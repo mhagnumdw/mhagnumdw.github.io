@@ -9,30 +9,34 @@
         <description>{{ site.theme_settings.description | xml_escape }}</description>
         <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
         {% comment %}
+        {% endcomment %}
         <webfeeds:cover image="{{ site.url }}{{ site.baseurl }}/{{ site.theme_settings.avatar }}" />
         <webfeeds:icon>{{ site.url }}{{ site.baseurl }}/{{ site.theme_settings.favicon }}</webfeeds:icon>
         <webfeeds:related layout="card" target="browser"/>
-        {% endcomment %}
+        <enclosure length="1" type="image" url="{{ site.url }}{{ site.baseurl }}/{{ site.theme_settings.avatar }}"/>
         {% for post in site.posts limit:15 %}
         <item>
+            {% if post.thumbnail %}
+                {% comment %}   
+                {% endcomment %}
+                <image>
+                    <url>{{ site.url }}{{ site.baseurl }}/{{ site.theme_settings.avatar }}</url>
+                    <title>{{ site.url }}{{ site.baseurl }}</title>
+                    <link>{{ site.url }}{{ site.baseurl }}</link>
+                </image>
+                
+                <webfeeds:cover image="{{ site.url }}{{ site.baseurl }}/{{ site.theme_settings.avatar }}" />
+                
+                <enclosure length="1" type="image" url="{{ site.url }}{{ site.baseurl }}/{{ site.theme_settings.avatar }}"/>
+                
+                <media:thumbnail url="{{ site.url }}{{ site.baseurl }}/{{ site.theme_settings.avatar }}" />
+                <media:content url="{{ site.url }}{{ site.baseurl }}/{{ site.theme_settings.avatar }}" />
+            {% endif %}
             <title>{{ post.title | xml_escape }}</title>
             <link>{{ post.url | relative_url }}</link>
             <guid isPermaLink="true">{{ post.url | relative_url }}</guid>
             <description>{{ post.content | xml_escape }}</description>
             <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
-            {% if post.thumbnail %}
-                {% comment %}   
-                <image>
-                    <url>{{ site.url }}{{ site.baseurl }}/{{ post.thumbnail }}</url>
-                    <title>{{ site.url }}{{ site.baseurl }}</title>
-                    <link>{{ site.url }}{{ site.baseurl }}</link>
-                </image>
-                <webfeeds:cover image="{{ site.url }}{{ site.baseurl }}/{{ post.thumbnail }}" />
-                <enclosure length="1" type="image" url="{{ site.url }}{{ site.baseurl }}/{{ post.thumbnail }}"/>
-                {% endcomment %}
-                <media:thumbnail url="{{ site.url }}{{ site.baseurl }}/{{ site.theme_settings.avatar }}" />
-                <media:content url="{{ site.url }}{{ site.baseurl }}/{{ site.theme_settings.avatar }}" />
-            {% endif %}
         </item>
         {% endfor %}
     </channel>
