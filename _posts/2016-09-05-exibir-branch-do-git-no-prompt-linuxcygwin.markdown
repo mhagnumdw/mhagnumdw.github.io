@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Exibir branch do Git no prompt (Linux/Cygwin)
-date: 2016-09-05 11:25:10.000000000 -03:00
+date: 2016-09-05 11:25:10 -03:00
 categories:
 - Git
 tags:
