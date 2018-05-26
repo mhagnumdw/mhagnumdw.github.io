@@ -17,7 +17,7 @@
         <webfeeds:related layout="card" target="browser"/>
         <enclosure length="1" type="image" url="{{ site.url }}{{ site.baseurl }}/{{ site.theme_settings.avatar }}"/>
         {% endcomment %}
-        {% for post in site.posts limit:15 %}
+        {% for post in site.posts limit:1000 %}
         <item>
             {% if post.thumbnail %}
                 <enclosure length="1" type="image" url="{{ site.url }}{{ site.baseurl }}/{{ post.thumbnail }}"/>
