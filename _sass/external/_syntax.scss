@@ -4,6 +4,10 @@
 //   Syntax highlighting
 // ========================================================================== 
 
+code.highlighter-rouge {
+    background: rgba(27,31,35,0.08);
+}
+
 div.highlighter-rouge,
 figure.highlight {
     position: relative;
