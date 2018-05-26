@@ -8,12 +8,7 @@ tags:
 - Hibernate
 - Java
 - JPA
-#author:
-#  login: mhagnumdw
-#  email: mhagnumdw@gmail.com
-#  display_name: mhagnumdw
-#  first_name: ''
-#  last_name: ''
+author: mhagnumdw
 feature-img: "assets/hibernate_3_list_all_managed_entities.png"
 thumbnail: "assets/hibernate_3_list_all_managed_entities.png"
 ---

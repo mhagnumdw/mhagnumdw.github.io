@@ -4,13 +4,9 @@ title: 'Jenkins: Renomear Jobs em massa'
 date: 2016-09-27 21:56:16 -03:00
 categories:
 - Jenkins
-tags: []
-#author:
-#  login: mhagnumdw
-#  email: mhagnumdw@gmail.com
-#  display_name: mhagnumdw
-#  first_name: ''
-#  last_name: ''
+tags:
+- jenkins
+author: mhagnumdw
 feature-img: "assets/jenkins_script_console_v0.png"
 thumbnail: "assets/jenkins_script_console_v0.png"
 ---

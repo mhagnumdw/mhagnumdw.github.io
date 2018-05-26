@@ -4,13 +4,9 @@ title: 'SQL: gerando ranges (Date e Number)'
 date: 2016-10-08 12:02:12 -03:00
 categories:
 - SQL
-tags: []
-#author:
-#  login: mhagnumdw
-#  email: mhagnumdw@gmail.com
-#  display_name: mhagnumdw
-#  first_name: ''
-#  last_name: ''
+tags:
+- sql
+author: mhagnumdw
 feature-img: "assets/select_with_rangre_logo.png"
 thumbnail: "assets/select_with_rangre_logo.png"
 ---

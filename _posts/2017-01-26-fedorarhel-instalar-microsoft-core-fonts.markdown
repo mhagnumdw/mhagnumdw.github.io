@@ -8,12 +8,7 @@ tags:
 - Fedora
 - fonts
 - RHEL
-#author:
-#  login: mhagnumdw
-#  email: mhagnumdw@gmail.com
-#  display_name: mhagnumdw
-#  first_name: ''
-#  last_name: ''
+author: mhagnumdw
 feature-img: "assets/fedora_redhat_microsoft_core_fonts.jpg"
 thumbnail: "assets/fedora_redhat_microsoft_core_fonts.jpg"
 ---

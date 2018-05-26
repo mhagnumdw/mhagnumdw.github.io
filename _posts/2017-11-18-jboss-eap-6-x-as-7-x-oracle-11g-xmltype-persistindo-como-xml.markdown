@@ -11,12 +11,7 @@ tags:
 - Hibernate
 - XMLType
 - XStream
-#author:
-#  login: mhagnumdw
-#  email: mhagnumdw@gmail.com
-#  display_name: mhagnumdw
-#  first_name: ''
-#  last_name: ''
+author: mhagnumdw
 feature-img: "assets/logo_jboss_oracle_xmltype_v5.png"
 thumbnail: "assets/logo_jboss_oracle_xmltype_v5.png"
 ---

@@ -5,15 +5,9 @@ date: 2016-08-14 00:23:26 -03:00
 categories:
 - Java
 tags:
-- "@AutoService"
 - Eclipse
 - ServiceLoader
-#author:
-#  login: mhagnumdw
-#  email: mhagnumdw@gmail.com
-#  display_name: mhagnumdw
-#  first_name: ''
-#  last_name: ''
+author: mhagnumdw
 feature-img: "assets/java_serviceloader_autoservice_eclipse.png"
 thumbnail: "assets/java_serviceloader_autoservice_eclipse.png"
 ---

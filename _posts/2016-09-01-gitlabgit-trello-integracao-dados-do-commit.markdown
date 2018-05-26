@@ -9,12 +9,7 @@ tags:
 - Cygwin
 - GitLab
 - Trello
-#author:
-#  login: mhagnumdw
-#  email: mhagnumdw@gmail.com
-#  display_name: mhagnumdw
-#  first_name: ''
-#  last_name: ''
+author: mhagnumdw
 feature-img: "assets/git-gitlab-trello-integracao-banner_v2.png"
 thumbnail: "assets/git-gitlab-trello-integracao-banner_v2.png"
 ---

@@ -10,12 +10,7 @@ tags:
 - Checkstyle
 - GitLab
 - hook
-#author:
-#  login: mhagnumdw
-#  email: mhagnumdw@gmail.com
-#  display_name: mhagnumdw
-#  first_name: ''
-#  last_name: ''
+author: mhagnumdw
 feature-img: "assets/gitlab_checkstyle_push_prereceive_v2.png"
 thumbnail: "assets/gitlab_checkstyle_push_prereceive_v2.png"
 ---

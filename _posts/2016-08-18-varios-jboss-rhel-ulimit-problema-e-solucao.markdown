@@ -4,15 +4,11 @@ title: 'Vários JBoss + RHEL + ulimit: problema e solução'
 date: 2016-08-18 14:26:40 -03:00
 categories:
 - JBoss
-- Linux
 tags:
 - ulimit
-#author:
-#  login: mhagnumdw
-#  email: mhagnumdw@gmail.com
-#  display_name: mhagnumdw
-#  first_name: ''
-#  last_name: ''
+- JBoss
+- Linux
+author: mhagnumdw
 feature-img: "assets/jboss_rhel_ulimit.png"
 thumbnail: "assets/jboss_rhel_ulimit.png"
 ---

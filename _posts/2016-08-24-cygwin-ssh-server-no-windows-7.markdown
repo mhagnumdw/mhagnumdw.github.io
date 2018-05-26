@@ -4,15 +4,10 @@ title: Cygwin SSH Server no Windows 7
 date: 2016-08-24 11:47:28 -03:00
 categories:
 - Cygwin
-- Linux
 tags:
 - SSH
-#author:
-#  login: mhagnumdw
-#  email: mhagnumdw@gmail.com
-#  display_name: mhagnumdw
-#  first_name: ''
-#  last_name: ''
+- Linux
+author: mhagnumdw
 feature-img: "assets/cygwin_ssh_server_logo.png"
 thumbnail: "assets/cygwin_ssh_server_logo.png"
 ---

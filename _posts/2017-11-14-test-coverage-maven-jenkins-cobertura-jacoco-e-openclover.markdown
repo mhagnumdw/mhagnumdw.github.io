@@ -3,18 +3,13 @@ layout: post
 title: 'Test Coverage + Maven + Jenkins: Cobertura, JaCoCo e OpenClover'
 date: 2017-11-14 22:52:43 -03:00
 categories:
+- test
+tags:
 - coverage
 - Java
 - Jenkins
 - maven
-- test
-tags: []
-#author:
-#  login: mhagnumdw
-#  email: mhagnumdw@gmail.com
-#  display_name: mhagnumdw
-#  first_name: ''
-#  last_name: ''
+author: mhagnumdw
 feature-img: "assets/code-coverage-banner_v2.png"
 thumbnail: "assets/code-coverage-banner_v2.png"
 ---

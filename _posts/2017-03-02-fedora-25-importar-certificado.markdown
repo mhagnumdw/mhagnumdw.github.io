@@ -7,12 +7,7 @@ categories:
 tags:
 - Certificado
 - Fedora
-#author:
-#  login: mhagnumdw
-#  email: mhagnumdw@gmail.com
-#  display_name: mhagnumdw
-#  first_name: ''
-#  last_name: ''
+author: mhagnumdw
 feature-img: "assets/nss_importar_certificado.png"
 thumbnail: "assets/nss_importar_certificado.png"
 ---

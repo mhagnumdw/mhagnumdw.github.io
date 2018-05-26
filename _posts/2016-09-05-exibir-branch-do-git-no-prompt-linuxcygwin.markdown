@@ -3,16 +3,12 @@ layout: post
 title: Exibir branch do Git no prompt (Linux/Cygwin)
 date: 2016-09-05 11:25:10.000000000 -03:00
 categories:
-- Cygwin
 - Git
+tags:
+- Git
+- Cygwin
 - Linux
-tags: []
-#author:
-#  login: mhagnumdw
-#  email: mhagnumdw@gmail.com
-#  display_name: mhagnumdw
-#  first_name: ''
-#  last_name: ''
+author: mhagnumdw
 feature-img: "assets/exibir_branch_do_git_no_prompt.png"
 thumbnail: "assets/exibir_branch_do_git_no_prompt.png"
 ---

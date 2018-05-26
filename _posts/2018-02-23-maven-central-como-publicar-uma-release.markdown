@@ -11,12 +11,7 @@ tags:
 - maven
 - release
 - sonatype
-#author:
-#  login: mhagnumdw
-#  email: mhagnumdw@gmail.com
-#  display_name: mhagnumdw
-#  first_name: ''
-#  last_name: ''
+author: mhagnumdw
 # excerpt: Abaixo os passos para realizar uma publicação no Maven Central.
 # Por algum misterio foi preciso usar o excerpt_separator ou excerpt para definir a parte inicial para aparecer na listagem de posts
 excerpt_separator: <!--more-->
