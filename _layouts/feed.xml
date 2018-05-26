@@ -17,8 +17,9 @@
         {% for post in site.posts limit:15 %}
         <item>
             {% if post.thumbnail %}
+                <enclosure length="1" type="image" url="{{ site.url }}{{ site.baseurl }}/{{ post.thumbnail }}"/>
+                
                 {% comment %}   
-                {% endcomment %}
                 <image>
                     <url>{{ site.url }}{{ site.baseurl }}/{{ site.theme_settings.avatar }}</url>
                     <title>{{ site.url }}{{ site.baseurl }}</title>
@@ -27,10 +28,9 @@
                 
                 <webfeeds:cover image="{{ site.url }}{{ site.baseurl }}/{{ site.theme_settings.avatar }}" />
                 
-                <enclosure length="1" type="image" url="{{ site.url }}{{ site.baseurl }}/{{ site.theme_settings.avatar }}"/>
-                
                 <media:thumbnail url="{{ site.url }}{{ site.baseurl }}/{{ site.theme_settings.avatar }}" />
                 <media:content url="{{ site.url }}{{ site.baseurl }}/{{ site.theme_settings.avatar }}" />
+                {% endcomment %}
             {% endif %}
             <title>{{ post.title | xml_escape }}</title>
             <link>{{ post.url | relative_url }}</link>
