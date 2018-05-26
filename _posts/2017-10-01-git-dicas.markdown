@@ -1,0 +1,65 @@
+---
+layout: post
+title: 'git: dicas'
+date: 2017-10-01 13:32:22 -03:00
+categories:
+- Git
+tags:
+- git
+- git-dicas
+#author:
+#  login: mhagnumdw
+#  email: mhagnumdw@gmail.com
+#  display_name: mhagnumdw
+#  first_name: ''
+#  last_name: ''
+feature-img: "assets/git-goodness_v2.png"
+thumbnail: "assets/git-goodness_v2.png"
+---
+
+Dicas de git (snippets)
+
+### Criar uma branch vazia com nome "maven-repo"
+
+{% highlight shell %}
+git clone https://github.com/mhagnumdw/pippo.git
+cd pippo/
+git checkout --orphan maven-repo
+git rm -rf .
+git commit --allow-empty -m "Apagando todos os arquivos da branch para servir de repositório maven"
+git push origin maven-repo
+{% endhighlight %}
+
+* * *
+
+### Visualizar exclusivamente os commits feitos em uma branch em relação ao master
+
+{% highlight shell %}
+git branch
+git checkout maven-repo
+git cherry -v master
+{% endhighlight %}
+
+* * *
+
+### Merge entre branches de repositórios diferentes
+
+_Se você quiser fazer um merge de project-a para project-b:_
+
+{% highlight shell %}
+cd path/to/project-b  
+git remote add project-a path/to/project-a  
+git fetch project-a  
+git merge --allow-unrelated-histories project-a/master  
+git remote remove project-a
+{% endhighlight %}
+
+[https://stackoverflow.com/questions/1425892/how-do-you-merge-two-git-repositories#answer-10548919](https://stackoverflow.com/questions/1425892/how-do-you-merge-two-git-repositories#answer-10548919)
+
+* * *
+
+### Listar os autores em um projeto
+
+{% highlight shell %}
+git shortlog --summary --numbered --email
+{% endhighlight %}

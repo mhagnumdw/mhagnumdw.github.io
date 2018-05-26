@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  {% include head.html %}
+  <body>
+    {% include navbar.html %}
+
+{% comment %}
+  {% if site.theme_settings.header_text %}
+  <div id="main" class="call-out"
+    style="background-image: url('{{ site.baseurl }}/{{ site.theme_settings.header_text_feature_image }}')">
+    <h3 class="title">{{ site.theme_settings.header_text }}</h3>
+  </div>
+  {% endif %}
+{% endcomment %}
+
+    <div class="content">
+      {{ content }}
+    </div>
+    {% include footer.html %}
+  </body>
+</html>
