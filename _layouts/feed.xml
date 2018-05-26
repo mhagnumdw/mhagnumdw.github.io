@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"
+    xmlns:webfeeds="http://webfeeds.org/rss/1.0">
     <channel>
         <title>{{ site.theme_settings.title | xml_escape }}</title>
         <atom:link href="{{ "/feed.xml" | relative_url }}" rel="self" type="application/rss+xml"/>
@@ -14,11 +15,14 @@
             <description>{{ post.content | xml_escape }}</description>
             <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
             {% if post.thumbnail %}
+                {% comment %}
                 <image>
                     <url>{{ site.url }}{{ site.baseurl }}/{{ post.thumbnail }}</url>
                     <title>{{ site.url }}{{ site.baseurl }}</title>
                     <link>{{ site.url }}{{ site.baseurl }}</link>
                 </image>
+                {% endcomment %}
+                <webfeeds:cover image="{{ site.url }}{{ site.baseurl }}/{{ post.thumbnail }}" />
             {% endif %}
         </item>
         {% endfor %}
