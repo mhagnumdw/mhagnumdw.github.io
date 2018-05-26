@@ -30,8 +30,8 @@
                 <webfeeds:cover image="{{ site.url }}{{ site.baseurl }}/{{ post.thumbnail }}" />
                 <enclosure length="1" type="image" url="{{ site.url }}{{ site.baseurl }}/{{ post.thumbnail }}"/>
                 {% endcomment %}
-                <media:thumbnail url="{{ site.url }}{{ site.baseurl }}/{{ post.thumbnail }}" />
-                <media:content url="{{ site.url }}{{ site.baseurl }}/{{ post.thumbnail }}" />
+                <media:thumbnail url="{{ site.url }}{{ site.baseurl }}/{{ site.theme_settings.avatar }}" />
+                <media:content url="{{ site.url }}{{ site.baseurl }}/{{ site.theme_settings.avatar }}" />
             {% endif %}
         </item>
         {% endfor %}
