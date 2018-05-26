@@ -9,6 +9,7 @@
         <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
         <webfeeds:cover image="{{ site.url }}{{ site.baseurl }}/{{ site.theme_settings.avatar }}" />
         <webfeeds:icon>{{ site.url }}{{ site.baseurl }}/{{ site.theme_settings.favicon }}</webfeeds:icon>
+        <webfeeds:related layout="card" target="browser"/>
         {% for post in site.posts limit:15 %}
         <item>
             <title>{{ post.title | xml_escape }}</title>
