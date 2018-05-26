@@ -19,6 +19,7 @@
             {% if post.thumbnail %}
                 <enclosure length="1" type="image" url="{{ site.url }}{{ site.baseurl }}/{{ post.thumbnail }}"/>
                 
+                {% comment %}
                 <image>
                     <url>{{ site.url }}{{ site.baseurl }}/{{ post.thumbnail }}</url>
                     <title>{{ site.url }}{{ site.baseurl }}</title>
@@ -29,7 +30,6 @@
                 
                 <media:thumbnail url="{{ site.url }}{{ site.baseurl }}/{{ post.thumbnail }}" />
                 <media:content url="{{ site.url }}{{ site.baseurl }}/{{ post.thumbnail }}" />
-                {% comment %}
                 {% endcomment %}
             {% endif %}
             <title>{{ post.title | xml_escape }}</title>
