@@ -19,17 +19,17 @@
             {% if post.thumbnail %}
                 <enclosure length="1" type="image" url="{{ site.url }}{{ site.baseurl }}/{{ post.thumbnail }}"/>
                 
-                {% comment %}   
                 <image>
-                    <url>{{ site.url }}{{ site.baseurl }}/{{ site.theme_settings.avatar }}</url>
+                    <url>{{ site.url }}{{ site.baseurl }}/{{ post.thumbnail }}</url>
                     <title>{{ site.url }}{{ site.baseurl }}</title>
                     <link>{{ site.url }}{{ site.baseurl }}</link>
                 </image>
                 
-                <webfeeds:cover image="{{ site.url }}{{ site.baseurl }}/{{ site.theme_settings.avatar }}" />
+                <webfeeds:cover image="{{ site.url }}{{ site.baseurl }}/{{ post.thumbnail }}" />
                 
-                <media:thumbnail url="{{ site.url }}{{ site.baseurl }}/{{ site.theme_settings.avatar }}" />
-                <media:content url="{{ site.url }}{{ site.baseurl }}/{{ site.theme_settings.avatar }}" />
+                <media:thumbnail url="{{ site.url }}{{ site.baseurl }}/{{ post.thumbnail }}" />
+                <media:content url="{{ site.url }}{{ site.baseurl }}/{{ post.thumbnail }}" />
+                {% comment %}
                 {% endcomment %}
             {% endif %}
             <title>{{ post.title | xml_escape }}</title>
