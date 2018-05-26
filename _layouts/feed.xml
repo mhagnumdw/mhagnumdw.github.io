@@ -9,11 +9,11 @@
         <description>{{ site.theme_settings.description | xml_escape }}</description>
         <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
         {% comment %}
-        {% endcomment %}
         <webfeeds:cover image="{{ site.url }}{{ site.baseurl }}/{{ site.theme_settings.avatar }}" />
         <webfeeds:icon>{{ site.url }}{{ site.baseurl }}/{{ site.theme_settings.favicon }}</webfeeds:icon>
         <webfeeds:related layout="card" target="browser"/>
         <enclosure length="1" type="image" url="{{ site.url }}{{ site.baseurl }}/{{ site.theme_settings.avatar }}"/>
+        {% endcomment %}
         {% for post in site.posts limit:15 %}
         <item>
             {% if post.thumbnail %}
