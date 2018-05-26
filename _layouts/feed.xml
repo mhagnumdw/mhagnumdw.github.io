@@ -7,6 +7,8 @@
         <link>{{ site.url }}{{ site.baseurl }}/</link>
         <description>{{ site.theme_settings.description | xml_escape }}</description>
         <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
+        <webfeeds:cover image="{{ site.url }}{{ site.baseurl }}/{{ site.theme_settings.avatar }}" />
+        <webfeeds:icon>{{ site.url }}{{ site.baseurl }}/{{ site.theme_settings.favicon }}</webfeeds:icon>
         {% for post in site.posts limit:15 %}
         <item>
             <title>{{ post.title | xml_escape }}</title>
@@ -14,16 +16,16 @@
             <guid isPermaLink="true">{{ post.url | relative_url }}</guid>
             <description>{{ post.content | xml_escape }}</description>
             <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
+            {% comment %}   
             {% if post.thumbnail %}
-                {% comment %}
                 <image>
                     <url>{{ site.url }}{{ site.baseurl }}/{{ post.thumbnail }}</url>
                     <title>{{ site.url }}{{ site.baseurl }}</title>
                     <link>{{ site.url }}{{ site.baseurl }}</link>
                 </image>
-                {% endcomment %}
                 <webfeeds:cover image="{{ site.url }}{{ site.baseurl }}/{{ post.thumbnail }}" />
             {% endif %}
+            {% endcomment %}
         </item>
         {% endfor %}
     </channel>
