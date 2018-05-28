@@ -20,8 +20,8 @@
         {% for post in site.posts limit:1000 %}
         <item>
             {% if post.thumbnail %}
-                <webfeeds:cover image="{{ site.url }}{{ site.baseurl }}/{{ post.thumbnail }}" />
-                
+                <media:thumbnail url="{{ site.url }}{{ site.baseurl }}/{{ post.thumbnail }}" />
+                <media:content url="{{ site.url }}{{ site.baseurl }}/{{ post.thumbnail }}" />
                 {% comment %}
                 <enclosure length="1" type="image" url="{{ site.url }}{{ site.baseurl }}/{{ post.thumbnail }}"/>
                 
@@ -31,8 +31,7 @@
                     <link>{{ site.url }}{{ site.baseurl }}</link>
                 </image>
                 
-                <media:thumbnail url="{{ site.url }}{{ site.baseurl }}/{{ post.thumbnail }}" />
-                <media:content url="{{ site.url }}{{ site.baseurl }}/{{ post.thumbnail }}" />
+                <webfeeds:cover image="{{ site.url }}{{ site.baseurl }}/{{ post.thumbnail }}" />
                 {% endcomment %}
             {% endif %}
             <title>{{ post.title | xml_escape }}</title>
