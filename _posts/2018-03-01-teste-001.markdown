@@ -1,0 +1,18 @@
+---
+layout: post
+title: 'Teste 001'
+date: 2018-03-01 10:00:00 -03:00
+categories:
+- Teste
+tags:
+- teste
+author: mhagnumdw
+feature-img: "assets/test.png"
+thumbnail: "assets/test.png"
+---
+
+Esse é um teste para ver o thumbnail.
+
+<!--more-->
+
+Tentando mostrar um thumbnail.
