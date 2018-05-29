@@ -12,8 +12,8 @@ tags:
 - XMLType
 - XStream
 author: mhagnumdw
-feature-img: "assets/logo_jboss_oracle_xmltype_v5.png"
-thumbnail: "assets/logo_jboss_oracle_xmltype_v5.png"
+feature-img: "assets/test_v3.png"
+thumbnail: "assets/test_v3.png"
 ---
 
 A ideia é persistir uma entidade que possua um relacionamento qualquer com um objeto e esse objeto será persistido no banco de dados como XML (não é String!), mas especificamente o tipo XMLType.

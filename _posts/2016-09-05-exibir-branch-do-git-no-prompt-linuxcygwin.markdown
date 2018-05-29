@@ -9,8 +9,8 @@ tags:
 - Cygwin
 - Linux
 author: mhagnumdw
-feature-img: "assets/exibir_branch_do_git_no_prompt.png"
-thumbnail: "assets/exibir_branch_do_git_no_prompt.png"
+feature-img: "assets/test_v3.png"
+thumbnail: "assets/test_v3.png"
 ---
 
 Os passos abaixo descrevem como exibir a branch do git no prompt de comando.

@@ -15,8 +15,8 @@ author: mhagnumdw
 # excerpt: Abaixo os passos para realizar uma publicação no Maven Central.
 # Por algum misterio foi preciso usar o excerpt_separator ou excerpt para definir a parte inicial para aparecer na listagem de posts
 excerpt_separator: <!--more-->
-feature-img: "assets/mvc.png"
-thumbnail: "assets/mvc.png"
+feature-img: "assets/test_v3.png"
+thumbnail: "assets/test_v3.png"
 ---
 
 Abaixo os passos para realizar uma publicação no Maven Central.

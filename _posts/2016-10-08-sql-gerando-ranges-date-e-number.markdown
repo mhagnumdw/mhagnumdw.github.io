@@ -7,8 +7,8 @@ categories:
 tags:
 - sql
 author: mhagnumdw
-feature-img: "assets/select_with_rangre_logo.png"
-thumbnail: "assets/select_with_rangre_logo.png"
+feature-img: "assets/test_v3.png"
+thumbnail: "assets/test_v3.png"
 ---
 
 A necessidade é fazer uma consulta que tenha como base um conjunto sequencial de outra informação. Como exemplo, fazer uma segunda consulta com base em todos dias dentro de duas datas.

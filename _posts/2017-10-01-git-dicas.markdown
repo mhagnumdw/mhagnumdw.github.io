@@ -8,8 +8,8 @@ tags:
 - git
 - git-dicas
 author: mhagnumdw
-feature-img: "assets/git-goodness_v2.png"
-thumbnail: "assets/git-goodness_v2.png"
+feature-img: "assets/test_v3.png"
+thumbnail: "assets/test_v3.png"
 ---
 
 Dicas de git (snippets)

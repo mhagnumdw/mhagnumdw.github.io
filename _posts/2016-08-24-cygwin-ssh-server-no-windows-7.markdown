@@ -8,8 +8,8 @@ tags:
 - SSH
 - Linux
 author: mhagnumdw
-feature-img: "assets/cygwin_ssh_server_logo.png"
-thumbnail: "assets/cygwin_ssh_server_logo.png"
+feature-img: "assets/test_v3.png"
+thumbnail: "assets/test_v3.png"
 ---
 
 Instalar o Cygwin SSH Server como serviço no Windows.
