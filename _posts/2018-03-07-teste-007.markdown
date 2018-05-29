@@ -1,0 +1,19 @@
+---
+layout: post
+title: 'Teste 007'
+date: 2018-03-07 10:00:00 -03:00
+categories:
+- Teste
+tags:
+- teste
+author: mhagnumdw
+excerpt_separator: <!--more-->
+feature-img: "assets/test_v3.png"
+thumbnail: "assets/test_v3.png"
+---
+
+Esse é um teste para ver o thumbnail v7.
+
+<!--more-->
+
+Tentando mostrar um thumbnail v7.
