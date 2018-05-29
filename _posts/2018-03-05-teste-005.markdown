@@ -1,0 +1,19 @@
+---
+layout: post
+title: 'Teste 005'
+date: 2018-03-05 10:00:00 -03:00
+categories:
+- Teste
+tags:
+- teste
+author: mhagnumdw
+excerpt_separator: <!--more-->
+feature-img: "assets/test_v2.png"
+thumbnail: "assets/test_v2.png"
+---
+
+Esse é um teste para ver o thumbnail v5.
+
+<!--more-->
+
+Tentando mostrar um thumbnail v5.
