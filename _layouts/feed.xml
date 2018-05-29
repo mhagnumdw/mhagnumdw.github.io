@@ -22,7 +22,7 @@
             {% if post.thumbnail %}
                 <media:thumbnail url="{{ site.url }}{{ site.baseurl }}/{{ post.thumbnail }}" />
                 <media:content url="{{ site.url }}{{ site.baseurl }}/{{ post.thumbnail }}" />
-                {% comment %}
+                
                 <enclosure length="1" type="image" url="{{ site.url }}{{ site.baseurl }}/{{ post.thumbnail }}"/>
                 
                 <image>
@@ -32,6 +32,7 @@
                 </image>
                 
                 <webfeeds:cover image="{{ site.url }}{{ site.baseurl }}/{{ post.thumbnail }}" />
+                {% comment %}
                 {% endcomment %}
             {% endif %}
             <title>{{ post.title | xml_escape }}</title>
