@@ -20,7 +20,6 @@
         {% for post in site.posts limit:1000 %}
         <item>
             {% if post.thumbnail %}
-                {% comment %}
                 <media:thumbnail url="{{ site.url }}{{ site.baseurl }}/{{ post.thumbnail }}" />
                 <media:content url="{{ site.url }}{{ site.baseurl }}/{{ post.thumbnail }}" />
                 
@@ -31,6 +30,7 @@
                     <title>{{ site.url }}{{ site.baseurl }}</title>
                     <link>{{ site.url }}{{ site.baseurl }}</link>
                 </image>
+                {% comment %}
                 {% endcomment %}
                 
                 <webfeeds:cover image="{{ site.url }}{{ site.baseurl }}/{{ post.thumbnail }}" />
