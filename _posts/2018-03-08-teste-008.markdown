@@ -1,7 +1,7 @@
 ---
 layout: post
-title: 'Teste 007'
-date: 2018-03-07 10:00:00 -03:00
+title: 'Teste 008'
+date: 2018-03-08 10:00:00 -03:00
 categories:
 - Teste
 tags:
@@ -12,8 +12,8 @@ feature-img: "assets/test_v3.png"
 thumbnail: "assets/test_v3.png"
 ---
 
-Esse é um teste para ver o thumbnail v7.
+Esse é um teste para ver o thumbnail v8. Removido webfeeds:cover.
 
 <!--more-->
 
-Tentando mostrar um thumbnail v7.
+Tentando mostrar um thumbnail v8.
