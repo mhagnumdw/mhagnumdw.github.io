@@ -1,0 +1,19 @@
+---
+layout: post
+title: 'Teste 011'
+date: 2018-03-11 10:00:00 -03:00
+categories:
+- Teste
+tags:
+- teste
+author: mhagnumdw
+excerpt_separator: <!--more-->
+feature-img: "assets/test_v5.png"
+thumbnail: "assets/test_v5.png"
+---
+
+Esse é um teste para ver o thumbnail v11.
+
+<!--more-->
+
+Tentando mostrar um thumbnail v11.
