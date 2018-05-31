@@ -27,8 +27,9 @@
                     <link>{{ site.url }}{{ site.baseurl }}</link>
                 </image>
 
-                <enclosure length="1" type="image" url="{{ site.url }}{{ site.baseurl }}/{{ post.thumbnail }}"/>
                 {% comment %}
+                <enclosure length="1" type="image" url="{{ site.url }}{{ site.baseurl }}/{{ post.thumbnail }}"/>
+                
                 <media:thumbnail url="{{ site.url }}{{ site.baseurl }}/{{ post.thumbnail }}" />
                 <media:content url="{{ site.url }}{{ site.baseurl }}/{{ post.thumbnail }}" />
                 
