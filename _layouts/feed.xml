@@ -21,15 +21,15 @@
         {% for post in site.posts limit:1000 %}
         <item>
             {% if post.thumbnail %}
+                <enclosure length="1" type="image" url="{{ site.url }}{{ site.baseurl }}/{{ post.thumbnail }}"/>
+                
+                {% comment %}
                 <image>
                     <url>{{ site.url }}{{ site.baseurl }}/{{ post.thumbnail }}</url>
                     <title>{{ site.url }}{{ site.baseurl }}</title>
                     <link>{{ site.url }}{{ site.baseurl }}</link>
                 </image>
 
-                {% comment %}
-                <enclosure length="1" type="image" url="{{ site.url }}{{ site.baseurl }}/{{ post.thumbnail }}"/>
-                
                 <media:thumbnail url="{{ site.url }}{{ site.baseurl }}/{{ post.thumbnail }}" />
                 <media:content url="{{ site.url }}{{ site.baseurl }}/{{ post.thumbnail }}" />
                 
