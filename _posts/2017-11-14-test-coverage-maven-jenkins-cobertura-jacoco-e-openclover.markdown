@@ -10,8 +10,8 @@ tags:
 - Jenkins
 - maven
 author: mhagnumdw
-feature-img: "assets/test_v3.png"
-thumbnail: "assets/test_v3.png"
+feature-img: "assets/code-coverage-banner_v2.png"
+thumbnail: "assets/code-coverage-banner_v2.png"
 ---
 
 Configuração para Code Coverage usando Maven, Jenkins e um dos seguintes plugins para gerar a cobertura de código: OpenClover, Cobertura e JaCoCo.

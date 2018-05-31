@@ -8,8 +8,8 @@ tags:
 - Certificado
 - Fedora
 author: mhagnumdw
-feature-img: "assets/test_v3.png"
-thumbnail: "assets/test_v3.png"
+feature-img: "assets/nss_importar_certificado.png"
+thumbnail: "assets/nss_importar_certificado.png"
 ---
 
 Importar certificado para que seja reconhecido pelos browsers e outros softwares.

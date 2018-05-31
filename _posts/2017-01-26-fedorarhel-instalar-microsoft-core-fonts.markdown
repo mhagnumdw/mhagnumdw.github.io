@@ -9,8 +9,8 @@ tags:
 - fonts
 - RHEL
 author: mhagnumdw
-feature-img: "assets/test_v3.png"
-thumbnail: "assets/test_v3.png"
+feature-img: "assets/fedora_redhat_microsoft_core_fonts.jpg"
+thumbnail: "assets/fedora_redhat_microsoft_core_fonts.jpg"
 ---
 
 Instalar as fontes da Microsoft no linux Fefora/RHEL. Para outras distros os passos são os mesmos ou bem parecidos.

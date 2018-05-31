@@ -10,8 +10,8 @@ tags:
 - GitLab
 - Trello
 author: mhagnumdw
-feature-img: "assets/test_v3.png"
-thumbnail: "assets/test_v3.png"
+feature-img: "assets/git-gitlab-trello-integracao-banner_v2.png"
+thumbnail: "assets/git-gitlab-trello-integracao-banner_v2.png"
 ---
 
 Integrar GitLab e Trello no post-commit (client side) ou post-receive (server side).
