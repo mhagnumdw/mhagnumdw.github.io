@@ -7,12 +7,14 @@ categories:
 tags:
 - cron
 author: mhagnumdw
-# excerpt_separator: <!--more-->
+excerpt_separator: <!--more-->
 feature-img: "assets/cygwin-cron.png"
 thumbnail: "assets/cygwin-cron.png"
 ---
 
 Instalar o cron no Cygwin como serviço no Windows.
+
+<!--more-->
 
 ## Passos
 
