@@ -14,6 +14,8 @@ thumbnail: "assets/git-goodness_v2.png"
 
 Dicas de git (snippets)
 
+<!--more-->
+
 ### Criar uma branch vazia com nome "maven-repo"
 
 {% highlight shell %}

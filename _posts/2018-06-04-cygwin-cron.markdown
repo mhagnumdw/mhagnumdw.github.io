@@ -7,7 +7,6 @@ categories:
 tags:
 - cron
 author: mhagnumdw
-excerpt_separator: <!--more-->
 feature-img: "assets/cygwin-cron.png"
 thumbnail: "assets/cygwin-cron.png"
 ---

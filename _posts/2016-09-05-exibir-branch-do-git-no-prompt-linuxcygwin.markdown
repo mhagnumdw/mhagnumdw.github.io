@@ -15,6 +15,8 @@ thumbnail: "assets/exibir_branch_do_git_no_prompt.png"
 
 Os passos abaixo descrevem como exibir a branch do git no prompt de comando.
 
+<!--more-->
+
 ## Fedora/RHEL/Cygwin
 
 {% highlight shell %}

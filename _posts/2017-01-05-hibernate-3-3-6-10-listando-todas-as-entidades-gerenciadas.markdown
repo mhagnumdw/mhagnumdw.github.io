@@ -15,6 +15,8 @@ thumbnail: "assets/hibernate_3_list_all_managed_entities.png"
 
 Objetivo: listar todas as entidades gerenciadas pelo EntityManager no Hibernate 3.6.10 (JPA 1)
 
+<!--more-->
+
 {% highlight java %}
 EntityManager em = ;
 

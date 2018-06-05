@@ -6,7 +6,7 @@ title: MhagnumDw - Programação, configuração, script, Linux e afins # title 
 description: "Programação, configuração, script, Linux e afins" # used by search engines
 
 permalink: /:year/:month/:day/:title
-# excerpt_separator: <!--more-->
+excerpt_separator: <!--more-->
 
 # THEME-SPECIFIC CONFIGURATION
 theme_settings:

@@ -13,6 +13,8 @@ thumbnail: "assets/jenkins_script_console_v0.png"
 
 O Jenkins não possui uma função nativa para renomear jobs em massa. Quando o número de jobs é elevado fica inviável renomear manualmente.
 
+<!--more-->
+
 ## Solução
 
 Para esse exemplo os nomes atuais dos jobs são:

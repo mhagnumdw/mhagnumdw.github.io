@@ -22,6 +22,8 @@ thumbnail: "assets/java_serviceloader_autoservice_eclipse.png"
 
 É um provedor simples de serviços disponibilizado pela classe java.util.ServiceLoader. As interfaces devem ser registradas como arquivos dentro da pasta META-INF/services/ e as implementações registradas no conteúdo dos arquivos.
 
+<!--more-->
+
 Ver mais:
 - [http://www.oracle.com/technetwork/articles/javase/extensible-137159.html](http://www.oracle.com/technetwork/articles/javase/extensible-137159.html)
 - [http://docs.oracle.com/javase/6/docs/api/java/util/ServiceLoader.html](http://docs.oracle.com/javase/6/docs/api/java/util/ServiceLoader.html)

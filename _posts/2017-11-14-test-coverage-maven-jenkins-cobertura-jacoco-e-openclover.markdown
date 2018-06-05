@@ -16,6 +16,8 @@ thumbnail: "assets/code-coverage-banner_v2.png"
 
 Configuração para Code Coverage usando Maven, Jenkins e um dos seguintes plugins para gerar a cobertura de código: OpenClover, Cobertura e JaCoCo.
 
+<!--more-->
+
 ## OpenClover ![clover]({{ site.baseurl }}/assets/clover.png)
 
 ### Maven - pom.xml

@@ -13,6 +13,8 @@ thumbnail: "assets/select_with_rangre_logo.png"
 
 A necessidade é fazer uma consulta que tenha como base um conjunto sequencial de outra informação. Como exemplo, fazer uma segunda consulta com base em todos dias dentro de duas datas.
 
+<!--more-->
+
 Para isso, inicialmente, é necessário saber como fazer uma consulta que retorne todos os valores de um range. Agora vamos ao que interessa:
 
 ## Retorna os números inteiros entre 1 e 5

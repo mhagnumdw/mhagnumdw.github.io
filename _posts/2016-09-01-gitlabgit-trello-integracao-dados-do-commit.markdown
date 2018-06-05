@@ -16,6 +16,8 @@ thumbnail: "assets/git-gitlab-trello-integracao-banner_v2.png"
 
 Integrar GitLab e Trello no post-commit (client side) ou post-receive (server side).
 
+<!--more-->
+
 Commit e push efetivados terão seus dados disponibilizados nos cards do Trello.
 
 ## Instalar NodeJS

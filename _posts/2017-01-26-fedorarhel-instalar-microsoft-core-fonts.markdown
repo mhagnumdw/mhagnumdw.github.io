@@ -15,6 +15,8 @@ thumbnail: "assets/fedora_redhat_microsoft_core_fonts.jpg"
 
 Instalar as fontes da Microsoft no linux Fefora/RHEL. Para outras distros os passos são os mesmos ou bem parecidos.
 
+<!--more-->
+
 ### Executar
 {% highlight shell %}
 dnf install rpm-build cabextract ttmkfdir

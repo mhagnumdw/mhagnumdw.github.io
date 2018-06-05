@@ -15,6 +15,8 @@ thumbnail: "assets/jboss_rhel_ulimit.png"
 
 O JBoss EAP (Application Server) vinha apresentando problemas estranhos na subida. Quando um dos nós tentava subir alguns erros surgiam, geralmente ocorrendo: `Caused by: java.lang.OutOfMemoryError: unable to create new native thread`. Embora pareça um clássico problema de memória da JVM, o real problema é que o usuário que executava o JBoss tinha atingido os limites de recursos do sistema operacional disponibilizados para ele.
 
+<!--more-->
+
 Solução: modificar os limites do usuário que executa o JBoss.
 
 O ambiente em questão contava com uma máquina virtual com 8 cores, 8 GB de RAM e 4 GB de swap, rodando: 4 Servidores JBoss, 1 Process Controller e 1 Host Controller.

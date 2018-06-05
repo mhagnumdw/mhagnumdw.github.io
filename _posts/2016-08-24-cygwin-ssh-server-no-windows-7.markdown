@@ -14,6 +14,8 @@ thumbnail: "assets/cygwin_ssh_server_logo.png"
 
 Instalar o Cygwin SSH Server como serviço no Windows.
 
+<!--more-->
+
 ## Instalando
 
 Instalar os pacotes abaixo no Cygwin:  

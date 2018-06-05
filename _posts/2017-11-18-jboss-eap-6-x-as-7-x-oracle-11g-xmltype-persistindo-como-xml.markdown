@@ -18,6 +18,8 @@ thumbnail: "assets/logo_jboss_oracle_xmltype_v5.png"
 
 A ideia é persistir uma entidade que possua um relacionamento qualquer com um objeto e esse objeto será persistido no banco de dados como XML (não é String!), mas especificamente o tipo XMLType.
 
+<!--more-->
+
 Tanto a persistência quanto a recuperação desse objeto é totalmente transparente para o desenvolvedor com relação ao XML.
 
 No exemplo existe a entidade `Cidade` que possui um atributo do tipo `CidadeStatus` (CidadeStatus não é uma entidade!) que é persistido no banco de dados como XML. A serialização e desrealização para XML será feita pelo XStream.

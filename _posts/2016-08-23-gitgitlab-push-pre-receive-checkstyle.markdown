@@ -17,6 +17,8 @@ thumbnail: "assets/gitlab_checkstyle_push_prereceive_v2.png"
 
 Objetivo: realizar checagem de estilo de código com o checkstyle no hook pre-receive do git. Quando for realizado o push, antes de sua efetivação, a análise no código será realizada. O push será rejeitado se a análise contiver WARN's.
 
+<!--more-->
+
 ## Criando o hook pre-receive
 
 1. Entrar no diretório:  
