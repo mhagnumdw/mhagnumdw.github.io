@@ -43,16 +43,16 @@ cygrunsrv --list -V
 {% endhighlight %}
 _A saída do comando acima deve mostrar que o serviço está em execução_
 
- - Verificar que o serviço está cadastrado no Windows
- {% highlight shell %}
- cmd /c 'services.msc'
- {% endhighlight %}
- _Buscar pelo serviço_ `CYGWIN-cron`
+- Verificar que o serviço está cadastrado no Windows
+{% highlight shell %}
+cmd /c 'services.msc'
+{% endhighlight %}
+_Buscar pelo serviço_ `CYGWIN-cron`
 
- - Agora é só registrar alguma execução no cron
- {% highlight shell %}
- # em um sessao do cygwin com seu usuario definido no inicio
- crontab -e
- # ou, se você quiser especificar o editor
- env VISUAL="vim" crontab -e
- {% endhighlight %}
+- Agora é só registrar alguma execução no cron
+{% highlight shell %}
+# em um sessao do cygwin com seu usuario definido no inicio
+crontab -e
+# ou, se você quiser especificar o editor
+env VISUAL="vim" crontab -e
+{% endhighlight %}
