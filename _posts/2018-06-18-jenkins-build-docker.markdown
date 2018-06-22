@@ -106,3 +106,4 @@ Instalar o plugin Docker Plugin: https://wiki.jenkins.io/display/JENKINS/Docker+
 - Jenkins: 2.121.1
 - Docker client/server: 18.03.1-ce
 - https://wiki.jenkins.io/display/JENKINS/Docker+Plugin
+- https://hub.docker.com/r/jenkins/ssh-slave
