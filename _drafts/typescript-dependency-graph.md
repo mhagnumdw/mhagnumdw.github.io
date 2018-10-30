@@ -21,4 +21,4 @@ $ dependency-cruise -T dot -x '(node_modules|app.module.ts)' ./src/app/  | dot -
 
 Referências:
 https://github.com/sverweij/dependency-cruiser
-https://github.com/sverweij/dependency-cruiser/blob/develop/doc/real-world-samples.md
+https://github.com/sverweij/dependency-cruiser/blob/develop/doc/real-world-samples.md#typescript
