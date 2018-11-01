@@ -8,3 +8,5 @@ Que leva pra esse script: https://gist.github.com/prasadsilva/225fd0394a51e52bf6
 Ou por meio dessa extensão (que também funciona no Vivaldi): https://chrome.google.com/webstore/detail/change-timezone-time-shif/nbofeaabhknfdcpoddmfckpokmncimpj
 
 Site para verificar se o timezone mudou: https://whatismytimezone.com/
+
+Site legar que dado um horário + timezone e fonecendo o timezone de destino, calcula o horário do destino: https://www.calculator.net/time-zone-calculator.html?today=11%2F01%2F2018&tctime=09%3A34%3A41&tcfrom=%2B11%3A00&tcto=-03%3A00&x=94&y=24
