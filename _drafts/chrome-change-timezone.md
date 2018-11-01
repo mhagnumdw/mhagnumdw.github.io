@@ -6,3 +6,5 @@ Ver isso: https://stackoverflow.com/questions/16448754/how-to-use-a-custom-time-
 Que leva pra esse script: https://gist.github.com/prasadsilva/225fd0394a51e52bf62f
 
 Ou por meio dessa extensão (que também funciona no Vivaldi): https://chrome.google.com/webstore/detail/change-timezone-time-shif/nbofeaabhknfdcpoddmfckpokmncimpj
+
+Site para verificar se o timezone mudou: https://whatismytimezone.com/
