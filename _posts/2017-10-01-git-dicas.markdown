@@ -60,3 +60,11 @@ git remote remove project-a
 {% highlight shell %}
 git shortlog --summary --numbered --email
 {% endhighlight %}
+
+* * *
+
+### Adicionar ao stash sem remover do workspace
+
+{% highlight shell %}
+git stash push --include-untracked --message 'Melhoria do autocomplete usando rxjs - v001' && git stash apply
+{% endhighlight %}
