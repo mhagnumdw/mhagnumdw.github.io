@@ -68,3 +68,16 @@ git shortlog --summary --numbered --email
 {% highlight shell %}
 git stash push --include-untracked --message 'Melhoria do autocomplete usando rxjs - v001' && git stash apply
 {% endhighlight %}
+
+* * *
+
+### Deletar branch local e remota
+
+{% highlight shell %}
+# deletar branch remota
+git push --delete origin angular_gitlab_build_problem
+# deletar branch local
+git branch -d angular_gitlab_build_problem
+{% endhighlight %}
+
+* * *
