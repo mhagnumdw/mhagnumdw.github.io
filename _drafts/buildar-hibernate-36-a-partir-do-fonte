@@ -75,7 +75,7 @@ tar -xvzf apache-maven-3.1.1-bin.tar.gz
 
 # usar um settings.xml apropriado, que tenha os repositórios maven do JBoss
 # e que tenha acesso ao nexus caso seja feito deploy
-# // TODO: colocar um arquivo de exemplo desse settings.xml
+# ver exemplo de settings em [4]
 scp f0692311@d20658:/home/f0692311/ambiente-grpfor/maven/settings-sefin-grpfor-jenkins.xml ~/
 
 # apenas empacotar (não vai gerar o source pois o maven-source-plugin está definido para rodar no verify, ver pom.xml)
@@ -95,3 +95,14 @@ find /root/.m2/repository/org/hibernate/ | grep -P -i '\.jar$'
 # o settings.xml tem que ter as credenciais para escrever no Nexus
 # executar
 JAVA_HOME="/root/jdk1.5.0_22" /root/apache-maven-3.1.1/bin/mvn -B -V -gs /root/settings-sefin-grpfor-jenkins.xml -DskipTests=true -Dmaven.test.skip=true clean deploy -DdisableDistribution=true -Djdk16_home=/usr/java/jdk1.7.0_80
+
+# Referências
+[1] https://developer.jboss.org/thread/199389#jive-1168031045068142817703
+[2] https://hibernate.atlassian.net/browse/HHH-7682
+[3] https://github.com/hibernate/hibernate-orm/pull/393
+[4] https://developer.jboss.org/wiki/BuildingHibernateFromSource35
+[5] https://www.oracle.com/technetwork/java/archive-139210.html
+[6] https://bugzilla.redhat.com/show_bug.cgi?id=1653638
+
+
+
