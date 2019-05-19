@@ -1,45 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0"
-    xmlns:atom="http://www.w3.org/2005/Atom"
-    xmlns:webfeeds="http://webfeeds.org/rss/1.0"
-    xmlns:media="http://search.yahoo.com/mrss/"
-    xmlns:sy="http://purl.org/rss/1.0/modules/syndication/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>{{ site.theme_settings.title | xml_escape }}</title>
-        <atom:link href="{{ "/feed.xml" | relative_url }}" rel="self" type="application/rss+xml"/>
-        <link>{{ site.url }}{{ site.baseurl }}/</link>
+        <atom:link href="{{ "/feed.xml" | absolute_url }}" rel="self" type="application/rss+xml"/>
+        <link>{{ "/" | absolute_url }}</link>
         <description>{{ site.theme_settings.description | xml_escape }}</description>
         <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
-        <sy:updatePeriod>hourly</sy:updatePeriod>
-        <sy:updateFrequency>1</sy:updateFrequency>
-        <webfeeds:icon>{{ site.url }}{{ site.baseurl }}/{{ site.theme_settings.favicon }}</webfeeds:icon>
-        {% comment %}
-        <webfeeds:cover image="{{ site.url }}{{ site.baseurl }}/{{ site.theme_settings.avatar }}" />
-        <webfeeds:related layout="card" target="browser"/>
-        <enclosure length="1" type="image" url="{{ site.url }}{{ site.baseurl }}/{{ site.theme_settings.avatar }}"/>
-        {% endcomment %}
-        {% for post in site.posts limit:1000 %}
+        {% for post in site.posts limit:15 %}
         <item>
-            {% if post.thumbnail %}
-                <enclosure length="1" type="image" url="{{ site.url }}{{ site.baseurl }}/{{ post.thumbnail }}"/>
-                
-                {% comment %}
-                <image>
-                    <url>{{ site.url }}{{ site.baseurl }}/{{ post.thumbnail }}</url>
-                    <title>{{ site.url }}{{ site.baseurl }}</title>
-                    <link>{{ site.url }}{{ site.baseurl }}</link>
-                </image>
-
-                <media:thumbnail url="{{ site.url }}{{ site.baseurl }}/{{ post.thumbnail }}" />
-                <media:content url="{{ site.url }}{{ site.baseurl }}/{{ post.thumbnail }}" />
-                
-                <webfeeds:cover image="{{ site.url }}{{ site.baseurl }}/{{ post.thumbnail }}" />
-                {% endcomment %}
-                
-            {% endif %}
             <title>{{ post.title | xml_escape }}</title>
-            <link>{{ post.url | relative_url }}</link>
-            <guid isPermaLink="true">{{ post.url | relative_url }}</guid>
+            <link>{{ post.url | absolute_url }}</link>
+            <guid isPermaLink="false">{{ post.url | relative_url }}</guid>
             <description>{{ post.content | xml_escape }}</description>
             <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
         </item>

@@ -12,8 +12,8 @@ tags:
 - release
 - sonatype
 author: mhagnumdw
-feature-img: "assets/mvc.png"
-thumbnail: "assets/mvc.png"
+feature-img: "assets/img/posts/maven-central-como-publicar-uma-release/mvc.png"
+thumbnail: "assets/img/posts/maven-central-como-publicar-uma-release/mvc.png"
 ---
 
 Abaixo os passos para realizar uma publicação no Maven Central.
@@ -244,7 +244,7 @@ Aqui um vídeo demonstrando essa etapa: [https://www.youtube.com/watch?v=dXR4pJ
 
 Após essa etapa o ticket aberto no JIRA do Sonatype será respondido. Ver imagem de exemplo abaixo:
 
-![]({{ site.baseurl }}/assets/Screenshot-from-2018-02-23-13-52-07.png)
+![]({{ site.baseurl }}/assets/img/posts/maven-central-como-publicar-uma-release/Screenshot-from-2018-02-23-13-52-07.png)
 
 ## Alguns minutos ou horas depois...
 

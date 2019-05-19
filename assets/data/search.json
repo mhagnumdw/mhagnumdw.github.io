@@ -7,7 +7,7 @@
         "title"    : "{{ post.title | escape }}",
         "category" : "{{ post.category }}",
         "tags"     : "{{ post.tags | join: ', ' | prepend: " " }}",
-        "url"      : "{{ site.baseurl }}{{ post.url }}",
+        "url"      : "{{ post.url | relative_url }}",
         "date"     : "{{ post.date | date: "%B %-d, %Y" }}",
         "excerpt"  : {{ post.content | truncate: '250' | jsonify }},
         "content"  : {{ post.content | jsonify }}

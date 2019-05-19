@@ -12,8 +12,8 @@ tags:
 - XMLType
 - XStream
 author: mhagnumdw
-feature-img: "assets/logo_jboss_oracle_xmltype_v5.png"
-thumbnail: "assets/logo_jboss_oracle_xmltype_v5.png"
+feature-img: "assets/img/posts/jboss-eap-6-x-as-7-x-oracle-11g-xmltype-persistindo-como-xml/logo_jboss_oracle_xmltype_v5.png"
+thumbnail: "assets/img/posts/jboss-eap-6-x-as-7-x-oracle-11g-xmltype-persistindo-como-xml/logo_jboss_oracle_xmltype_v5.png"
 ---
 
 A ideia é persistir uma entidade que possua um relacionamento qualquer com um objeto e esse objeto será persistido no banco de dados como XML (não é String!), mas especificamente o tipo XMLType.
@@ -51,7 +51,7 @@ São necessários:
 
 Os arquivos acima já configurados como módulos estão aqui: [modules.7z](https://drive.google.com/open?id=1ZubEVuZN3U0VVIhRCOerkOdFsiW2a0Lu). O conteúdo deve ser extraído ficando a seguinte estrutura: `$JBOSS_HOME\modules\com\oracle`
 
-![estrutura]({{ site.baseurl }}/assets/estrutura.png)
+![estrutura]({{ site.baseurl }}/assets/img/posts/jboss-eap-6-x-as-7-x-oracle-11g-xmltype-persistindo-como-xml/estrutura.png)
 
 ## jboss-deployment-structure.xml
 
@@ -314,10 +314,10 @@ entityManager.persist(cidade);
 
 _Verificando no banco de dados_
 
-![Objeto_persistido_como_XMLType]({{ site.baseurl }}/assets/objeto_persistido_como_xmltype.png)
+![Objeto_persistido_como_XMLType]({{ site.baseurl }}/assets/img/posts/jboss-eap-6-x-as-7-x-oracle-11g-xmltype-persistindo-como-xml/objeto_persistido_como_xmltype.png)
 
 ## Testando a recuperação
 
-![Recuperando_Objeto_Persistido_Como_XMLType]({{ site.baseurl }}/assets/recuperando_objeto_persistido_como_xmltype1.png)
+![Recuperando_Objeto_Persistido_Como_XMLType]({{ site.baseurl }}/assets/img/posts/jboss-eap-6-x-as-7-x-oracle-11g-xmltype-persistindo-como-xml/recuperando_objeto_persistido_como_xmltype1.png)
 
 É isso!

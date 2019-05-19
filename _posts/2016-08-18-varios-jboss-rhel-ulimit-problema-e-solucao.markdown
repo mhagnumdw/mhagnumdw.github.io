@@ -9,8 +9,8 @@ tags:
 - JBoss
 - Linux
 author: mhagnumdw
-feature-img: "assets/jboss_rhel_ulimit.png"
-thumbnail: "assets/jboss_rhel_ulimit.png"
+feature-img: "assets/img/posts/varios-jboss-rhel-ulimit-problema-e-solucao/jboss_rhel_ulimit.png"
+thumbnail: "assets/img/posts/varios-jboss-rhel-ulimit-problema-e-solucao/jboss_rhel_ulimit.png"
 ---
 
 O JBoss EAP (Application Server) vinha apresentando problemas estranhos na subida. Quando um dos nós tentava subir alguns erros surgiam, geralmente ocorrendo: `Caused by: java.lang.OutOfMemoryError: unable to create new native thread`. Embora pareça um clássico problema de memória da JVM, o real problema é que o usuário que executava o JBoss tinha atingido os limites de recursos do sistema operacional disponibilizados para ele.
@@ -29,7 +29,7 @@ No terminal, logado como _jboss_, executar: `ulimit -a`
 
 No caso, pelo visto, **open files** e/ou **max user processes** com os valores correntes não estão sendo suficientes. Ver imagem abaixo, lado esquerdo:
 
-![Anexo 2 - Limite original e modificado usuario jboss]({{ site.baseurl }}/assets/anexo-2-limite-original-e-modificado-usuario-jboss1.jpg)
+![Anexo 2 - Limite original e modificado usuario jboss]({{ site.baseurl }}/assets/img/posts/varios-jboss-rhel-ulimit-problema-e-solucao/anexo-2-limite-original-e-modificado-usuario-jboss1.jpg)
 
 Que valores colocar? Para isso precisamos ter uma ideia de quantos arquivos abertos e threads estão para o usuário _jboss_, executando:
 

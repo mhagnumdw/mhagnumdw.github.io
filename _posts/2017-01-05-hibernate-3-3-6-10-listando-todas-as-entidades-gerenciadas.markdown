@@ -9,8 +9,8 @@ tags:
 - Java
 - JPA
 author: mhagnumdw
-feature-img: "assets/hibernate_3_list_all_managed_entities.png"
-thumbnail: "assets/hibernate_3_list_all_managed_entities.png"
+feature-img: "assets/img/posts/hibernate-3-3-6-10-listando-todas-as-entidades-gerenciadas/hibernate_3_list_all_managed_entities.png"
+thumbnail: "assets/img/posts/hibernate-3-3-6-10-listando-todas-as-entidades-gerenciadas/hibernate_3_list_all_managed_entities.png"
 ---
 
 Objetivo: listar todas as entidades gerenciadas pelo EntityManager no Hibernate 3.6.10 (JPA 1)

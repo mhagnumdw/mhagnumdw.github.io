@@ -10,8 +10,8 @@ tags:
 - Container
 - Jenkins
 author: mhagnumdw
-feature-img: "assets/jenkins-build-docker-v2.png"
-thumbnail: "assets/jenkins-build-docker-v2.png"
+feature-img: "assets/img/posts/jenkins-build-docker/jenkins-build-docker-v2.png"
+thumbnail: "assets/img/posts/jenkins-build-docker/jenkins-build-docker-v2.png"
 ---
 
 Executar o build do Jenkins dentro de um container.

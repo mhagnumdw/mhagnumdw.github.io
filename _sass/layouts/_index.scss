@@ -11,10 +11,18 @@
     background-size: $feature-image-size;
 
     /* --- Responsive --- */
-    @media screen and (max-width: 850px) {
-        background-size: 100% auto;
-    } 
-    
+    @media screen and (min-width: $break) {
+        background-size: 120% auto;
+    }
+
+    @media screen and (max-width: $break) {
+        background-size: 200% auto;
+    }
+
+    @media screen and (max-width: $sm-break) {
+        background-size: 400% auto;
+    }
+
     //For white images
     p,
     a,
@@ -45,9 +53,11 @@
         display: inline-block;
         background-size: $feature-image-size;
         border-bottom: 1px solid $border-color;
+
         p a {
             @extend .body-link;
         }
+
         img {
             width: 100%;
             padding: 0;
@@ -59,17 +69,18 @@
             border-radius: 10px;
             overflow: hidden;
 
-            //@media (min-width: $break) {
-            //    height: 250px;
-            //} //Smaller screen
-            //@media screen and (max-width: $break) {
-            //    height: 150px;
-            //}
+            @media (min-width: $break) {
+                height: 250px;
+            }
+
+            //Smaller screen
+            @media screen and (max-width: $break) {
+                height: 150px;
+            }
         }
 
         .post-img img {
             //max-width: 100%;
-
             -moz-transition-timing-function: ease-out;
             -webkit-transition-timing-function: ease-out;
             transition-timing-function: ease-out;
@@ -85,24 +96,8 @@
             }
         }
     }
+
     .excerpt {
         margin-top: 1em;
     }
-}
-
-// Pagination
-.pagination {
-    padding: $padding-small $padding-large 0 $padding-large;
-    text-align: center;
-    @media (max-width: 600px) {
-        padding: $padding-small;
-    }
-
-    .button {
-        margin: 0 1.5em;
-        i {
-            vertical-align: middle;
-        }
-    }
-
 }

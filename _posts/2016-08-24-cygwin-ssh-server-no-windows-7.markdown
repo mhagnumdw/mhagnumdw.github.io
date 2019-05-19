@@ -8,8 +8,8 @@ tags:
 - SSH
 - Linux
 author: mhagnumdw
-feature-img: "assets/cygwin_ssh_server_logo.png"
-thumbnail: "assets/cygwin_ssh_server_logo.png"
+feature-img: "assets/img/posts/cygwin-ssh-server-no-windows-7/cygwin_ssh_server_logo.png"
+thumbnail: "assets/img/posts/cygwin-ssh-server-no-windows-7/cygwin_ssh_server_logo.png"
 ---
 
 Instalar o Cygwin SSH Server como serviço no Windows.
@@ -35,7 +35,7 @@ O assistente vai criar o usuário `cyg_server` para rodar o serviço SSH e ser�
 
 A mensagem abaixo deve ser exibida após a finalização com sucesso:
 
-![Cygwin_SSH_Server_Install]({{ site.baseurl }}/assets/cygwin_ssh_server_install.png)
+![Cygwin_SSH_Server_Install]({{ site.baseurl }}/assets/img/posts/cygwin-ssh-server-no-windows-7/cygwin_ssh_server_install.png)
 
 Nesse ponto o serviço SSH está instalado.
 

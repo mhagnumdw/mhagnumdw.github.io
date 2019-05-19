@@ -1,5 +1,4 @@
 # SITE CONFIGURATION
-#baseurl: "/blog" # the subpath of your site, e.g. /blog
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://mhagnumdw.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 title: MhagnumDw - Programação, configuração, script, Linux e afins # title do html
@@ -18,10 +17,10 @@ theme_settings:
 
   # Header and footer text
   header_text: > #two or three lines to describe your site
-     Programação, configuração, script, Linux e afins
-  header_text_feature_image: assets/cropped-codecode.jpg
+    Programação, configuração, script, Linux e afins
+  header_feature_image: assets/cropped-codecode.jpg
   footer_text: >
-   Powered by <a href="https://jekyllrb.com/">Jekyll</a>
+    Powered by <a href="https://jekyllrb.com/">Jekyll</a>
 
   # Icons
   rss: true  # Make sure you created a feed.xml with feed.xml layout
@@ -43,7 +42,7 @@ theme_settings:
   stack_exchange:  # Full URL
   steam:
   tumblr:
-  twitter:
+  twitter: # "twitter username"
   vimeo:
   wordpress:
   youtube:
@@ -68,7 +67,7 @@ theme_settings:
   
   special_page:
     search: 
-      icon: "search" # Assuming page link and icon are the same
+      icon: "search"
       enabled: true
     tags:
       icon: "tags"
@@ -86,22 +85,17 @@ theme_settings:
   str_previous_post: "Previous post"
   str_next_page: "Next"
   str_previous_page: "Prev"
-  str_continue_reading: "Continue reading"
   str_javascript_required_disqus: "Please enable JavaScript to view comments."
-  #str_search_subtitle: "O que você quer encontrar?"
-
-  # Colours, typography and padding
-  # Open the "_sass > base" folder, and open "_variables.scss"
-  google_fonts: "Source+Sans+Pro:400,700,700italic,400italic"
 
   # Post navigation
   post_navigation: true
   
+  # Colours, typography and padding
+  # Open the "_sass > base" folder, and open "_variables.scss"
   
 # PAGINATION
-paginate: 20
-#paginate_path: "blog/page:num"
-paginate_path: "/page:num"
+paginate: 10
+paginate_path: "blog/page:num"
 
 
 # BUILD SETTINGS
@@ -111,7 +105,5 @@ sass:
   sass_dir: _sass
   style: :compressed
 plugins: [jekyll-paginate, jekyll-seo-tag]
-exclude: ["Gemfile", "Gemfile.lock", "type-on-strap.gemspec", "*.gem", "LICENSE", "README.md", "screenshot.png"]
-
-# Substituir valores no front matter - não esquecer do ' | flatify '
-# http://acegik.net/blog/ruby/jekyll/plugins/howto-nest-liquid-template-variables-inside-yaml-front-matter-block.html
+#theme: type-on-strap # Uncomment if using the theme as a jekyll theme gem
+exclude: ["Gemfile", "Gemfile.lock", "type-on-strap.gemspec", "*.gem", "LICENSE", "README.md", "screenshot.png", "package.json", "node_modules", "gulpfile.js", ".idea/*"]

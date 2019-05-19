@@ -7,8 +7,8 @@ categories:
 tags:
 - sql
 author: mhagnumdw
-feature-img: "assets/select_with_rangre_logo.png"
-thumbnail: "assets/select_with_rangre_logo.png"
+feature-img: "assets/img/posts/sql-gerando-ranges-date-e-number/select_with_rangre_logo.png"
+thumbnail: "assets/img/posts/sql-gerando-ranges-date-e-number/select_with_rangre_logo.png"
 ---
 
 A necessidade é fazer uma consulta que tenha como base um conjunto sequencial de outra informação. Como exemplo, fazer uma segunda consulta com base em todos dias dentro de duas datas.
@@ -32,7 +32,7 @@ ORDER BY DIA ASC
 ;
 {% endhighlight %}
 
-![select_with_number_range]({{ site.baseurl }}/assets/select_with_number_range.png)
+![select_with_number_range]({{ site.baseurl }}/assets/img/posts/sql-gerando-ranges-date-e-number/select_with_number_range.png)
 
 ## Retorna a datas (dia a dia) entre '01/10/2016' e '05/10/2016'
 
@@ -50,7 +50,7 @@ ORDER BY DIA DESC
 ;
 {% endhighlight %}
 
-![select_with_date_range]({{ site.baseurl }}/assets/select_with_date_range.png)
+![select_with_date_range]({{ site.baseurl }}/assets/img/posts/sql-gerando-ranges-date-e-number/select_with_date_range.png)
 
 ## Retorna a quantidade de acessos por dia entre '01/10/2016' e '05/10/2016'
 
@@ -74,7 +74,7 @@ ORDER BY DIA DESC
 ;  
 {% endhighlight %}
 
-![select_with_date_range_and_users]({{ site.baseurl }}/assets/select_with_date_range_and_users.png)
+![select_with_date_range_and_users]({{ site.baseurl }}/assets/img/posts/sql-gerando-ranges-date-e-number/select_with_date_range_and_users.png)
 
 Testes realizados no H2 e Oracle.
 

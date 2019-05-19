@@ -4,10 +4,6 @@
 //   Syntax highlighting
 // ========================================================================== 
 
-code.highlighter-rouge {
-    background: rgba(27,31,35,0.08);
-}
-
 div.highlighter-rouge,
 figure.highlight {
     position: relative;
@@ -23,6 +19,15 @@ figure.highlight {
         margin: 0;
         padding: 1em
     }
+}
+
+code.highlighter-rouge {
+    padding: 0.2em 0.4em;
+    font-size: $font-size-code;
+    background-color: transparentize($base00, 0.85);
+    color: rgb(36, 41, 46);
+    border-radius: 2px;
+    font-family: $monospace;
 }
 
 .highlight table {

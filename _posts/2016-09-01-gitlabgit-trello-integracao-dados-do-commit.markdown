@@ -10,8 +10,8 @@ tags:
 - GitLab
 - Trello
 author: mhagnumdw
-feature-img: "assets/git-gitlab-trello-integracao-banner_v2.png"
-thumbnail: "assets/git-gitlab-trello-integracao-banner_v2.png"
+feature-img: "assets/img/posts/gitlabgit-trello-integracao-dados-do-commit/git-gitlab-trello-integracao-banner_v2.png"
+thumbnail: "assets/img/posts/gitlabgit-trello-integracao-dados-do-commit/git-gitlab-trello-integracao-banner_v2.png"
 ---
 
 Integrar GitLab e Trello no post-commit (client side) ou post-receive (server side).
@@ -36,12 +36,12 @@ Realizar download para Windows e instalar: [http://nodejs.org/](http://nodejs.or
 {% highlight shell %}
 sudo npm install -g node-trello  
 {% endhighlight %}
-![npm install node-trello]({{ site.baseurl }}/assets/gitlabgit-trello-integracao-dados-do-commit-004.png)
+![npm install node-trello]({{ site.baseurl }}/assets/img/posts/gitlabgit-trello-integracao-dados-do-commit/gitlabgit-trello-integracao-dados-do-commit-004.png)
 
 {% highlight shell %}
 sudo npm install -g colors
 {% endhighlight %}
-![npm install colors]({{ site.baseurl }}/assets/gitlabgit-trello-integracao-dados-do-commit-005.png)
+![npm install colors]({{ site.baseurl }}/assets/img/posts/gitlabgit-trello-integracao-dados-do-commit/gitlabgit-trello-integracao-dados-do-commit-005.png)
 
 #### Cygwin
 {% highlight shell %}
@@ -62,7 +62,7 @@ Acessar
 https://trello.com/1/connect?key=**CHAVE_TRELLO**&name=git-hook&expiration=never&response_type=token&scope=read,write
 ```
 
-![trello token]({{ site.baseurl }}/assets/gitlabgit-trello-integracao-dados-do-commit-006.png)
+![trello token]({{ site.baseurl }}/assets/img/posts/gitlabgit-trello-integracao-dados-do-commit/gitlabgit-trello-integracao-dados-do-commit-006.png)
 
 ## Obter o ID do quadro do Trello
 
@@ -116,9 +116,9 @@ Exemplo
 git commit -m "#7 Teste integração: Trello e GitLab. post-commit."
 {% endhighlight %}
 
-![resultado post-commit]({{ site.baseurl }}/assets/gitlabgit-trello-integracao-dados-do-commit-008.png)
+![resultado post-commit]({{ site.baseurl }}/assets/img/posts/gitlabgit-trello-integracao-dados-do-commit/gitlabgit-trello-integracao-dados-do-commit-008.png)
 
-![card trello comentado]({{ site.baseurl }}/assets/gitlabgit-trello-integracao-dados-do-commit-007.png)
+![card trello comentado]({{ site.baseurl }}/assets/img/posts/gitlabgit-trello-integracao-dados-do-commit/gitlabgit-trello-integracao-dados-do-commit-007.png)
 
 Obs: pode ser necessário ajustar `export NODE_PATH` do script/hook `post-commit`, devendo apontar para o local onde se encontra os módulos do NodeJS.
 

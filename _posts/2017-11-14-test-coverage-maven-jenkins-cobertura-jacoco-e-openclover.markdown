@@ -10,15 +10,15 @@ tags:
 - Jenkins
 - maven
 author: mhagnumdw
-feature-img: "assets/code-coverage-banner_v2.png"
-thumbnail: "assets/code-coverage-banner_v2.png"
+feature-img: "assets/img/posts/test-coverage-maven-jenkins-cobertura-jacoco-e-openclover/code-coverage-banner_v2.png"
+thumbnail: "assets/img/posts/test-coverage-maven-jenkins-cobertura-jacoco-e-openclover/code-coverage-banner_v2.png"
 ---
 
 Configuração para Code Coverage usando Maven, Jenkins e um dos seguintes plugins para gerar a cobertura de código: OpenClover, Cobertura e JaCoCo.
 
 <!--more-->
 
-## OpenClover ![clover]({{ site.baseurl }}/assets/clover.png)
+## OpenClover ![clover]({{ site.baseurl }}/assets/img/posts/test-coverage-maven-jenkins-cobertura-jacoco-e-openclover/clover.png)
 
 ### Maven - pom.xml
 
@@ -62,7 +62,7 @@ Configuração
 - Goals do maven conforme acima
 - No `Post-build Actions` adicionar `Publish OpenClover coverage report`
 
-![Jenkins-Clover]({{ site.baseurl }}/assets/jenkins-clover.png)
+![Jenkins-Clover]({{ site.baseurl }}/assets/img/posts/test-coverage-maven-jenkins-cobertura-jacoco-e-openclover/jenkins-clover.png)
 
 **Observação**
 
@@ -134,7 +134,7 @@ Configuração
 - Goals do maven conforme acima
 - No 'Post-build Actions' adicionar 'Publish Cobertura Coverage Report'
 
-![Jenkins-Cobertura]({{ site.baseurl }}/assets/jenkins-cobertura.png)
+![Jenkins-Cobertura]({{ site.baseurl }}/assets/img/posts/test-coverage-maven-jenkins-cobertura-jacoco-e-openclover/jenkins-cobertura.png)
 
 * * *
 
@@ -186,6 +186,6 @@ Configuração
 - Goals do maven conforme acima
 - No 'Post-build Actions' adicionar 'Record JaCoCo coverage report'
 
-![Jenkins-JaCoCo]({{ site.baseurl }}/assets/jenkins-jacoco.png)
+![Jenkins-JaCoCo]({{ site.baseurl }}/assets/img/posts/test-coverage-maven-jenkins-cobertura-jacoco-e-openclover/jenkins-jacoco.png)
 
 Fim

@@ -9,8 +9,8 @@ tags:
 - Cygwin
 - Linux
 author: mhagnumdw
-feature-img: "assets/exibir_branch_do_git_no_prompt.png"
-thumbnail: "assets/exibir_branch_do_git_no_prompt.png"
+feature-img: "assets/img/posts/exibir-branch-do-git-no-prompt-linuxcygwin/exibir_branch_do_git_no_prompt.png"
+thumbnail: "assets/img/posts/exibir-branch-do-git-no-prompt-linuxcygwin/exibir_branch_do_git_no_prompt.png"
 ---
 
 Os passos abaixo descrevem como exibir a branch do git no prompt de comando.
@@ -55,6 +55,6 @@ source .bashrc
 
 A partir daqui ao entrar em um repositório git o branch será exibido no prompt.
 
-![Exibir_branch_do_Git_no_prompt]({{ site.baseurl }}/assets/exibir_branch_do_git_no_prompt.png)
+![Exibir_branch_do_Git_no_prompt]({{ site.baseurl }}/assets/img/posts/exibir-branch-do-git-no-prompt-linuxcygwin/exibir_branch_do_git_no_prompt.png)
 
 [Mirror para o git-prompt.sh](https://drive.google.com/open?id=0B80EagoWEV2xa3dQRllrOTQxOFE)

@@ -8,8 +8,8 @@ tags:
 - Eclipse
 - ServiceLoader
 author: mhagnumdw
-feature-img: "assets/java_serviceloader_autoservice_eclipse.png"
-thumbnail: "assets/java_serviceloader_autoservice_eclipse.png"
+feature-img: "assets/img/posts/java-serviceloader-autoserive-eclipse-ide/java_serviceloader_autoservice_eclipse.png"
+thumbnail: "assets/img/posts/java-serviceloader-autoserive-eclipse-ide/java_serviceloader_autoservice_eclipse.png"
 ---
 
 - O que é Java ServiceLoader?

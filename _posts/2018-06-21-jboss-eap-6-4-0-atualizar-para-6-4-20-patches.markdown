@@ -8,8 +8,8 @@ tags:
 - patches
 - update
 author: mhagnumdw
-feature-img: "assets/jboss-eap-6-4-0-atualizar-para-6-4-20-patches.png"
-thumbnail: "assets/jboss-eap-6-4-0-atualizar-para-6-4-20-patches.png"
+feature-img: "assets/img/posts/jboss-eap-6-4-0-atualizar-para-6-4-20-patches/jboss-eap-6-4-0-atualizar-para-6-4-20-patches.png"
+thumbnail: "assets/img/posts/jboss-eap-6-4-0-atualizar-para-6-4-20-patches/jboss-eap-6-4-0-atualizar-para-6-4-20-patches.png"
 ---
 
 Aplicar patches ao JBoss EAP 6.4.0 usando o _patch management system_ que foi introduzido a partir do JBoss EAP 6.2.
