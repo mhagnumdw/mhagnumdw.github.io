@@ -5,12 +5,12 @@ layout: default
   <header id="main" style="background-image: url('{{ page.feature-img | relative_url }}')">
     {% unless page.hide_title %}
       <h1 id="{{ page.title | cgi_escape }}" class="title">{{ page.title }}</h1>
-      <p class="meta">
-      {{ page.date | date: "%B %-d, %Y" }}
-      {% if page.author %} - {{ page.author }}{% endif %}
-      </p>
     {% endunless %}
   </header>
+  <p class="meta" style="text-align: center;">
+    {{ page.date | date: "%B %-d, %Y" }}
+    {% if page.author %} - {{ page.author }}{% endif %}
+  </p>
   <section class="post-content">
   {% if page.bootstrap %}
     <div class="bootstrap-iso">
