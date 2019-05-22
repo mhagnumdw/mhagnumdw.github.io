@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About
+title: Sobre
 permalink: /about/
 feature-img: "assets/cropped-codecode.jpg"
 tags: [About]
