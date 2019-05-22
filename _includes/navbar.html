@@ -44,7 +44,9 @@
           {% if item[1].enabled %}
             <li class="separator"> | </li>
             <li>
-              <a class="clear" href="{{ item[0] | relative_url }}" aria-label="{{ item[0] }}">
+              <!-- // TODO: quanto ao title abaixo, ver: https://github.com/sylhare/Type-on-Strap/issues/148 -->
+              <a class="clear" href="{{ item[0] | relative_url }}" aria-label="{{ item[0] }}"
+                title="{{ item[0] }}">
                 <i class="fa fa-{{ item[1].icon }}" aria-hidden="true"></i>
               </a>
             </li>
