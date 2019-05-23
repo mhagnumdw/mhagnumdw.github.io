@@ -40,68 +40,68 @@ h4,
 h5,
 h6 {
     font-family: $font-family-headings;
-    line-height: 1.3;
+    line-height: 1.0;
     margin: 0.67em 0;
     a {
         color: $text-color;
     }
-    
-    
 }
 
+$base-size: 2.0em; // original: 2.3em
+
 h1 {
-    font-size: 2.3em;
+    font-size: $base-size;
 }
 
 h2 {
-    font-size: 1.75em;
+    font-size: $base-size * 0.76; // 76% da font base
 }
 
 h3 {
-    font-size: 1.5em;
+    font-size: $base-size * 0.65;
 }
 
 h4 {
-    font-size: 1.15em;
+    font-size: $base-size * 0.5;
 }
 
 /* ---- Responsive ---- */
 
 @media screen and (max-width: $break) {
     h1 {
-        font-size: 2em;
+        font-size: $base-size * 0.87;
     }
     h2 {
-        font-size: 1.5em;
+        font-size: $base-size * 0.65;
     }
     h3 {
-        font-size: 1em;
+        font-size: $base-size * 0.43;
     }
     h4,
     .meta {
-        font-size: 0.9em;
+        font-size: $base-size * 0.39;
     }
     p {
-        font-size: 0.8em;
+        font-size: $base-size * 0.35;
     }
 }
 
 @media screen and (max-width: $sm-break) {
     h1 {
-        font-size: 1.5em;
+        font-size: $base-size * 0.65;
     }
     h2 {
-        font-size: 1em;
+        font-size: $base-size * 0.43;
     }
     h3 {
-        font-size: 0.9em;
+        font-size: $base-size * 0.39;
     }
     h4,
     .meta {
-        font-size: 0.85em;
+        font-size: $base-size * 0.37;
     }
     p {
-        font-size: 0.8em;
+        font-size: $base-size * 0.35;
     }
 }
 
