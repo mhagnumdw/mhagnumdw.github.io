@@ -86,6 +86,8 @@ theme_settings:
   str_next_page: "Next"
   str_previous_page: "Prev"
   str_javascript_required_disqus: "Please enable JavaScript to view comments."
+  # Novas (personalizacao)
+  str_read_more: "Read more"
 
   # Post navigation
   post_navigation: true

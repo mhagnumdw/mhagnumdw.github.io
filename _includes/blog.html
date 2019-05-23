@@ -6,10 +6,13 @@
             <img alt="{{ post.title }}" src="{{ post.thumbnail | relative_url }}">
         </div>
         {% endif %}
+        
+        {% assign post_url = post.url | relative_url %}
+        
         <span>
           <header>
             <h1>
-              <a aria-label="{{ post.title }}" class="post-link" href="{{ post.url | relative_url }}">
+              <a aria-label="{{ post.title }}" class="post-link" href="{{ post_url }}">
                 {{ post.title }}
               </a>
             </h1>
@@ -20,6 +23,9 @@
           <div class="excerpt">
               {{ post.excerpt | strip_html | escape }}
           </div>
+          {% if post.excerpt != post.content %}
+            <a href="{{ post_url }}">{{ site.theme_settings.str_read_more }} →</a>
+          {% endif %}
       </span>
     </div>
     {% endfor %}
