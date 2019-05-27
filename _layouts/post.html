@@ -9,10 +9,11 @@ layout: default
     {{ page.title }}
   </h1>
   {% endunless %}
-  <p class="meta" style="text-align: center;">
-    {{ page.date | date: "%B %-d, %Y" }}
-    {% if page.author %} - {{ page.author }}{% endif %}
-  </p>
+  
+  <div style="text-align: center;">
+    {% include post_info.html post=page %}
+  </div>
+
   <section class="post-content">
   {% if page.bootstrap %}
     <div class="bootstrap-iso">
