@@ -7,8 +7,7 @@ categories:
 tags:
 - patches
 - update
-author: mhagnumdw
-author_avatar: "assets/img/caduceus.jpg"
+author-id: mhagnumdw
 feature-img: "assets/img/posts/jboss-eap-6-4-0-atualizar-para-6-4-20-patches/jboss-eap-6-4-0-atualizar-para-6-4-20-patches.png"
 thumbnail: "assets/img/posts/jboss-eap-6-4-0-atualizar-para-6-4-20-patches/jboss-eap-6-4-0-atualizar-para-6-4-20-patches.png"
 ---

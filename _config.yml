@@ -99,6 +99,13 @@ theme_settings:
 paginate: 10
 paginate_path: "blog/page:num"
 
+authors:
+  mhagnumdw:
+    name: "MhagnumDw"
+    avatar: "assets/img/avatars/mhagnumdw.jpg"
+#  bob:
+#    name: "Bob"
+#    avatar: "assets/img/avatars/bob.jpg"
 
 # BUILD SETTINGS
 markdown: kramdown

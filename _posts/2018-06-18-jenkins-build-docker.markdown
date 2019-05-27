@@ -9,8 +9,7 @@ tags:
 - Docker
 - Container
 - Jenkins
-author: mhagnumdw
-author_avatar: "assets/img/caduceus.jpg"
+author-id: mhagnumdw
 feature-img: "assets/img/posts/jenkins-build-docker/jenkins-build-docker-v2.png"
 thumbnail: "assets/img/posts/jenkins-build-docker/jenkins-build-docker-v2.png"
 ---
