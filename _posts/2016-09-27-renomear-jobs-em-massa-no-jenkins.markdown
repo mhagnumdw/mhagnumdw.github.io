@@ -6,7 +6,7 @@ categories:
 - Jenkins
 tags:
 - jenkins
-author: mhagnumdw
+author-id: mhagnumdw
 feature-img: "assets/img/posts/renomear-jobs-em-massa-no-jenkins/jenkins_script_console_v0.png"
 thumbnail: "assets/img/posts/renomear-jobs-em-massa-no-jenkins/jenkins_script_console_v0.png"
 ---

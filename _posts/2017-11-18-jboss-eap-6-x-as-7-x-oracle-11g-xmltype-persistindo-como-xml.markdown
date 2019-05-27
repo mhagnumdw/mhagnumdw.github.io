@@ -11,7 +11,7 @@ tags:
 - Hibernate
 - XMLType
 - XStream
-author: mhagnumdw
+author-id: mhagnumdw
 feature-img: "assets/img/posts/jboss-eap-6-x-as-7-x-oracle-11g-xmltype-persistindo-como-xml/logo_jboss_oracle_xmltype_v5.png"
 thumbnail: "assets/img/posts/jboss-eap-6-x-as-7-x-oracle-11g-xmltype-persistindo-como-xml/logo_jboss_oracle_xmltype_v5.png"
 ---

@@ -9,7 +9,7 @@ tags:
 - Cygwin
 - GitLab
 - Trello
-author: mhagnumdw
+author-id: mhagnumdw
 feature-img: "assets/img/posts/gitlabgit-trello-integracao-dados-do-commit/git-gitlab-trello-integracao-banner_v2.png"
 thumbnail: "assets/img/posts/gitlabgit-trello-integracao-dados-do-commit/git-gitlab-trello-integracao-banner_v2.png"
 ---

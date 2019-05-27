@@ -7,7 +7,7 @@ categories:
 tags:
 - Certificado
 - Fedora
-author: mhagnumdw
+author-id: mhagnumdw
 feature-img: "assets/img/posts/fedora-25-importar-certificado/nss_importar_certificado.png"
 thumbnail: "assets/img/posts/fedora-25-importar-certificado/nss_importar_certificado.png"
 ---

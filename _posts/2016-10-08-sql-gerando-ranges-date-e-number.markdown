@@ -6,7 +6,7 @@ categories:
 - SQL
 tags:
 - sql
-author: mhagnumdw
+author-id: mhagnumdw
 feature-img: "assets/img/posts/sql-gerando-ranges-date-e-number/select_with_rangre_logo.png"
 thumbnail: "assets/img/posts/sql-gerando-ranges-date-e-number/select_with_rangre_logo.png"
 ---

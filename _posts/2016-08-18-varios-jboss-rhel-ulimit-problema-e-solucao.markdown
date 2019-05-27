@@ -8,7 +8,7 @@ tags:
 - ulimit
 - JBoss
 - Linux
-author: mhagnumdw
+author-id: mhagnumdw
 feature-img: "assets/img/posts/varios-jboss-rhel-ulimit-problema-e-solucao/jboss_rhel_ulimit.png"
 thumbnail: "assets/img/posts/varios-jboss-rhel-ulimit-problema-e-solucao/jboss_rhel_ulimit.png"
 ---

@@ -10,7 +10,7 @@ tags:
 - Checkstyle
 - GitLab
 - hook
-author: mhagnumdw
+author-id: mhagnumdw
 feature-img: "assets/img/posts/gitgitlab-push-pre-receive-checkstyle/gitlab_checkstyle_push_prereceive_v2.png"
 thumbnail: "assets/img/posts/gitgitlab-push-pre-receive-checkstyle/gitlab_checkstyle_push_prereceive_v2.png"
 ---

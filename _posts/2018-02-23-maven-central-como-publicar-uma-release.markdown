@@ -11,7 +11,7 @@ tags:
 - maven
 - release
 - sonatype
-author: mhagnumdw
+author-id: mhagnumdw
 feature-img: "assets/img/posts/maven-central-como-publicar-uma-release/mvc.png"
 thumbnail: "assets/img/posts/maven-central-como-publicar-uma-release/mvc.png"
 ---

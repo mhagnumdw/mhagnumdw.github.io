@@ -7,7 +7,7 @@ categories:
 tags:
 - git
 - git-dicas
-author: mhagnumdw
+author-id: mhagnumdw
 feature-img: "assets/img/posts/git-dicas/git-goodness_v2.png"
 thumbnail: "assets/img/posts/git-dicas/git-goodness_v2.png"
 ---

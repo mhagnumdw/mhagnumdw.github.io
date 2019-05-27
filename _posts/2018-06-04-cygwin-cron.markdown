@@ -6,7 +6,7 @@ categories:
 - Cygwin
 tags:
 - cron
-author: mhagnumdw
+author-id: mhagnumdw
 feature-img: "assets/img/posts/cygwin-cron/cygwin-cron.png"
 thumbnail: "assets/img/posts/cygwin-cron/cygwin-cron.png"
 ---

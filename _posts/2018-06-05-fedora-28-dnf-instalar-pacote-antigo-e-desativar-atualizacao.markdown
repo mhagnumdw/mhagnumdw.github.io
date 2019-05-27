@@ -8,7 +8,7 @@ tags:
 - Fedora
 - dnf
 - yum
-author: mhagnumdw
+author-id: mhagnumdw
 feature-img: "assets/img/posts/fedora-28-dnf-instalar-pacote-antigo-e-desativar-atualizacao/fedora-dnf-package-old-disable.png"
 thumbnail: "assets/img/posts/fedora-28-dnf-instalar-pacote-antigo-e-desativar-atualizacao/fedora-dnf-package-old-disable.png"
 ---
