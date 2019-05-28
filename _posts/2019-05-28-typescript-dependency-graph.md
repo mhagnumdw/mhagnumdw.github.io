@@ -2,8 +2,6 @@
 layout: post
 title:  "Typescript - Gráfico de dependências"
 date: 2019-05-28 15:28:00 -03:00
-categories: 
-  - Typescript
 tags:
   - typescript
 author-id: mhagnumdw
