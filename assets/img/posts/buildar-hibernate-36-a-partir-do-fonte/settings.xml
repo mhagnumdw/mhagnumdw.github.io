@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<settings>
+  <profiles>
+    <profile>
+      <id>repos</id>
+      <!-- Here we define the JBoss release and snapshot repos -->
+      <repositories>
+        <repository>
+          <id>jboss</id>
+          <url>https://repository.jboss.org/nexus/content/groups/public/</url>
+          <releases>
+            <enabled>true</enabled>
+            <updatePolicy>never</updatePolicy>
+          </releases>
+          <snapshots>
+            <enabled>true</enabled>
+            <updatePolicy>never</updatePolicy>
+          </snapshots>
+        </repository>
+      </repositories>
+      <!-- Here we define the JBoss release and snapshot repos *for plugins* -->
+      <pluginRepositories>
+        <pluginRepository>
+          <id>jboss-plugins</id>
+          <url>https://repository.jboss.org/nexus/content/groups/public/</url>
+          <releases>
+            <enabled>true</enabled>
+            <updatePolicy>never</updatePolicy>
+          </releases>
+          <snapshots>
+            <enabled>true</enabled>
+            <updatePolicy>never</updatePolicy>
+          </snapshots>
+        </pluginRepository>
+      </pluginRepositories>
+    </profile>
+  </profiles>
+  <!-- Here we add our profile defined in settings.xml to the active profiles -->
+  <activeProfiles>
+    <activeProfile>repos</activeProfile>
+  </activeProfiles>
+</settings>
