@@ -92,7 +92,7 @@ tar -xvzf apache-maven-3.1.1-bin.tar.gz
 ```
 
 ## Compilar / Empacotar / Deploy
-Usar um `settings.xml` apropriado, que tenha os repositórios maven do JBoss e que tenha acesso ao Nexus caso seja feito deploy. Você pode usar a versão disponibilizada [aqui]({{ "/assets/img/posts/buildar-hibernate-36-a-partir-do-fonte/settings.xml" | relative_url }}) ou pegar a versão disponibilizada no item 4 na sessão referências.
+Usar um `settings.xml` apropriado, que tenha os repositórios maven do JBoss e que tenha acesso ao Nexus caso seja feito deploy. Você pode usar a versão disponibilizada [aqui]({{ "/assets/img/posts/buildar-hibernate-36-a-partir-do-fonte/settings.xml" | relative_url }}) ou pegar a versão disponibilizada no item 4 na seção referências.
 
 ### Abaixo três opções
 
