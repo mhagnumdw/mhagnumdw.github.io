@@ -25,7 +25,7 @@ $ dependency-cruise -T dot -x '(node_modules|app.module.ts)' ./src/app/  | dot -
 ```
 
 ## Resultado
-![Gráfico das dependências]({{ site.baseurl }}/assets/img/posts/typescript-dependency-graph/tslint-without-node_modules.png)
+![Gráfico das dependências]({{ "/assets/img/posts/typescript-dependency-graph/tslint-without-node_modules.png" | relative_url }})
 
 ## Referências
 1. https://github.com/sverweij/dependency-cruiser
