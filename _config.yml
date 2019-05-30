@@ -1,7 +1,7 @@
 # SITE CONFIGURATION
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://mhagnumdw.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-title: MhagnumDw - Programação, configuração, script, Linux e afins # title do html
+title: MhagnumDw # title do html
 description: "Programação, configuração, script, Linux e afins" # used by search engines
 
 permalink: /:year/:month/:day/:title
@@ -10,7 +10,6 @@ excerpt_separator: <!--more-->
 # THEME-SPECIFIC CONFIGURATION
 theme_settings:
   # Meta
-  title: MhagnumDw # blog's title
   avatar: assets/img/caduceus.jpg
   favicon: assets/favicon.ico
   gravatar: # Email MD5 hash
