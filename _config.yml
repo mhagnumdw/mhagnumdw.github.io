@@ -1,6 +1,6 @@
 # SITE CONFIGURATION
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://mhagnumdw.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://mhagnumdw.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 title: MhagnumDw # title do html
 description: "Programação, configuração, script, Linux e afins" # used by search engines
 
