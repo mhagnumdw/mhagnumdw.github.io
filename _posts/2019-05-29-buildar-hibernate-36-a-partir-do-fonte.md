@@ -5,6 +5,7 @@ date: 2019-05-29 08:30:00 -03:00
 tags:
   - hibernate
 author-id: mhagnumdw
+image: "assets/img/posts/buildar-hibernate-36-a-partir-do-fonte/buildar-hibernate-36-banner.png"
 feature-img: "assets/img/posts/buildar-hibernate-36-a-partir-do-fonte/buildar-hibernate-36-banner.png"
 thumbnail: "assets/img/posts/buildar-hibernate-36-a-partir-do-fonte/buildar-hibernate-36-banner.png"
 ---

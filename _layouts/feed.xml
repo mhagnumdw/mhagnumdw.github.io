@@ -12,30 +12,11 @@
         <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
         <sy:updatePeriod>hourly</sy:updatePeriod>
         <sy:updateFrequency>1</sy:updateFrequency>
-        <webfeeds:icon>{{ site.theme_settings.favicon | absolute_url }}</webfeeds:icon>
-        {% comment %}
-        <webfeeds:cover image="{{ site.theme_settings.avatar | absolute_url }}" />
-        <webfeeds:related layout="card" target="browser"/>
-        <enclosure length="1" type="image" url="{{ site.theme_settings.avatar | absolute_url }}"/>
-        {% endcomment %}
+        <webfeeds:icon>{{ site.theme_settings.avatar | absolute_url }}</webfeeds:icon>
         {% for post in site.posts limit:1000 %}
         <item>
             {% if post.thumbnail %}
                 <enclosure length="1" type="image" url="{{ post.thumbnail | absolute_url }}"/>
-                
-                {% comment %}
-                <image>
-                    <url>{{ post.thumbnail | absolute_url }}</url>
-                    <title>{{ "/" | absolute_url }}</title>
-                    <link>{{ "/" | absolute_url }}</link>
-                </image>
-
-                <media:thumbnail url="{{ post.thumbnail | absolute_url }}" />
-                <media:content url="{{ post.thumbnail | absolute_url }}" />
-                
-                <webfeeds:cover image="{{ post.thumbnail | absolute_url }}" />
-                {% endcomment %}
-                
             {% endif %}
             <title>{{ post.title | xml_escape }}</title>
             <link>{{ post.url | absolute_url }}</link>

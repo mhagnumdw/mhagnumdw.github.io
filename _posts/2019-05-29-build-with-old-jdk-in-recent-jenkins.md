@@ -5,6 +5,7 @@ date: 2019-05-29 10:06:00 -03:00
 tags:
   - jenkins
 author-id: mhagnumdw
+image: "assets/img/posts/build-with-old-jdk-in-recent-jenkins/build-with-old-jdk-in-recent-jenkins-banner.jpeg"
 feature-img: "assets/img/posts/build-with-old-jdk-in-recent-jenkins/build-with-old-jdk-in-recent-jenkins-banner.jpeg"
 thumbnail: "assets/img/posts/build-with-old-jdk-in-recent-jenkins/build-with-old-jdk-in-recent-jenkins-banner.jpeg"
 ---
