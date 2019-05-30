@@ -5,6 +5,7 @@ date: 2019-05-28 15:28:00 -03:00
 tags:
   - typescript
 author-id: mhagnumdw
+image: "assets/img/posts/typescript-dependency-graph/banner-tslint-without-node_modules.png"
 feature-img: "assets/img/posts/typescript-dependency-graph/banner-tslint-without-node_modules.png"
 thumbnail: "assets/img/posts/typescript-dependency-graph/banner-tslint-without-node_modules.png"
 ---

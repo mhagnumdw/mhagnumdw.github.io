@@ -6,6 +6,7 @@ tags:
 - chrome
 - timezone
 author-id: mhagnumdw
+image: "assets/img/posts/chrome-change-timezone/chrome-change-timezone-logo.png"
 feature-img: "assets/img/posts/chrome-change-timezone/chrome-change-timezone-logo.png"
 thumbnail: "assets/img/posts/chrome-change-timezone/chrome-change-timezone-logo.png"
 ---

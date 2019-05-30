@@ -9,6 +9,7 @@ tags:
 - Cygwin
 - Linux
 author-id: mhagnumdw
+image: "assets/img/posts/exibir-branch-do-git-no-prompt-linuxcygwin/exibir_branch_do_git_no_prompt.png"
 feature-img: "assets/img/posts/exibir-branch-do-git-no-prompt-linuxcygwin/exibir_branch_do_git_no_prompt.png"
 thumbnail: "assets/img/posts/exibir-branch-do-git-no-prompt-linuxcygwin/exibir_branch_do_git_no_prompt.png"
 ---

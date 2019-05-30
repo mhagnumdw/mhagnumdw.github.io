@@ -7,6 +7,7 @@ categories:
 tags:
 - jenkins
 author-id: mhagnumdw
+image: "assets/img/posts/renomear-jobs-em-massa-no-jenkins/jenkins_script_console_v0.png"
 feature-img: "assets/img/posts/renomear-jobs-em-massa-no-jenkins/jenkins_script_console_v0.png"
 thumbnail: "assets/img/posts/renomear-jobs-em-massa-no-jenkins/jenkins_script_console_v0.png"
 ---

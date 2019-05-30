@@ -7,6 +7,7 @@ tags:
   - ECMAScript
   - javascript
 author-id: mhagnumdw
+image: "assets/img/posts/dicas-typescript-javascript/dicas-typescript-javascript-banner.png"
 feature-img: "assets/img/posts/dicas-typescript-javascript/dicas-typescript-javascript-banner.png"
 thumbnail: "assets/img/posts/dicas-typescript-javascript/dicas-typescript-javascript-banner.png"
 ---

@@ -10,6 +10,7 @@ tags:
 - GitLab
 - Trello
 author-id: mhagnumdw
+image: "assets/img/posts/gitlabgit-trello-integracao-dados-do-commit/git-gitlab-trello-integracao-banner_v2.png"
 feature-img: "assets/img/posts/gitlabgit-trello-integracao-dados-do-commit/git-gitlab-trello-integracao-banner_v2.png"
 thumbnail: "assets/img/posts/gitlabgit-trello-integracao-dados-do-commit/git-gitlab-trello-integracao-banner_v2.png"
 ---

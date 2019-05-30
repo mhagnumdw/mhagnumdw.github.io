@@ -9,6 +9,7 @@ tags:
 - JBoss
 - Linux
 author-id: mhagnumdw
+image: "assets/img/posts/varios-jboss-rhel-ulimit-problema-e-solucao/jboss_rhel_ulimit.png"
 feature-img: "assets/img/posts/varios-jboss-rhel-ulimit-problema-e-solucao/jboss_rhel_ulimit.png"
 thumbnail: "assets/img/posts/varios-jboss-rhel-ulimit-problema-e-solucao/jboss_rhel_ulimit.png"
 ---

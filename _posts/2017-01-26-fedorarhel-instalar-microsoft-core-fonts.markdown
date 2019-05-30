@@ -9,6 +9,7 @@ tags:
 - fonts
 - RHEL
 author-id: mhagnumdw
+image: "assets/img/posts/fedorarhel-instalar-microsoft-core-fonts/fedora_redhat_microsoft_core_fonts.jpg"
 feature-img: "assets/img/posts/fedorarhel-instalar-microsoft-core-fonts/fedora_redhat_microsoft_core_fonts.jpg"
 thumbnail: "assets/img/posts/fedorarhel-instalar-microsoft-core-fonts/fedora_redhat_microsoft_core_fonts.jpg"
 ---

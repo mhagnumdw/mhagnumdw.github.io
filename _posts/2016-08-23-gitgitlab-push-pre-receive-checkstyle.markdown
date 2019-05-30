@@ -11,6 +11,7 @@ tags:
 - GitLab
 - hook
 author-id: mhagnumdw
+image: "assets/img/posts/gitgitlab-push-pre-receive-checkstyle/gitlab_checkstyle_push_prereceive_v2.png"
 feature-img: "assets/img/posts/gitgitlab-push-pre-receive-checkstyle/gitlab_checkstyle_push_prereceive_v2.png"
 thumbnail: "assets/img/posts/gitgitlab-push-pre-receive-checkstyle/gitlab_checkstyle_push_prereceive_v2.png"
 ---

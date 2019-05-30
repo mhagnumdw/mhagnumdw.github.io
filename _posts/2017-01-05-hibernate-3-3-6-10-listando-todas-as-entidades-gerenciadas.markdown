@@ -9,6 +9,7 @@ tags:
 - Java
 - JPA
 author-id: mhagnumdw
+image: "assets/img/posts/hibernate-3-3-6-10-listando-todas-as-entidades-gerenciadas/hibernate_3_list_all_managed_entities.png"
 feature-img: "assets/img/posts/hibernate-3-3-6-10-listando-todas-as-entidades-gerenciadas/hibernate_3_list_all_managed_entities.png"
 thumbnail: "assets/img/posts/hibernate-3-3-6-10-listando-todas-as-entidades-gerenciadas/hibernate_3_list_all_managed_entities.png"
 ---

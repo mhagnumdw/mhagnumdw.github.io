@@ -8,6 +8,7 @@ tags:
 - git
 - git-dicas
 author-id: mhagnumdw
+image: "assets/img/posts/git-dicas/git-goodness_v2.png"
 feature-img: "assets/img/posts/git-dicas/git-goodness_v2.png"
 thumbnail: "assets/img/posts/git-dicas/git-goodness_v2.png"
 ---

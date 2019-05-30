@@ -8,6 +8,7 @@ tags:
 - Eclipse
 - ServiceLoader
 author-id: mhagnumdw
+image: "assets/img/posts/java-serviceloader-autoserive-eclipse-ide/java_serviceloader_autoservice_eclipse.png"
 feature-img: "assets/img/posts/java-serviceloader-autoserive-eclipse-ide/java_serviceloader_autoservice_eclipse.png"
 thumbnail: "assets/img/posts/java-serviceloader-autoserive-eclipse-ide/java_serviceloader_autoservice_eclipse.png"
 ---

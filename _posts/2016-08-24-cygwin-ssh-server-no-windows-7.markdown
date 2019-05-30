@@ -8,6 +8,7 @@ tags:
 - SSH
 - Linux
 author-id: mhagnumdw
+image: "assets/img/posts/cygwin-ssh-server-no-windows-7/cygwin_ssh_server_logo.png"
 feature-img: "assets/img/posts/cygwin-ssh-server-no-windows-7/cygwin_ssh_server_logo.png"
 thumbnail: "assets/img/posts/cygwin-ssh-server-no-windows-7/cygwin_ssh_server_logo.png"
 ---

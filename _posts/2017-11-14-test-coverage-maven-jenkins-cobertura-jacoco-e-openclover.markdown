@@ -10,6 +10,7 @@ tags:
 - Jenkins
 - maven
 author-id: mhagnumdw
+image: "assets/img/posts/test-coverage-maven-jenkins-cobertura-jacoco-e-openclover/code-coverage-banner_v2.png"
 feature-img: "assets/img/posts/test-coverage-maven-jenkins-cobertura-jacoco-e-openclover/code-coverage-banner_v2.png"
 thumbnail: "assets/img/posts/test-coverage-maven-jenkins-cobertura-jacoco-e-openclover/code-coverage-banner_v2.png"
 ---

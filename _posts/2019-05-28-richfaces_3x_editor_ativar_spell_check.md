@@ -5,6 +5,7 @@ date: 2019-05-28 16:05:00 -03:00
 tags:
   - richfaces
 author-id: mhagnumdw
+image: "assets/img/posts/richfaces_3x_editor_ativar_spell_check/richfaces_logo.jpeg"
 feature-img: "assets/img/posts/richfaces_3x_editor_ativar_spell_check/richfaces_logo.jpeg"
 thumbnail: "assets/img/posts/richfaces_3x_editor_ativar_spell_check/richfaces_logo.jpeg"
 ---
