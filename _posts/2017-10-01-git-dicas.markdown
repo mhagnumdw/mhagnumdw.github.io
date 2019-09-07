@@ -67,7 +67,24 @@ git shortlog --summary --numbered --email
 ### Adicionar ao stash sem remover do workspace
 
 {% highlight shell %}
-git stash push --include-untracked --message 'Melhoria do autocomplete usando rxjs - v001' && git stash apply
+git stash push --include-untracked \
+  --message 'Melhoria do autocomplete usando rxjs - v001' && \
+  git stash apply
+{% endhighlight %}
+
+* * *
+
+### Obter um arquivo específico de um stash
+
+{% highlight shell %}
+# listar stashs
+git stash list
+# listar os arquivos de um stash
+git stash show stash@{0}
+# ver o conteúdo do arquivo
+git show stash@{0}:src/main/java/br/log/AlertsManager.java
+# obter o arquivo para o workspace
+git checkout stash@{0} -- src/main/java/br/log/AlertsManager.java
 {% endhighlight %}
 
 * * *
