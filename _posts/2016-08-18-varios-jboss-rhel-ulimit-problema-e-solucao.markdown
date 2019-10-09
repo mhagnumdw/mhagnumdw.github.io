@@ -58,8 +58,8 @@ _jboss_ hard nofile 12288
 ```
 
 - **max user processes**  
-Deveria ser no mesmo arquivo, em várias outras distribuições Linux é, mas no caso do RHEL 6 (Red Hat Enterprise Linux) a mudança deve ser feita em \[ref 1\]:  
-`vim /etc/security/limits.d/90-nproc.conf`  
+Deveria ser no mesmo arquivo, em várias outras distribuições Linux é, mas no caso do RHEL 6 (Red Hat Enterprise Linux) a mudança deve ser feita no arquivo `/etc/security/limits.d/90-nproc.conf` \[ref 1\] e no RHEL 7 em `/etc/security/limits.d/20-nproc.conf`:
+
 Adicionar as linhas:  
 ```
 _jboss_ soft nproc 4096  
