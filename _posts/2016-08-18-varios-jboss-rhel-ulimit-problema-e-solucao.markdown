@@ -38,6 +38,8 @@ Que valores colocar? Para isso precisamos ter uma ideia de quantos arquivos abe
 
 {% highlight shell %}
 lsof | grep ' jboss ' | awk '{print $NF}' | sort | wc -l
+# ou talvez seja melhor
+lsof -u jboss | wc -l
 {% endhighlight %}
 
 **Threads (depois do enter digite o nome do usuário):**
