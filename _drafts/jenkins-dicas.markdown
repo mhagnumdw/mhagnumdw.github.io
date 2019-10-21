@@ -1,0 +1,52 @@
+---
+layout: post
+title: 'jenkins: dicas'
+date: 2019-10-21 08:00:00 -03:00
+categories:
+- Jenkins
+tags:
+- jenkins
+- dicas
+author-id: mhagnumdw
+image: "assets/img/posts/jenkins-dicas/xxx.png"
+feature-img: "assets/img/posts/jenkins-dicas/xxx.png"
+thumbnail: "assets/img/posts/jenkins-dicas/xxx.png"
+---
+
+Dicas sobre o Jenkins. Snippets, configurações simples, scripts groovy para autoamizar tarefas etc.
+
+<!--more-->
+
+### Deletar jobs em massa filtando por nome
+
+{% highlight groovy %}
+import jenkins.model.*
+
+def matchedJobs = Jenkins.instance.items.findAll { job ->
+  job.name =~ /regex_filter_here/
+}
+    
+matchedJobs.each { job ->
+    // println job.name
+    job.delete()
+}
+{% endhighlight %}
+
+* * *
+
+### Deletar jobs em massa (TODOS, sem filtro!)
+
+> CUIDADO!
+
+{% highlight groovy %}
+import jenkins.model.*
+
+def allJobs = Jenkins.instance.items.findAll()
+    
+allJobs.each { job ->
+  job.delete()
+}
+{% endhighlight %}
+
+* * *
+
