@@ -1,12 +1,16 @@
 ---
-layout: single
-title:  "Draft Post"
-header:
-  teaser: "unsplash-gallery-image-2-th.jpg"
-categories: 
-  - Jekyll
+layout: post
+title:  "Cygwin: the input device is not a TTY"
+date: 2019-10-21 08:00:00 -03:00
+categories:
+- Cygwin
 tags:
-  - edge case
+- cygwin
+- tty
+author-id: mhagnumdw
+image: "assets/img/posts/cygwin-input-not-tty/xxx.png"
+feature-img: "assets/img/posts/cygwin-input-not-tty/xxx.png"
+thumbnail: "assets/img/posts/cygwin-input-not-tty/xxx.png"
 ---
 
 
