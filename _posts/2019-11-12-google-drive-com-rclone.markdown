@@ -1,17 +1,18 @@
 ---
 layout: post
 title: 'Google Drive sincronizando com rclone'
-date: 2019-11-12 15:30:00 -03:00
+date: 2019-11-12 22:38:00 -03:00
 categories:
 - Sync
 tags:
 - google drive
 - sync
 - cloud
+- linux
 author-id: mhagnumdw
-image: "assets/img/posts/google-drive-com-rclone/xxx.png"
-feature-img: "assets/img/posts/google-drive-com-rclone/xxx.png"
-thumbnail: "assets/img/posts/google-drive-com-rclone/xxx.png"
+image: "assets/img/posts/google-drive-com-rclone/google-drive-com-rclone-banner.png"
+feature-img: "assets/img/posts/google-drive-com-rclone/google-drive-com-rclone-banner.png"
+thumbnail: "assets/img/posts/google-drive-com-rclone/google-drive-com-rclone-banner.png"
 ---
 
 Direto ao ponto: sincronizando no Linux com Google Drive e [rclone](https://rclone.org/).
@@ -56,7 +57,7 @@ Então:
 
 - Esse link redireciona para a tela de login com o Google.
 - Confirme o login.
-- Deve aparecer no browser:
+- Deve aparecer no browser a mensagem abaixo:
 
 ```
 Success!
@@ -90,7 +91,7 @@ rclone ls GoogleDrive:/
 
 ### Especificar o que deve ser sincronizando
 
-Nem sempre desejamos sincronizar todo o drive. Vamos especificar o que sincronizar. Criar o arquivo `filter-file-GoogleDrive.txt` (dê o nome que preferir) e especificar o que deve ou não ser sincronizado.
+Nem sempre desejamos sincronizar todo o drive. Vamos especificar o que sincronizar. Para isso criar o arquivo `filter-file-GoogleDrive.txt` (dê o nome que preferir) e especificar o que deve ou não ser sincronizado, conforme conteúdo de exemplo abaixo.
 - Com sinal de `+` deve sincronizar
 - Com sinal de `-` não deve sincronizar
 - Mais detalhes [aqui](https://rclone.org/filtering/)
@@ -137,7 +138,7 @@ rclone sync \
 
 O `rclone sync` só faz sincronização em um único sentido. Ele só altera a pasta de destino, como pode ser visto na documentação [aqui](https://rclone.org/commands/rclone_sync/).
 
-**Vamos usar o `rclonesync.py` para isso**, que é indicado no próprio site do rclone [aqui](https://github.com/rclone/rclone/wiki/Third-Party-Integrations-with-rclone#rclonesync-v2).
+**Vamos usar o `rclonesync.py` para isso**, que é indicado no próprio site do `rclone` [aqui](https://github.com/rclone/rclone/wiki/Third-Party-Integrations-with-rclone#rclonesync-v2).
 
 
 ```bash
@@ -147,7 +148,8 @@ wget https://raw.githubusercontent.com/cjnaz/rclonesync-V2/f2316cfeebda1532c3438
 chmod +x rclonesync.py
 ```
 
-Na primeira sincronização é necessário executar com o parâmetro `--first-sync`
+#### Primeira Execução
+> Na primeira sincronização é necessário executar com o parâmetro `--first-sync`
 
 > É possível usar o parâmetro `--dry-run` para ver o resultado sem efetivar as mudanças
 
@@ -160,15 +162,17 @@ Na primeira sincronização é necessário executar com o parâmetro `--first-sy
   --first-sync
 ```
 
-A execuções subsequentes não devem ter o parâmetro `--first-sync`
-
+#### Execuções subsequentes
+> As execuções subsequentes não devem ter o parâmetro `--first-sync`
 
 ```bash
 ./rclonesync.py /root/GoogleDrive/ GoogleDrive:/ \
   --filters-file filter-file-GoogleDrive.txt \
   --verbose \
   --rclone-args --drive-skip-gdocs
+
 # ou
+
 ./rclonesync.py /root/GoogleDrive/ GoogleDrive:/ \
   --filters-file filter-file-GoogleDrive.txt \
   --verbose \
@@ -183,10 +187,25 @@ A execuções subsequentes não devem ter o parâmetro `--first-sync`
 
 ### Automizando!
 
-Afinal não queremos ficar rodando manualmente.
+Afinal não queremos ficar executando manualmente. Vamos agendar a sincronização no cron.
 
-// TODO:
+```bash
+crontab -e
+```
+
+Adicionar o código abaixo que agenda a execução a cada 5 minutos.
+
+```
+*/5 * * * * ./rclonesync.py /root/GoogleDrive/ GoogleDrive:/ \
+  --filters-file filter-file-GoogleDrive.txt \
+  --verbose \
+  --rclone-args \
+  --drive-export-formats=.link.html 2>&1 >> ~/GoogleDrive_rclonesync.log
+```
 
 ### Referências
 
-// TODO:
+- https://github.com/rclone/rclone
+- https://forum.rclone.org/t/bi-directional-rclone-solution/3478
+- https://rclone.org/drive/
+- https://github.com/cjnaz/rclonesync-V2
