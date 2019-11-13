@@ -117,7 +117,8 @@ Nem sempre desejamos sincronizar todo o drive. Vamos especificar o que sincroniz
 ```bash
 rclone sync \
   --create-empty-src-dirs \
-  --progress --drive-acknowledge-abuse \
+  --progress \
+  --drive-acknowledge-abuse \
   --filter-from filter-file-GoogleDrive.txt \
   GoogleDrive:/ /root/GoogleDrive/
 ```
@@ -129,7 +130,8 @@ rclone sync \
 ```bash
 rclone sync \
   --create-empty-src-dirs \
-  --progress --drive-acknowledge-abuse \
+  --progress \
+  --drive-acknowledge-abuse \
   --filter-from filter-file-GoogleDrive.txt \
   /root/GoogleDrive/ GoogleDrive:/
 ```
@@ -159,7 +161,8 @@ chmod +x rclonesync.py
 ./rclonesync.py /root/GoogleDrive/ GoogleDrive:/ \
   --filters-file filter-file-GoogleDrive.txt \
   --verbose \
-  --first-sync
+  --first-sync \
+  --rclone-args --drive-export-formats=.link.html --drive-acknowledge-abuse
 ```
 
 #### Execuções subsequentes
@@ -169,21 +172,21 @@ chmod +x rclonesync.py
 ./rclonesync.py /root/GoogleDrive/ GoogleDrive:/ \
   --filters-file filter-file-GoogleDrive.txt \
   --verbose \
-  --rclone-args --drive-skip-gdocs
+  --rclone-args --drive-acknowledge-abuse --drive-skip-gdocs
 
 # ou
 
 ./rclonesync.py /root/GoogleDrive/ GoogleDrive:/ \
   --filters-file filter-file-GoogleDrive.txt \
   --verbose \
-  --rclone-args --drive-export-formats=.link.html
-
+  --rclone-args --drive-acknowledge-abuse --drive-export-formats=.link.html
 ```
 
 > A opção `--drive-skip-gdocs` não sincroniza os arquivos do Google Docs, que no sistema de arquivos local seriam apenas atalhos.
 
-> Caso queira sincronizar os arquivos do Google Docs, use a opção `--drive-export-formats=.link.html` que atualmente é documentada apenas [aqui](https://github.com/rclone/rclone/pull/2479) 
+> Caso queira sincronizar os arquivos do Google Docs, use a opção `--drive-export-formats=.link.html` que atualmente é documentada [aqui](https://github.com/rclone/rclone/pull/2479) e [aqui](https://rclone.org/drive/#import-export-of-google-documents)
 
+> A opção `--drive-acknowledge-abuse` permite sincronizar arquivos que o Google Drive acha suspeitos (ex: malware).
 
 ### Automizando!
 
@@ -200,6 +203,7 @@ Adicionar o código abaixo que agenda a execução a cada 5 minutos.
   --filters-file filter-file-GoogleDrive.txt \
   --verbose \
   --rclone-args \
+  --drive-acknowledge-abuse \
   --drive-export-formats=.link.html 2>&1 >> ~/GoogleDrive_rclonesync.log
 ```
 
