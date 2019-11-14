@@ -204,7 +204,7 @@ Adicionar o código abaixo que agenda a execução a cada 5 minutos.
   --verbose \
   --rclone-args \
   --drive-acknowledge-abuse \
-  --drive-export-formats=.link.html 2>&1 >> ~/GoogleDrive_rclonesync.log
+  --drive-export-formats=.link.html >> ~/GoogleDrive_rclonesync.log 2>&1
 ```
 
 ### Referências
