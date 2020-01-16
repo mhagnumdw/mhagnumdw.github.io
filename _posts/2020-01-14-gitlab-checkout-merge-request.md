@@ -8,12 +8,12 @@ tags:
 - checkout
 - merge request
 author-id: mhagnumdw
-image: "assets/img/posts/gitlab-checkout-merge-request/xxx.png"
-feature-img: "assets/img/posts/gitlab-checkout-merge-request/xxx.png"
-thumbnail: "assets/img/posts/gitlab-checkout-merge-request/xxx.png"
+image: "assets/img/posts/gitlab-checkout-merge-request/banner.jpg"
+feature-img: "assets/img/posts/gitlab-checkout-merge-request/banner.jpg"
+thumbnail: "assets/img/posts/gitlab-checkout-merge-request/banner.jpg"
 ---
 
-Realizar o checkout de um merge request do GitLab.
+Realizar o checkout de um merge request do GitLab. Abaixo duas opções.
 
 ## Opção 1: criar uma referência para o merge request
 
@@ -37,13 +37,14 @@ git checkout MR118
 
 ## Opção 2: adicionando uma nova referência ao remote
 
-É possível editando o arquivo `.git/config` ou por meio do comando `git config -e`.
+É possível editando o arquivo `.git/config` ou por meio do comando `git config -e`. Vamos fazer por meio do comando.
 
 ```bash
+# abrir as configurações do git no editor padrão
 git config -e
 ```
 
-Dentro da seção `[remote "origin"]` adicionar na última o trecho abaixo
+Dentro da seção `[remote "origin"]` adicionar na última linha o trecho abaixo
 ```
 fetch = +refs/merge-requests/*/head:refs/remotes/origin/merge-requests/*
 ```
@@ -57,7 +58,7 @@ fetch = +refs/merge-requests/*/head:refs/remotes/origin/merge-requests/*
 
 então, salvar o arquivo.
 
-Em seguida executar
+Em seguida fazer o checkout do merge request
 
 ```bash
 # atualizar as referências (vão aparecer as referências de merge request)
