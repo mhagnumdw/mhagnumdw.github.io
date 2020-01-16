@@ -99,3 +99,20 @@ git branch -d angular_gitlab_build_problem
 {% endhighlight %}
 
 * * *
+
+### Buscar no conteúdo dos arquivos em todo o histórico
+
+Buscar um texto em **todos os arquivos** em **todo o histórico**.
+
+{% highlight shell %}
+# achar o bloco de código sem se importar com o arquivo
+git log --patch | grep -P -B 20 -A 3 '(addShutdownHook|threadToDeleteOnExit)'
+
+# achar os commits que possuem os arquivos com o termo buscado
+git log -SaddShutdownHook --name-status
+git log -GaddShutdownHook --name-status
+# após o S e G deve ser o termo buscado, que pode estar entre aspas simples
+# a opção G aceita regex
+{% endhighlight %}
+
+* * *
