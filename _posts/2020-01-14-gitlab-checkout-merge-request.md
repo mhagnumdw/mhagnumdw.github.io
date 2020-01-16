@@ -13,7 +13,9 @@ feature-img: "assets/img/posts/gitlab-checkout-merge-request/banner.jpg"
 thumbnail: "assets/img/posts/gitlab-checkout-merge-request/banner.jpg"
 ---
 
-Realizar o checkout de um merge request do GitLab. Abaixo duas opções.
+Realizar o checkout de um merge request do GitLab.
+
+<!--more-->
 
 ## Opção 1: criar uma referência para o merge request
 
