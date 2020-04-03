@@ -50,3 +50,15 @@ allJobs.each { job ->
 
 * * *
 
+### Cancelar todos os jobs em execução
+
+{% highlight groovy %}
+import hudson.model.*
+
+def q = Jenkins.instance.queue
+
+q.items.each { q.cancel(it.task) }
+{% endhighlight %}
+
+* * *
+
