@@ -53,3 +53,9 @@ Você teve ter um diff parecido com o diff abaixo. Observar o atributo `metadata
 
 Ver arquivo: windows-wsl-linux-chmod-nao-funciona-diff.png
 
+# Referências
+
+- https://github.com/microsoft/WSL/issues/3181#issuecomment-394762108
+- https://devblogs.microsoft.com/commandline/automatically-configuring-wsl/
+- https://superuser.com/questions/1126721/rebooting-ubuntu-on-windows-without-rebooting-windows#1347725
+
