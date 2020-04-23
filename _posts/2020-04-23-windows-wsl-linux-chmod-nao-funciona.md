@@ -81,3 +81,5 @@ Se mudaram tudo ok! ;)
 
 - <https://devblogs.microsoft.com/commandline/automatically-configuring-wsl/>
 - <https://github.com/Microsoft/WSL/issues/81>
+- <https://github.com/microsoft/WSL/issues/3181#issuecomment-394762108>
+- <https://superuser.com/questions/1126721/rebooting-ubuntu-on-windows-without-rebooting-windows#1347725>
