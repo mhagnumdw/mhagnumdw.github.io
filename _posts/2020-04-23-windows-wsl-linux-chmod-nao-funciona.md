@@ -1,0 +1,83 @@
+---
+layout: post
+title:  "Windows WSL - Alterar permissões com chmod não surte efeito"
+date: 2020-04-23 19:23:00 -03:00
+tags:
+  - windows
+  - wsl
+  - chmod
+author-id: mhagnumdw
+image: "assets/img/posts/windows-wsl-linux-chmod-nao-funciona/windows-wsl-linux-chmod-nao-funciona-banner.png"
+feature-img: "assets/img/posts/windows-wsl-linux-chmod-nao-funciona/windows-wsl-linux-chmod-nao-funciona-banner.png"
+thumbnail: "assets/img/posts/windows-wsl-linux-chmod-nao-funciona/windows-wsl-linux-chmod-nao-funciona-banner.png"
+---
+
+Alterar permissões com `chmod` não surte efeito no Windows WSL. Teste e solução.
+
+<!--more-->
+
+## Ambiente de teste
+
+- Windows 10 Pro Versão 10.0.18363 Compilação 18363
+- WSL 1
+- Linux: Ubuntu 18.04.2 LTS (Bionic Beaver)
+
+## Simulando o problema
+
+```bash
+cd /tmp/
+echo "teste" > teste.txt
+ls -la
+# Observar as permissões do arquivo
+```
+
+Tentar mudar a permissão do arquivo
+
+```bash
+chmod 600 teste.txt
+ls -la
+```
+
+Aqui provavelmente você verá que as permissões do arquivo não mudaram. _Se mudaram, acho que você não precisa continuar._
+
+> **NOTA**: antes de irmos para a solução vamos guardar o output do comando: `mount -l > /tmp/mount-antes.txt`
+
+## Solução
+
+Dentro do WSL Linux, no caso um WSL Ubuntu, editar/criar o arquivo
+`/etc/wsl.conf` com o conteúdo
+
+```conf
+[automount]
+options = "metadata"
+```
+
+Fechar o WSL completamente:
+
+- Sair de todas as instâncias do WSL (`exit` em todos os terminais)
+- Abrir o power shell
+  - Obter o nome da instância WSL que foi alterada: `wsl --list`
+  - O output do comando pode ser algo parecido com:
+
+    ```text
+    Distribuições do Subsistema do Windows para Linux:
+    Ubuntu (Padrão)
+    ```
+
+  - Desligar a instância pelo nome: `wsl -t Ubuntu`
+
+## Verificando se tudo ok
+
+- Abrir o WSL (no caso um WSL Ubuntu)
+- Executar o chmod no arquivo e verificar se as permissões mudaram
+
+Se mudaram tudo ok! ;)
+
+> **NOTA**: vamos gerar um novo output do mount: `mount -l > /tmp/mount-depois.txt`. Você teve ter um diff parecido com o diff abaixo. **Observar o atributo `metadata` na diferença.**
+
+![Diff]({{ site.baseurl }}/assets/img/posts/windows-wsl-linux-chmod-nao-funciona/windows-wsl-linux-chmod-nao-funciona-diff.png)
+
+## Referências
+
+- <https://devblogs.microsoft.com/commandline/automatically-configuring-wsl/>
+- <https://github.com/Microsoft/WSL/issues/81>
