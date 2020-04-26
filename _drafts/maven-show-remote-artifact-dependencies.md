@@ -30,3 +30,8 @@ Como pode ser visto em
 - https://stackoverflow.com/questions/1895492/how-can-i-download-a-specific-maven-artifact-in-one-command-line#1896110
 - https://maven.apache.org/plugins/maven-dependency-plugin/usage.html#dependency:get
 
+Funcionou para:
+- org.atteo.classindex classindex 3.9
+
+Não funcionou para:
+- io.github.classgraph classgraph lassgraph-4.8.75
