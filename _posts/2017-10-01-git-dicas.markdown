@@ -19,24 +19,24 @@ Dicas de git (snippets)
 
 ### Criar uma branch vazia com nome "maven-repo"
 
-{% highlight shell %}
+```shell
 git clone https://github.com/mhagnumdw/pippo.git
 cd pippo/
 git checkout --orphan maven-repo
 git rm -rf .
 git commit --allow-empty -m "Apagando todos os arquivos da branch para servir de repositório maven"
 git push origin maven-repo
-{% endhighlight %}
+```
 
 * * *
 
 ### Visualizar exclusivamente os commits feitos em uma branch em relação ao master
 
-{% highlight shell %}
+```shell
 git branch
-git checkout maven-repo
+git checkout feature
 git cherry -v master
-{% endhighlight %}
+```
 
 * * *
 
@@ -54,13 +54,13 @@ diff -y <(git log --oneline -10) <(git log --oneline origin/master -10)
 
 _Se você quiser fazer um merge de project-a para project-b:_
 
-{% highlight shell %}
+```shell
 cd path/to/project-b
 git remote add project-a path/to/project-a
 git fetch project-a
 git merge --allow-unrelated-histories project-a/master
 git remote remove project-a
-{% endhighlight %}
+```
 
 [https://stackoverflow.com/questions/1425892/how-do-you-merge-two-git-repositories#answer-10548919](https://stackoverflow.com/questions/1425892/how-do-you-merge-two-git-repositories#answer-10548919)
 
@@ -68,25 +68,25 @@ git remote remove project-a
 
 ### Listar os autores em um projeto
 
-{% highlight shell %}
+```shell
 git shortlog --summary --numbered --email
-{% endhighlight %}
+```
 
 * * *
 
 ### Adicionar ao stash sem remover do workspace
 
-{% highlight shell %}
+```shell
 git stash push --include-untracked \
   --message 'Melhoria do autocomplete usando rxjs - v001' && \
   git stash apply
-{% endhighlight %}
+```
 
 * * *
 
 ### Obter um arquivo específico de um stash
 
-{% highlight shell %}
+```shell
 # listar stashs
 git stash list
 # listar os arquivos de um stash
@@ -95,18 +95,18 @@ git stash show stash@{0}
 git show stash@{0}:src/main/java/br/log/AlertsManager.java
 # obter o arquivo para o workspace
 git checkout stash@{0} -- src/main/java/br/log/AlertsManager.java
-{% endhighlight %}
+```
 
 * * *
 
 ### Deletar branch local e remota
 
-{% highlight shell %}
+```shell
 # deletar branch remota
 git push --delete origin angular_gitlab_build_problem
 # deletar branch local
 git branch -d angular_gitlab_build_problem
-{% endhighlight %}
+```
 
 * * *
 
@@ -114,7 +114,7 @@ git branch -d angular_gitlab_build_problem
 
 Buscar um texto em **todos os arquivos** em **todo o histórico**.
 
-{% highlight shell %}
+```shell
 # achar o bloco de código sem se importar com o arquivo
 git log --patch | grep -P -B 20 -A 3 '(addShutdownHook|threadToDeleteOnExit)'
 
@@ -123,6 +123,6 @@ git log -SaddShutdownHook --name-status
 git log -GaddShutdownHook --name-status
 # após o S e G deve ser o termo buscado, que pode estar entre aspas simples
 # a opção G aceita regex
-{% endhighlight %}
+```
 
 * * *
