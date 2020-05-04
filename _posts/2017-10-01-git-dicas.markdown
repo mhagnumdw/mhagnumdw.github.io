@@ -40,15 +40,25 @@ git cherry -v master
 
 * * *
 
+### Diferença de commits entre duas branches
+
+```shell
+git log --oneline origin/master..HEAD
+# ou
+diff -y <(git log --oneline -10) <(git log --oneline origin/master -10)
+```
+
+* * *
+
 ### Merge entre branches de repositórios diferentes
 
 _Se você quiser fazer um merge de project-a para project-b:_
 
 {% highlight shell %}
-cd path/to/project-b  
-git remote add project-a path/to/project-a  
-git fetch project-a  
-git merge --allow-unrelated-histories project-a/master  
+cd path/to/project-b
+git remote add project-a path/to/project-a
+git fetch project-a
+git merge --allow-unrelated-histories project-a/master
 git remote remove project-a
 {% endhighlight %}
 
