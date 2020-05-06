@@ -10,7 +10,7 @@ feature-img: "assets/img/posts/jboss-consumo-elevado-cpu-com-muitos-logs/banner.
 thumbnail: "assets/img/posts/jboss-consumo-elevado-cpu-com-muitos-logs/banner.png"
 ---
 
-JBoss EAP 6 - Consumo elevado de CPU quando existem muitos arquivos de log, inclusive logs compactados.
+JBoss EAP 6 - Consumo elevado de CPU quando existem muitos arquivos arquivos de log, inclusive logs compactados.
 
 <!--more-->
 
@@ -22,7 +22,7 @@ JBoss EAP 6 - Consumo elevado de CPU quando existem muitos arquivos de log, incl
 
 ## Solução
 
-Diminuir a quantidade de logs. É isso mesmo, camarada! Esse problema talvez tenha sido corrigido na versão EAP 7.1.0+.
+Diminuir a quantidade de arquivos de logs. É isso mesmo, camarada! Esse problema talvez tenha sido corrigido na versão EAP 7.1.0+.
 
 A pasta de logs pode ser descoberta a partir da system property `${jboss.server.log.dir}`.
 
