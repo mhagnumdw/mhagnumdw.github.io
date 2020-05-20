@@ -57,3 +57,4 @@ Até a próxima!
 
 - <https://tanelpoder.com/posts/troubleshooting-linux-ssh-logon-delay-always-takes-10-seconds/>
 - <https://unix.stackexchange.com/questions/298698/ssh-very-slow-connection#298797>
+- <https://wiki.alpinelinux.org/wiki/Setting_up_a_ssh-server#Fine_tuning>
