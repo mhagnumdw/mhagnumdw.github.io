@@ -10,3 +10,19 @@ skopeo list-tags docker://registry.meudominio.com/app | \
    grep -P -o '[^"]+' | \
    xargs -I{} skopeo delete docker://docker://registry.meudominio.com/app:{}
 ```
+
+# Apagar as imagens a partir de X dias
+
+```shell
+ - days="15" # Imagens com mais de X dias serão apagadas
+ # Modo 1
+ - docker image prune --all --force --filter=until=$((days * 24))h --filter=label=${IMAGE_TEMP_NAME}
+ - timeago=$(date --date "$days days ago" +'%s')
+ # Modo 2
+ # Deleta a imagem pelo <image:tag> ao invés do ID, evita erros se a imagem estiver sendo referenciada
+ - docker image ls --filter=reference="$IMAGE_TEMP_NAME" --format "{{.Repository}}:{{.Tag}};{{.CreatedAt}}" |
+     while IFS=";" read -r IMAGE CreatedAt; do
+       CreatedAt=$(echo "$CreatedAt" | rev | cut -c5- | rev | xargs -I{} date -d {} +%s);
+       if [ "$CreatedAt" -lt "$timeago" ]; then echo "$IMAGE"; docker image rm --force "$IMAGE"; fi;
+     done
+```
