@@ -298,6 +298,8 @@ E o prolema foi embora! 🎉🎉🎉
 
 Até a próxima!
 
+_ps: é claro que a hora do runner tem que ser ajustada!_
+
 ## Referências
 
 - <https://stackoverflow.com/questions/3820111/facelet-was-modified-messages#10311517>
