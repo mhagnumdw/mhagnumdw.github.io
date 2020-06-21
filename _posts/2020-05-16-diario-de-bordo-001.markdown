@@ -20,6 +20,8 @@ Teste automatizado, Dcoker, SVN Subversion container, demora de aproximadamente 
 
 ## História
 
+{% include about_diario_de_bordo.markdown %}
+
 Tenho alguns testes automatizados escritos em Java que sobem um container do SVN e se conectam ao container via SSH utilizando chave púlica/privada.
 
 A biblioteca Java utilziada para fazer acesso SSH é a [jsch](http://www.jcraft.com/jsch/) na versão [0.1.55](https://mvnrepository.com/artifact/com.jcraft/jsch/0.1.55). Inicialmente pensei que o problema fosse nela, inclusive precisei escrever uma classe de log para ela seguindo [esse modelo](http://www.jcraft.com/jsch/examples/Logger.java.html) (estranho!), onde é possível vincular ao sistema de log da minha aplicação.

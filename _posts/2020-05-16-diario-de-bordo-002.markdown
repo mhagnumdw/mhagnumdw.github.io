@@ -20,6 +20,8 @@ Build, pipeline no GitLab, geração de imagem docker de aplicação com jsf 1.2
 
 <!--more-->
 
+{% include about_diario_de_bordo.markdown %}
+
 > **Spoiler:** é claro que existia diferença nos ambientes!
 
 ## História
@@ -292,7 +294,7 @@ E o prolema foi embora! 🎉🎉🎉
 
 > Runner é um container docker, iniciado pelo GitLab, que possui as ferramentas para buildar a aplicação. O build da aplicação, no caso aqui geração do EAR, é feito dentro desse container.
 
-**Porque a aplicação `app-branch` passou a funcionar do nada?** Na verdade não foi do nada. Quano a hora do container docker ficou na frente da hora de modicação dos arquivos `xhtml`, o `facelets` deixou de re-compilar os `xhtml` por entender que eles não foram modificados.
+**Porque a aplicação `app-branch` passou a funcionar do nada?** Na verdade não foi do nada. Quando a hora do container docker ficou na frente da hora de modicação dos arquivos `xhtml`, o `facelets` deixou de re-compilar os `xhtml` por entender que eles não foram modificados.
 
 **🧩 Dica:** em produção o parâmetro `facelets.REFRESH_PERIOD` deve ser `-1`, já que os `xhtml` não vão mudar, mas em desenvolvimento, com _hot deploy_, o interessante é que seja `0`, para que as mudanças feitas no código surtam efeito o quanto antes.
 
