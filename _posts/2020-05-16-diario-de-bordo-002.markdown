@@ -28,7 +28,7 @@ Build, pipeline no GitLab, geração de imagem docker de aplicação com jsf 1.2
 
 Tenho - na prática mesmo não é meu, então só modo de falar - um pipeline montado de uma aplicação Java que gera um `EAR`. Dentro do `EAR` existe um `WAR` e alguns `JARs`.
 
-O pipeline basicamente executa em seqência: compilação, testes, geração do EAR, geração da imagem docker por meio do [s2i (source-to-image)](https://github.com/openshift/source-to-image) e por fim deploy dessa imagem docker no OpenShift.
+O pipeline basicamente executa em sequência: compilação, testes, geração do EAR, geração da imagem docker por meio do [s2i (source-to-image)](https://github.com/openshift/source-to-image) e por fim deploy dessa imagem docker no OpenShift.
 
 > Embora o s2i sugira *código para imagem*, estamos utilizando ele para, a partir de um binário compilado, no caso o `EAR`, montar a imagem docker da aplicação.
 
