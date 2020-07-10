@@ -4,6 +4,12 @@
         "siblings_only": true
     },
     "MD033": {
-        "allowed_elements": ["details", "summary", "br"]
+        "allowed_elements": [
+            "details",
+            "summary",
+            "br",
+            "video",
+            "source"
+        ]
     }
 }
