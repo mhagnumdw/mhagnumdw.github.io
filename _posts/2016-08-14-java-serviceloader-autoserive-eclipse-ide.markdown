@@ -26,6 +26,7 @@ thumbnail: "assets/img/posts/java-serviceloader-autoserive-eclipse-ide/java_serv
 <!--more-->
 
 Ver mais:
+
 - [http://www.oracle.com/technetwork/articles/javase/extensible-137159.html](http://www.oracle.com/technetwork/articles/javase/extensible-137159.html)
 - [http://docs.oracle.com/javase/6/docs/api/java/util/ServiceLoader.html](http://docs.oracle.com/javase/6/docs/api/java/util/ServiceLoader.html)
 
@@ -35,44 +36,45 @@ Ver mais:
 
 Gera automaticamente os arquivos necessários para o [java.util.ServiceLoader](http://docs.oracle.com/javase/6/docs/api/java/util/ServiceLoader.html) funcionar.
 
-{% highlight xml %}
+```xml
 <dependency>
     <groupId>com.google.auto.service</groupId>
     <artifactId>auto-service</artifactId>
     <version>1.0-rc2</version>
     <optional>true</optional>
 </dependency>
-{% endhighlight %}
+```
 
 O código de exemplo abaixo:
 
-{% highlight java %}
+```java
 package com.demo;
 public interface ControllerHandlerFactory {
     //...
 }
-{% endhighlight %}
+```
 
-{% highlight java %}
+```java
 package com.demo;
 @AutoService(ControllerHandlerFactory.class)
 public class DefaultControllerHandlerFactory implements ControllerHandlerFactory {
     //...
 }
-{% endhighlight %}
+```
 
-{% highlight java %}
+```java
 package com.demo;
 @AutoService(ControllerHandlerFactory.class)
 public class GuiceControllerHandlerFactory implements ControllerHandlerFactory {
     //...
 }
-{% endhighlight %}
+```
 
 **Gera o arquivo:**
 /META-INF/services/com.demo.ControllerHandlerFactory
 
 **Contendo as linhas:**
+
 - com.demo.DefaultControllerHandlerFactory
 - com.demo.GuiceControllerHandlerFactory
 
@@ -83,12 +85,13 @@ Ver mais: [https://github.com/google/auto/tree/master/service](https://github.co
 ## Eclipse IDE - Integração com o @AutoService
 
 **Realizar o download dos JARs:**
+
 - [https://mvnrepository.com/artifact/com.google.auto.service/auto-service](https://mvnrepository.com/artifact/com.google.auto.service/auto-service)
 - [https://mvnrepository.com/artifact/com.google.code.findbugs/jsr305](https://mvnrepository.com/artifact/com.google.code.findbugs/jsr305)
 - [https://mvnrepository.com/artifact/com.google.guava/guava](https://mvnrepository.com/artifact/com.google.guava/guava)
 - [https://mvnrepository.com/artifact/com.google.auto/auto-common](https://mvnrepository.com/artifact/com.google.auto/auto-common)
 
-_Dica: fazer uso desses jar's a partir do .m2 do maven_
+> 📋 Dica: fazer uso desses jar's a partir do .m2 do maven
 
 **Seguir os passos:**
 

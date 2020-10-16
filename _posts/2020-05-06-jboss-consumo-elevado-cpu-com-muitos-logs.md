@@ -26,7 +26,7 @@ Diminuir a quantidade de arquivos de logs. É isso mesmo, camarada! Esse problem
 
 A pasta de logs pode ser descoberta a partir da system property `${jboss.server.log.dir}`.
 
-## Como saber se o que causa 100% de CPU são mesmo os logs?
+## Como saber se o que causa 100% de CPU são mesmo os logs
 
 - Descobrir o PID do JBoss: `ps aux | grep -i java`
 - Listar as threads desse PID que mais consomem CPU: `COLUMNS=10000 top -n 1 -b -H -p PID | head -30`
@@ -38,7 +38,7 @@ A pasta de logs pode ser descoberta a partir da system property `${jboss.server.
 
 Stack trace
 
-```raw
+```text
 2020-05-05 18:28:44
 Full thread dump Java HotSpot(TM) 64-Bit Server VM (25.171-b11 mixed mode):
 
@@ -97,7 +97,7 @@ Full thread dump Java HotSpot(TM) 64-Bit Server VM (25.171-b11 mixed mode):
 ```
 
 > **NOTA:** o comando top exibe o ID da thread em base 10, enquanto o jstack exibe em base 16 (hexadecimal), por isso é necessária a conversão
-
+>
 > **NOTA:** no Windows a linha `at java.io.UnixFileSystem.checkAccess(Native Method)` deve ser `at java.io.WinNTFileSystem.checkAccess(Native Method)`
 
 ## Dicas

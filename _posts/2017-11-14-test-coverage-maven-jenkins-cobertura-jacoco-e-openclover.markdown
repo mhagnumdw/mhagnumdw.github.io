@@ -23,29 +23,29 @@ Configuração para Code Coverage usando Maven, Jenkins e um dos seguintes plugi
 
 ### Maven - pom.xml
 
-{% highlight xml %}
-<plugin>  
-    <groupId>org.openclover</groupId>  
-    <artifactId>clover-maven-plugin</artifactId>  
-    <version>4.2.0</version>  
-    <configuration>  
-        <jdk>1.8</jdk>  
-        <instrumentLambda>block</instrumentLambda>  
-        <showInnerFunctions>true</showInnerFunctions>  
-        <showLambdaFunctions>true</showLambdaFunctions>  
-        <includesTestSourceRoots>true</includesTestSourceRoots>  
-        <setTestFailureIgnore>true</setTestFailureIgnore>  
-        <generateHistorical>true</generateHistorical>  
-        <historyDir>${user.home}/.clover-history/${project.groupId}-${project.artifactId}</historyDir>  
-    </configuration>  
-</plugin>  
-{% endhighlight %}
+```xml
+<plugin>
+    <groupId>org.openclover</groupId>
+    <artifactId>clover-maven-plugin</artifactId>
+    <version>4.2.0</version>
+    <configuration>
+        <jdk>1.8</jdk>
+        <instrumentLambda>block</instrumentLambda>
+        <showInnerFunctions>true</showInnerFunctions>
+        <showLambdaFunctions>true</showLambdaFunctions>
+        <includesTestSourceRoots>true</includesTestSourceRoots>
+        <setTestFailureIgnore>true</setTestFailureIgnore>
+        <generateHistorical>true</generateHistorical>
+        <historyDir>${user.home}/.clover-history/${project.groupId}-${project.artifactId}</historyDir>
+    </configuration>
+</plugin>
+```
 
 #### Executar
 
-{% highlight shell %}
+```shell
 mvn clean clover:setup package clover:aggregate clover:save-history clover:clover
-{% endhighlight %}
+```
 
 Artefatos gerados
 
@@ -65,17 +65,17 @@ Configuração
 
 ![Jenkins-Clover]({{ site.baseurl }}/assets/img/posts/test-coverage-maven-jenkins-cobertura-jacoco-e-openclover/jenkins-clover.png)
 
-**Observação**
+Observação:
 
 Para acessar o relatório do Clover disponibilizado por dentro do Jenkins é necessário configurar o _Content Security Policy_. Para isso executar no Script Console do Jenkins:
 
-{% highlight groovy %}
+```groovy
 System.clearProperty("hudson.model.DirectoryBrowserSupport.CSP");
 
 System.setProperty("hudson.model.DirectoryBrowserSupport.CSP", "default-src 'self'; script-src * 'unsafe-inline'; img-src * 'self' data:; style-src * 'unsafe-inline'; font-src *");
 
 println(System.getProperty("hudson.model.DirectoryBrowserSupport.CSP"))
-{% endhighlight %}
+```
 
 Se reiniciar o Jenkins as configurações acima são perdidas. Para deixar persistente é necessário configurar na inicialização. Mais detalhes abaixo:
 
@@ -88,39 +88,40 @@ Se reiniciar o Jenkins as configurações acima são perdidas. Para deixar persi
 
 ### Maven - pom.xml
 
-{% highlight xml %}
-<plugin>  
-    <groupId>org.codehaus.mojo</groupId>  
-    <artifactId>cobertura-maven-plugin</artifactId>  
-    <version>2.7</version>  
-    <configuration>  
-        <formats>  
-            <format>html</format>  
-            <format>xml</format>  
-        </formats>  
-        <instrumentation>  
-            <excludes> <!-- opcional -->  
-                <exclude>**/*_.class</exclude>  
-            </excludes>  
-        </instrumentation>  
-    </configuration>  
-    <dependencies>  
-        <dependency> <!-- se houver problema com ASM -->  
-            <groupId>org.ow2.asm</groupId>  
-            <artifactId>asm</artifactId>  
-            <version>6.0</version>  
-          </dependency>  
-    </dependencies>  
-</plugin>  
-{% endhighlight %}
+```xml
+<plugin>
+    <groupId>org.codehaus.mojo</groupId>
+    <artifactId>cobertura-maven-plugin</artifactId>
+    <version>2.7</version>
+    <configuration>
+        <formats>
+            <format>html</format>
+            <format>xml</format>
+        </formats>
+        <instrumentation>
+            <excludes> <!-- opcional -->
+                <exclude>**/*_.class</exclude>
+            </excludes>
+        </instrumentation>
+    </configuration>
+    <dependencies>
+        <dependency> <!-- se houver problema com ASM -->
+            <groupId>org.ow2.asm</groupId>
+            <artifactId>asm</artifactId>
+            <version>6.0</version>
+          </dependency>
+    </dependencies>
+</plugin>
+```
 
 #### Executar
 
-{% highlight shell %}
+```shell
 mvn clean cobertura:cobertura
-{% endhighlight %}
+```
 
 Artefatos gerados
+
 - target/cobertura/
 - target/site/cobertura/index.html
 
@@ -133,7 +134,7 @@ Plugin
 Configuração
 
 - Goals do maven conforme acima
-- No 'Post-build Actions' adicionar 'Publish Cobertura Coverage Report'
+- No `Post-build Actions` adicionar `Publish Cobertura Coverage Report`
 
 ![Jenkins-Cobertura]({{ site.baseurl }}/assets/img/posts/test-coverage-maven-jenkins-cobertura-jacoco-e-openclover/jenkins-cobertura.png)
 
@@ -143,35 +144,36 @@ Configuração
 
 ### Maven - pom.xml
 
-{% highlight xml %}
-<plugin>  
-    <groupId>org.jacoco</groupId>  
-    <artifactId>jacoco-maven-plugin</artifactId>  
-    <version>0.7.9</version>  
-    <executions>  
-        <execution>  
-            <goals>  
-                <goal>prepare-agent</goal>  
-            </goals>  
-        </execution>  
-        <execution>  
-            <id>report</id>  
-            <phase>prepare-package</phase>  
-            <goals>  
-                <goal>report</goal>  
-            </goals>  
-        </execution>  
-    </executions>  
-</plugin>  
-{% endhighlight %}
+```xml
+<plugin>
+    <groupId>org.jacoco</groupId>
+    <artifactId>jacoco-maven-plugin</artifactId>
+    <version>0.7.9</version>
+    <executions>
+        <execution>
+            <goals>
+                <goal>prepare-agent</goal>
+            </goals>
+        </execution>
+        <execution>
+            <id>report</id>
+            <phase>prepare-package</phase>
+            <goals>
+                <goal>report</goal>
+            </goals>
+        </execution>
+    </executions>
+</plugin>
+```
 
 #### Executar
 
-{% highlight shell %}
+```shell
 mvn clean package
-{% endhighlight %}
+```
 
 Artefatos gerados
+
 - target/jacoco.exec
 - target/site/jacoco/index.html
 - target/site/jacoco/jacoco.csv
@@ -184,6 +186,7 @@ Plugin
 [https://wiki.jenkins.io/display/JENKINS/JaCoCo+Plugin](https://wiki.jenkins.io/display/JENKINS/JaCoCo+Plugin)
 
 Configuração
+
 - Goals do maven conforme acima
 - No 'Post-build Actions' adicionar 'Record JaCoCo coverage report'
 

@@ -21,19 +21,24 @@ Instalar uma versão específica de um pacote e desativar sua atualização ao e
 Para o exemplo abaixo será utilizado o pacote do `subversion`.
 
 #### Listar as versões do pacote
-{% highlight shell %}
+
+```shell
 dnf --showduplicates list subversion
-{% endhighlight %}
+```
 
 #### Instalar a versão desejada
-{% highlight shell %}
+
+```shell
 sudo dnf install subversion-1.9.7-6.fc28
-{% endhighlight %}
-_Especificar a versão desejada concatenado o nome do pacote com a versão_
+```
+
+Especificar a versão desejada concatenado o nome do pacote com a versão.
 
 #### Excluir o pacote da atualização do DNF
+
 Editar o arquivo `sudo vim /etc/dnf/dnf.conf` e adicionar a linha
-```
+
+```text
 exclude=subversion subversion-javahl subversion-lib
 ```
 

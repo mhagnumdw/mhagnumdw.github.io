@@ -22,10 +22,10 @@ Objetivo: realizar checagem de estilo de código com o checkstyle no hook pre-re
 
 ## Criando o hook pre-receive
 
-1. Entrar no diretório:  
-   - GitLab Instalação convencional:  
-   `/home/git/repositories/<group>/<project>.git`  
-   - GitLab Instalação usando o Omnibus:  
+1. Entrar no diretório:
+   - GitLab Instalação convencional:
+   `/home/git/repositories/<group>/<project>.git`
+   - GitLab Instalação usando o Omnibus:
    `/var/opt/gitlab/git-data/repositories/<group>/<project>.git`
 1. Criar a pasta: `custom_hooks`
 1. Criar o arquivo: `pre-receive` (neste arquivo ficará o código do hook)
@@ -36,6 +36,7 @@ Objetivo: realizar checagem de estilo de código com o checkstyle no hook pre-re
 
 Abaixo um código funcional que faz a checagem de estilo de código. O push será rejeitado se a análise contiver WARN's.
 
+<!-- markdownlint-disable -->
 {% highlight shell linenos %}
 #!/bin/bash
 
@@ -159,20 +160,21 @@ if [[ $BAD_STYLE -eq 1 ]]; then
     exit 1
 fi
 {% endhighlight %}
+<!-- markdownlint-enable -->
 
 ## Fazendo o script funcionar
 
-- Ter o Java instalado;  
-- Colocar dentro da pasta `custom_hooks`, criada anteriormente, o jar do checkstyle e o xml do estilo. Na variáveis `CHECKSTYLE_JAR` e `CHECKSTYLE_XML` defina seus valores, que, para o exemplo, utilizaram checkstyle-7.1-all.jar e TechThingsCool_CheckStyle_Google.xml respectivamente;  
+- Ter o Java instalado;
+- Colocar dentro da pasta `custom_hooks`, criada anteriormente, o jar do checkstyle e o xml do estilo. Na variáveis `CHECKSTYLE_JAR` e `CHECKSTYLE_XML` defina seus valores, que, para o exemplo, utilizaram checkstyle-7.1-all.jar e TechThingsCool_CheckStyle_Google.xml respectivamente;
 - Realizar um push com e outro sem alerta de estilo de código. Verifique o output do push.
 
 _**Obs:** o arquivo TechThingsCool_CheckStyle_Google.xml pode ser substituído pelo padrão do Google, que pode ser obtido em: [https://github.com/checkstyle/checkstyle/tree/master/src/main/resources](https://github.com/checkstyle/checkstyle/tree/master/src/main/resources)_
 
-**Versões**  
-GitLab Community Edition 8.7.2  
+**Versões**
+GitLab Community Edition 8.7.2
 Checkstyle 7.1: [Link](http://downloads.sourceforge.net/project/checkstyle/checkstyle/7.1/checkstyle-7.1-all.jar)
 
-**Referências**  
-[http://docs.gitlab.com/ce/administration/custom_hooks.html](http://docs.gitlab.com/ce/administration/custom_hooks.html)  
-[https://git-scm.com/book/it/v2/Customizing-Git-Git-Hooks](https://git-scm.com/book/it/v2/Customizing-Git-Git-Hooks)  
+**Referências**
+[http://docs.gitlab.com/ce/administration/custom_hooks.html](http://docs.gitlab.com/ce/administration/custom_hooks.html)
+[https://git-scm.com/book/it/v2/Customizing-Git-Git-Hooks](https://git-scm.com/book/it/v2/Customizing-Git-Git-Hooks)
 [http://checkstyle.sourceforge.net/cmdline.html](http://checkstyle.sourceforge.net/cmdline.html)

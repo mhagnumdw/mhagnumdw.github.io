@@ -25,7 +25,7 @@ Tanto a persistência quanto a recuperação desse objeto é totalmente transpar
 
 No exemplo existe a entidade `Cidade` que possui um atributo do tipo `CidadeStatus` (CidadeStatus não é uma entidade!) que é persistido no banco de dados como XML. A serialização e desrealização para XML será feita pelo XStream.
 
-**Etapas**
+## Etapas
 
 - Criar coluna no Oracle
 - Adicionar _modules_ ao JBoss (módulos do Oracle para trabalhar com `XMLType`)
@@ -35,17 +35,18 @@ No exemplo existe a entidade `Cidade` que possui um atributo do tipo `CidadeStat
 - Testar a gravação e verificar no banco de dados
 - Testar a recuperação
 
-_Se qualquer versão aqui apresentada diferir da sua, ajuste as versões_
+Se qualquer versão aqui apresentada diferir da sua, ajuste as versões.
 
 ## Criar coluna no Oracle
 
-{% highlight sql %}
+```sql
 ALTER TABLE cidade add (XML_CIDADE_STATUS XMLType);
-{% endhighlight %}
+```
 
 ## Adicionar _modules_ ao JBoss
 
 São necessários:
+
 - `ojdbc6.jar` - driver do banco de dados;
 - `xdb6.jar` - para suporte a XML, pode ser obtido na mesma página que o `ojdbc6.jar`;
 - `xmlparserv2.jar` - para suporte a XML, recomendo obter a partir do diretório de instalação do Oracle;
@@ -58,7 +59,7 @@ Os arquivos acima já configurados como módulos estão aqui: [modules.7z](https
 
 _Com os módulos que devem ser carregados. Se o projeto tiver sub-deployment os módulos devem ser informados nos mesmos._
 
-{% highlight xml %}
+```xml
 <jboss-deployment-structure>
     <deployment>
         <dependencies>
@@ -67,13 +68,13 @@ _Com os módulos que devem ser carregados. Se o projeto tiver sub-deployment os 
         </dependencies>
     </deployment>
 </jboss-deployment-structure>
-{% endhighlight %}
+```
 
 ## pom.xml
 
-_Com as dependências necessárias_
+Com as dependências necessárias.
 
-{% highlight xml %}
+```xml
 <dependency>
     <groupId>com.thoughtworks.xstream</groupId>
     <artifactId>xstream</artifactId>
@@ -96,11 +97,11 @@ _Com as dependências necessárias_
     <version>11.2.0.4</version>
     <scope>provided</scope>
 </dependency>
-{% endhighlight %}
+```
 
 ## Entidade Cidade.java
 
-{% highlight java %}
+```java
 import java.io.Serializable;
 
 import javax.persistence.Column;
@@ -135,13 +136,13 @@ public class Cidade implements Serializable {
     private CidadeStatus status;
 
 }
-{% endhighlight %}
+```
 
 ## CidadeStatus.java
 
-_Será gravado no banco de dados como XML_
+Será gravado no banco de dados como XML.
 
-{% highlight java %}
+```java
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
@@ -182,15 +183,15 @@ public class CidadeStatus implements Serializable {
     }
 
 }
-{% endhighlight %}
+```
 
 ## CidadeStatusUserType.java
 
-_É por meio dessa classe que o Hibernate sabe salvar o CidadeStatus como XML e sabe recuperar o XML convertendo em CidadeStatus_
+É por meio dessa classe que o Hibernate sabe salvar o CidadeStatus como XML e sabe recuperar o XML convertendo em CidadeStatus.
 
-_A serialização do XStream feita por essa classe já dá suporte a Proxy e aos tipos internos do Hibernate_
+A serialização do XStream feita por essa classe já dá suporte a Proxy e aos tipos internos do Hibernate.
 
-{% highlight java %}
+```java
 public class CidadeStatusUserType implements UserType {
 
     private static final Logger log = LogManager.getLogger(CidadeStatusUserType.class);
@@ -291,13 +292,13 @@ public class CidadeStatusUserType implements UserType {
     }
 
 }
-{% endhighlight %}
+```
 
 ## Testando a gravação e verificando no banco de dados
 
-_Persistindo_
+Persistindo.
 
-{% highlight java %}
+```java
 Cidade cidade = new Cidade();
 cidade.setNome("Dummy City");
 
@@ -311,9 +312,9 @@ cidadeStatus.setFundadores(fundadores);
 cidade.setStatus(cidadeStatus);
 
 entityManager.persist(cidade);
-{% endhighlight %}
+```
 
-_Verificando no banco de dados_
+Verificando no banco de dados.
 
 ![Objeto_persistido_como_XMLType]({{ site.baseurl }}/assets/img/posts/jboss-eap-6-x-as-7-x-oracle-11g-xmltype-persistindo-como-xml/objeto_persistido_como_xmltype.png)
 

@@ -29,28 +29,28 @@ Abaixo os passos para realizar uma publicação no Maven Central.
 
 _Se já possui as chaves, utilize-a e desconsidere essa etapa._
 
-{% highlight shell %}
+```shell
 # Criar a chave
 gpg2 --gen-key
-{% endhighlight %}
+```
 
-{% highlight shell %}
+```shell
 # Listar as chaves
 gpg2 --list-keys
-{% endhighlight %}
+```
 
-{% highlight shell %}
+```shell
 # Enviar as chaves para os servidores de chaves remotas
 gpg2 --send-keys KEY
-{% endhighlight %}
+```
 
-{% highlight shell %}
+```shell
 # Confirmar se a chave está disponível
 gpg2 --recv-keys KEY
 
 # ou especificando o servidor
 gpg2 --keyserver hkp://pool.sks-keyservers.net --recv-keys KEY
-{% endhighlight %}
+```
 
 > **É bem importante guardar a passphrase e fazer backup da pasta ~/.gnupg**
 
@@ -60,7 +60,7 @@ O `pom.xml` abaixo já segue os requisitos mínimos para publicação no Maven C
 
 Observar que a versão é `-SNAPSHOT`. Mais a frente vamos gerar a release.
 
-{% highlight xml %}
+```xml
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <parent>
@@ -181,23 +181,23 @@ Observar que a versão é `-SNAPSHOT`. Mais a frente vamos gerar a release.
     </build>
 
 </project>
-{% endhighlight %}
+```
 
 ## Alterar o settings.xml
 
 Acrescentar o server
 
-{% highlight xml %}
+```xml
 <server>
     <id>ossrh</id> <!-- mesmo nome definido no pom.xml -->
     <username>mhagnumdw</username>
     <password>sonatype-password</password>
 </server>
-{% endhighlight %}
+```
 
 Acrescentar o profile
 
-{% highlight xml %}
+```xml
 <profile>
     <id>ossrh</id>
     <activation>
@@ -209,37 +209,37 @@ Acrescentar o profile
       <gpg.passphrase>FRASE-SECRETA</gpg.passphrase>
     </properties>
 </profile>
-{% endhighlight %}
+```
 
 ## Gerar a release
 
-{% highlight shell %}
+```shell
 mvn release:clean release:prepare
-{% endhighlight %}
+```
 
 A linha de comando acima vai buildar, testar, assinar os artefatos gerados pelo maven com a chave gpg `(~/.gnupg)`, alterar o `pom.xml`, criar a tag, fazer commit e realizar um push.
 
 > O push é automático porque está definido no `pom.xml` em `<pushChanges>true</pushChanges>`
 
-{% highlight shell %}
+```shell
 mvn release:perform
-{% endhighlight %}
+```
 
 A linha de comando acima vai fazer o checkout da tag, buildar e fazer o deploy dos artefatos gerados pelo maven e assinados com a chave GPG na etapa anterior. O deploy é feito para staging do sonatype, ainda não é para o maven central.
 
-{% highlight shell %}
+```shell
 mvn release:clean
-{% endhighlight %}
+```
 
 Para apagar arquivos temporários que o plugin de release do maven gera.
 
 ## Liberar release
 
-1.  Acessar e se logar em [https://oss.sonatype.org](https://oss.sonatype.org);
-1.  Selecionar `Staging repositories`;
-1.  Selecionar o repositório criado no deploy e clicar em `Close`;
-1.  Verificar a guia de atividades, que vai informar se está tudo ok ou se alguma etapa de validação falhou;
-1.  Se tudo ok é só clicar no botão `Release` e será iniciada a sincronização com o maven central (isso pode levar alguns minutos).
+1. Acessar e se logar em [https://oss.sonatype.org](https://oss.sonatype.org);
+1. Selecionar `Staging repositories`;
+1. Selecionar o repositório criado no deploy e clicar em `Close`;
+1. Verificar a guia de atividades, que vai informar se está tudo ok ou se alguma etapa de validação falhou;
+1. Se tudo ok é só clicar no botão `Release` e será iniciada a sincronização com o maven central (isso pode levar alguns minutos).
 
 Aqui um vídeo demonstrando essa etapa: [https://www.youtube.com/watch?v=dXR4pJ_zS-0](https://www.youtube.com/watch?v=dXR4pJ_zS-0)
 
@@ -251,10 +251,8 @@ Após essa etapa o ticket aberto no JIRA do Sonatype será respondido. Ver imag
 
 A sincronização com o maven central deve ocorrer alguns minutos depois, mas para a lib aparecer na busca [https://search.maven.org](https://search.maven.org) pode levar umas 2 horas.
 
-#### Referências
+## Referências
 
-[http://central.sonatype.org/pages/ossrh-guide.html](http://central.sonatype.org/pages/ossrh-guide.html)
-
-[http://www.baeldung.com/maven-release-nexus](http://www.baeldung.com/maven-release-nexus)
-
-[http://central.sonatype.org/pages/apache-maven.html](http://central.sonatype.org/pages/apache-maven.html)
+- [http://central.sonatype.org/pages/ossrh-guide.html](http://central.sonatype.org/pages/ossrh-guide.html)
+- [http://www.baeldung.com/maven-release-nexus](http://www.baeldung.com/maven-release-nexus)
+- [http://central.sonatype.org/pages/apache-maven.html](http://central.sonatype.org/pages/apache-maven.html)

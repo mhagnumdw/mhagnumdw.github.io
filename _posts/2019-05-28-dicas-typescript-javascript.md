@@ -37,6 +37,7 @@ delete allThemesExceptDefault['default-theme'];
 ```
 
 ## Juntar dois ou mais arrays usando Array Spread (ES6)
+
 ```typescript
 const arr1 = [1,2,3]
 const arr2 = [4,5,6]

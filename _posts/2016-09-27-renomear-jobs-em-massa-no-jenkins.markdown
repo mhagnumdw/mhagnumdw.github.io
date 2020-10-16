@@ -32,11 +32,11 @@ E será removido "-core", ficando:
 
 ### Abrir Script Console do Jenkins
 
-**Jenkins > Manage Jenkins > Script Console**
+Jenkins > Manage Jenkins > Script Console
 
 Colar o script abaixo
 
-{% highlight groovy %}
+```groovy
 import hudson.model.*
 
 disableChildren(Hudson.instance.items)
@@ -54,7 +54,7 @@ def disableChildren(items) {
     }
     println("Fim!")
 }
-{% endhighlight %}
+```
 
 Foi utilizado um regex para filtrar apenas o jobs que se deseja renomear. O regex está em vermelho no script acima.
 
@@ -62,17 +62,17 @@ Foi utilizado um regex para filtrar apenas o jobs que se deseja renomear. O reg
 
 ### Sobre o regex do exemplo acima
 
-```
+```text
 ^(techthingscool)-core-(.*)$
 ```
 
-- **(techthingscool)** é o grupo 1
-- **(.*)** é o grupo 2
+- `(techthingscool)` é o grupo 1
+- `(.*)` é o grupo 2
 
-## Dica!!
+## Dica
 
 É bom comentar a linha **item.renameTo(newname)** e rodar o script para checar os jobs que foram capturados pelo regex e os novos nomes.
 
-**Referências**
+## Referências
 
 [https://wiki.jenkins-ci.org/display/JENKINS/Bulk+rename+projects](https://wiki.jenkins-ci.org/display/JENKINS/Bulk+rename+projects)

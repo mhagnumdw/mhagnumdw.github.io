@@ -22,6 +22,7 @@ Direto ao ponto: sincronizando no Linux com Google Drive e [rclone](https://rclo
 ### Instalar e Configurar o rclone
 
 #### Instalar
+
 ```bash
 curl https://rclone.org/install.sh | sudo bash
 # checar a versão
@@ -36,7 +37,8 @@ rclone config
 ```
 
 Responder de acordo com o que está abaixo
-```
+
+```text
 n/s/q> n
 name> GoogleDrive (dê o nome que preferir)
 Storage> 13
@@ -51,7 +53,7 @@ Use auto config? y
 
 Em seguida deve aparecer um link similar ao link abaixo e o browser deve abrir automaticamente, caso não clique no link para abrir.
 
-- http://127.0.0.1:53682/auth?state=xxxxxxxxxxxxxxxxxxxxxx
+- <http://127.0.0.1:53682/auth?state=xxxxxxxxxxxxxxxxxxxxxx>
 
 Então:
 
@@ -59,14 +61,14 @@ Então:
 - Confirme o login.
 - Deve aparecer no browser a mensagem abaixo:
 
-```
+```text
 Success!
 All done. Please go back to rclone.
 ```
 
 Volte para o console (que deve ter tido alteração!) E continue respondendo:
 
-```
+```text
 Configure this as a team drive? n
 y) Yes this is OK [ y ]
 q) Quit config [ q ]
@@ -88,16 +90,15 @@ rclone ls GoogleDrive:/
 
 > `--max-depth 1` vai listar apenas a pasta raiz
 
-
 ### Especificar o que deve ser sincronizando
 
 Nem sempre desejamos sincronizar todo o drive. Vamos especificar o que sincronizar. Para isso criar o arquivo `filter-file-GoogleDrive.txt` (dê o nome que preferir) e especificar o que deve ou não ser sincronizado, conforme conteúdo de exemplo abaixo.
+
 - Com sinal de `+` deve sincronizar
 - Com sinal de `-` não deve sincronizar
 - Mais detalhes [aqui](https://rclone.org/filtering/)
 
-
-```
+```text
 # Sincronizar
 + /Aplicativos/**
 + /Apostilas/**
@@ -108,7 +109,6 @@ Nem sempre desejamos sincronizar todo o drive. Vamos especificar o que sincroniz
 # Nao sincronizar
 - *
 ```
-
 
 ### Sincronizar do Google Drive para uma pasta local
 
@@ -142,7 +142,6 @@ O `rclone sync` só faz sincronização em um único sentido. Ele só altera a p
 
 **Vamos usar o `rclonesync.py` para isso**, que é indicado no próprio site do `rclone` [aqui](https://github.com/rclone/rclone/wiki/Third-Party-Integrations-with-rclone#rclonesync-v2).
 
-
 ```bash
 # download
 wget https://raw.githubusercontent.com/cjnaz/rclonesync-V2/f2316cfeebda1532c343890668ec972bf3bb276e/rclonesync.py
@@ -151,10 +150,9 @@ chmod +x rclonesync.py
 ```
 
 #### Primeira Execução
+
 > Na primeira sincronização é necessário executar com o parâmetro `--first-sync`
-
 > É possível usar o parâmetro `--dry-run` para ver o resultado sem efetivar as mudanças
-
 > Observar que primeiro a pasta local e em seguida a pasta remota (em tese mudar a ordem não deve alterar o resultado)
 
 ```bash
@@ -166,6 +164,7 @@ chmod +x rclonesync.py
 ```
 
 #### Execuções subsequentes
+
 > As execuções subsequentes não devem ter o parâmetro `--first-sync`
 
 ```bash
@@ -183,12 +182,10 @@ chmod +x rclonesync.py
 ```
 
 > A opção `--drive-skip-gdocs` não sincroniza os arquivos do Google Docs, que no sistema de arquivos local seriam apenas atalhos.
-
 > Caso queira sincronizar os arquivos do Google Docs, use a opção `--drive-export-formats=.link.html` que atualmente é documentada [aqui](https://github.com/rclone/rclone/pull/2479) e [aqui](https://rclone.org/drive/#import-export-of-google-documents)
-
 > A opção `--drive-acknowledge-abuse` permite sincronizar arquivos que o Google Drive acha suspeitos (ex: malware).
 
-### Automizando!
+### Automizando
 
 Afinal não queremos ficar executando manualmente. Vamos agendar a sincronização no cron.
 
@@ -198,7 +195,7 @@ crontab -e
 
 Adicionar o código abaixo que agenda a execução a cada 5 minutos.
 
-```
+```bash
 */5 * * * * ./rclonesync.py /root/GoogleDrive/ GoogleDrive:/ \
   --filters-file filter-file-GoogleDrive.txt \
   --verbose \
@@ -209,7 +206,7 @@ Adicionar o código abaixo que agenda a execução a cada 5 minutos.
 
 ### Referências
 
-- https://github.com/rclone/rclone
-- https://forum.rclone.org/t/bi-directional-rclone-solution/3478
-- https://rclone.org/drive/
-- https://github.com/cjnaz/rclonesync-V2
+- <https://github.com/rclone/rclone>
+- <https://forum.rclone.org/t/bi-directional-rclone-solution/3478>
+- <https://rclone.org/drive/>
+- <https://github.com/cjnaz/rclonesync-V2>

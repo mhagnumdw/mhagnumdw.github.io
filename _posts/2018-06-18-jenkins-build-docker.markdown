@@ -21,7 +21,7 @@ Executar o build do Jenkins dentro de um container.
 
 ## Instalando Docker
 
-{% highlight shell %}
+```shell
 # instalando
 sudo dnf -y install dnf-plugins-core
 sudo dnf config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo
@@ -39,32 +39,36 @@ sudo systemctl start docker
 # a execução dos comando abaixo com sucesso indica que o docker foi instalado corretamente
 docker images
 docker run hello-world
-{% endhighlight %}
+```
 
 ## Configurando Docker
+
 Se o acesso ao daemon do docker é feito de uma máquina remota, é necessário configurar o `hosts` no arquivo `/etc/docker/daemon.json`, em outras palavras, se o jenkins está em uma máquina e o docker em outra, essa configuração é necessária.
 
 Adicionar o conteúdo abaixo ao arquivo `/etc/docker/daemon.json`
+
 ```json
 {
   "hosts": ["tcp://0.0.0.0:2375"]
 }
 ```
 
-> **Essa configuração expõe o acesso ao daemon do docker a partir de todas as interfaces de rede. Para garantir a segurança tem que usar certificado: https://docs.docker.com/engine/security/https/**
+> **Essa configuração expõe o acesso ao daemon do docker a partir de todas as interfaces de rede. Para garantir a segurança tem que usar certificado: <https://docs.docker.com/engine/security/https/>**
 
 Reiniciar o docker
-{% highlight shell %}
+
+```shell
 sudo systemctl restart docker
-{% endhighlight %}
+```
 
 ## Configurando Jenkins
 
-Instalar o plugin Docker Plugin: https://wiki.jenkins.io/display/JENKINS/Docker+Plugin
+Instalar o plugin Docker Plugin: <https://wiki.jenkins.io/display/JENKINS/Docker+Plugin>
 
 ![Jenkins - Instalando plugin Docker]({{ site.baseurl }}/assets/img/posts/jenkins-build-docker/instalando-plugin-docker.png)
 
-#### Configurar plugin
+### Configurar plugin
+
 1. abrir o Jenkins
 1. menu `Manage Jenkins`
 1. menu `Configure System`
@@ -89,22 +93,26 @@ Instalar o plugin Docker Plugin: https://wiki.jenkins.io/display/JENKINS/Docker+
    1. Pull strategy: `Pull once and update latest`
 1. clicar em `Save`
 
-#### Overview da configuração
+### Overview da configuração
+
 ![Jenkins - Docker Conf Overview]({{ site.baseurl }}/assets/img/posts/jenkins-build-docker/plugin-docker-conf-overview.gif)
 
 ## Criar Job (ou alterar um existente)
 
-#### Configurar o build para executar em container
+### Configurar o build para executar em container
+
 1. abrir as configurações do job
 1. marcar a opção `Restrict where this project can be run`
 1. Label Expression: `docker-slave`
 ![Jenkins - Restrict where this project can be run]({{ site.baseurl }}/assets/img/posts/jenkins-build-docker/restrict-where-this-project-can-be-run.png)
 
-#### Buildar
+### Buildar
+
 ![Jenkins - Buildando dentro de container]({{ site.baseurl }}/assets/img/posts/jenkins-build-docker/buildando-dentro-de-container.gif)
 
 ## Versões/Referências
+
 - Jenkins: 2.121.1
 - Docker client/server: 18.03.1-ce
-- https://wiki.jenkins.io/display/JENKINS/Docker+Plugin
-- https://hub.docker.com/r/jenkins/ssh-slave
+- <https://wiki.jenkins.io/display/JENKINS/Docker+Plugin>
+- <https://hub.docker.com/r/jenkins/ssh-slave>

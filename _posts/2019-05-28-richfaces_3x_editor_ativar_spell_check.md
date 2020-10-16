@@ -27,11 +27,14 @@ Para ativar o spell check no `rich:editor`, usando os recursos do próprio brows
 ```
 
 ## Resultado
+
 ![Spellcheck]({{ "/assets/img/posts/richfaces_3x_editor_ativar_spell_check/richfaces_3x_editor_ativar_spell_check.png" | relative_url }})
 
 ## Observação
+
 - O Richfaces 3.3.4 utiliza o TinyMCE versão 3.2.5 que pode ser visto no arquivo:
 richfaces-ui-3.3.4.Final.jar/org/richfaces/renderkit/html/scripts/tiny_mce/tiny_mce.js
 
 ## Referências
-- https://www.tiny.cloud/docs/configure/spelling/#gecko_spellcheck
+
+- <https://www.tiny.cloud/docs/configure/spelling/#gecko_spellcheck>

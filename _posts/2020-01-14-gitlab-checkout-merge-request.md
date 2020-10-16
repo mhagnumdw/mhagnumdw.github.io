@@ -33,9 +33,8 @@ git checkout MR118
 ```
 
 > **Checando a referência:** `git show-ref | grep MR118`
-> 
+>
 > **Deletando a referência:** `git branch -D MR118`
-
 
 ## Opção 2: adicionando uma nova referência ao remote
 
@@ -47,11 +46,14 @@ git config -e
 ```
 
 Dentro da seção `[remote "origin"]` adicionar na última linha o trecho abaixo
-```
+
+```text
 fetch = +refs/merge-requests/*/head:refs/remotes/origin/merge-requests/*
 ```
+
 ficando algo parecido com
-```
+
+```text
 [remote "origin"]
 url = git@git.doinio.com:mhagnumdw/dummy.git
 fetch = +refs/heads/*:refs/remotes/origin/*
@@ -70,5 +72,6 @@ git checkout origin/merge-requests/118
 ```
 
 ## Referências
-- https://docs.gitlab.com/ee/user/project/merge_requests/reviewing_and_managing_merge_requests.html#checkout-locally-by-modifying-gitconfig-for-a-given-repository
-- https://stackoverflow.com/questions/44992512/git-how-to-checkout-merge-request-locally-and-create-new-local-branch#44992513
+
+- <https://docs.gitlab.com/ee/user/project/merge_requests/reviewing_and_managing_merge_requests.html#checkout-locally-by-modifying-gitconfig-for-a-given-repository>
+- <https://stackoverflow.com/questions/44992512/git-how-to-checkout-merge-request-locally-and-create-new-local-branch#44992513>

@@ -29,23 +29,27 @@ git config --global difftool.bc3.cmd '"c:/program files/beyond compare 4/bcomp.e
 ```
 
 Para desativar o prompt "Launch ... [Y/n]?"
+
 ```shell
 git config --global difftool.prompt false
 ```
 
 Exemplos
+
 ```shell
 git difftool master..minha-branch -- frontend/user/user-list.component.html
 git difftool filename.ext
 ```
 
 > Versões aqui testadas:
+>
 > - Beyond Compare 4
 > - Git 2.21.0 / 2.21.0.windows.1
 
 ## Linux
 
-_Em breve_
+Em breve
 
 ## Referências
-- https://www.scootersoftware.com/support.php?zz=kb_vcs
+
+- <https://www.scootersoftware.com/support.php?zz=kb_vcs>

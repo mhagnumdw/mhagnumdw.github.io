@@ -18,37 +18,39 @@ Instalar as fontes da Microsoft no linux Fefora/RHEL. Para outras distros os pas
 
 <!--more-->
 
-### Executar
-{% highlight shell %}
+```shell
 dnf install rpm-build cabextract ttmkfdir
-{% endhighlight %}
+```
 
-_Para o RHEL o **cabextract** está no EPEL_  
-_Para o Fedora é bom que tenha os repositórios do RPM Fusion_
+> Para o RHEL o **cabextract** está no EPEL
+>
+> Para o Fedora é bom que tenha os repositórios do RPM Fusion
 
-### Executar
-{% highlight shell %}
+```shell
 cd /tmp
 wget http://corefonts.sourceforge.net/msttcorefonts-2.5-1.spec
-{% endhighlight %}
+```
 
 Precisamos ajustar um endereço no arquivo acima. Na linha 62 deve haver:
-```
+
+```text
 mirror="http://${m}.dl.sourceforge.net/project/corefonts/the%20fonts/final/"
 ```
 
 Que deve ser substituída por:
-```
+
+```text
 mirror="http://sourceforge.net/projects/corefonts/files/the%20fonts/final/"
 ```
 
-### Executar
-{% highlight shell %}
+Executar
+
+```shell
 rpmbuild -bb msttcorefonts-2.5-1.spec
 cp ~/rpmbuild/RPMS/noarch/msttcorefonts-2.5-1.noarch.rpm /tmp
 dnf install msttcorefonts-2.5-1.noarch.rpm
 fc-cache /usr/share/fonts
-{% endhighlight %}
+```
 
 Não deve ser necessário reiniciar.
 

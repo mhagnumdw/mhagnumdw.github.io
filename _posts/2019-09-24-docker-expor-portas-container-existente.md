@@ -14,7 +14,7 @@ Expor portas de um container previamente criado.
 
 <!--more-->
 
-## Neste exemplo vamos querer expor a porta `4200`.
+## Neste exemplo vamos querer expor a porta `4200`
 
 ### Passos iniciais
 
@@ -41,8 +41,7 @@ cp -ra . /tmp/container-original/
 
 ### Editar o arquivo `config.v2.json`
 
-> **DICA**
-> <p>Copie o conteúdo para algum editor que seja possível formatar. Isso ajuda na visualização.</p>
+> **DICA** 📋 Copie o conteúdo para algum editor que seja possível formatar. Isso ajuda na visualização.
 
  Abaixo o antes e o depois do arquivo:
 
@@ -69,12 +68,12 @@ docker ps --all
 sudo netstat -tulnp | grep -i -P '4200'
 ```
 
-
 ## Detalhes do ambiente
+
 - Fedora 28
 - Docker client 1.13.1 / 18.x
 - Docker server 1.13.1 / 18.x
 
-
 ## Referências
-- Com a solução apresentada aqui e várias outas: https://stackoverflow.com/questions/19335444/how-do-i-assign-a-port-mapping-to-an-existing-docker-container
+
+- Com a solução apresentada aqui e várias outas: <https://stackoverflow.com/questions/19335444/how-do-i-assign-a-port-mapping-to-an-existing-docker-container>

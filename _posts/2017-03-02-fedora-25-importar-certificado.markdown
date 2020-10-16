@@ -21,15 +21,16 @@ Com a importação do certificado deixa-se de receber o alerta que os browsers e
 
 #### Listar os certificados atuais
 
-{% highlight shell %}
+```shell
 certutil -d sql:$HOME/.pki/nssdb -L
-{% endhighlight %}
+```
 
 #### Importar um certificado
 
-{% highlight shell %}
+```shell
 certutil -d sql:$HOME/.pki/nssdb -A -t "TCu,Cu,Tuw" -n 'MhagnumDw-CA' -i ~/Downloads/MhagnumDw-CA.cer
-{% endhighlight %}
+```
 
 Referências
+
 - [https://wiki.archlinux.org/index.php/Network_Security_Services](https://wiki.archlinux.org/index.php/Network_Security_Services)

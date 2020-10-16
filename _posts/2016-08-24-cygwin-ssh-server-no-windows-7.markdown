@@ -19,7 +19,7 @@ Instalar o Cygwin SSH Server como serviço no Windows.
 
 ## Instalando
 
-Instalar os pacotes abaixo no Cygwin:  
+Instalar os pacotes abaixo no Cygwin:
 _Dica: executar o próprio instalador do Cygwin para instalar os pacotes._
 
 - openssh
@@ -28,9 +28,9 @@ _Dica: executar o próprio instalador do Cygwin para instalar os pacotes._
 
 Após a instalação dos pacotes acima, no terminal do Cygwin, executar:
 
-{% highlight shell %}
+```shell
 ssh-host-config -y
-{% endhighlight %}
+```
 
 O assistente vai criar o usuário `cyg_server` para rodar o serviço SSH e será necessário definir uma senha.
 
@@ -42,17 +42,17 @@ Nesse ponto o serviço SSH está instalado.
 
 ## Iniciando o serviço SSH
 
-{% highlight shell %}
+```shell
 cygrunsrv -S sshd
-{% endhighlight %}
+```
 
 ## Parando o serviço SSH
 
-{% highlight shell %}
+```shell
 cygrunsrv -E sshd
-{% endhighlight %}
+```
 
 ## Outros
 
-- O serviço criado pode ser visualizado no `services.msc` com o nome `CYGWIN sshd`;
-- Para iniciar o serviço SSH com outro usuário, utilizar o parâmetro `-u` no comando `ssh-host-config`.
+- O serviço criado pode ser visualizado no `services.msc` com o nome `CYGWIN sshd`
+- Para iniciar o serviço SSH com outro usuário, utilizar o parâmetro `-u` no comando `ssh-host-config`

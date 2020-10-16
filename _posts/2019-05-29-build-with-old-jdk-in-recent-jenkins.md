@@ -15,9 +15,11 @@ Por exemplo, a partir de tal versão do Jenkins a JDK 8 é necessária e isso po
 <!--more-->
 
 ## Motivação (caso de uso)
+
 O Hibernate 3.6 necessita da JDK 5 para buildar corretamente. Mesmo adicionando no Jenkins a JDK 5, o maven 3.1.1 que é a última versão compatível para essa JDK e configurando o job para fazer uso dessas versões, teremos o problema: `Exception in thread "main" java.lang.UnsupportedClassVersionError: Bad version number in .class file`
 
 ## Ambiente em questão
+
 - Jenkins 2.32.3 com `JDK 8`
 - Versão do Maven no Jenkins: 3.2.1
 - Projeto para buildar: Hibernate 3.6 com `JDK 5`
@@ -28,12 +30,15 @@ O Hibernate 3.6 necessita da JDK 5 para buildar corretamente. Mesmo adicionando 
 
 ### Jenkins (configuração global)
 
-1. Instalar o plugin: [Config File Provider Plugin](https://wiki.jenkins.io/display/JENKINS/Config+File+Provider+Plugin)
-1. Criar configuração do toolchain: `Jenkins > Manage Jenkins > Managed files > Add a new Config > Maven toolchains.xml > Submit`
-1. Adicionar as informações abaixo
-> ##### Name:
+- Instalar o plugin: [Config File Provider Plugin](https://wiki.jenkins.io/display/JENKINS/Config+File+Provider+Plugin)
+- Criar configuração do toolchain: `Jenkins > Manage Jenkins > Managed files > Add a new Config > Maven toolchains.xml > Submit`
+- Adicionar as informações abaixo
+
+> **Name:**
 > Hibernate-Toolchains
-> ##### Content:
+>
+> **Content:**
+>
 > ```xml
 > <?xml version="1.0" encoding="UTF-8"?>
 > <toolchains>
@@ -49,8 +54,10 @@ O Hibernate 3.6 necessita da JDK 5 para buildar corretamente. Mesmo adicionando 
 >   </toolchain>
 > </toolchains>
 > ```
+>
 ![Maven toolchains.xml]({{ "assets/img/posts/build-with-old-jdk-in-recent-jenkins/managed-files-config.png" | relative_url }})
-1. Clicar em Submit
+
+- Clicar em Submit
 
 Então será redirecionado para todos os arquivos de configuração.
 
@@ -71,7 +78,6 @@ Então será redirecionado para todos os arquivos de configuração.
 ![Build Environment]({{ "assets/img/posts/build-with-old-jdk-in-recent-jenkins/build-enviroment.png" | relative_url }})
 
 ![Build - Goals and options]({{ "assets/img/posts/build-with-old-jdk-in-recent-jenkins/build-goals-and-options.png" | relative_url }})
-
 
 ### Configurar o projeto
 
@@ -95,7 +101,7 @@ Configuração no pom.xml do projeto (snippet)
             <configuration>
                 <toolchains>
                     <jdk>
-                        <version>1.5</version>  
+                        <version>1.5</version>
                         <vendor>oracle</vendor>
                     </jdk>
                 </toolchains>
@@ -115,11 +121,13 @@ Configuração no pom.xml do projeto (snippet)
 </build>
 ```
 
-## É isso!
+## É isso
+
 A partir de então, mesmo que o maven do Jenkins seja invocado com a jdk 8, o build do Hibernate vai acontecer com a jdk 5.
 
 ## Referências
-- https://stackoverflow.com/questions/46276236/jenkins-error-when-i-try-to-use-an-older-jdk-for-a-specific-maven-project?rq=1
-- http://maven.apache.org/plugins/maven-toolchains-plugin/toolchains/jdk.html
-- https://support.cloudbees.com/hc/en-us/articles/115003910392-How-to-config-a-Maven-Toolchain
-- https://maven.apache.org/docs/history.html
+
+- <https://stackoverflow.com/questions/46276236/jenkins-error-when-i-try-to-use-an-older-jdk-for-a-specific-maven-project?rq=1>
+- <http://maven.apache.org/plugins/maven-toolchains-plugin/toolchains/jdk.html>
+- <https://support.cloudbees.com/hc/en-us/articles/115003910392-How-to-config-a-Maven-Toolchain>
+- <https://maven.apache.org/docs/history.html>

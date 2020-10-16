@@ -19,18 +19,18 @@ Dicas sobre o Jenkins. Snippets, configurações simples, scripts groovy para au
 
 ### Deletar jobs em massa filtando por nome
 
-{% highlight groovy %}
+```groovy
 import jenkins.model.*
 
 def matchedJobs = Jenkins.instance.items.findAll { job ->
   job.name =~ /regex_filter_here/
 }
-    
+
 matchedJobs.each { job ->
     // println job.name
     job.delete()
 }
-{% endhighlight %}
+```
 
 * * *
 
@@ -38,27 +38,26 @@ matchedJobs.each { job ->
 
 > CUIDADO!
 
-{% highlight groovy %}
+```groovy
 import jenkins.model.*
 
 def allJobs = Jenkins.instance.items.findAll()
-    
+
 allJobs.each { job ->
   job.delete()
 }
-{% endhighlight %}
+```
 
 * * *
 
 ### Cancelar todos os jobs em execução
 
-{% highlight groovy %}
+```groovy
 import hudson.model.*
 
 def q = Jenkins.instance.queue
 
 q.items.each { q.cancel(it.task) }
-{% endhighlight %}
+```
 
 * * *
-

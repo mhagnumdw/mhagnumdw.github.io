@@ -23,37 +23,46 @@ Instalar o cron no Cygwin como serviço no Windows.
 - Iniciar o Cygwin como administrador do Windows
 
 - Registrar o serviço
-{% highlight shell %}
+
+```shell
 cygrunsrv -I CYGWIN-cron -u SEU_USUARIO_AQUI -p /usr/sbin/cron -a "-n"
-{% endhighlight %}
+```
 
 - Ver detalhes do serviço
-{% highlight shell %}
+
+```shell
 cygrunsrv --list -V
-{% endhighlight %}
-_A saída do comando acima deve mostrar que o serviço está parado_
+```
+
+> 📋 A saída do comando acima deve mostrar que o serviço está parado
 
 - Iniciando o serviço
-{% highlight shell %}
+
+```shell
 cygrunsrv --start CYGWIN-cron
-{% endhighlight %}
+```
 
 - Ver detalhes do serviço
-{% highlight shell %}
+
+```shell
 cygrunsrv --list -V
-{% endhighlight %}
-_A saída do comando acima deve mostrar que o serviço está em execução_
+```
+
+> 📋 A saída do comando acima deve mostrar que o serviço está em execução
 
 - Verificar que o serviço está cadastrado no Windows
-{% highlight shell %}
+
+```shell
 cmd /c 'services.msc'
-{% endhighlight %}
+```
+
 _Buscar pelo serviço_ `CYGWIN-cron`
 
 - Agora é só registrar alguma execução no cron
-{% highlight shell %}
+
+```shell
 # em um sessao do cygwin com seu usuario definido no inicio
 crontab -e
 # ou, se você quiser especificar o editor
 env VISUAL="vim" crontab -e
-{% endhighlight %}
+```

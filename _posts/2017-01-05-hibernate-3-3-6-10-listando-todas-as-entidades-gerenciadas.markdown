@@ -18,7 +18,7 @@ Objetivo: listar todas as entidades gerenciadas pelo EntityManager no Hibernate 
 
 <!--more-->
 
-{% highlight java %}
+```java
 EntityManager em = ;
 
 // recuperar aqui alguma entidade para vê-la gerenciada no loop abaixo
@@ -32,13 +32,16 @@ for (IdentityMapEntry ime : entryList) {
     Object entidade = ime.getKey();
     System.out.println(ee.getEntityName() + " - " + ee.getId() + " - " + ee.getStatus());
 }
-{% endhighlight %}
+```
 
 imports:
-- org.hibernate.engine.SessionImplementor
-- org.hibernate.engine.PersistenceContext
-- org.hibernate.util.IdentityMap
-- org.hibernate.util.IdentityMap.IdentityMapEntry
-- org.hibernate.engine.EntityEntry
 
-Obs: para JPA 2 é diferente
+```java
+import org.hibernate.engine.SessionImplementor;
+import org.hibernate.engine.PersistenceContext;
+import org.hibernate.util.IdentityMap;
+import org.hibernate.util.IdentityMap.IdentityMapEntry;
+import org.hibernate.engine.EntityEntry;
+```
+
+> 📋 Obs: para JPA 2 é diferente

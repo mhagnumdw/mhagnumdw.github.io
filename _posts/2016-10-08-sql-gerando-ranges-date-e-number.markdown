@@ -20,7 +20,7 @@ Para isso, inicialmente, é necessário saber como fazer uma consulta que retorn
 
 ## Retorna os números inteiros entre 1 e 5
 
-{% highlight sql %}
+```sql
 -- Retorna os números inteiros entre 1 e 5
 WITH T(DIA) AS (
     SELECT 1 FROM DUAL
@@ -31,13 +31,13 @@ SELECT DIA
 FROM T
 ORDER BY DIA ASC
 ;
-{% endhighlight %}
+```
 
 ![select_with_number_range]({{ site.baseurl }}/assets/img/posts/sql-gerando-ranges-date-e-number/select_with_number_range.png)
 
 ## Retorna a datas (dia a dia) entre '01/10/2016' e '05/10/2016'
 
-{% highlight sql %}
+```sql
 -- Retorna a datas (dia a dia) entre '01/10/2016' e '05/10/2016'
 WITH T(DIA) AS (
     SELECT TO_DATE('01/10/2016' , 'DD/MM/YYYY') FROM DUAL
@@ -49,13 +49,13 @@ SELECT DIA
 FROM T
 ORDER BY DIA DESC
 ;
-{% endhighlight %}
+```
 
 ![select_with_date_range]({{ site.baseurl }}/assets/img/posts/sql-gerando-ranges-date-e-number/select_with_date_range.png)
 
 ## Retorna a quantidade de acessos por dia entre '01/10/2016' e '05/10/2016'
 
-{% highlight sql %}
+```sql
 -- Retorna a quantidade de acessos por dia entre '01/10/2016' e '05/10/2016'
 WITH T(DIA) AS (
     SELECT TO_DATE('01/10/2016' , 'DD/MM/YYYY') FROM DUAL
@@ -72,8 +72,8 @@ SELECT DIA
 ) AS QTD
 FROM T
 ORDER BY DIA DESC
-;  
-{% endhighlight %}
+;
+```
 
 ![select_with_date_range_and_users]({{ site.baseurl }}/assets/img/posts/sql-gerando-ranges-date-e-number/select_with_date_range_and_users.png)
 
