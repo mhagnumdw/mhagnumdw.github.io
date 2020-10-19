@@ -83,3 +83,13 @@ cd /tmp
 grep "docker.sock" /var/log/audit/audit.* | audit2allow -M dockersock
 semodule -i dockersock.pp
 ```
+
+### Exportar e importar uma imagem
+
+```bash
+# exportar
+docker save jenkins:2.46.1 | gzip -9 > /tmp/jenkins-2.46.1.docker-image.gz
+
+# importar
+zcat /tmp/jenkins-2.46.1.docker-image.gz | docker load
+```
