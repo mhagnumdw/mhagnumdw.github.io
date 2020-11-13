@@ -42,3 +42,11 @@ https://github.com/wagoodman/dive
 [Linux] fd no lugar do find (chamado de fdfind): https://github.com/sharkdp/fd
 
 [Linux] rg no lugar do grep (chamado de ripgrep): https://github.com/BurntSushi/ripgrep
+
+## Visualizador de arquivos texto/logs
+
+### lnav
+
+https://github.com/tstack/lnav
+
+
