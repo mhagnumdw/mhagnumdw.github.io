@@ -50,3 +50,8 @@ https://github.com/wagoodman/dive
 https://github.com/tstack/lnav
 
 
+## top style (monitoramento)
+
+### bpytop
+
+https://github.com/aristocratos/bpytop
