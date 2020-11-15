@@ -18,7 +18,7 @@ vimdiff <(oc get route app-jbossws-ws -o yaml) <(oc get route app-jbossws -o yam
 ```
 
 
-## Docker
+## Docker / Docker Manager
 
 ### dive
 
@@ -31,6 +31,10 @@ CI=true dive IMAGE:TAG
 ```
 
 https://github.com/wagoodman/dive
+
+### lazydocker
+
+https://github.com/jesseduffield/lazydocker
 
 
 ## Análise de disco
