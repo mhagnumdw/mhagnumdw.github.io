@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Imagen docker JBoss EAP 6.4: Logs em JSON e formato do stacktrace'
+title: 'Imagem docker JBoss EAP 6.4: Logs em JSON e stacktrace'
 date: 2020-11-19 19:20:00 -03:00
 categories:
 - JBoss EAP
@@ -13,22 +13,41 @@ feature-img: "assets/img/posts/jboss-eap-docker-image-stacktrace-json-log/banner
 thumbnail: "assets/img/posts/jboss-eap-docker-image-stacktrace-json-log/banner.png"
 ---
 
-Ativar o log no formato JSON da imagem docker do JBoss EAP 6.4. Também vamos mudar o formato que o stacktrace aparece no JSON.
+Ativar o log no formato JSON na imagem docker do JBoss EAP 6.4. Também vamos mudar o formato que o stacktrace aparece no JSON.
 
 <!--more-->
 
-// TODO: explicar como a imagem do JBoss ativa o log de JSON...
+## Imagem oficial
 
-As imagens oficiais podem ser obtidas do docker registry da RedHat: registry.redhat.io
+As imagens docker oficiais podem ser obtidas no registry da RedHat, em `registry.redhat.io`.
 
 ```bash
+# login
+docker login -u USER registry.redhat.io
+
 # listar as tags disponíveis
 skopeo list-tags docker://registry.redhat.io/jboss-eap-6/eap64-openshift
 ```
 
-Para ativar o log no formato JSON do JBoss, basta subir um container setando a variável de ambiente `ENABLE_JSON_LOGGING` para `true`.
+## Ativando o log JSON
 
-A partir disso casa linha do log da aplicação será parecido com isso:
+Para ativar o log do JBoss no formato JSON, basta subir um container setando a variável de ambiente `ENABLE_JSON_LOGGING` para `true`.
+
+```bash
+# executar
+docker run --rm \
+  --env ENABLE_JSON_LOGGING=true \
+  registry.redhat.io/jboss-eap-6/eap64-openshift:1.9
+
+# ou se você quiser ver o JSON formatado
+jq -R '. as $raw | try fromjson catch $raw' <(\
+  docker run --rm \
+    --env ENABLE_JSON_LOGGING=true \
+    registry.redhat.io/jboss-eap-6/eap64-openshift:1.9 \
+)
+```
+
+A partir disso cada linha do log da aplicação será parecida com isso:
 
 ```json
 {
@@ -47,14 +66,13 @@ A partir disso casa linha do log da aplicação será parecido com isso:
 }
 ```
 
-Se houver exceção, o log será parecido com isso:
-
-> 📋 Observar que cada linha do stacktrace ficou em um fragmento de JSON, o que pode deixar um pouco chato a visualização.
+**Se houver exceção, o log será parecido com isso:**
 
 <details>
-  <summary>Clique para visualizar o log em JSON</summary>
-
-```json
+  <summary>Clique AQUI para visualizar o log em JSON</summary>
+<!-- Não mudar o bloco de código para ```json , pois a formatação
+dentro do details+summary só funcionou com o bloco de código do Jekyll -->
+{% highlight json %}
 {
   "@version": 1,
   "@timestamp": "2020-11-20T16:24:35-03:00",
@@ -400,14 +418,122 @@ Se houver exceção, o log será parecido com isso:
   },
   "log-handler": "CONSOLE"
 }
-```
-
+{% endhighlight %}
 </details>
+
+> 📋 Observar que cada linha do stacktrace ficou em um fragmento de JSON, o que pode deixar um pouco chato a visualização.
 
 Podemos configurar para que o stacktrace da exception fique no formato padrão, de quando visualizamos no console.
 
-// TODO: daquiiiii
+## Formato do stacktrace da exception no log
+
+Vamos mudar para o formato tradicional, algo parecido com:
+
+```text
+org.jboss.msc.service.StartException in service jboss.web.deployment.default-host./xxx: org.jboss.msc.service.StartException in anonymous service: JBAS018040: Falha ao iniciar o contexto
+    at org.jboss.as.web.deployment.WebDeploymentService$1.run(WebDeploymentService.java:99)
+    at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+    at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+    at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+    at java.lang.Thread.run(Thread.java:748)
+    at org.jboss.threads.JBossThread.run(JBossThread.java:122)
+Caused by: org.jboss.msc.service.StartException in anonymous service: JBAS018040: Falha ao iniciar o contexto
+    at org.jboss.as.web.deployment.WebDeploymentService.doStart(WebDeploymentService.java:168)
+    at org.jboss.as.web.deployment.WebDeploymentService.access$000(WebDeploymentService.java:61)
+    at org.jboss.as.web.deployment.WebDeploymentService$1.run(WebDeploymentService.java:96)
+    ... 6 more
+```
+
+Não é possível simplesmente por meio de um parâmetro da imagem. Precisamos alterar o arquivo `/opt/eap/standalone/configuration/logging.properties` para configurar o _formatter_ `OPENSHIFT` do log4j.
+
+Visualizar o `/opt/eap/standalone/configuration/logging.properties` e observar a configuração do `formatter.OPENSHIFT`:
+
+```bash
+docker run --rm \
+  registry.redhat.io/jboss-eap-6/eap64-openshift:1.9 \
+  cat -n /opt/eap/standalone/configuration/logging.properties
+```
+
+Agora vamos criar um Dockerfile conforme abaixo, que vai configurar o `formatter.OPENSHIFT` para printar o stacktrace no formato que desejamos:
+
+```dockerfile
+FROM registry.redhat.io/jboss-eap-6/eap64-openshift:1.9
+
+# backup do arquivo original
+RUN cp -a /opt/eap/standalone/configuration/logging.properties \
+          /opt/eap/standalone/configuration/logging.properties.original
+
+# adiciona a propriedade exceptionOutputType
+RUN sed -i -E \
+      's|^formatter.OPENSHIFT.properties=metaData$|formatter.OPENSHIFT.properties=metaData,exceptionOutputType|' \
+      /opt/eap/standalone/configuration/logging.properties
+
+# define exceptionOutputType=FORMATTED (default: DETAILED)
+RUN echo -e \
+      '\nformatter.OPENSHIFT.exceptionOutputType=FORMATTED' >> \
+      /opt/eap/standalone/configuration/logging.properties
+```
+
+> 📋 As três linhas de `RUN` podem ficar em um único `RUN`. Estão separadas para melhorar a visualização.
+
+Com o Dockerfile já criado, vamos construir a imagem:
+
+```bash
+docker build -t jboss:json .
+```
+
+Agora é só executar como já vimos anteriormente:
+
+```bash
+# executar
+docker run --rm \
+  --env ENABLE_JSON_LOGGING=true \
+  jboss:json
+
+# ou se você quiser ver o JSON formatado
+jq -R '. as $raw | try fromjson catch $raw' <(\
+  docker run --rm \
+    --env ENABLE_JSON_LOGGING=true \
+    jboss:json \
+)
+```
+
+E se houver uma exceção, o log com o stacktrace será algo parecido com:
+
+```json
+{
+  "@version": 1,
+  "@timestamp": "2020-11-21T11:18:28-03:00",
+  "sequence": 7086,
+  "loggerClassName": "org.jboss.msc.service.ServiceLogger_$logger",
+  "loggerName": "org.jboss.msc.service.fail",
+  "level": "ERROR",
+  "message": "MSC000001: Failed to start service jboss.web.deployment.default-host./xxx",
+  "threadName": "ServerService Thread Pool -- 107",
+  "threadId": 237,
+  "mdc": {},
+  "ndc": "",
+  "stackTrace": "org.jboss.msc.service.StartException in service jboss.web.deployment.default-host./xxx: org.jboss.msc.service.StartException in anonymous service: JBAS018040: Falha ao iniciar o contexto\n\tat org.jboss.as.web.deployment.WebDeploymentService$1.run(WebDeploymentService.java:99)\n\tat java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)\n\tat java.util.concurrent.FutureTask.run(FutureTask.java:266)\n\tat java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)\n\tat java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)\n\tat java.lang.Thread.run(Thread.java:748)\n\tat org.jboss.threads.JBossThread.run(JBossThread.java:122)\nCaused by: org.jboss.msc.service.StartException in anonymous service: JBAS018040: Falha ao iniciar o contexto\n\tat org.jboss.as.web.deployment.WebDeploymentService.doStart(WebDeploymentService.java:168)\n\tat org.jboss.as.web.deployment.WebDeploymentService.access$000(WebDeploymentService.java:61)\n\tat org.jboss.as.web.deployment.WebDeploymentService$1.run(WebDeploymentService.java:96)\n\t... 6 more\n",
+  "log-handler": "CONSOLE"
+}
+```
+
+> 📋 Agora todo o stacktrace é um único atributo no json.
+
+Uma ferramenta como o Kibana vai mostrar o log acima formato, algo parecido com:
+
+![Kibana - Stacktrace formatado]({{ site.baseurl }}/assets/img/posts/jboss-eap-docker-image-stacktrace-json-log/kibana-stacktrace.png.jpg)
+
+Ou você pode salvar o log acima para um arquivo e ver formato, assim:
+
+```bash
+while read -r line; do echo -e $line; done <log.json
+```
 
 ## Referências
 
-- <...........>
+- Muito grep dentro da imagem do JBoss
+- <https://access.redhat.com/solutions/3318531>
+- <https://github.com/jamezp/jboss-logmanager-ext>
+- <https://github.com/jamezp/jboss-logmanager-ext/blob/1472e87fffc1a6ea557172d28d598d134d173295/src/main/java/org/jboss/logmanager/ext/formatters/StructuredFormatter.java#L103-L118>
