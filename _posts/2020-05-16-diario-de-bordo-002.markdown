@@ -13,7 +13,7 @@ tags:
 author-id: mhagnumdw
 image: "assets/img/cockpit-banner.jpg"
 feature-img: "assets/img/cockpit-banner.jpg"
-thumbnail: "assets/img/cockpit-banner.jpg"
+thumbnail: "assets/img/cockpit-banner-900.jpg"
 ---
 
 Build, pipeline no GitLab, geração de imagem docker de aplicação com jsf 1.2 + Facelets + JBoss EAP 6.4, deploy no OpenShift, ambientes totalmente iguais e comportamentos diferentes ⏩ Troubleshooting
@@ -224,7 +224,7 @@ Eu também observei no log, na primeira vez que mandava pesquisar, diversas mens
 
 > **Spoiler:** se eu tivesse dado atenção a essas mensagens acima e se minha memória tivesse funcionado, eu teria matado a charada sem ter perdido muito tempo.
 
-**Mas porque nos ambientes do OpenShift essa simples pesquisa não funcionava e em ambientes que já exisitiam funcionava?**
+**Mas porque nos ambientes do OpenShift essa simples pesquisa não funcionava e em ambientes que já existiam funcionava?**
 
 Na imagem docker executada no Openshift (onte tínhamos problemas):
 
@@ -277,7 +277,7 @@ Agora eu resolvi dar importância, então dá-lhe Google, e tome logo no primeir
 
 Bom... lendo o post, o cara fala do atributo `facelets.REFRESH_PERIOD` e quando eu bati o olho nisso lembrei de umas coisas. Então fui checar as datas de modificação dos arquivos `xhtml` em ambos os `EAR`. **No `EAR` problemático a data de todos eles estava no futuro!**
 
-Na primeira requisição, quando esses `xhtml` eram acessados, o `facelets` entedia que eles haviam mudado e os recompilava, o que acaba por recriar a árvore de componentes, o que acabava por perder os dados do request e fazer sugir o problema.
+Na primeira requisição, quando esses `xhtml` eram acessados, o `facelets` entedia que eles haviam mudado e os recompilava, o que acaba por recriar a árvore de componentes, o que acabava por perder os dados do request e fazer surgir o problema.
 
 Informei para o `facelets` não checar as mudanças nos `xhtml`, adicionando ao `web.xml`:
 

@@ -11,10 +11,10 @@ tags:
 author-id: mhagnumdw
 image: "assets/img/cockpit-banner.jpg"
 feature-img: "assets/img/cockpit-banner.jpg"
-thumbnail: "assets/img/cockpit-banner.jpg"
+thumbnail: "assets/img/cockpit-banner-900.jpg"
 ---
 
-Teste automatizado, Dcoker, SVN Subversion container, demora de aproximadamente 10 segundos para conectar via SSH ⏩ Troubleshooting
+Teste automatizado, Docker, SVN Subversion container, demora de aproximadamente 10 segundos para conectar via SSH ⏩ Troubleshooting
 
 <!--more-->
 
@@ -24,7 +24,7 @@ Teste automatizado, Dcoker, SVN Subversion container, demora de aproximadamente 
 
 Tenho alguns testes automatizados escritos em Java que sobem um container do SVN e se conectam ao container via SSH utilizando chave púlica/privada.
 
-A biblioteca Java utilziada para fazer acesso SSH é a [jsch](http://www.jcraft.com/jsch/) na versão [0.1.55](https://mvnrepository.com/artifact/com.jcraft/jsch/0.1.55). Inicialmente pensei que o problema fosse nela, inclusive precisei escrever uma classe de log para ela seguindo [esse modelo](http://www.jcraft.com/jsch/examples/Logger.java.html) (estranho!), onde é possível vincular ao sistema de log da minha aplicação.
+A biblioteca Java utilizada para fazer acesso SSH é a [jsch](http://www.jcraft.com/jsch/) na versão [0.1.55](https://mvnrepository.com/artifact/com.jcraft/jsch/0.1.55). Inicialmente pensei que o problema fosse nela, inclusive precisei escrever uma classe de log para ela seguindo [esse modelo](http://www.jcraft.com/jsch/examples/Logger.java.html) (estranho!), onde é possível vincular ao sistema de log da minha aplicação.
 
 Agora com o log do jsch e debugando o código dele, percebi que o código ficava esperando um [InputStream](https://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html) de um socket no método `com.jcraft.jsch.IO.getByte(byte[], int, int)`, então comecei a pensar que o problema estava no servidor de SSH no container. Antes disso pesquisei sobre lentidão na conexão SSH com jsch, na esperança de achar algum parâmetro mágico e pouco achei e nada serviu.
 
