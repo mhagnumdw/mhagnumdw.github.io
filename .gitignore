@@ -15,6 +15,7 @@ _development_tool/*
 *.css.map
 *.scssc
 .jekyll-metadata
+.jekyll-cache
 
 # Theme Gem files
 Gemfile.lock
