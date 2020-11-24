@@ -59,3 +59,9 @@ https://github.com/tstack/lnav
 ### bpytop
 
 https://github.com/aristocratos/bpytop
+
+## JVM
+
+- https://github.com/ajermakovics/jvm-mon
+- https://github.com/patric-r/jvmtop
+
