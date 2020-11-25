@@ -1,0 +1,32 @@
+# Builda a lib libfaketime
+# https://github.com/wolfcw/libfaketime
+FROM debian as libfaketime-bin
+
+RUN apt-get update && \
+    apt-get install -y git build-essential
+
+RUN git clone https://github.com/wolfcw/libfaketime /libfaketime
+
+WORKDIR /libfaketime
+
+RUN make
+
+RUN make install
+
+#########################
+
+# Builda a imagem debian com a lib libfaketime (imagem definitiva)
+FROM debian
+
+COPY --from=libfaketime-bin /usr/local/lib/faketime /usr/local/lib/faketime
+
+# Testar
+#
+# docker build -t faketime-debian -f Dockerfile.debian .
+#
+# docker run -it --rm \
+#     --env FAKETIME=+15d \
+#     --env LD_PRELOAD=/usr/local/lib/faketime/libfaketimeMT.so.1 \
+#     --env DONT_FAKE_MONOTONIC=1 \
+#     faketime-debian \
+#     date

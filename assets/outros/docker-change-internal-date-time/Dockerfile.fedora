@@ -1,0 +1,29 @@
+# Builda a lib libfaketime
+# https://github.com/wolfcw/libfaketime
+FROM fedora as libfaketime-bin
+
+RUN dnf install -y git @development-tools
+
+RUN git clone https://github.com/wolfcw/libfaketime /libfaketime
+
+WORKDIR /libfaketime
+
+RUN make
+
+RUN make install
+
+# Builda a imagem fedora com a lib libfaketime (imagem definitiva)
+FROM fedora
+
+COPY --from=libfaketime-bin /usr/local/lib/faketime /usr/local/lib/faketime
+
+# Testar
+#
+# docker build -t faketime-fedora -f Dockerfile.fedora .
+#
+# docker run -it --rm \
+#     --env FAKETIME=+15d \
+#     --env LD_PRELOAD=/usr/local/lib/faketime/libfaketimeMT.so.1 \
+#     --env DONT_FAKE_MONOTONIC=1 \
+#     faketime-fedora \
+#     date

@@ -1,0 +1,29 @@
+# Builda a lib libfaketime
+# https://github.com/wolfcw/libfaketime
+FROM alpine as libfaketime-bin
+
+RUN apk -U add git build-base
+
+RUN git clone https://github.com/wolfcw/libfaketime /libfaketime
+
+WORKDIR /libfaketime
+
+RUN make
+
+RUN make install
+
+# Builda a imagem alpine com a lib libfaketime (imagem definitiva)
+FROM alpine
+
+COPY --from=libfaketime-bin /usr/local/lib/faketime /usr/local/lib/faketime
+
+# Testar
+#
+# docker build -t faketime-alpine -f Dockerfile.alpine .
+#
+# docker run -it --rm \
+#     --env FAKETIME=+15d \
+#     --env LD_PRELOAD=/usr/local/lib/faketime/libfaketimeMT.so.1 \
+#     --env DONT_FAKE_MONOTONIC=1 \
+#     faketime-alpine \
+#     date

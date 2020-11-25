@@ -23,3 +23,19 @@ docker run \
 ```
 
 <https://github.com/envygeeks/jekyll-docker>
+
+## Comprimindo vídeos
+
+```bash
+ffmpeg -i \
+  VIDEO-DE-ENTRADA.mp4 \
+  -vcodec libx264 \
+  -f mp4 \
+  -preset slow \
+  -movflags +faststart \
+  VIDEO-DE-SAIDA-QUE-DEVE-SER-MENOR.mp4
+```
+
+## Comprimir imagens online
+
+<https://tinypng.com/>
