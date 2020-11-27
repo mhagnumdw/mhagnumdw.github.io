@@ -65,3 +65,6 @@ https://github.com/aristocratos/bpytop
 - https://github.com/ajermakovics/jvm-mon
 - https://github.com/patric-r/jvmtop
 
+## PS1
+
+- https://github.com/jonmosco/kube-ps1
