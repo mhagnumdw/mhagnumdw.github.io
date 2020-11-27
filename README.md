@@ -36,6 +36,17 @@ ffmpeg -i \
   VIDEO-DE-SAIDA-QUE-DEVE-SER-MENOR.mp4
 ```
 
+## Minificar/comprimir js, css, imagens etc
+
+```bash
+cd assets/
+sudo npm install gulp-cli -g
+npm install
+gulp default
+# dica: executar "git status" para ver as mudanças
+git status
+```
+
 ## Comprimir imagens online
 
 <https://tinypng.com/>
