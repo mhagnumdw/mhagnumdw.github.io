@@ -15,7 +15,7 @@ feature-img: "assets/img/posts/memoria-jvm-container-docker/banner.jpg"
 thumbnail: "assets/img/posts/memoria-jvm-container-docker/banner.jpg"
 ---
 
-Análise da memória da JVM...
+Análise da memória da JVM... // TODO: escrever mais
 
 <!--more-->
 
@@ -24,13 +24,15 @@ Análise da memória da JVM...
   - [JVM antiga que identifica de forma errada a memória física total ⛔](#jvm-antiga-que-identifica-de-forma-errada-a-memória-física-total-)
   - [JVM que identifica de forma correta a memória física total 🎉](#jvm-que-identifica-de-forma-correta-a-memória-física-total-)
 - [Alguns parâmetros da JVM menos comuns](#alguns-parâmetros-da-jvm-menos-comuns)
-  - [`-XX:MaxRAM`](#-xxmaxram)
-  - [`-XX:+UseParallelGC`](#-xxuseparallelgc)
-  - [`-XX:MaxHeapFreeRatio=percent`](#-xxmaxheapfreeratiopercent)
-  - [`-XX:GCTimeRatio=nnn`](#-xxgctimerationnn)
-  - [`-XX:AdaptiveSizePolicyWeight=nn`](#-xxadaptivesizepolicyweightnn)
+  - [-XX:MaxRAM](#-xxmaxram)
+  - [-XX:+UseParallelGC](#-xxuseparallelgc)
+  - [-XX:MaxHeapFreeRatio=percent](#-xxmaxheapfreeratiopercent)
+  - [-XX:GCTimeRatio=nnn](#-xxgctimerationnn)
+  - [-XX:AdaptiveSizePolicyWeight=nn](#-xxadaptivesizepolicyweightnn)
 - [Forçando a jvm a devolver memória para o SO](#forçando-a-jvm-a-devolver-memória-para-o-so)
 - [Várias JVM dentro de um container](#várias-jvm-dentro-de-um-container)
+- [Ajustando os parâmetros da JVM](#ajustando-os-parâmetros-da-jvm)
+- [// TODO: Falar dessas coisas?](#-todo-falar-dessas-coisas)
 - [Referências](#referências)
 
 ## Início
@@ -154,25 +156,27 @@ Pelo resultado acima, o valor do `MaxHeapSize` é `256 MB` (`268435456` bytes / 
 
 ## Alguns parâmetros da JVM menos comuns
 
-### `-XX:MaxRAM`
+// TODO: escrever sobre esses parâmetros em português da forma mais clara possível
+
+### -XX:MaxRAM
 
 Indica para a jvm o total de memória física disponível. Exemplo para definir 1 GB: `-XX:MaxRAM=1G`.
 
-### `-XX:+UseParallelGC`
+### -XX:+UseParallelGC
 
 _The parallel collector (also known as the throughput collector) performs minor collections in parallel, which can significantly reduce garbage collection overhead. It is intended for applications with medium-sized to large-sized data sets that are run on multiprocessor or multithreaded hardware. The parallel collector is selected by default on certain hardware and operating system configurations, or can be explicitly enabled with the option `-XX:+UseParallelGC`._
 
-### `-XX:MaxHeapFreeRatio=percent`
+### -XX:MaxHeapFreeRatio=percent
 
 _Sets the maximum allowed percentage of free heap space (0 to 100) after a GC event. If free heap space expands above this value, then the heap will be shrunk. By default, this value is set to 70%. The following example shows how to set the maximum free heap ratio to 75%: `-XX:MaxHeapFreeRatio=75`_
 
-### `-XX:GCTimeRatio=nnn`
+### -XX:GCTimeRatio=nnn
 
 _A hint to the virtual machine that it's desirable that not more than 1 / (1 + nnn) of the application execution time be spent in the collector. For example `-XX:GCTimeRatio=19` sets a goal of 5% of the total time for GC and throughput goal of 95%. That is, the application should get 19 times as much time as the collector. By default the value is 99, meaning the application should get at least 99 times as much time as the collector. That is, the collector should run for not more than 1% of the total time. This was selected as a good choice for server applications. A value that is too high will cause the size of the heap to grow to its maximum._
 
-### `-XX:AdaptiveSizePolicyWeight=nn`
+### -XX:AdaptiveSizePolicyWeight=nn
 
-**// TODO: escrever**
+// TODO: escrever
 
 ## Forçando a jvm a devolver memória para o SO
 
@@ -184,7 +188,9 @@ Quando estamos em um ambiente compartilhado, com dezenas de containers rodando e
 
 Outra ponto comum é que a memória HEAP da jvm em geral é bem menor que a memória física total do servidor, então dificilmente a jvm vai usar mais memória do que a disponível no servidor.
 
-Outra questão é que a memória da jvm não se resume a memória HEAP, existem várias outras áreas de memória chamadas _off-heap_ e elas também consomem memória do sistema operacional, sendo exemplos dessas áreas: Metaspace, Thread Stack, Code Cache, Run-Time Constant Pool / Symbol, Native Method Stacks e Native Byte Buffers. **// TODO: rever o Metaspace**
+Outra questão é que a memória da jvm não se resume a memória HEAP, existem várias outras áreas de memória chamadas _off-heap_ e elas também consomem memória do sistema operacional, sendo exemplos dessas áreas: Metaspace, Thread Stack, Code Cache, Run-Time Constant Pool / Symbol, Native Method Stacks e Native Byte Buffers.
+
+// TODO: rever o Metaspace citado logo acima, se algumas das áreas de memórias já não são contidas nele
 
 Uma forma de forçar a jvm a devolver (liberar) a memória para o SO, é com os parâmetros abaixo:
 
@@ -194,7 +200,7 @@ Uma forma de forçar a jvm a devolver (liberar) a memória para o SO, é com os 
 -XX:AdaptiveSizePolicyWeight=90.
 ```
 
-**// TODO: ver na prática como isso se comporta**
+// TODO: explicar um pouco aqui ou informar que isso será visto em detalhes mais a frente
 
 ## Várias JVM dentro de um container
 
@@ -262,17 +268,22 @@ Vale ressaltar, que se uma aplicação iniciar com valores definidos na linha de
 
 > 📋 Eu recomendo definir a variável de ambiente `JAVA_TOOL_OPTIONS`.
 
+## Ajustando os parâmetros da JVM
 
+Mas não vamos fazer às cegas. Vamos fazer testes práticos e mostrar com números se os ajustes valem a pena ou não.
 
+daquiiiiii: You get what you ask for
 
+## // TODO: Falar dessas coisas?
 
-**// TODO: falar?**
-- que é possível obter os valores de limits e requests de memória dentro do POD? https://docs.openshift.com/container-platform/4.6/nodes/clusters/nodes-cluster-resource-configure.html#nodes-cluster-resource-configure-request-limit_nodes-cluster-resource-configure**
-- /sys/fs/cgroup/memory/memory.oom_control: https://docs.openshift.com/container-platform/4.6/nodes/clusters/nodes-cluster-resource-configure.html#clipboard-8
-- containerStatuses do POD pra ver o último motivo do restart: https://docs.openshift.com/container-platform/4.6/nodes/clusters/nodes-cluster-resource-configure.html#clipboard-17
+- que é possível obter os valores de limits e requests de memória dentro do POD? <https://docs.openshift.com/container-platform/4.6/nodes/clusters/nodes-cluster-resource-configure.html#nodes-cluster-resource-configure-request-limit_nodes-cluster-resource-configure>**
+- /sys/fs/cgroup/memory/memory.oom_control: <https://docs.openshift.com/container-platform/4.6/nodes/clusters/nodes-cluster-resource-configure.html#clipboard-8>
+- containerStatuses do POD pra ver o último motivo do restart: <https://docs.openshift.com/container-platform/4.6/nodes/clusters/nodes-cluster-resource-configure.html#clipboard-17>
 
 ## Referências
 
 - Diversos parâmetros da JVM: <https://docs.oracle.com/javase/8/docs/technotes/tools/unix/java.html>
 - `-XX:GCTimeRatio=nnn` e outros parâmetros do GC: <https://docs.oracle.com/javase/8/docs/technotes/guides/vm/gc-ergonomics.html>
 - JVM + Configuring cluster memory to meet container memory and risk requirements: <https://docs.openshift.com/container-platform/4.6/nodes/clusters/nodes-cluster-resource-configure.html>
+- Tuning Java's footprint in OpenShift (Part 1): <https://developers.redhat.com/blog/2014/07/15/dude-wheres-my-paas-memory-tuning-javas-footprint-in-openshift-part-1/>
+- Tuning Java’s footprint in OpenShift (Part 2): <https://developers.redhat.com/blog/2014/07/22/dude-wheres-my-paas-memory-tuning-javas-footprint-in-openshift-part-2/>
