@@ -22,6 +22,13 @@ docker run \
   jekyll serve --livereload --livereload-port 4001
 ```
 
+Adicionar a opção:
+
+- `--drafts` para exibir os posts na pasta `_drafts`
+- `--profile` para estatíticas da compilação
+- `--trace` para exibir um log detalhado
+- `--help` para exibir todas as opções
+
 <https://github.com/envygeeks/jekyll-docker>
 
 ## Comprimindo vídeos
