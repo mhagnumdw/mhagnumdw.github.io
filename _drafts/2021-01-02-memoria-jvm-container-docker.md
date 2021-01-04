@@ -32,6 +32,8 @@ Análise da memória da JVM... // TODO: escrever mais
 - [Forçando a jvm a devolver memória para o SO](#forçando-a-jvm-a-devolver-memória-para-o-so)
 - [Várias JVM dentro de um container](#várias-jvm-dentro-de-um-container)
 - [Ajustando os parâmetros da JVM](#ajustando-os-parâmetros-da-jvm)
+  - [Verificando o tempo do GC - Exemplo 1](#verificando-o-tempo-do-gc---exemplo-1)
+  - [Verificando o tempo do GC - Exemplo 2](#verificando-o-tempo-do-gc---exemplo-2)
 - [// TODO: Falar dessas coisas?](#-todo-falar-dessas-coisas)
 - [Referências](#referências)
 
@@ -40,6 +42,8 @@ Análise da memória da JVM... // TODO: escrever mais
 **// TODO:** Tudo o que for dito aqui é valido para a OpenJDK, ok? Versão 1.8.0_212 acima, ok?
 
 **// TODO:** renomear de HEAP para `HEAP`
+
+**// TODO:** usar a sigla SO ou o termo Sistema Operacional?
 
 However, as a starting point for running OpenJDK in a container, at least the following three memory-related tasks are key:
 
@@ -264,6 +268,8 @@ OpenJDK 64-Bit Server VM (build 25.212-b04, mixed mode)
 InitialHeapSize: 6 MB  /  MaxHeapSize: 20 MB
 ```
 
+// TODO: dividir a parte acima em blocos talvez melhore na visualização
+
 Vale ressaltar, que se uma aplicação iniciar com valores definidos na linha de comando, esses serão os valores efetivamente usados, e não os valores definidos na variável de ambiente `JAVA_TOOL_OPTIONS`. Se `JAVA_TOOL_OPTIONS="-Xms6m -Xmx20m"` e a aplicação inicia explicitando `-Xmx128m`, o `Xmx` efetivo será `128m`.
 
 > 📋 Eu recomendo definir a variável de ambiente `JAVA_TOOL_OPTIONS`.
@@ -272,7 +278,80 @@ Vale ressaltar, que se uma aplicação iniciar com valores definidos na linha de
 
 Mas não vamos fazer às cegas. Vamos fazer testes práticos e mostrar com números se os ajustes valem a pena ou não.
 
-daquiiiiii: You get what you ask for
+GC paralelo, na configuração padrão, a jvm vai tentar usar todo o heap. Isso acontece mesmo se a aplicação precisar de pouco espaço para executar. No GC serial isso é minimizado, mas ainda assim ocorre.
+
+Se a aplicação precisa de bem menos memória do que o HEAP máximo configurado, o GC pode rodar antecipadamente, antes que o HEAP esteja quase todo em uso, liberando memória para o SO. Isso pode ser configurado!
+
+Muitas vezes a única instrução que passamos para o GC é o máximo de HEAP que pode ser usado, não informando, por exemplo, que menos HEAP (memória) seja usado, e muito menos informamos como ele deve fazer isso.
+
+Abaixo é um exemplo de uma aplicação em produção que está a 13 dias no ar, consumindo aproximadamente 380 MB da HEAP e após um Full GC forçado cai para 122 MB, liberando 258 MB. A memória só não caiu mais porque a aplicação estava com algumas tarefas em andamento no momento do GC. Em uma execução posterior forçada do GC a memória caiu para 81 MB de uso. Um Full GC pode parar a sua apicação por milésemos ou segundos! Cuidado!
+
+<video muted autoplay controls style="width=:100%;padding: unset;">
+    <source src="{{ site.baseurl }}/assets/img/posts/memoria-jvm-container-docker/heap-after-force-gc.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+
+Como dito acima, é possível configurar a jvm para que menos HEAP seja usado, se possível for, claro, liberando memória para o SO, deixando o HEAP de um tamanho próximo aos dados que a aplicação efetivamente precisa no momento (ou seja, deixando em memória apenas objetos ainda referenciados pela aplicação/jvm).
+
+Precisamos começar definindo o `-Xms`, algo como `-Xms48M`. Isso varia com a aplicação. Se a aplicação inicialmente precisa de um mínimo de **100 MB**, faz sentido definir algo como `-Xms128M`. Para uma necessidade inicial de **100 MB** pode-se definir `-Xms48M`, mas o GC só vai perder tempo alocando mais HEAP.
+
+Outra opção que temos é aumentar a frequência do GC, para que objetos mortos (não mais referenciados) possam ser coletados e memória possa ser liberada, mas de modo que isso adicione um custo baixo no processamento do GC para que não impacte no funcionamento da aplicação. Vale lembrar que as threads de limpeza do GC executam em paralelo com as threads da aplicação.
+
+daquiiii: It doesn’t cost much to ask
+
+### Verificando o tempo do GC - Exemplo 1
+
+// TODO: colocar aqui os tempos de GC do GRPFOR ou do ISS Fortaleza após ficarem no ar por um longo tempo. Isso é pra mostrar a razão entre o tempo de GC e o tempo total da aplicação.
+
+### Verificando o tempo do GC - Exemplo 2
+
+Outro exemplo, de um JBoss EAP 6.4, rodando a **108 dias**, mas com quase nada de carga nesse período, apenas com os seguintes parâmetros configurados referentes a memória e GC: `-XX:PermSize=256m -XX:MaxPermSize=256m -Xms1024m -Xmx2048m`. Com um tempo de GC de **6974 segundos (~ 2h)**, o que representa apenas **0,0746%** do tempo total de execução da jvm. Abaixo como os dados desse exemplo foram coletados:
+
+Obter o PID da JVM:
+
+```bash
+jps -lvm
+# ou
+ps aux | grep java
+```
+
+Vamos supor o PID 32549.
+
+Obter o uptime da JVM em segundos:
+
+```console
+$ jcmd 32549 VM.uptime
+32549:
+9347114.094 s
+```
+
+Obter dados do GC da JVM (a coluna GCT significa _Garbage Collection Time_, em segundos):
+
+```console
+$ jstat -gc 32549
+ S0C    S1C    S0U    S1U      EC       EU        OC         OU       MC     MU    CCSC   CCSU   YGC     YGCT    FGC    FGCT     GCT
+25088,0 25088,0 23648,1  0,0   648704,0 182309,7 1398272,0  1255760,7  251504,0 231526,4 29608,0 24808,2  24832 6971,431   6      3,433 6974,864
+```
+
+Temos **6974 segundos**.
+
+Descobrir quantos % do tempo o GC levou do tempo total de execução da JVM. Uma matemática simples:
+
+```console
+$ bc <<< "scale=8; 6974 / 9347114 * 100"
+.07461100
+```
+
+Temos **0.07461100%**. É muito pouco!
+
+> 🧙‍♂️ Em um comando só:
+>
+> ```bash
+> JVM_PID=32549; \
+> GC_TOTAL_TIME=$( jstat -gc $JVM_PID | tail -n 1 | awk '{print $17}' | grep -P -o '^\d+' ); \
+> JVM_UPTIME=$( jcmd $JVM_PID VM.uptime | tail -1 | grep -P -o '^\d+' ); \
+> bc <<< "scale=8; $GC_TOTAL_TIME / $JVM_UPTIME * 100"
+> ```
 
 ## // TODO: Falar dessas coisas?
 
