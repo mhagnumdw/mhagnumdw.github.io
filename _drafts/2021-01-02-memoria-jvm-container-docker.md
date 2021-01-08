@@ -26,12 +26,15 @@ Análise da memória da JVM... // TODO: escrever mais
 - [Alguns parâmetros da JVM menos comuns](#alguns-parâmetros-da-jvm-menos-comuns)
   - [-XX:MaxRAM](#-xxmaxram)
   - [-XX:+UseParallelGC](#-xxuseparallelgc)
+  - [-XX:MinHeapFreeRatio=percent](#-xxminheapfreeratiopercent)
   - [-XX:MaxHeapFreeRatio=percent](#-xxmaxheapfreeratiopercent)
   - [-XX:GCTimeRatio=nnn](#-xxgctimerationnn)
   - [-XX:AdaptiveSizePolicyWeight=nn](#-xxadaptivesizepolicyweightnn)
 - [Forçando a jvm a devolver memória para o SO](#forçando-a-jvm-a-devolver-memória-para-o-so)
 - [Várias JVM dentro de um container](#várias-jvm-dentro-de-um-container)
 - [Ajustando os parâmetros da JVM](#ajustando-os-parâmetros-da-jvm)
+  - [Sobre oa parâmetros da JVM utilizados nos testes](#sobre-oa-parâmetros-da-jvm-utilizados-nos-testes)
+  - [Sobre o log do GC](#sobre-o-log-do-gc)
   - [Verificando o tempo do GC - Exemplo 1](#verificando-o-tempo-do-gc---exemplo-1)
   - [Verificando o tempo do GC - Exemplo 2](#verificando-o-tempo-do-gc---exemplo-2)
 - [// TODO: Falar dessas coisas?](#-todo-falar-dessas-coisas)
@@ -170,6 +173,10 @@ Indica para a jvm o total de memória física disponível. Exemplo para definir 
 
 _The parallel collector (also known as the throughput collector) performs minor collections in parallel, which can significantly reduce garbage collection overhead. It is intended for applications with medium-sized to large-sized data sets that are run on multiprocessor or multithreaded hardware. The parallel collector is selected by default on certain hardware and operating system configurations, or can be explicitly enabled with the option `-XX:+UseParallelGC`._
 
+### -XX:MinHeapFreeRatio=percent
+
+// TODO: escrever
+
 ### -XX:MaxHeapFreeRatio=percent
 
 _Sets the maximum allowed percentage of free heap space (0 to 100) after a GC event. If free heap space expands above this value, then the heap will be shrunk. By default, this value is set to 70%. The following example shows how to set the maximum free heap ratio to 75%: `-XX:MaxHeapFreeRatio=75`_
@@ -284,7 +291,9 @@ Se a aplicação precisa de bem menos memória do que o HEAP máximo configurado
 
 Muitas vezes a única instrução que passamos para o GC é o máximo de HEAP que pode ser usado, não informando, por exemplo, que menos HEAP (memória) seja usado, e muito menos informamos como ele deve fazer isso.
 
-Abaixo é um exemplo de uma aplicação em produção que está a 13 dias no ar, consumindo aproximadamente 380 MB da HEAP e após um Full GC forçado cai para 122 MB, liberando 258 MB. A memória só não caiu mais porque a aplicação estava com algumas tarefas em andamento no momento do GC. Em uma execução posterior forçada do GC a memória caiu para 81 MB de uso. Um Full GC pode parar a sua apicação por milésemos ou segundos! Cuidado!
+Abaixo é um exemplo de uma aplicação em produção que está a 13 dias no ar, consumindo aproximadamente 380 MB da HEAP e após um Full GC forçado cai para 122 MB, liberando 258 MB. A memória só não caiu mais porque a aplicação estava com algumas tarefas em andamento no momento do GC. Em uma execução posterior forçada do GC a memória caiu para 81 MB de uso.
+
+> ⚠️ Um Full GC pode parar a sua apicação por milésemos ou segundos! Cuidado!
 
 <video muted autoplay controls style="width=:100%;padding: unset;">
     <source src="{{ site.baseurl }}/assets/img/posts/memoria-jvm-container-docker/heap-after-force-gc.mp4" type="video/mp4">
@@ -297,7 +306,46 @@ Precisamos começar definindo o `-Xms`, algo como `-Xms48M`. Isso varia com a ap
 
 Outra opção que temos é aumentar a frequência do GC, para que objetos mortos (não mais referenciados) possam ser coletados e memória possa ser liberada, mas de modo que isso adicione um custo baixo no processamento do GC para que não impacte no funcionamento da aplicação. Vale lembrar que as threads de limpeza do GC executam em paralelo com as threads da aplicação.
 
-daquiiii: It doesn’t cost much to ask
+Em servidores JBoss que tenho acesso, que recebem muitas requisições por dia, o tempo do GC fica abaixo de **1%** do tempo total de execução da JVM. Então se pudermos aumentar a frequência do GC de modo que não aumente muito esse tempo, estaremos removendo com mais frequência objetos mortos e consequentemente menos memória é alocada (usada).
+
+A JVM (Oracle JDK, OpenJDK, outras?) por padrão não é configurada para ser mais agressiva no GC porque inicialmente as aplicações rodavam em servidores dedicados - inclusive é o caso de algumas aplicações enterprise que conheço, com todos os recursos voltados para a aplicação, onde qualquer ganho de performance, embora ínfimo, era (ou é!) levado em consideração. Certamente alguns aplicativos, dependendo de como eles precisem usar a memória, não irão se beneficiar de um GC mais agressivo, pelo contrário, pode ser que a performance degrade muito devido a concorrência entre o GC (tentando limpar a memória) e a aplicação (tentando fazer o seu trabalho).
+
+### Sobre oa parâmetros da JVM utilizados nos testes
+
+Para os testes vamos usar 4 configurações de GC:
+
+1. -XX:UseParallelGC
+2. -XX:+UseSerialGC
+3. -XX:+UseSerialGC -XX:MinHeapFreeRatio=20 -XX:MaxHeapFreeRatio=40
+4. -XX:UseParallelGC -XX:MinHeapFreeRatio=20 -XX:MaxHeapFreeRatio=40 -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90
+
+`-XX:UseParallelGC` utiliza várias threads para fazer a coleta de lixo, enquanto `-XX:+UseSerialGC` utiliza apenas uma thread.
+
+O GC pode decidir por alocar mais HEAP ou mesmo liberar HEAP e isso pode ser controlado por meio dos parâmetros `-XX:MinHeapFreeRatio` e `-XX:MaxHeapFreeRatio`, que recebem um valor inteiro em porcentagem.
+
+- `-XX:MinHeapFreeRatio`: porcentagem mínima de espaço livre na HEAP (0 a 100%) **após uma coleta do GC**. Se o tamanho do HEAP ficar menor que esse valor, o HEAP será expandido. O valor padrão é 40%. Exemplo: para um valor de 20% e HEAP com tamanho máximo de 256 MB, o HEAP mínimo alocado deve ser 51,2 MB. Se após o GC o HEAP ficar em 40 MB, ele será expandido para um valor acima de 51,2 MB.
+- // TODO: acho que tanto o MinHeapFreeRatio (acima) e MaxHeapFreeRatio (abaixo), são em relação ao espaço livre da HEAP e não em relação ao tamanho máximo. Será? Ver isso! Mas agora ao ler isso <https://www.openshift.com/blog/scaling-java-containers> mudei mais uma vez de ideia.
+- `-XX:MaxHeapFreeRatio`: porcentagem máxima de espaço livre na HEAP (0 a 100%) **após uma coleta do GC**. Se o tamanho do HEAP ficar maior que esse valor, o HEAP será reduzido. O valor padrão é 70%. Exemplo: para um valor de 40% e HEAP com tamanho máximo de 256 MB, o HEAP máximo alocado deve ser 102,4 MB.
+
+O GC paralelo (`-XX:UseParallelGC`) tenta equilibrar o custo de fazer a limpeza da memória com o tempo gasto. Supondo uma mesma taxa de alocação de objetos, em um HEAP grande o GC acaba agindo menos, em um HEAP pequeno, como a memória enche mais rápido, o GC precisa agir mais. É possível balancear esses dois pontos, custo do GC vs tempo para fazer a limpeza, por meio dos parâmetros `-XX:GCTimeRatio` (padrão: 99) e `-XX:AdaptiveSizePolicyWeight` (padrão: 10 [0-100%]).
+
+```bash
+# visualizar o valor padrão
+java -XX:+PrintFlagsFinal -version | grep -iE 'AdaptiveSizePolicyWeight|GCTimeRatio'
+
+# ou para ver o valor de uma jvm já em execução
+jcmd <JVM_PID> VM.flags -all | grep -iE 'AdaptiveSizePolicyWeight|GCTimeRatio'
+```
+
+- `-XX:GCTimeRatio`: é uma dica para a jvm de que é desejável que não mais que `1 / (1 + nnn)` do tempo de execução da jvm seja gasto com o GC. O valor padrão, 99, implica que o GC só pode tomar no máximo **1%** (`1 / 1 + 99`) do tempo total de execução da jvm. Setando `-XX:GCTimeRatio` para, por exemplo, 4, teremos até 20% do tempo para o GC, ou seja, dedica mais tempo para limpeza do que para a redução de tempo de limpeza. Vale lembrar que esses 20% do tempo para o GC é o pior caso, não quer dizer que ele sempre usará 20% do tempo para fazer limpeza, isso até tornaria impraticável o uso da aplicação que "só" teria 80% do tempo.
+- `-XX:AdaptiveSizePolicyWeight`: indica quanto tempo das execuções anteriores do GC devem ser levadas em consideração para atingir a meta de tempo. O valor padrão, 10, indica que 90% das execuções anteriores devem ser levadas em consideração e apenas 10% deve levar em consideração a execução atual. Supondo um valor 90 - ao invés do padrão 10 - indica que a meta de tempo será mais baseada na execução corrente do GC do que nas execuções anteriores. Supõe-se que o GC corrente leva menos tempo que a soma dos anteriores, logo o GC fica mais longe da meta de tempo definida pelo `-XX:GCTimeRatio`, logo o GC acaba agindo mais.
+
+### Sobre o log do GC
+
+Para decidirmos qual das 4 opções é a melhor, ou melhor falando, é a que mais se encaixa para a carga de trabalho a qual a aplicação será submetida, vamos analisar o log do GC. É possível atachar na JVM um programa (um jar) que se conecta direto ao GC por meio do [JVM Tool Interface/JVMTI](https://docs.oracle.com/javase/8/docs/platform/jvmti/jvmti.html), coletando dados direto do GC e fazendo análise que for. Não vamos por essa opção. Achei mais simples ativar o log de texto do GC, por meio do parâmetro `-Xloggc:/path/to/gc.log` e um script `shell` simples que eu criei fazer a análise. A desvantagem do log de texto é que não há um padrão para esse log entre as implementações de jvm. Então pode ser que esse script não funcione em outra versão/vendor de jvm.
+
+// TODO: acima eu digo que usei o log do gc, mas só usei em partes, usei em conjunto o log do jstat -gc "$JVM_PID"
+
 
 ### Verificando o tempo do GC - Exemplo 1
 
@@ -366,3 +414,5 @@ Temos **0.07461100%**. É muito pouco!
 - JVM + Configuring cluster memory to meet container memory and risk requirements: <https://docs.openshift.com/container-platform/4.6/nodes/clusters/nodes-cluster-resource-configure.html>
 - Tuning Java's footprint in OpenShift (Part 1): <https://developers.redhat.com/blog/2014/07/15/dude-wheres-my-paas-memory-tuning-javas-footprint-in-openshift-part-1/>
 - Tuning Java’s footprint in OpenShift (Part 2): <https://developers.redhat.com/blog/2014/07/22/dude-wheres-my-paas-memory-tuning-javas-footprint-in-openshift-part-2/>
+- <https://www.baeldung.com/jvm-garbage-collectors>
+- <https://www.baeldung.com/jvm-parameters>
