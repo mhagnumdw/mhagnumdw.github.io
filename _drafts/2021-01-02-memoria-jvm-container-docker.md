@@ -37,6 +37,10 @@ Análise da memória da JVM... // TODO: escrever mais
   - [Sobre o log do GC](#sobre-o-log-do-gc)
   - [Verificando o tempo do GC - Exemplo 1](#verificando-o-tempo-do-gc---exemplo-1)
   - [Verificando o tempo do GC - Exemplo 2](#verificando-o-tempo-do-gc---exemplo-2)
+- [Executando os testes de carga](#executando-os-testes-de-carga)
+  - [Interface gráfica (JMeter GUI)](#interface-gráfica-jmeter-gui)
+  - [Linha de comando (JMeter)](#linha-de-comando-jmeter)
+  - [Linha de comando (Jmeter com Taurus)](#linha-de-comando-jmeter-com-taurus)
 - [// TODO: Falar dessas coisas?](#-todo-falar-dessas-coisas)
 - [Referências](#referências)
 
@@ -401,6 +405,48 @@ Temos **0.07461100%**. É muito pouco!
 > bc <<< "scale=8; $GC_TOTAL_TIME / $JVM_UPTIME * 100"
 > ```
 
+## Executando os testes de carga
+
+Os testes de carga são escritos no [JMeter](https://jmeter.apache.org/) e estão definidos no arquivo `jmeter.jmx`.
+
+### Interface gráfica (JMeter GUI)
+
+Os testes pode ser executados pela interface gráfica (GUI) do JMeter, **mas nesse caso apenas em tempo de desenvolvimento dos testes, pois a interface gráfica acaba consumindo recursos e concorrendo com o teste em si**. Para executar basta abrir o JMeter, menu `File > Open`, selecionar o arquivo `jmeter.jmx`, checar se os parâmetros nos itens globais `User Defined Variables`, `HTTP Request Defaults` e `Grupo de Usuários (Thread Group)` estão corretos, e por fim clicar no botão `Start` (uma seta verde no formato de Play ▶).
+
+### Linha de comando (JMeter)
+
+Os testes em sua execução valendo devem ser feitos via linha de comando, em uma máquina que esteja executando apenas os testes, sem qualquer outro processamento em paralelo que possa degradar a performance do teste. Para iniciar o teste basta executar:
+
+```bash
+jmeter -n -t jmeter.jmx
+```
+
+Se desejar ver um pouco mais de detalhes das requisições e da execução do JMeter, basta ativar o log de ambas, assim:
+
+```bash
+jmeter -n -t jmeter.jmx \
+  -l /tmp/jmeter-requests.jtl -j /tmp/jmeter.log
+```
+
+Mais parâmetros de linha de comando: <https://jmeter.apache.org/usermanual/get-started.html#non_gui>
+
+### Linha de comando (Jmeter com [Taurus](https://gettaurus.org/))
+
+Aqui temos uma interface bonita no console, que permite acompanhar os testes em tempo real.
+
+```bash
+docker run -it --rm \
+  -v ~/projetos/jarvis:/bzt-configs \
+  -v /tmp/jarvis-load-test-artifacts:/tmp/artifacts \
+  blazemeter/taurus jmeter.jmx
+```
+
+> 📋 NOTA
+>
+> - `~/projetos/jarvis` é onde se encontra o `jmeter.jmx`
+> - o volume `/tmp/jarvis-load-test-artifacts` é opcional
+> - em sistemas com SELinux é preciso aplicar o contexto nas pastas dos volumes, ex: `sudo chcon -t svirt_sandbox_file_t /tmp/jarvis-load-test-artifacts`
+
 ## // TODO: Falar dessas coisas?
 
 - que é possível obter os valores de limits e requests de memória dentro do POD? <https://docs.openshift.com/container-platform/4.6/nodes/clusters/nodes-cluster-resource-configure.html#nodes-cluster-resource-configure-request-limit_nodes-cluster-resource-configure>**
@@ -416,3 +462,4 @@ Temos **0.07461100%**. É muito pouco!
 - Tuning Java’s footprint in OpenShift (Part 2): <https://developers.redhat.com/blog/2014/07/22/dude-wheres-my-paas-memory-tuning-javas-footprint-in-openshift-part-2/>
 - <https://www.baeldung.com/jvm-garbage-collectors>
 - <https://www.baeldung.com/jvm-parameters>
+- <https://www.blazemeter.com/blog/3-easy-ways-to-monitor-jmeter-non-gui-test-results>
