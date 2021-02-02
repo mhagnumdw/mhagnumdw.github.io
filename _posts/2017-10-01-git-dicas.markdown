@@ -126,3 +126,34 @@ git log -GaddShutdownHook --name-status
 ```
 
 * * *
+
+### Exibir o autor no `git rebase -i`
+
+```shell
+git config --add rebase.instructionFormat "(%an <%ae>) %s" 
+
+# ou global
+git config --global rebase.instructionFormat "(%an <%ae>) %s"
+```
+
+* * *
+
+### Exibir o autor no estilo `git log --oneline`
+
+```shell
+git log --pretty=format:"%C(yellow)%h %C(auto,magenta)%>(12)[%ad] %Cgreen%<(7)%aN (%aE)%Cred%d %Creset%s" --date=format:"%d/%m/%Y %H:%M:%S"
+```
+
+Criar um alias para evitar toda essa linha:
+
+```shell
+# definir globalmente um alias chamado logp
+git config --global alias.logp 'log --pretty=format:"%C(yellow)%h %C(auto,magenta)%>(12)[%ad] %Cgreen%<(7)%aN (%aE)%Cred%d %Creset%s" --date=format:"%d/%m/%Y %H:%M:%S"'
+
+# agora basta
+git logp
+git logp -5
+git logp origin/master..
+```
+
+* * *
