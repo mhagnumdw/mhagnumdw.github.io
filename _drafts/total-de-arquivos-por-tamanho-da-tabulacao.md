@@ -1,3 +1,9 @@
+## Pré-requisito
+
+```shell
+npm install --global detect-indent-cli
+```
+
 ## Quantidade de arquivos por tamanho da tabulação (apenas os arquivos: css scss ts js html):
 
 ```shell
