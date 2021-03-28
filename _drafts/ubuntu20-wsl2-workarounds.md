@@ -14,6 +14,11 @@ exec sudo nsenter -t $(pidof systemd) -a su - $LOGNAME
 snap version
 ```
 
+Observações:
+- Ao executar em um shell, não funciona em outro shell
+- Para executar em outro shell precisa parar o wsl: `wsl --shutdown`
+- Podem existir efeitos colaterais diversos (qualquer coisa é parar o wsl)
+
 Referências:
 - https://github.com/microsoft/WSL/issues/5126#issuecomment-653715201-permalink
 
