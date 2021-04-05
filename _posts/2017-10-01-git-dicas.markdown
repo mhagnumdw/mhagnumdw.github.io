@@ -130,7 +130,7 @@ git log -GaddShutdownHook --name-status
 ### Exibir o autor no `git rebase -i`
 
 ```shell
-git config --add rebase.instructionFormat "(%an <%ae>) %s" 
+git config --add rebase.instructionFormat "(%an <%ae>) %s"
 
 # ou global
 git config --global rebase.instructionFormat "(%an <%ae>) %s"
@@ -155,5 +155,17 @@ git logp
 git logp -5
 git logp origin/master..
 ```
+
+* * *
+
+### Checkout por data e hora
+
+```shell
+git checkout `git rev-list -n 1 --before="2021-03-24 17:00" master`
+```
+
+Observação: é possível ver por aí, pesquisando na net, a solução `git checkout master@{2021-03-24 17:00}`, **não vai funcionar bem**, porque ele usa o reflog (que expira depois de algum tempo).
+
+ref: <http://web.archive.org/web/20170303015800/http://bramschoenmakers.nl/en/node/645>
 
 * * *
