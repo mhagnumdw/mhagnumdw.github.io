@@ -60,6 +60,10 @@ https://github.com/tstack/lnav
 
 https://github.com/aristocratos/bpytop
 
+### gotop
+
+https://github.com/xxxserxxx/gotop
+
 ## JVM
 
 - https://github.com/ajermakovics/jvm-mon
