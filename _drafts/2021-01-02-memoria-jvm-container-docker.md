@@ -463,3 +463,4 @@ docker run -it --rm \
 - <https://www.baeldung.com/jvm-garbage-collectors>
 - <https://www.baeldung.com/jvm-parameters>
 - <https://www.blazemeter.com/blog/3-easy-ways-to-monitor-jmeter-non-gui-test-results>
+- <https://www.baeldung.com/native-memory-tracking-in-jvm>
