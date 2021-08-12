@@ -169,3 +169,15 @@ Observação: é possível ver por aí, pesquisando na net, a solução `git che
 ref: <http://web.archive.org/web/20170303015800/http://bramschoenmakers.nl/en/node/645>
 
 * * *
+
+### `git log` por data e hora
+
+```shell
+# ex1
+git log --oneline --after="2020-01-01 00:00"
+
+# ex2
+git log --oneline --before="2020-01-01 00:00"
+```
+
+* * *
