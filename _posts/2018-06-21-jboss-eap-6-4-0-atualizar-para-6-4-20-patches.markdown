@@ -61,19 +61,19 @@ Até a data de hoje (21/06/2018) existem 20 patches disponíveis. Bastando aplic
 
 ```shell
 # Aplicando o patch 9 (1 a 9)
-patch apply ~/ambiente-grpfor/servers/jboss/jboss-eap-6.4-patches/jboss-eap-6.4.9-patch.zip
+patch apply ~/ambiente/servers/jboss/jboss-eap-6.4-patches/jboss-eap-6.4.9-patch.zip
 
 # Reiniciar o JBoss
 shutdown --restart=true
 
 # Aplicando o patch 19 (10 a 19)
-patch apply ~/ambiente-grpfor/servers/jboss/jboss-eap-6.4-patches/jboss-eap-6.4.19-patch.zip
+patch apply ~/ambiente/servers/jboss/jboss-eap-6.4-patches/jboss-eap-6.4.19-patch.zip
 
 # Reiniciar o JBoss
 shutdown --restart=true
 
 # Aplicando o patch 20
-patch apply ~/ambiente-grpfor/servers/jboss/jboss-eap-6.4-patches/jboss-eap-6.4.20-patch.zip
+patch apply ~/ambiente/servers/jboss/jboss-eap-6.4-patches/jboss-eap-6.4.20-patch.zip
 
 # Reiniciar o JBoss
 shutdown --restart=true
