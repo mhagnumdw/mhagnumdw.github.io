@@ -81,6 +81,10 @@ https://github.com/xxxserxxx/gotop
 
 - https://github.com/isacikgoz/gitbatch
 
+### gita
+
+- https://github.com/nosarthur/gita
+
 ## Vídeo
 
 ### catt - transmitir para o Chromecast
