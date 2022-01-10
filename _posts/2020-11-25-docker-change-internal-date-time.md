@@ -32,40 +32,40 @@ Alterar a data e hora de um container docker **sem interferir na data e hora do 
 
 Ao tentar alterar a data pelo modo tradicional, obtemos um erro:
 
-```terminal
+```console
 (host)$ docker run -it --rm --env TZ=America/Fortaleza --privileged debian sh
-#
-# id # checando o usuario corrente
+$
+$ id # checando o usuario corrente
 uid=0(root) gid=0(root) groups=0(root),1(bin),2(daemon),3(sys),4(adm),6(disk),10(wheel),11(floppy),20(dialout),26(tape),27(video)
-#
-# date # verificando a data corrente
+$
+$ date # verificando a data corrente
 Wed Nov 25 21:02:49 UTC 2020
-#
-# date -s "2020-12-15 18:00:00" # tentando alterar a data
+$
+$ date -s "2020-12-15 18:00:00" # tentando alterar a data
 date: can't set date: Operation not permitted
 Tue Dec 15 18:00:00 UTC 2020
-#
-# date # verificando a data corrente (nao foi alterada)
+$
+$ date # verificando a data corrente (nao foi alterada)
 Wed Nov 25 21:02:58 UTC 2020
-#
+$
 ```
 
 ### Executando `date -s` em um container com `--privileged`
 
 Subindo o container com `--privileged`, até conseguimos alterar, **mas também altera no host** (não queremos isso!):
 
-```terminal
+```console
 (host)$ docker run -it --rm --env TZ=America/Fortaleza --privileged debian sh
-#
-# date # verificando a data corrente
+$
+$ date # verificando a data corrente
 Wed Nov 25 18:26:23 -03 2020
-#
-# date -s "2020-12-15 18:00:00" # tentando alterar a data
+$
+$ date -s "2020-12-15 18:00:00" # tentando alterar a data
 Tue Dec 15 18:00:00 -03 2020
-#
-# date # verificando: foi alterada no container e no host
+$
+$ date # verificando: foi alterada no container e no host
 Tue Dec 15 18:00:07 -03 2020
-#
+$
 ```
 
 <video muted autoplay controls style="width=:100%;padding: unset;">
