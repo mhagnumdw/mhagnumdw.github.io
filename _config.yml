@@ -8,7 +8,7 @@ permalink: /:year/:month/:day/:title
 excerpt_separator: <!--more-->
 
 defaults:
-  - 
+  -
     scope:
       path: "" # an empty string here means all files in the project
     values:
@@ -52,7 +52,7 @@ theme_settings:
   vimeo:
   wordpress:
   youtube:
-  
+
   # Sharing options
   share_buttons:
     facebook: true
@@ -66,19 +66,19 @@ theme_settings:
     wordpress:
     email: true
 
-  # Scripts / Features 
+  # Scripts / Features
   google_analytics: # Tracking ID, e.g. "UA-000000-01"
   disqus_shortname: mhagnumdw
   katex: true # Enable if using math markup
-  
+
   special_page:
-    search: 
+    search:
       icon: "search"
       enabled: true
     tags:
       icon: "tags"
       enabled: true
-  
+
   # Localization strings
   str_follow_on: "Follow on"
   str_rss_follow: "Follow RSS feed"
@@ -97,10 +97,10 @@ theme_settings:
 
   # Post navigation
   post_navigation: true
-  
+
   # Colours, typography and padding
   # Open the "_sass > base" folder, and open "_variables.scss"
-  
+
 # PAGINATION
 paginate: 10
 paginate_path: "blog/page:num"
@@ -109,9 +109,9 @@ authors:
   mhagnumdw:
     name: "MhagnumDw"
     avatar: "assets/img/avatars/mhagnumdw.jpg"
-#  bob:
-#    name: "Bob"
-#    avatar: "assets/img/avatars/bob.jpg"
+  jacksoncastro:
+    name: "Jackson Castro"
+    avatar: "assets/img/avatars/bob.jpg"
 
 # BUILD SETTINGS
 markdown: kramdown
