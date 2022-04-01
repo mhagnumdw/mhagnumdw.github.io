@@ -93,3 +93,27 @@ docker save jenkins:2.46.1 | gzip -9 > /tmp/jenkins-2.46.1.docker-image.gz
 # importar
 zcat /tmp/jenkins-2.46.1.docker-image.gz | docker load
 ```
+
+### Alterar range padrão das redes internas
+
+Algo que pode ser necessário é ter que mudar a faixa de rede padrão do docker por conflitar com outras redes, com uma VPN por exemplo.
+Algo comum nesse sentido é usar alterar o `bip` dentro do `daemon.json` do docker. Porém essa estratégia falha ao criar novas interfaces, pois o docker irá usar um _pool_ de endereços padrões.
+
+Então para modificar esse _pool_ dentro de `/etc/docker/daemon.json` altere:
+
+```json
+{
+    "default-address-pools": [
+        {
+        "base": "172.18.0.1/16",
+        "size": 24
+        }
+    ]
+}
+```
+
+Agora basta reiniciar o _docker_:
+
+```bash
+sudo service docker restart
+```
