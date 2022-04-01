@@ -1,14 +1,44 @@
-{%- assign author-id = include.post.author-id -%}
+{% comment %}
+Autores podem ser definidos nos post de duas formas.
 
-{%- assign author_name = site.authors[author-id].name -%}
-{%- assign avatar = site.authors[author-id].avatar -%}
-{%- assign date = include.post.date -%}
+Definido um único autor, assim:
+author-id: mhagnumdw
+
+Ou definindo múltiplos autores, assim:
+authors-ids:
+- mhagnumdw
+- jacksoncastro
+
+Ambas as formas podem ser combinadas.
+
+Os autores devem ser definidos no arquivo
+_config.yml na seção authors.
+{% endcomment %}
+
+{%- assign post-author-id-as-array = include.post.author-id | split: ',' -%}
+
+{%- assign all-authors-ids = include.post.authors-ids | concat: post-author-id-as-array -%}
+
+{%- assign last-author-id = all-authors-ids.last -%}
 
 <div class="post-info">
-  {% if avatar %}
-    <img src="{{ avatar | relative_url }}">
-  {% endif %}
-  <p class="meta">
-    {{ author_name }} - {{ date | date: "%B %-d, %Y" }}
-  </p>
+
+  {% for author-id in all-authors-ids %}
+
+    {%- assign author_name = site.authors[author-id].name -%}
+    {%- assign avatar = site.authors[author-id].avatar -%}
+    {%- assign date = include.post.date -%}
+
+    {% if avatar %}
+      <img src="{{ avatar | relative_url }}">
+    {% endif %}
+    <p class="meta">
+      {{ author_name }}
+      {% if last-author-id == author-id %}
+      - {{ date | date: "%B %-d, %Y" }}
+      {% endif %}
+    </p>
+
+  {% endfor %}
+
 </div>
