@@ -7,7 +7,9 @@ categories:
 tags:
 - docker
 - docker-dicas
-author-id: mhagnumdw
+authors-ids:
+- mhagnumdw
+- jacksoncastro
 image: "assets/img/posts/docker-dicas/banner.png"
 feature-img: "assets/img/posts/docker-dicas/banner.png"
 thumbnail: "assets/img/posts/docker-dicas/banner.png"
