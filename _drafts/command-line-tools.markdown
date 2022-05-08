@@ -90,3 +90,10 @@ https://github.com/xxxserxxx/gotop
 ### catt - transmitir para o Chromecast
 
 - https://github.com/skorokithakis/catt
+
+## Código
+
+### cloc - Contar linhas de código com diversas estatísticas
+
+- https://github.com/AlDanial/cloc
+
