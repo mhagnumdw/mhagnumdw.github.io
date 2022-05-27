@@ -69,3 +69,4 @@ curl -i --location --request GET 'https://apisidra.ibge.gov.br/values/t/7063/n1/
 - <https://docs.fedoraproject.org/en-US/quick-docs/using-shared-system-certificates/>
 - <https://ajmaradiaga.com/Adding-trusting-CA-Fedora/>
 - <https://sectigo.com/knowledge-base/detail/Sectigo-Intermediate-Certificates/kA01N000000rfBO>
+- <https://access.redhat.com/solutions/1435913>
