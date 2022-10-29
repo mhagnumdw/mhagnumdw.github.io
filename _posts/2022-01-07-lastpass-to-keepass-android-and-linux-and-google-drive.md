@@ -66,15 +66,15 @@ O LastPass facilita esse trabalho porque ele naturalmente sincroniza as senhas e
 
 ### Google Drive
 
-Vamos usar Google Drive como exemplo para compartilhar a base de dados. Coloque o arquivo da base de dados de senhas em uma pasta do Google Drive, preferencialmente sincronizada com o seu desktop, para que você possa acessar as senhas pelo `keepass` e `keepassxc`.
+Coloque o arquivo da base de dados de senhas em uma pasta do Google Drive, preferencialmente sincronizada com o seu desktop, para que você possa acessar as senhas pelo `keepass` e/ou `keepassxc`.
 
-### No Android
+#### No Android
 
 Usar o app [Keepass2Android Password Safe](https://play.google.com/store/apps/details?id=keepass2android.keepass2android) (citado no site do KeePass) e abrir o arquivo da base de dados de senhas pela opção `Seletor de arquivo de sistema`; no explorador de arquivos do Android, acessar o Google Drive e selecionar o arquivo da base de dados do KeePass. A sincronia será automática.
 
 ![Keepass2Android]({{ site.baseurl }}/assets/img/posts/lastpass-to-keepass-android-and-linux-and-google-drive/keepass2android.jpg)
 
-### No Linux (Fedora)
+#### No Linux (Fedora)
 
 Vamos usar o [GDrive](https://github.com/prasmussen/gdrive) (CLI não oficial do Google Drive) para sincronizar o arquivo da base de dados do KeePass.
 
@@ -131,3 +131,16 @@ alias kp-upload="if check_keepass_db_diff; then gdrive update $KEEPASS_DB_GOOGLE
 
 # Fim: KeePass, sincronizacao com o Google Drive
 ```
+
+### Dropbox
+
+> 📋 Para Linux acaba sendo a melhor opção, já que não há um cliente oficial do Google Drive.
+
+Aqui vamos iniciar pelo [Keepass2Android Password Safe](https://play.google.com/store/apps/details?id=keepass2android.keepass2android). Vá na opção `Dropbox (pasta KP2A)`, permita a conexão com o Dropbox - então, caso não exista, será criada a pasta `Apps / Keepass2Android` no seu Dropbox e o Keepass2Android terá acesso apenas a essa pasta.
+
+Depois que a pasta for criada, coloque nela a base de dados do KeePass. Você pode fazer isso pelo Android, Web, Desktop etc.
+
+Certamente você pode instalar o cliente do Dropbox para o desktop:
+
+- Se Linux: <https://www.dropbox.com/install-linux>
+- Outros: <https://www.dropbox.com/install>
