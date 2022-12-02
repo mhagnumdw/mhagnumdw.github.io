@@ -57,7 +57,7 @@ Issuer: C = GB, ST = Greater Manchester, L = Salford, O = Sectigo Limited, CN = 
     CA Issuers - URI:http://crt.sectigo.com/SectigoRSAOrganizationValidationSecureServerCA.crt
 ```
 
-Podemos observar no output que o certificado do site é mitido pela Sectigo.
+Podemos observar no output que o certificado do site é emitido pela Sectigo.
 
 ### Verificando se a CA existe localmente (no SO)
 
