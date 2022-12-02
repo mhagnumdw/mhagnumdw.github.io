@@ -130,7 +130,7 @@ $ curl https://git.mydomain.com:5050/v2/
 {"errors":[{"code":"UNAUTHORIZED","message":"authentication required","detail":null}]}
 ```
 
-🎉 🎉 🎉 Agora sem erros de SSL. O erro mostrado acima já é a aplicação requerendo autentiação. Sucesso então!
+🎉 🎉 🎉 Agora sem erros de SSL. O erro mostrado acima já é a aplicação requerendo autenticação. Sucesso então!
 
 #### Com o `docker`
 
