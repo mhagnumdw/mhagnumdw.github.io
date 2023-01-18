@@ -145,7 +145,7 @@ oc adm policy \
 
 Ao criar uma aplicação no ArgoCD (que roda no namespace `openshift-gitops`) ela será deployada no namespace `jarvis`.
 
-### Referências
+## Referências
 
 - <https://argo-cd.readthedocs.io/en/stable/getting_started>
 - <https://argo-cd.readthedocs.io/en/stable/user-guide/projects>
