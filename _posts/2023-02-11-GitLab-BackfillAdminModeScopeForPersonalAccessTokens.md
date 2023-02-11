@@ -13,25 +13,25 @@ feature-img: "assets/img/posts/GitLab-BackfillAdminModeScopeForPersonalAccessTok
 thumbnail: "assets/img/posts/GitLab-BackfillAdminModeScopeForPersonalAccessTokens/banner.png"
 ---
 
-Problema com a background migration `BackfillAdminModeScopeForPersonalAccessTokens: personal_access_tokens` que falha após atualizar o GitLab da versão 15.4.6 para 15.8.1.
+Problem with the background migration `BackfillAdminModeScopeForPersonalAccessTokens: personal_access_tokens`  that fails after updating GitLab from version 15.4.6 to 15.8.1.
 
 <!--more-->
 
-> No momento o Google não retorna nada para `"BackfillAdminModeScopeForPersonalAccessTokens"`, mas buscando direto no GitLab.com achei uma [issue](https://gitlab.com/gitlab-org/gitlab/-/issues/388935). Curiosidamente [bing.com](https://www.bing.com/search?q=%22BackfillAdminModeScopeForPersonalAccessTokens%22) e [duckduckgo.com](https://duckduckgo.com/?q=%22BackfillAdminModeScopeForPersonalAccessTokens%22) acham.
+> At the moment, Google doesn't return anything for `"BackfillAdminModeScopeForPersonalAccessTokens"`, but searching directly on GitLab.com I found an [issue](https://gitlab.com/gitlab-org/gitlab/-/issues/388935). Interestingly, [bing.com](https://www.bing.com/search?q=%22BackfillAdminModeScopeForPersonalAccessTokens%22) and [duckduckgo.com](https://duckduckgo.com/?q=%22BackfillAdminModeScopeForPersonalAccessTokens%22) find it.
 
-## Problema
+## Problem
 
 ![git-recentb]({{ site.baseurl }}/assets/img/posts/GitLab-BackfillAdminModeScopeForPersonalAccessTokens/problema.png)
 
-## Causa do Problema
+## Cause of the problem
 
-Na máquina do GitLab, na linha de comando, entre no prompt do GitLab DB
+On the GitLab machine, in the command line, go to the GitLab DB prompt
 
 ```bash
 gitlab-rails db
 ```
 
-E execute
+And execute
 
 ```sql
 SELECT t.id,u.name,t.name,t.revoked,t.scopes
@@ -39,26 +39,26 @@ FROM personal_access_tokens t
 JOIN users u ON t.user_id = u.id;
 ```
 
-O problema são os escopos começando com `:`
+The problem is the scopes starting with `:`
 
 ![git-recentb]({{ site.baseurl }}/assets/img/posts/GitLab-BackfillAdminModeScopeForPersonalAccessTokens/causa-do-prolema.png)
 
-## Soluções
+## Solutions
 
-### Remover os `:` dos escopos
+### Remove the `:` from the scopes
 
-Prefiro essa. Remover os `:` dos escopos (`replace` só remove a primeira ocorrência da string, ótimo!)
+I prefer this. Remove the `:` from the scopes (replace only removes the first occurrence of the string, great!)
 
 ```sql
 UPDATE personal_access_tokens
 SET scopes = replace(scopes, ':', '');
 ```
 
-Ou você pode revogar os tokens, conforme mais abaixo.
+Or you can revoke the tokens, as below.
 
-### Revogar os tokens
+### Revoke the tokens
 
-Revogar os tokens que possuem os `:` no escopo, algo como
+Revoke the tokens that have `:` in the scope, something like
 
 ```sql
 UPDATE personal_access_tokens
@@ -66,12 +66,12 @@ SET revoked = 't'
 WHERE id in (4, 2 ,6);
 ```
 
-## Executar a background migration manualmente
+## Manually run the background migration
 
 ![git-recentb]({{ site.baseurl }}/assets/img/posts/GitLab-BackfillAdminModeScopeForPersonalAccessTokens/executar-background-migration.png)
 
-Que deverá ser executada com sucesso.
+Which should run successfully 🎉🎉🎉
 
-## Referências
+## References
 
 - <https://gitlab.com/gitlab-org/gitlab/-/issues/388935>
