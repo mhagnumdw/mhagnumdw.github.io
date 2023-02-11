@@ -7,7 +7,7 @@
 Entrar na pasta do projeto e executar os comandos abaixo.
 
 ```bash
-export JEKYLL_VERSION=4
+export JEKYLL_VERSION=4.1.0
 
 docker run \
   --name jekyll \
