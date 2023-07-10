@@ -47,7 +47,7 @@ ffmpeg -i \
 
 ```bash
 cd assets/
-sudo npm install gulp-cli -g
+npm install gulp-cli -g
 npm install
 gulp default
 # dica: executar "git status" para ver as mudanças
@@ -57,3 +57,13 @@ git status
 ## Comprimir imagens online
 
 <https://tinypng.com/>
+
+## Buscar todas as categories e tags já existentes
+
+```bash
+# categories
+rg --multiline --no-heading --no-filename '(?s)categories:.*?tags:' | sort | uniq -c | sort -n
+
+# tags
+rg --multiline --no-heading --no-filename '(?s)tags:.*?author-id:' | sort | uniq -c | sort -n
+```
