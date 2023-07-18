@@ -119,3 +119,38 @@ Agora basta reiniciar o _docker_:
 ```bash
 sudo service docker restart
 ```
+
+## Backup de volumes (Opção 1)
+
+```bash
+# listar volumes
+docker volume ls
+
+# backup de um volume para um novo volume
+VOLUME_NAME="sonarqube_logs" ; \
+docker run --rm \
+  -v $VOLUME_NAME:/volume_origem:ro \
+  -v bkp_$VOLUME_NAME:/volume_destino \
+  alpine \
+  cp -ra /volume_origem /volume_destino
+```
+
+## Backup de volumes (Opção 2)
+
+```bash
+# backup para o sistema de arquivos
+VOLUME_NAME="sonarqube_logs" ; \
+docker run --rm \
+  -v $VOLUME_NAME:/volume_origem:ro \
+  -v /var/backup/volumes-sonar:/volume_destino \
+  alpine \
+  tar -cf /volume_destino/$VOLUME_NAME.tar -C /volume_origem .
+
+# restore
+VOLUME_NAME="sonarqube_logs" ; \
+docker run --rm \
+  -v $VOLUME_NAME:/volume_destino \
+  -v /var/backup/volumes-sonar:/volume_origem \
+  alpine \
+  tar -xf /volume_origem/$VOLUME_NAME.tar -C /volume_destino
+```
