@@ -96,6 +96,13 @@ docker save jenkins:2.46.1 | gzip -9 > /tmp/jenkins-2.46.1.docker-image.gz
 zcat /tmp/jenkins-2.46.1.docker-image.gz | docker load
 ```
 
+Para uma máquina remota via ssh:
+
+```bash
+# exportar e importar
+docker save jenkins:2.46.1 | gzip | ssh user@IP 'zcat | docker load'
+```
+
 ### Alterar range padrão das redes internas
 
 Algo que pode ser necessário é ter que mudar a faixa de rede padrão do docker por conflitar com outras redes, como uma VPN por exemplo.
