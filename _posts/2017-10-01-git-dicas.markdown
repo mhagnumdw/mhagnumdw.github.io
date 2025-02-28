@@ -17,6 +17,22 @@ Dicas de git (snippets)
 
 <!--more-->
 
+Índice
+
+- [Criar uma branch vazia com nome "maven-repo"](#criar-uma-branch-vazia-com-nome-maven-repo)
+- [Visualizar exclusivamente os commits feitos em uma branch em relação ao master](#visualizar-exclusivamente-os-commits-feitos-em-uma-branch-em-relação-ao-master)
+- [Diferença de commits entre duas branches](#diferença-de-commits-entre-duas-branches)
+- [Merge entre branches de repositórios diferentes](#merge-entre-branches-de-repositórios-diferentes)
+- [Listar os autores em um projeto](#listar-os-autores-em-um-projeto)
+- [Adicionar ao stash sem remover do workspace](#adicionar-ao-stash-sem-remover-do-workspace)
+- [Obter um arquivo específico de um stash](#obter-um-arquivo-específico-de-um-stash)
+- [Deletar branch local e remota](#deletar-branch-local-e-remota)
+- [Buscar no conteúdo dos arquivos em todo o histórico](#buscar-no-conteúdo-dos-arquivos-em-todo-o-histórico)
+- [Exibir o autor no `git rebase -i`](#exibir-o-autor-no-git-rebase--i)
+- [Exibir o autor no estilo `git log --oneline`](#exibir-o-autor-no-estilo-git-log---oneline)
+- [Checkout por data e hora](#checkout-por-data-e-hora)
+- [`git log` por data e hora](#git-log-por-data-e-hora)
+
 ### Criar uma branch vazia com nome "maven-repo"
 
 ```shell
