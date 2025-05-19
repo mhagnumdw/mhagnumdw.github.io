@@ -2,35 +2,42 @@
 
 <https://mhagnumdw.github.io/>
 
-## Executando local
+## Executando o blog localmente
 
-Entrar na pasta do projeto e executar os comandos abaixo.
+Primeiro é preciso baixar o projeto:
 
 ```bash
-export JEKYLL_VERSION=4.1.0
-
-docker run \
-  --name jekyll \
-  -it \
-  --rm \
-  --env JEKYLL_UID=$(id -u) \
-  --volume="$PWD:/srv/jekyll"  \
-  --volume="jekyll_$JEKYLL_VERSION:/usr/local/bundle" \
-  -p 4000:4000 \
-  -p 4001:4001 \
-  jekyll/jekyll:$JEKYLL_VERSION \
-  jekyll serve --livereload --livereload-port 4001
+git clone git@github.com:mhagnumdw/mhagnumdw.github.io.git
+cd mhagnumdw.github.io
 ```
 
-Adicionar a opção:
+Em seguida use uma das opções abaixo para acessar o site do blog localmente.
 
-- `--future` para exibir os posts com data futura
-- `--drafts` para exibir os posts na pasta `_drafts`
-- `--profile` para estatíticas da compilação
-- `--trace` para exibir um log detalhado
-- `--help` para exibir todas as opções
+### Com Docker (recomendado)
 
-<https://github.com/envygeeks/jekyll-docker>
+Entrar na pasta do projeto e executar:
+
+```bash
+docker run --rm -it \
+  -v $(pwd):/src \
+  -p 1313:1313 \
+  hugomods/hugo:base-non-root-0.145.0 \
+  server
+```
+
+Acessar <http://localhost:1313/techblog>
+
+### Com o hugo instalado no sistema
+
+[Instalar](https://gohugo.io/getting-started/installing) o Hugo.
+
+Entrar na pasta do projeto e executar:
+
+```bash
+hugo server --disableFastRender --buildDrafts
+```
+
+Acessar <http://localhost:1313/techblog>
 
 ## Comprimindo vídeos
 
