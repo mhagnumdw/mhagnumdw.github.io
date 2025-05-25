@@ -4,6 +4,7 @@
 
 // TODOs: ainda sem funcionar
 - [ ] Tag `<video`
+- [ ] A busca com lunr.js não está case-insensitive
 
 ## Executando o blog localmente
 
