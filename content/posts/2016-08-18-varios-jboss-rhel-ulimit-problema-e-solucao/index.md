@@ -29,7 +29,7 @@ No terminal, logado como _jboss_, executar: `ulimit -a`
 
 No caso, pelo visto, **open files** e/ou **max user processes** com os valores correntes não estão sendo suficientes. Ver imagem abaixo, lado esquerdo:
 
-![Anexo 2 - Limite original e modificado usuario jboss]({{ site.baseurl }}/assets/img/posts/varios-jboss-rhel-ulimit-problema-e-solucao/anexo-2-limite-original-e-modificado-usuario-jboss1.jpg)
+![Anexo 2 - Limite original e modificado usuario jboss](anexo-2-limite-original-e-modificado-usuario-jboss1.jpg)
 
 Que valores colocar? Para isso precisamos ter uma ideia de quantos arquivos abertos e threads estão para o usuário _jboss_, executando:
 

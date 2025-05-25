@@ -66,7 +66,7 @@ Tue Dec 15 18:00:07 -03 2020
 ```
 
 <video muted autoplay controls style="width=:100%;padding: unset;">
-    <source src="{{ site.baseurl }}/assets/img/posts/docker-change-internal-date-time/docker-privileged-change-date-time.mp4" type="video/mp4">
+    <source src="docker-privileged-change-date-time.mp4" type="video/mp4">
     Your browser does not support the video tag.
 </video>
 

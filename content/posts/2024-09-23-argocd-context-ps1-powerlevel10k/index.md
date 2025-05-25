@@ -40,7 +40,7 @@ No arquivo `~/.p10k.zsh`, navegar até o final, e antes da última chave `}`, ad
 
 Conforme a imagem abaixo:
 
-![p10k.zsh-1](/p10k.zsh-1.png)
+![p10k.zsh-1](p10k.zsh-1.png)
 
 ### Atualizar `POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS`
 
@@ -52,7 +52,7 @@ custom_argocd_context   # ArgoCD
 
 Conforme a imagem abaixo:
 
-![p10k.zsh-2]({{ site.baseurl }}/assets/img/posts/argocd-context-ps1-powerlevel10k/p10k.zsh-2.png)
+![p10k.zsh-2](p10k.zsh-2.png)
 
 ## Arquivo `~/.zshrc`
 
@@ -96,7 +96,7 @@ Agora recarregue o seu shell ou o terminal.
 
 Ao digitar `argocd` vai aparecer o contexto no prompt, conforme image abaixo:
 
-![prompt]({{ site.baseurl }}/assets/img/posts/argocd-context-ps1-powerlevel10k/prompt.png)
+![prompt](prompt.png)
 
 ## Melhorias
 

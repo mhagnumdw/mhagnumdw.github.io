@@ -522,7 +522,7 @@ E se houver uma exceção, o log com o stacktrace será algo parecido com:
 
 Uma ferramenta como o Kibana vai mostrar o log acima formatado, algo parecido com:
 
-![Kibana - Stacktrace formatado]({{ site.baseurl }}/assets/img/posts/jboss-eap-docker-image-stacktrace-json-log/kibana-stacktrace.png.jpg)
+![Kibana - Stacktrace formatado](kibana-stacktrace.png.jpg)
 
 Ou você pode salvar o log acima para um arquivo e ver formatado, assim:
 

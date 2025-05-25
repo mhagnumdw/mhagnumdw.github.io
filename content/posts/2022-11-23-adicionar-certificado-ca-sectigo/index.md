@@ -72,7 +72,7 @@ Provavelmente não deve exibir nada ou, se exibir, não é a CA necessária.
 
 Acessar o site oficial da Sectigo [clicando aqui](https://support.sectigo.com/articles/Knowledge/Sectigo-Intermediate-Certificates) e baixar os três certificados mostrados na imagem abaixo.
 
-![certificados]({{ site.baseurl }}/assets/img/posts/adicionar-certificado-ca-sectigo/site-sectigo-certificados.png)
+![certificados](site-sectigo-certificados.png)
 
 Que devem ser os arquivos:
 

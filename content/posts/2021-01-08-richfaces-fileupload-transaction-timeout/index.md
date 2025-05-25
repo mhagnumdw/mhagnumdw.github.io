@@ -25,7 +25,7 @@ O componente de upload apresenta a mensagem _Transfer error occurred_ e no log o
 
 Tela do componente `rich:fileUpload`:
 
-![Transfer error occurred]({{ site.baseurl }}/assets/img/posts/richfaces-fileupload-transaction-timeout/transfer-error-occurred.jpg)
+![Transfer error occurred](transfer-error-occurred.jpg)
 
 No log do servidor há mensagens parecidas com essas:
 
@@ -39,7 +39,7 @@ No log do servidor há mensagens parecidas com essas:
 <br/>
 Requests no developer tools. Retorna http `200`, mas pelo payload dá pra ver que redireciona para a tela de erro:
 
-![FireFox Developer Tools]({{ site.baseurl }}/assets/img/posts/richfaces-fileupload-transaction-timeout/firefox-developer-tools.jpg)
+![FireFox Developer Tools](firefox-developer-tools.jpg)
 
 ## Qual é o problema?
 

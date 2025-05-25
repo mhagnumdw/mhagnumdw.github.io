@@ -31,7 +31,7 @@ O GitLab chama esse recurso de _Cleanup policy for tags_ e pode ser configurado 
 
 Basta ativar e setar os parâmetros. Abaixo um exemplo real.
 
-![Cleanup policy for tags]({{ site.baseurl }}/assets/img/posts/gitlab-registry-cleanup/cleanup_policy_for_tags.jpg)
+![Cleanup policy for tags](cleanup_policy_for_tags.jpg)
 
 Explicando a imagem acima e seus valores
 

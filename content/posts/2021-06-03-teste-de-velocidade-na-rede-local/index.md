@@ -44,7 +44,7 @@ iperf3 -c $IP_DO_SERVER
 
 E você terá uma saída parecida com essa:
 
-![client-output]({{ site.baseurl }}/assets/img/posts/teste-de-velocidade-na-rede-local/client-output.png)
+![client-output](client-output.png)
 
 ### Ouras opções
 

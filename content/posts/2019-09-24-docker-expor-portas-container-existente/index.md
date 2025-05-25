@@ -44,13 +44,13 @@ cp -ra . /tmp/container-original/
 
  Abaixo o antes e o depois do arquivo:
 
-![Diff config.v2.json]({{ site.baseurl }}/assets/img/posts/docker-expor-portas-container-existente/diff-configv2json.png)
+![Diff config.v2.json](diff-configv2json.png)
 
 ### Editar o arquivo `hostconfig.json`
 
 Abaixo o antes e o depois do arquivo:
 
-![Diff hostconfig.json]({{ site.baseurl }}/assets/img/posts/docker-expor-portas-container-existente/diff-hostconfigjson.png)
+![Diff hostconfig.json](diff-hostconfigjson.png)
 
 ### Passos finais
 

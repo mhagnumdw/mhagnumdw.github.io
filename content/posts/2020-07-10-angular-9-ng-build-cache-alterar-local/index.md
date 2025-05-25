@@ -32,7 +32,7 @@ E é só isso. Basta dar uma olhada no conteúdo da pasta.
 ## Tempo de build
 
 <video muted autoplay controls style="width=:100%;padding: unset;">
-    <source src="{{ site.baseurl }}/assets/img/posts/angular-9-ng-build-cache-alterar-local/angular-9-ng-build-cache-alterar-local.mp4" type="video/mp4">
+    <source src="angular-9-ng-build-cache-alterar-local.mp4" type="video/mp4">
     Your browser does not support the video tag.
 </video>
 

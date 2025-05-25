@@ -25,7 +25,7 @@ No Windows, executar `SQLWorkbench64.exe`. No linux `./sqlwbconsole.sh`.
 Precisamos criar dois profiles das duas instâncias de banco de dados, conforme vídeo abaixo.
 
 <video muted controls style="width=:100%;padding: unset;">
-    <source src="{{ site.baseurl }}/assets/img/posts/database-diff/sql-workbench-criar-profiles.mp4" type="video/mp4">
+    <source src="sql-workbench-criar-profiles.mp4" type="video/mp4">
     Your browser does not support the video tag.
 </video>
 
@@ -34,7 +34,7 @@ Precisamos criar dois profiles das duas instâncias de banco de dados, conforme 
 Agora, no terminal, abrir o console `SQL Workbench/J` e executar o script que vai gerar o `SQL` de _diff_ que deve ser aplicado no destino. Ver vídeo abaixo.
 
 <video muted controls style="width=:100%;padding: unset;">
-    <source src="{{ site.baseurl }}/assets/img/posts/database-diff/sql-workbench-gerar-diff.mp4" type="video/mp4">
+    <source src="sql-workbench-gerar-diff.mp4" type="video/mp4">
     Your browser does not support the video tag.
 </video>
 

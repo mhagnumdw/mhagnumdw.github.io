@@ -64,7 +64,7 @@ sudo systemctl restart docker
 
 Instalar o plugin Docker Plugin: <https://wiki.jenkins.io/display/JENKINS/Docker+Plugin>
 
-![Jenkins - Instalando plugin Docker]({{ site.baseurl }}/assets/img/posts/jenkins-build-docker/instalando-plugin-docker.png)
+![Jenkins - Instalando plugin Docker](instalando-plugin-docker.png)
 
 ### Configurar plugin
 
@@ -94,7 +94,7 @@ Instalar o plugin Docker Plugin: <https://wiki.jenkins.io/display/JENKINS/Docker
 
 ### Overview da configuração
 
-![Jenkins - Docker Conf Overview]({{ site.baseurl }}/assets/img/posts/jenkins-build-docker/plugin-docker-conf-overview.gif)
+![Jenkins - Docker Conf Overview](plugin-docker-conf-overview.gif)
 
 ## Criar Job (ou alterar um existente)
 
@@ -103,11 +103,11 @@ Instalar o plugin Docker Plugin: <https://wiki.jenkins.io/display/JENKINS/Docker
 1. abrir as configurações do job
 1. marcar a opção `Restrict where this project can be run`
 1. Label Expression: `docker-slave`
-![Jenkins - Restrict where this project can be run]({{ site.baseurl }}/assets/img/posts/jenkins-build-docker/restrict-where-this-project-can-be-run.png)
+![Jenkins - Restrict where this project can be run](restrict-where-this-project-can-be-run.png)
 
 ### Buildar
 
-![Jenkins - Buildando dentro de container]({{ site.baseurl }}/assets/img/posts/jenkins-build-docker/buildando-dentro-de-container.gif)
+![Jenkins - Buildando dentro de container](buildando-dentro-de-container.gif)
 
 ## Versões/Referências
 

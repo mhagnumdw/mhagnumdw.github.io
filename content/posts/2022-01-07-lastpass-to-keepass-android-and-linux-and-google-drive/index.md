@@ -71,7 +71,7 @@ Coloque o arquivo da base de dados de senhas em uma pasta do Google Drive, prefe
 
 Usar o app [Keepass2Android Password Safe](https://play.google.com/store/apps/details?id=keepass2android.keepass2android) (citado no site do KeePass) e abrir o arquivo da base de dados de senhas pela opção `Seletor de arquivo de sistema`; no explorador de arquivos do Android, acessar o Google Drive e selecionar o arquivo da base de dados do KeePass. A sincronia será automática.
 
-![Keepass2Android]({{ site.baseurl }}/assets/img/posts/lastpass-to-keepass-android-and-linux-and-google-drive/keepass2android.jpg)
+![Keepass2Android](keepass2android.jpg)
 
 #### No Linux (Fedora)
 

@@ -74,7 +74,7 @@ Se mudaram tudo ok! ;)
 
 > **NOTA**: vamos gerar um novo output do mount: `mount -l > /tmp/mount-depois.txt`. Você teve ter um diff parecido com o diff abaixo. **Observar o atributo `metadata` na diferença.**
 
-![Diff]({{ site.baseurl }}/assets/img/posts/windows-wsl-linux-chmod-nao-funciona/windows-wsl-linux-chmod-nao-funciona-diff.png)
+![Diff](windows-wsl-linux-chmod-nao-funciona-diff.png)
 
 ## Referências
 

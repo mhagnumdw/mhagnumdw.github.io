@@ -33,13 +33,13 @@ Uma JVM com versão `17-ea` que é versão 17, é detectada como versão 1. Exem
 
 Se por qualquer motivo você não puder trocar a versão do log4j1 ou mesmo mudar para outro provedor de log, é possível substituir a classe `org.apache.log4j.helpers.Loader` colocando-a no seu projeto no mesmo pacote de origem dela.
 
-![loader-dentro-do-projeto]({{ site.baseurl }}/assets/img/posts/log4j1-mdc-problem-java17/loader-dentro-do-projeto.png)
+![loader-dentro-do-projeto](loader-dentro-do-projeto.png)
 
 Agora faça as modificações no arquivo `Loader.java` conforme instruções abaixo:
 
 - Comente o código conforme a imagem:
 
-![diff1]({{ site.baseurl }}/assets/img/posts/log4j1-mdc-problem-java17/loader-diff-1.png)
+![diff1](loader-diff-1.png)
 
 - O método `isJava1()` deve sempre retornar `true`
 - Os locais que referenciam a variável `java1` devem passar a chamar o método `isJava1()`

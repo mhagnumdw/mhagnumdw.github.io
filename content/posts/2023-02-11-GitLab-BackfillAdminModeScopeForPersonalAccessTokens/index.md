@@ -20,7 +20,7 @@ Problem with the background migration `BackfillAdminModeScopeForPersonalAccessTo
 
 ## Problem
 
-![git-recentb]({{ site.baseurl }}/assets/img/posts/GitLab-BackfillAdminModeScopeForPersonalAccessTokens/problema.png)
+![git-recentb](problema.png)
 
 ## Cause of the problem
 
@@ -40,7 +40,7 @@ JOIN users u ON t.user_id = u.id;
 
 The problem is the scopes starting with `:`
 
-![git-recentb]({{ site.baseurl }}/assets/img/posts/GitLab-BackfillAdminModeScopeForPersonalAccessTokens/causa-do-prolema.png)
+![git-recentb](causa-do-prolema.png)
 
 ## Solutions
 
@@ -67,7 +67,7 @@ WHERE id in (4, 2 ,6);
 
 ## Manually run the background migration
 
-![git-recentb]({{ site.baseurl }}/assets/img/posts/GitLab-BackfillAdminModeScopeForPersonalAccessTokens/executar-background-migration.png)
+![git-recentb](executar-background-migration.png)
 
 Which should run successfully 🎉🎉🎉
 

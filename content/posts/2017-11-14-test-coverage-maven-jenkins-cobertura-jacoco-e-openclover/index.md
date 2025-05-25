@@ -18,7 +18,7 @@ Configuração para Code Coverage usando Maven, Jenkins e um dos seguintes plugi
 
 <!--more-->
 
-## OpenClover ![clover]({{ site.baseurl }}/assets/img/posts/test-coverage-maven-jenkins-cobertura-jacoco-e-openclover/clover.png)
+## OpenClover ![clover](clover.png)
 
 ### Maven - pom.xml
 
@@ -62,7 +62,7 @@ Configuração
 - Goals do maven conforme acima
 - No `Post-build Actions` adicionar `Publish OpenClover coverage report`
 
-![Jenkins-Clover]({{ site.baseurl }}/assets/img/posts/test-coverage-maven-jenkins-cobertura-jacoco-e-openclover/jenkins-clover.png)
+![Jenkins-Clover](jenkins-clover.png)
 
 Observação:
 
@@ -135,7 +135,7 @@ Configuração
 - Goals do maven conforme acima
 - No `Post-build Actions` adicionar `Publish Cobertura Coverage Report`
 
-![Jenkins-Cobertura]({{ site.baseurl }}/assets/img/posts/test-coverage-maven-jenkins-cobertura-jacoco-e-openclover/jenkins-cobertura.png)
+![Jenkins-Cobertura](jenkins-cobertura.png)
 
 * * *
 
@@ -189,6 +189,6 @@ Configuração
 - Goals do maven conforme acima
 - No 'Post-build Actions' adicionar 'Record JaCoCo coverage report'
 
-![Jenkins-JaCoCo]({{ site.baseurl }}/assets/img/posts/test-coverage-maven-jenkins-cobertura-jacoco-e-openclover/jenkins-jacoco.png)
+![Jenkins-JaCoCo](jenkins-jacoco.png)
 
 Fim

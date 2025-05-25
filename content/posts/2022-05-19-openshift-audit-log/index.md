@@ -105,9 +105,9 @@ E então teremos um json que represena a linha de log, com informações como:
 
 Abaixo um exemplo de log:
 
-![Log parte 1]({{ site.baseurl }}/assets/img/posts/openshift-audit-log/log-json-1.png)
+![Log parte 1](log-json-1.png)
 
-![Log parte 2]({{ site.baseurl }}/assets/img/posts/openshift-audit-log/log-json-2.png)
+![Log parte 2](log-json-2.png)
 
 ## Notas / Dicas 📋 ⚠️
 

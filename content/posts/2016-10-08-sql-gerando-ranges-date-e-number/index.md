@@ -32,7 +32,7 @@ ORDER BY DIA ASC
 ;
 ```
 
-![select_with_number_range]({{ site.baseurl }}/assets/img/posts/sql-gerando-ranges-date-e-number/select_with_number_range.png)
+![select_with_number_range](select_with_number_range.png)
 
 ## Retorna a datas (dia a dia) entre '01/10/2016' e '05/10/2016'
 
@@ -50,7 +50,7 @@ ORDER BY DIA DESC
 ;
 ```
 
-![select_with_date_range]({{ site.baseurl }}/assets/img/posts/sql-gerando-ranges-date-e-number/select_with_date_range.png)
+![select_with_date_range](select_with_date_range.png)
 
 ## Retorna a quantidade de acessos por dia entre '01/10/2016' e '05/10/2016'
 
@@ -74,7 +74,7 @@ ORDER BY DIA DESC
 ;
 ```
 
-![select_with_date_range_and_users]({{ site.baseurl }}/assets/img/posts/sql-gerando-ranges-date-e-number/select_with_date_range_and_users.png)
+![select_with_date_range_and_users](select_with_date_range_and_users.png)
 
 Testes realizados no H2 e Oracle.
 

@@ -244,7 +244,7 @@ Aqui um vídeo demonstrando essa etapa: [https://www.youtube.com/watch?v=dXR4pJ
 
 Após essa etapa o ticket aberto no JIRA do Sonatype será respondido. Ver imagem de exemplo abaixo:
 
-![]({{ site.baseurl }}/assets/img/posts/maven-central-como-publicar-uma-release/Screenshot-from-2018-02-23-13-52-07.png)
+![](Screenshot-from-2018-02-23-13-52-07.png)
 
 ## Alguns minutos ou horas depois...
 

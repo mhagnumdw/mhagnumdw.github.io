@@ -68,7 +68,7 @@ Vai assumir que a branch de referência é a branch default, geralmente `master`
 git recentb
 ```
 
-![git-recentb]({{ site.baseurl }}/assets/img/posts/git-branches-by-recent-commit/git-recentb.png)
+![git-recentb](git-recentb.png)
 
 ### Especificando uma branch de referência
 
@@ -76,7 +76,7 @@ git recentb
 git recentb origin/post-memoria-jvm-container-docker
 ```
 
-![git-recentb]({{ site.baseurl }}/assets/img/posts/git-branches-by-recent-commit/git-recentb-ref-branch.png)
+![git-recentb](git-recentb-ref-branch.png)
 
 ### Especificando a quantidade de branches e o refs
 

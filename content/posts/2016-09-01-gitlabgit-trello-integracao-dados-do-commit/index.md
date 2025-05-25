@@ -40,13 +40,13 @@ Realizar download para Windows e instalar: [http://nodejs.org/](http://nodejs.or
 sudo npm install -g node-trello
 ```
 
-![npm install node-trello]({{ site.baseurl }}/assets/img/posts/gitlabgit-trello-integracao-dados-do-commit/gitlabgit-trello-integracao-dados-do-commit-004.png)
+![npm install node-trello](gitlabgit-trello-integracao-dados-do-commit-004.png)
 
 ```shell
 sudo npm install -g colors
 ```
 
-![npm install colors]({{ site.baseurl }}/assets/img/posts/gitlabgit-trello-integracao-dados-do-commit/gitlabgit-trello-integracao-dados-do-commit-005.png)
+![npm install colors](gitlabgit-trello-integracao-dados-do-commit-005.png)
 
 ### Cygwin
 
@@ -69,7 +69,7 @@ Acessar
 https://trello.com/1/connect?key=**CHAVE_TRELLO**&name=git-hook&expiration=never&response_type=token&scope=read,write
 ```
 
-![trello token]({{ site.baseurl }}/assets/img/posts/gitlabgit-trello-integracao-dados-do-commit/gitlabgit-trello-integracao-dados-do-commit-006.png)
+![trello token](gitlabgit-trello-integracao-dados-do-commit-006.png)
 
 ## Obter o ID do quadro do Trello
 
@@ -124,9 +124,9 @@ Exemplo
 git commit -m "#7 Teste integração: Trello e GitLab. post-commit."
 ```
 
-![resultado post-commit]({{ site.baseurl }}/assets/img/posts/gitlabgit-trello-integracao-dados-do-commit/gitlabgit-trello-integracao-dados-do-commit-008.png)
+![resultado post-commit](gitlabgit-trello-integracao-dados-do-commit-008.png)
 
-![card trello comentado]({{ site.baseurl }}/assets/img/posts/gitlabgit-trello-integracao-dados-do-commit/gitlabgit-trello-integracao-dados-do-commit-007.png)
+![card trello comentado](gitlabgit-trello-integracao-dados-do-commit-007.png)
 
 Obs: pode ser necessário ajustar `export NODE_PATH` do script/hook `post-commit`, devendo apontar para o local onde se encontra os módulos do NodeJS.
 
