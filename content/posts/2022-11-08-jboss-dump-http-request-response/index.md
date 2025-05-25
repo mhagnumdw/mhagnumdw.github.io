@@ -1,14 +1,18 @@
 ---
-author-id: mhagnumdw
+author: mhagnumdw
+authorLink: "https://mhagnumdw.github.io/"
+
 categories:
 - JBoss
 date: "2022-11-08T13:26:00Z"
-feature-img: assets/img/posts/jboss-dump-http-request-response/banner.png
-image: assets/img/posts/jboss-dump-http-request-response/banner.png
+
+resources:
+- name: "featured-image"
+  src: "banner.png"
 tags:
 - jboss
 - http
-thumbnail: assets/img/posts/jboss-dump-http-request-response/banner.png
+
 title: 'JBoss EAP 6: dump da requisição http recebida'
 ---
 

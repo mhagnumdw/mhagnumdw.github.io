@@ -1,15 +1,17 @@
 ---
-author-id: mhagnumdw
+author: mhagnumdw
+authorLink: "https://mhagnumdw.github.io/"
+
 categories:
 - angular
 date: "2020-07-10T17:06:00Z"
-feature-img: assets/img/posts/angular-9-ng-build-cache-alterar-local/angular-9-ng-build-cache-alterar-local-banner.png
+
 image: assets/img/posts/angular-9-ng-build-cache-alterar-local/angular-9-ng-build-cache-alterar-local-banner.png
 tags:
 - angular
 - build
 - performance
-thumbnail: assets/img/posts/angular-9-ng-build-cache-alterar-local/angular-9-ng-build-cache-alterar-local-banner.png
+
 title: 'Angular 9+: alterar local do cache do ng build'
 ---
 

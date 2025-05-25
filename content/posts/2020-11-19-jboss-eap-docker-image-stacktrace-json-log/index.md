@@ -1,14 +1,18 @@
 ---
-author-id: mhagnumdw
+author: mhagnumdw
+authorLink: "https://mhagnumdw.github.io/"
+
 categories:
 - JBoss EAP
 date: "2020-11-19T19:20:00Z"
-feature-img: assets/img/posts/jboss-eap-docker-image-stacktrace-json-log/banner.png
-image: assets/img/posts/jboss-eap-docker-image-stacktrace-json-log/banner.png
+
+resources:
+- name: "featured-image"
+  src: "banner.png"
 tags:
 - docker
 - jboss
-thumbnail: assets/img/posts/jboss-eap-docker-image-stacktrace-json-log/banner.png
+
 title: 'Imagem docker JBoss EAP 6.4: Logs em JSON e stacktrace'
 ---
 

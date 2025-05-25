@@ -1,15 +1,19 @@
 ---
-author-id: mhagnumdw
+author: mhagnumdw
+authorLink: "https://mhagnumdw.github.io/"
+
 categories:
 - Hibernate 3
 date: "2017-01-05T14:09:52Z"
-feature-img: assets/img/posts/hibernate-3-3-6-10-listando-todas-as-entidades-gerenciadas/hibernate_3_list_all_managed_entities.png
-image: assets/img/posts/hibernate-3-3-6-10-listando-todas-as-entidades-gerenciadas/hibernate_3_list_all_managed_entities.png
+
+resources:
+- name: "featured-image"
+  src: "hibernate_3_list_all_managed_entities.png"
 tags:
 - Hibernate
 - Java
 - JPA
-thumbnail: assets/img/posts/hibernate-3-3-6-10-listando-todas-as-entidades-gerenciadas/hibernate_3_list_all_managed_entities.png
+
 title: Hibernate 3 / 3.6.10 - Listando todas as entidades gerenciadas
 ---
 

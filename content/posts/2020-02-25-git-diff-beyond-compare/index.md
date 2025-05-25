@@ -1,12 +1,14 @@
 ---
-author-id: mhagnumdw
+author: mhagnumdw
+authorLink: "https://mhagnumdw.github.io/"
+
 date: "2020-02-25T09:34:00Z"
-feature-img: assets/img/posts/git-diff-beyond-compare/git-beyond-compare-banner.png
+
 image: assets/img/posts/git-diff-beyond-compare/git-beyond-compare-banner.png
 tags:
 - git
 - diff
-thumbnail: assets/img/posts/git-diff-beyond-compare/git-beyond-compare-banner.png
+
 title: Git Diff com Beyond Compare
 ---
 

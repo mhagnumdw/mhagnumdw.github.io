@@ -1,16 +1,20 @@
 ---
-author-id: mhagnumdw
+author: mhagnumdw
+authorLink: "https://mhagnumdw.github.io/"
+
 categories:
 - deploy
 date: "2023-01-18T12:07:44Z"
-feature-img: assets/img/posts/argocd-cli-criar-projeto/banner.png
-image: assets/img/posts/argocd-cli-criar-projeto/banner.png
+
+resources:
+- name: "featured-image"
+  src: "banner.png"
 tags:
 - argocd
 - gitops
 - openshift
 - kubernetes
-thumbnail: assets/img/posts/argocd-cli-criar-projeto/banner.png
+
 title: ArgoCD CLI - Criar um projeto e adicionar repositórios
 ---
 

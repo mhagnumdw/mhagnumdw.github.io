@@ -1,12 +1,14 @@
 ---
-author-id: mhagnumdw
+author: mhagnumdw
+authorLink: "https://mhagnumdw.github.io/"
+
 date: "2019-05-28T18:10:00Z"
-feature-img: assets/img/posts/chrome-change-timezone/chrome-change-timezone-logo.png
+
 image: assets/img/posts/chrome-change-timezone/chrome-change-timezone-logo.png
 tags:
 - chrome
 - timezone
-thumbnail: assets/img/posts/chrome-change-timezone/chrome-change-timezone-logo.png
+
 title: Mudar o timezone do Chrome
 ---
 

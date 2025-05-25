@@ -1,11 +1,15 @@
 ---
-author-id: mhagnumdw
+author: mhagnumdw
+authorLink: "https://mhagnumdw.github.io/"
+
 date: "2019-05-28T16:05:00Z"
-feature-img: assets/img/posts/richfaces_3x_editor_ativar_spell_check/richfaces_logo.jpeg
-image: assets/img/posts/richfaces_3x_editor_ativar_spell_check/richfaces_logo.jpeg
+
+resources:
+- name: "featured-image"
+  src: "richfaces_logo.jpeg"
 tags:
 - richfaces
-thumbnail: assets/img/posts/richfaces_3x_editor_ativar_spell_check/richfaces_logo.jpeg
+
 title: 'Richfaces 3.3.4: rich:editor com spellcheck do browser'
 ---
 

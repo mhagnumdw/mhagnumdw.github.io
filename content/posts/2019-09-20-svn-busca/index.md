@@ -1,11 +1,13 @@
 ---
-author-id: mhagnumdw
+author: mhagnumdw
+authorLink: "https://mhagnumdw.github.io/"
+
 date: "2019-09-20T11:43:00Z"
-feature-img: assets/img/posts/svn-busca/svn-busca-banner.png
+
 image: assets/img/posts/svn-busca/svn-busca-banner.png
 tags:
 - svn
-thumbnail: assets/img/posts/svn-busca/svn-busca-banner.png
+
 title: SVN - Busca avançada em múltiplos repositórios
 ---
 

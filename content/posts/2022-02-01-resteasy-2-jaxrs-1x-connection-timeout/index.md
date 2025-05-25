@@ -1,15 +1,19 @@
 ---
-author-id: mhagnumdw
+author: mhagnumdw
+authorLink: "https://mhagnumdw.github.io/"
+
 categories:
 - RestEasy
 date: "2022-02-01T19:49:00Z"
-feature-img: assets/img/posts/resteasy-2-jaxrs-1x-connection-timeout/banner.png
-image: assets/img/posts/resteasy-2-jaxrs-1x-connection-timeout/banner.png
+
+resources:
+- name: "featured-image"
+  src: "banner.png"
 tags:
 - http
 - timeout
 - jboss
-thumbnail: assets/img/posts/resteasy-2-jaxrs-1x-connection-timeout/banner.png
+
 title: RestEasy 2 - Configurar timeout da conexão
 ---
 

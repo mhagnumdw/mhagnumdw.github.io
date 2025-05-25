@@ -1,14 +1,18 @@
 ---
-author-id: mhagnumdw
+author: mhagnumdw
+authorLink: "https://mhagnumdw.github.io/"
+
 categories:
 - Linux
 date: "2017-03-02T15:49:32Z"
-feature-img: assets/img/posts/fedora-25-importar-certificado/nss_importar_certificado.png
-image: assets/img/posts/fedora-25-importar-certificado/nss_importar_certificado.png
+
+resources:
+- name: "featured-image"
+  src: "nss_importar_certificado.png"
 tags:
 - Certificado
 - Fedora
-thumbnail: assets/img/posts/fedora-25-importar-certificado/nss_importar_certificado.png
+
 title: Fedora 25 - Importar certificado
 ---
 

@@ -1,13 +1,15 @@
 ---
-author-id: mhagnumdw
+author: mhagnumdw
+authorLink: "https://mhagnumdw.github.io/"
+
 categories:
 - Cygwin
 date: "2018-06-04T20:03:00Z"
-feature-img: assets/img/posts/cygwin-cron/cygwin-cron.png
+
 image: assets/img/posts/cygwin-cron/cygwin-cron.png
 tags:
 - cron
-thumbnail: assets/img/posts/cygwin-cron/cygwin-cron.png
+
 title: Cygwin Cron
 ---
 

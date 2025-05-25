@@ -1,14 +1,16 @@
 ---
-author-id: mhagnumdw
+author: mhagnumdw
+authorLink: "https://mhagnumdw.github.io/"
+
 categories:
 - JBoss EAP
 date: "2018-06-21T10:16:00Z"
-feature-img: assets/img/posts/jboss-eap-6-4-0-atualizar-para-6-4-20-patches/jboss-eap-6-4-0-atualizar-para-6-4-20-patches.png
+
 image: assets/img/posts/jboss-eap-6-4-0-atualizar-para-6-4-20-patches/jboss-eap-6-4-0-atualizar-para-6-4-20-patches.png
 tags:
 - patches
 - update
-thumbnail: assets/img/posts/jboss-eap-6-4-0-atualizar-para-6-4-20-patches/jboss-eap-6-4-0-atualizar-para-6-4-20-patches.png
+
 title: 'JBoss EAP 6.4.0: atualizar para 6.4.20 (patches)'
 ---
 

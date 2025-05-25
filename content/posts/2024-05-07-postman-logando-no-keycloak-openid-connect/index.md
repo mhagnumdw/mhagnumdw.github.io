@@ -1,16 +1,13 @@
 ---
-author-id: mhagnumdw
-categories:
-- Postman
-- Keycloak
-date: "2024-05-07T15:03:00Z"
-feature-img: assets/img/posts/postman-logando-no-keycloak-openid-connect/banner.png
-image: assets/img/posts/postman-logando-no-keycloak-openid-connect/banner.png
-tags:
-- Postman
-- Keycloak
-thumbnail: assets/img/posts/postman-logando-no-keycloak-openid-connect/banner.png
 title: Postman logando no Keycloak com OpenID Connect + OAuth2
+date: "2024-05-07T15:03:00Z"
+author: mhagnumdw
+authorLink: "https://mhagnumdw.github.io/"
+resources:
+- name: "featured-image"
+  src: "banner.png"
+categories: ["Postman", "Keycloak"]
+tags: ["Postman", "Keycloak"]
 ---
 
 Configurar o Postman para realizar requests para um API que precisa de autenticação no Keycloak. Será utilizado o padrão de mercado OpenID Connect com OAuth2. O fluxo do OAuth2 será o Authorization Code + PKCE.

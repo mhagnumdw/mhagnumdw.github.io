@@ -1,16 +1,18 @@
 ---
-author-id: mhagnumdw
+author: mhagnumdw
+authorLink: "https://mhagnumdw.github.io/"
+
 categories:
 - test
 date: "2017-11-14T22:52:43Z"
-feature-img: assets/img/posts/test-coverage-maven-jenkins-cobertura-jacoco-e-openclover/code-coverage-banner_v2.png
+
 image: assets/img/posts/test-coverage-maven-jenkins-cobertura-jacoco-e-openclover/code-coverage-banner_v2.png
 tags:
 - coverage
 - Java
 - Jenkins
 - maven
-thumbnail: assets/img/posts/test-coverage-maven-jenkins-cobertura-jacoco-e-openclover/code-coverage-banner_v2.png
+
 title: 'Test Coverage + Maven + Jenkins: Cobertura, JaCoCo e OpenClover'
 ---
 

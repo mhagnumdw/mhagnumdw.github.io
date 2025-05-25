@@ -1,11 +1,15 @@
 ---
-author-id: mhagnumdw
+author: mhagnumdw
+authorLink: "https://mhagnumdw.github.io/"
+
 date: "2020-05-06T12:30:00Z"
-feature-img: assets/img/posts/jboss-consumo-elevado-cpu-com-muitos-logs/banner.png
-image: assets/img/posts/jboss-consumo-elevado-cpu-com-muitos-logs/banner.png
+
+resources:
+- name: "featured-image"
+  src: "banner.png"
 tags:
 - jboss
-thumbnail: assets/img/posts/jboss-consumo-elevado-cpu-com-muitos-logs/banner.png
+
 title: JBoss EAP 6 - Consumo elevado de CPU com muitos logs
 ---
 

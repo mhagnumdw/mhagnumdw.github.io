@@ -1,15 +1,19 @@
 ---
-author-id: mhagnumdw
+author: mhagnumdw
+authorLink: "https://mhagnumdw.github.io/"
+
 categories:
 - Linux
 date: "2017-01-26T12:57:29Z"
-feature-img: assets/img/posts/fedorarhel-instalar-microsoft-core-fonts/fedora_redhat_microsoft_core_fonts.jpg
-image: assets/img/posts/fedorarhel-instalar-microsoft-core-fonts/fedora_redhat_microsoft_core_fonts.jpg
+
+resources:
+- name: "featured-image"
+  src: "fedora_redhat_microsoft_core_fonts.jpg"
 tags:
 - Fedora
 - fonts
 - RHEL
-thumbnail: assets/img/posts/fedorarhel-instalar-microsoft-core-fonts/fedora_redhat_microsoft_core_fonts.jpg
+
 title: Fedora/RHEL - Instalar Microsoft core fonts
 ---
 

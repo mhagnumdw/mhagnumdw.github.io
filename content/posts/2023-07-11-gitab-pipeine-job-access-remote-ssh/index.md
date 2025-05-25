@@ -1,17 +1,13 @@
 ---
-author-id: mhagnumdw
-categories:
-- GitLab
-- SSH
-date: "2023-07-11T09:00:00Z"
-feature-img: assets/img/posts/gitab-pipeine-job-access-remote-ssh/banner.png
-image: assets/img/posts/gitab-pipeine-job-access-remote-ssh/banner.png
-tags:
-- GitLab
-- Pipeline
-- SSH
-thumbnail: assets/img/posts/gitab-pipeine-job-access-remote-ssh/banner.png
 title: GitLab Pipeline - Acessar uma máquina remota com chave SSH
+date: "2023-07-11T09:00:00Z"
+author: mhagnumdw
+authorLink: "https://mhagnumdw.github.io/"
+resources:
+- name: "featured-image"
+  src: "banner.png"
+categories: ["GitLab", "SSH"]
+tags: ["GitLab", "Pipeline", "SSH"]
 ---
 
 Passos para dentro de um job do pipeline do GitLab, acessar uma máquina remota via ssh.

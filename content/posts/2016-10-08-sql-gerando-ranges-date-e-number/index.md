@@ -1,13 +1,17 @@
 ---
-author-id: mhagnumdw
+author: mhagnumdw
+authorLink: "https://mhagnumdw.github.io/"
+
 categories:
 - SQL
 date: "2016-10-08T12:02:12Z"
-feature-img: assets/img/posts/sql-gerando-ranges-date-e-number/select_with_rangre_logo.png
-image: assets/img/posts/sql-gerando-ranges-date-e-number/select_with_rangre_logo.png
+
+resources:
+- name: "featured-image"
+  src: "select_with_rangre_logo.png"
 tags:
 - sql
-thumbnail: assets/img/posts/sql-gerando-ranges-date-e-number/select_with_rangre_logo.png
+
 title: 'SQL: gerando ranges (Date e Number)'
 ---
 

@@ -1,11 +1,13 @@
 ---
-author-id: mhagnumdw
+author: mhagnumdw
+authorLink: "https://mhagnumdw.github.io/"
+
 date: "2019-05-29T08:30:00Z"
-feature-img: assets/img/posts/buildar-hibernate-36-a-partir-do-fonte/buildar-hibernate-36-banner.png
+
 image: assets/img/posts/buildar-hibernate-36-a-partir-do-fonte/buildar-hibernate-36-banner.png
 tags:
 - hibernate
-thumbnail: assets/img/posts/buildar-hibernate-36-a-partir-do-fonte/buildar-hibernate-36-banner.png
+
 title: Buildar Hibernate 3.6.x
 ---
 

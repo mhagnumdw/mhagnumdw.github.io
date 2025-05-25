@@ -1,13 +1,17 @@
 ---
-author-id: mhagnumdw
+author: mhagnumdw
+authorLink: "https://mhagnumdw.github.io/"
+
 categories:
 - shell
 date: "2022-10-31T09:50:00Z"
-feature-img: assets/img/posts/shell-quick-tips-001/banner.png
-image: assets/img/posts/shell-quick-tips-001/banner.png
+
+resources:
+- name: "featured-image"
+  src: "banner.png"
 tags:
 - find
-thumbnail: assets/img/posts/shell-quick-tips-001/banner.png
+
 title: 'Shell - Quick Tips #001'
 ---
 

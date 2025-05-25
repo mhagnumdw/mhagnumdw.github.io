@@ -1,14 +1,18 @@
 ---
-author-id: mhagnumdw
+author: mhagnumdw
+authorLink: "https://mhagnumdw.github.io/"
+
 categories:
 - GitLab
 date: "2023-02-11T17:27:18Z"
-feature-img: assets/img/posts/GitLab-BackfillAdminModeScopeForPersonalAccessTokens/banner.png
-image: assets/img/posts/GitLab-BackfillAdminModeScopeForPersonalAccessTokens/banner.png
+
+resources:
+- name: "featured-image"
+  src: "banner.png"
 tags:
 - GitLab
 - Update
-thumbnail: assets/img/posts/GitLab-BackfillAdminModeScopeForPersonalAccessTokens/banner.png
+
 title: 'GitLab: BackfillAdminModeScopeForPersonalAccessTokens'
 ---
 

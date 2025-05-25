@@ -1,13 +1,17 @@
 ---
-author-id: mhagnumdw
+author: mhagnumdw
+authorLink: "https://mhagnumdw.github.io/"
+
 categories:
 - openshift
 date: "2022-05-19T15:42:00Z"
-feature-img: assets/img/posts/openshift-audit-log/banner.png
-image: assets/img/posts/openshift-audit-log/banner.png
+
+resources:
+- name: "featured-image"
+  src: "banner.png"
 tags:
 - auditoria
-thumbnail: assets/img/posts/openshift-audit-log/banner.png
+
 title: Openshift - Quem fez o quê? (Audioria)
 ---
 

@@ -1,17 +1,21 @@
 ---
-author-id: mhagnumdw
+author: mhagnumdw
+authorLink: "https://mhagnumdw.github.io/"
+
 categories:
 - Git
 - Java
 - Linux
 date: "2016-08-23T19:19:24Z"
-feature-img: assets/img/posts/gitgitlab-push-pre-receive-checkstyle/gitlab_checkstyle_push_prereceive_v2.png
-image: assets/img/posts/gitgitlab-push-pre-receive-checkstyle/gitlab_checkstyle_push_prereceive_v2.png
+
+resources:
+- name: "featured-image"
+  src: "gitlab_checkstyle_push_prereceive_v2.png"
 tags:
 - Checkstyle
 - GitLab
 - hook
-thumbnail: assets/img/posts/gitgitlab-push-pre-receive-checkstyle/gitlab_checkstyle_push_prereceive_v2.png
+
 title: Git/GitLab + push + pre-receive + Checkstyle
 ---
 

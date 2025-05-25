@@ -1,14 +1,18 @@
 ---
-author-id: mhagnumdw
+author: mhagnumdw
+authorLink: "https://mhagnumdw.github.io/"
+
 categories:
 - docker
 date: "2020-11-25T16:45:00Z"
-feature-img: assets/img/posts/docker-change-internal-date-time/banner.png
-image: assets/img/posts/docker-change-internal-date-time/banner.png
+
+resources:
+- name: "featured-image"
+  src: "banner.png"
 tags:
 - docker
 - time
-thumbnail: assets/img/posts/docker-change-internal-date-time/banner.png
+
 title: 'Docker: alterar data e hora sem interferir no host'
 ---
 

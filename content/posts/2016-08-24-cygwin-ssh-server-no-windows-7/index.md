@@ -1,14 +1,18 @@
 ---
-author-id: mhagnumdw
+author: mhagnumdw
+authorLink: "https://mhagnumdw.github.io/"
+
 categories:
 - Cygwin
 date: "2016-08-24T11:47:28Z"
-feature-img: assets/img/posts/cygwin-ssh-server-no-windows-7/cygwin_ssh_server_logo.png
-image: assets/img/posts/cygwin-ssh-server-no-windows-7/cygwin_ssh_server_logo.png
+
+resources:
+- name: "featured-image"
+  src: "cygwin_ssh_server_logo.png"
 tags:
 - SSH
 - Linux
-thumbnail: assets/img/posts/cygwin-ssh-server-no-windows-7/cygwin_ssh_server_logo.png
+
 title: Cygwin SSH Server no Windows 7
 ---
 

@@ -1,16 +1,20 @@
 ---
-author-id: mhagnumdw
+author: mhagnumdw
+authorLink: "https://mhagnumdw.github.io/"
+
 categories:
 - JBoss
 - EJB
 date: "2023-07-10T09:00:00Z"
-feature-img: assets/img/posts/jboss-eap-6-ejb-31-concurrent-access-timeout/banner.png
-image: assets/img/posts/jboss-eap-6-ejb-31-concurrent-access-timeout/banner.png
+
+resources:
+- name: "featured-image"
+  src: "banner.png"
 tags:
 - JBoss EAP
 - EJB 3.1
 - Transaction
-thumbnail: assets/img/posts/jboss-eap-6-ejb-31-concurrent-access-timeout/banner.png
+
 title: JBoss EAP 6 EJB 3.1 Concurrent Access Timeout InterceptorContext
 ---
 

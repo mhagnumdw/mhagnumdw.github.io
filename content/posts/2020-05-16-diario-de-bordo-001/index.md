@@ -1,15 +1,17 @@
 ---
-author-id: mhagnumdw
+author: mhagnumdw
+authorLink: "https://mhagnumdw.github.io/"
+
 categories:
 - Diário de Bordo
 date: "2020-05-16T12:22:00Z"
-feature-img: assets/img/cockpit-banner.jpg
+
 image: assets/img/cockpit-banner.jpg
 tags:
 - docker
 - ssh
 - dns
-thumbnail: assets/img/cockpit-banner-900.jpg
+
 title: 'Diário de Bordo #001 - Demora para se conectar via SSH'
 ---
 

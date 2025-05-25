@@ -1,11 +1,13 @@
 ---
-author-id: mhagnumdw
+author: mhagnumdw
+authorLink: "https://mhagnumdw.github.io/"
+
 date: "2019-05-29T10:06:00Z"
-feature-img: assets/img/posts/build-with-old-jdk-in-recent-jenkins/build-with-old-jdk-in-recent-jenkins-banner.jpeg
+
 image: assets/img/posts/build-with-old-jdk-in-recent-jenkins/build-with-old-jdk-in-recent-jenkins-banner.jpeg
 tags:
 - jenkins
-thumbnail: assets/img/posts/build-with-old-jdk-in-recent-jenkins/build-with-old-jdk-in-recent-jenkins-banner.jpeg
+
 title: Jenkins recente buildando com JDK antiga
 ---
 

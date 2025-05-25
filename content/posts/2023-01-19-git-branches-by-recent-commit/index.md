@@ -1,13 +1,17 @@
 ---
-author-id: mhagnumdw
+author: mhagnumdw
+authorLink: "https://mhagnumdw.github.io/"
+
 categories:
 - git
 date: "2023-01-19T16:18:34Z"
-feature-img: assets/img/posts/git-branches-by-recent-commit/banner.png
-image: assets/img/posts/git-branches-by-recent-commit/banner.png
+
+resources:
+- name: "featured-image"
+  src: "banner.png"
 tags:
 - git
-thumbnail: assets/img/posts/git-branches-by-recent-commit/banner.png
+
 title: 'Git: listar as branches por commit mais recente'
 ---
 

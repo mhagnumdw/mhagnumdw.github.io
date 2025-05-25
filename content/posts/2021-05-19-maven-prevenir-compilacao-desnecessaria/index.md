@@ -1,15 +1,19 @@
 ---
-author-id: mhagnumdw
+author: mhagnumdw
+authorLink: "https://mhagnumdw.github.io/"
+
 categories:
 - maven
 - pipeline
 date: "2021-05-19T18:20:00Z"
-feature-img: assets/img/posts/maven-prevenir-compilacao-desnecessaria/banner.png
-image: assets/img/posts/maven-prevenir-compilacao-desnecessaria/banner.png
+
+resources:
+- name: "featured-image"
+  src: "banner.png"
 tags:
 - maven
 - pipeline
-thumbnail: assets/img/posts/maven-prevenir-compilacao-desnecessaria/banner.png
+
 title: 'Maven: prevenir compilação desnecessária'
 ---
 

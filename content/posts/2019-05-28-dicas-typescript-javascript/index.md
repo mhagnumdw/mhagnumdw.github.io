@@ -1,13 +1,15 @@
 ---
-author-id: mhagnumdw
+author: mhagnumdw
+authorLink: "https://mhagnumdw.github.io/"
+
 date: "2019-05-28T17:52:00Z"
-feature-img: assets/img/posts/dicas-typescript-javascript/dicas-typescript-javascript-banner.png
+
 image: assets/img/posts/dicas-typescript-javascript/dicas-typescript-javascript-banner.png
 tags:
 - typescript
 - ECMAScript
 - javascript
-thumbnail: assets/img/posts/dicas-typescript-javascript/dicas-typescript-javascript-banner.png
+
 title: 'Typescript/ECMAScript/Javascript: dicas'
 ---
 

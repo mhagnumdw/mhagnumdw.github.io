@@ -1,13 +1,17 @@
 ---
-author-id: mhagnumdw
+author: mhagnumdw
+authorLink: "https://mhagnumdw.github.io/"
+
 categories:
 - Jenkins
 date: "2016-09-27T21:56:16Z"
-feature-img: assets/img/posts/renomear-jobs-em-massa-no-jenkins/jenkins_script_console_v0.png
-image: assets/img/posts/renomear-jobs-em-massa-no-jenkins/jenkins_script_console_v0.png
+
+resources:
+- name: "featured-image"
+  src: "jenkins_script_console_v0.png"
 tags:
 - jenkins
-thumbnail: assets/img/posts/renomear-jobs-em-massa-no-jenkins/jenkins_script_console_v0.png
+
 title: 'Jenkins: Renomear Jobs em massa'
 ---
 

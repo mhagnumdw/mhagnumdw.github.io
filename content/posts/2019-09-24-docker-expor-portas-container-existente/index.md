@@ -1,11 +1,13 @@
 ---
-author-id: mhagnumdw
+author: mhagnumdw
+authorLink: "https://mhagnumdw.github.io/"
+
 date: "2019-09-24T09:07:00Z"
-feature-img: assets/img/posts/docker-expor-portas-container-existente/docker-network-ports-banner.png
+
 image: assets/img/posts/docker-expor-portas-container-existente/docker-network-ports-banner.png
 tags:
 - docker
-thumbnail: assets/img/posts/docker-expor-portas-container-existente/docker-network-ports-banner.png
+
 title: Docker - Expor portas de um container existente
 ---
 

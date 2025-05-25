@@ -1,14 +1,16 @@
 ---
-author-id: mhagnumdw
+author: mhagnumdw
+authorLink: "https://mhagnumdw.github.io/"
+
 categories:
 - gitlab
 date: "2020-11-18T20:28:00Z"
-feature-img: assets/img/posts/gitlab-registry-cleanup/gitlab-registry-cleanup-banner.png
+
 image: assets/img/posts/gitlab-registry-cleanup/gitlab-registry-cleanup-banner.png
 tags:
 - docker
 - registry
-thumbnail: assets/img/posts/gitlab-registry-cleanup/gitlab-registry-cleanup-banner.png
+
 title: 'GitLab Registry: Cleanup policy for tags / Garbage collection'
 ---
 

@@ -1,17 +1,21 @@
 ---
-author-id: mhagnumdw
+author: mhagnumdw
+authorLink: "https://mhagnumdw.github.io/"
+
 categories:
 - lan
 - wifi
 - velocidade
 date: "2021-06-03T15:03:00Z"
-feature-img: assets/img/posts/teste-de-velocidade-na-rede-local/banner.png
-image: assets/img/posts/teste-de-velocidade-na-rede-local/banner.png
+
+resources:
+- name: "featured-image"
+  src: "banner.png"
 tags:
 - lan
 - wifi
 - velocidade
-thumbnail: assets/img/posts/teste-de-velocidade-na-rede-local/banner.png
+
 title: Testar velocidade na rede local
 ---
 

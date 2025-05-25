@@ -1,14 +1,18 @@
 ---
-author-id: mhagnumdw
+author: mhagnumdw
+authorLink: "https://mhagnumdw.github.io/"
+
 categories:
 - lastpass
 - keepass
 date: "2022-01-07T12:34:00Z"
-feature-img: assets/img/posts/lastpass-to-keepass-android-and-linux-and-google-drive/banner.png
-image: assets/img/posts/lastpass-to-keepass-android-and-linux-and-google-drive/banner.png
+
+resources:
+- name: "featured-image"
+  src: "banner.png"
 tags:
 - senhas
-thumbnail: assets/img/posts/lastpass-to-keepass-android-and-linux-and-google-drive/banner.png
+
 title: Migrar do LastPass para o KeePass
 ---
 

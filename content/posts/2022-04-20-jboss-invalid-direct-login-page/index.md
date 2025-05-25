@@ -1,16 +1,20 @@
 ---
-author-id: mhagnumdw
+author: mhagnumdw
+authorLink: "https://mhagnumdw.github.io/"
+
 categories:
 - JBoss
 date: "2022-04-20T11:32:00Z"
-feature-img: assets/img/posts/jboss-invalid-direct-login-page/banner.png
-image: assets/img/posts/jboss-invalid-direct-login-page/banner.png
+
+resources:
+- name: "featured-image"
+  src: "banner.png"
 tags:
 - http
 - jboss
 - tomcat
 - JASS
-thumbnail: assets/img/posts/jboss-invalid-direct-login-page/banner.png
+
 title: 'JBWEB000006: Invalid direct reference to form login page'
 ---
 

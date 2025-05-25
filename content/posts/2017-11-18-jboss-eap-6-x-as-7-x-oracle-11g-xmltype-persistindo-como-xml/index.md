@@ -1,18 +1,22 @@
 ---
-author-id: mhagnumdw
+author: mhagnumdw
+authorLink: "https://mhagnumdw.github.io/"
+
 categories:
 - Hibernate 3
 - JBoss
 - Oracle
 - XML
 date: "2017-11-18T21:53:24Z"
-feature-img: assets/img/posts/jboss-eap-6-x-as-7-x-oracle-11g-xmltype-persistindo-como-xml/logo_jboss_oracle_xmltype_v5.png
-image: assets/img/posts/jboss-eap-6-x-as-7-x-oracle-11g-xmltype-persistindo-como-xml/logo_jboss_oracle_xmltype_v5.png
+
+resources:
+- name: "featured-image"
+  src: "logo_jboss_oracle_xmltype_v5.png"
 tags:
 - Hibernate
 - XMLType
 - XStream
-thumbnail: assets/img/posts/jboss-eap-6-x-as-7-x-oracle-11g-xmltype-persistindo-como-xml/logo_jboss_oracle_xmltype_v5.png
+
 title: 'JBoss EAP 6.x/AS 7.x + Oracle 11g + XMLType: persistindo como XML'
 ---
 

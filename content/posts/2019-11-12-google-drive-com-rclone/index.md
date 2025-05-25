@@ -1,16 +1,18 @@
 ---
-author-id: mhagnumdw
+author: mhagnumdw
+authorLink: "https://mhagnumdw.github.io/"
+
 categories:
 - Sync
 date: "2019-11-12T22:38:00Z"
-feature-img: assets/img/posts/google-drive-com-rclone/google-drive-com-rclone-banner.png
+
 image: assets/img/posts/google-drive-com-rclone/google-drive-com-rclone-banner.png
 tags:
 - google drive
 - sync
 - cloud
 - linux
-thumbnail: assets/img/posts/google-drive-com-rclone/google-drive-com-rclone-banner.png
+
 title: Google Drive sincronizando com rclone
 ---
 

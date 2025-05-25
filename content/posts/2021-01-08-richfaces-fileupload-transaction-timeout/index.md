@@ -1,13 +1,17 @@
 ---
-author-id: mhagnumdw
+author: mhagnumdw
+authorLink: "https://mhagnumdw.github.io/"
+
 categories:
 - richfaces3
 date: "2021-01-08T14:10:00Z"
-feature-img: assets/img/posts/richfaces-fileupload-transaction-timeout/banner.png
-image: assets/img/posts/richfaces-fileupload-transaction-timeout/banner.png
+
+resources:
+- name: "featured-image"
+  src: "banner.png"
 tags:
 - richfaces
-thumbnail: assets/img/posts/richfaces-fileupload-transaction-timeout/banner.png
+
 title: RichFaces 3 + File Upload + Transaction Timeout
 ---
 

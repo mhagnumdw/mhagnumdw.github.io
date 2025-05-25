@@ -1,14 +1,18 @@
 ---
-author-id: mhagnumdw
+author: mhagnumdw
+authorLink: "https://mhagnumdw.github.io/"
+
 categories:
 - Jenkins
 date: "2022-11-07T17:26:00Z"
-feature-img: assets/img/posts/jenkins-dicas/banner.png
-image: assets/img/posts/jenkins-dicas/banner.png
+
+resources:
+- name: "featured-image"
+  src: "banner.png"
 tags:
 - jenkins
 - dicas
-thumbnail: assets/img/posts/jenkins-dicas/banner.png
+
 title: 'Jenkins: Dicas'
 ---
 

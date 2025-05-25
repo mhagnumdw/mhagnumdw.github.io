@@ -1,15 +1,19 @@
 ---
-author-id: mhagnumdw
+author: mhagnumdw
+authorLink: "https://mhagnumdw.github.io/"
+
 categories:
 - log4j1
 date: "2022-05-06T16:18:00Z"
-feature-img: assets/img/posts/log4j1-mdc-problem-java17/banner.png
-image: assets/img/posts/log4j1-mdc-problem-java17/banner.png
+
+resources:
+- name: "featured-image"
+  src: "banner.png"
 tags:
 - log4j
 - mdc
 - java
-thumbnail: assets/img/posts/log4j1-mdc-problem-java17/banner.png
+
 title: Log4j1 - MDC não funciona no Java 9+
 ---
 

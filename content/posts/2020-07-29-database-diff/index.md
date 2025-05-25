@@ -1,14 +1,16 @@
 ---
-author-id: mhagnumdw
+author: mhagnumdw
+authorLink: "https://mhagnumdw.github.io/"
+
 categories:
 - database
 date: "2020-07-29T15:20:00Z"
-feature-img: assets/img/posts/database-diff/database-diff-banner.png
+
 image: assets/img/posts/database-diff/database-diff-banner.png
 tags:
 - database
 - diff
-thumbnail: assets/img/posts/database-diff/database-diff-banner.png
+
 title: Database diff com SQL Workbench/J
 ---
 

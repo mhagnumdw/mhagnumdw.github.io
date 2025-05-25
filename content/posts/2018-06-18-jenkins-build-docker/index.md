@@ -1,16 +1,18 @@
 ---
-author-id: mhagnumdw
+author: mhagnumdw
+authorLink: "https://mhagnumdw.github.io/"
+
 categories:
 - Jenkins
 date: "2018-06-18T09:56:00Z"
-feature-img: assets/img/posts/jenkins-build-docker/jenkins-build-docker-v2.png
+
 image: assets/img/posts/jenkins-build-docker/jenkins-build-docker-v2.png
 tags:
 - Fedora
 - Docker
 - Container
 - Jenkins
-thumbnail: assets/img/posts/jenkins-build-docker/jenkins-build-docker-v2.png
+
 title: Jenkins buildando dentro de container (Docker)
 ---
 

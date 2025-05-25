@@ -1,15 +1,19 @@
 ---
-author-id: mhagnumdw
+author: mhagnumdw
+authorLink: "https://mhagnumdw.github.io/"
+
 categories:
 - Git
 date: "2016-09-05T11:25:10Z"
-feature-img: assets/img/posts/exibir-branch-do-git-no-prompt-linuxcygwin/exibir_branch_do_git_no_prompt.png
-image: assets/img/posts/exibir-branch-do-git-no-prompt-linuxcygwin/exibir_branch_do_git_no_prompt.png
+
+resources:
+- name: "featured-image"
+  src: "exibir_branch_do_git_no_prompt.png"
 tags:
 - Git
 - Cygwin
 - Linux
-thumbnail: assets/img/posts/exibir-branch-do-git-no-prompt-linuxcygwin/exibir_branch_do_git_no_prompt.png
+
 title: Exibir branch do Git no prompt (Linux/Cygwin)
 ---
 

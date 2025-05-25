@@ -1,18 +1,22 @@
 ---
-author-id: mhagnumdw
+author: mhagnumdw
+authorLink: "https://mhagnumdw.github.io/"
+
 categories:
 - Java
 - maven
 date: "2018-02-23T14:04:14Z"
-feature-img: assets/img/posts/maven-central-como-publicar-uma-release/mvc.png
-image: assets/img/posts/maven-central-como-publicar-uma-release/mvc.png
+
+resources:
+- name: "featured-image"
+  src: "mvc.png"
 tags:
 - central
 - Java
 - maven
 - release
 - sonatype
-thumbnail: assets/img/posts/maven-central-como-publicar-uma-release/mvc.png
+
 title: 'Maven Central: como publicar uma release'
 ---
 

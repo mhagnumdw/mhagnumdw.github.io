@@ -1,12 +1,14 @@
 ---
-author-id: mhagnumdw
+author: mhagnumdw
+authorLink: "https://mhagnumdw.github.io/"
+
 date: "2020-03-18T09:34:00Z"
-feature-img: assets/img/posts/git-prompt-ps1-diff-master/git-prompt-ps1-diff-master.png
+
 image: assets/img/posts/git-prompt-ps1-diff-master/git-prompt-ps1-diff-master.png
 tags:
 - git
 - diff
-thumbnail: assets/img/posts/git-prompt-ps1-diff-master/git-prompt-ps1-diff-master.png
+
 title: Git - Quantidade de commits atrás/frente em relação ao master no prompt
 ---
 

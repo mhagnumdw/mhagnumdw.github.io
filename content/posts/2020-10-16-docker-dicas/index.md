@@ -5,12 +5,14 @@ authors-ids:
 categories:
 - docker
 date: "2020-10-16T16:25:00Z"
-feature-img: assets/img/posts/docker-dicas/banner.png
-image: assets/img/posts/docker-dicas/banner.png
+
+resources:
+- name: "featured-image"
+  src: "banner.png"
 tags:
 - docker
 - docker-dicas
-thumbnail: assets/img/posts/docker-dicas/banner.png
+
 title: 'docker: dicas'
 ---
 

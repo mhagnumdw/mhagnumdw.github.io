@@ -1,14 +1,16 @@
 ---
-author-id: mhagnumdw
+author: mhagnumdw
+authorLink: "https://mhagnumdw.github.io/"
+
 categories:
 - Git
 date: "2017-10-01T13:32:22Z"
-feature-img: assets/img/posts/git-dicas/git-goodness_v2.png
+
 image: assets/img/posts/git-dicas/git-goodness_v2.png
 tags:
 - git
 - git-dicas
-thumbnail: assets/img/posts/git-dicas/git-goodness_v2.png
+
 title: 'git: dicas'
 ---
 

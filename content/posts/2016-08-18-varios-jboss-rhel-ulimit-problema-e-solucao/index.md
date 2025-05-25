@@ -1,15 +1,19 @@
 ---
-author-id: mhagnumdw
+author: mhagnumdw
+authorLink: "https://mhagnumdw.github.io/"
+
 categories:
 - JBoss
 date: "2016-08-18T14:26:40Z"
-feature-img: assets/img/posts/varios-jboss-rhel-ulimit-problema-e-solucao/jboss_rhel_ulimit.png
-image: assets/img/posts/varios-jboss-rhel-ulimit-problema-e-solucao/jboss_rhel_ulimit.png
+
+resources:
+- name: "featured-image"
+  src: "jboss_rhel_ulimit.png"
 tags:
 - ulimit
 - JBoss
 - Linux
-thumbnail: assets/img/posts/varios-jboss-rhel-ulimit-problema-e-solucao/jboss_rhel_ulimit.png
+
 title: 'Vários JBoss + RHEL + ulimit: problema e solução'
 ---
 

@@ -1,14 +1,18 @@
 ---
-author-id: mhagnumdw
+author: mhagnumdw
+authorLink: "https://mhagnumdw.github.io/"
+
 categories:
 - GitLab
 date: "2020-01-14T19:33:00Z"
-feature-img: assets/img/posts/gitlab-checkout-merge-request/banner.jpg
-image: assets/img/posts/gitlab-checkout-merge-request/banner.jpg
+
+resources:
+- name: "featured-image"
+  src: "banner.jpg"
 tags:
 - checkout
 - merge request
-thumbnail: assets/img/posts/gitlab-checkout-merge-request/banner.jpg
+
 title: 'GitLab: checkout merge request'
 ---
 

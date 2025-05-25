@@ -1,14 +1,18 @@
 ---
-author-id: mhagnumdw
+author: mhagnumdw
+authorLink: "https://mhagnumdw.github.io/"
+
 categories:
 - Java
 date: "2016-08-14T00:23:26Z"
-feature-img: assets/img/posts/java-serviceloader-autoserive-eclipse-ide/java_serviceloader_autoservice_eclipse.png
-image: assets/img/posts/java-serviceloader-autoserive-eclipse-ide/java_serviceloader_autoservice_eclipse.png
+
+resources:
+- name: "featured-image"
+  src: "java_serviceloader_autoservice_eclipse.png"
 tags:
 - Eclipse
 - ServiceLoader
-thumbnail: assets/img/posts/java-serviceloader-autoserive-eclipse-ide/java_serviceloader_autoservice_eclipse.png
+
 title: Java ServiceLoader + @AutoService + Eclipse IDE
 ---
 

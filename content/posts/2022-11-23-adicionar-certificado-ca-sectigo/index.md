@@ -1,16 +1,20 @@
 ---
-author-id: mhagnumdw
+author: mhagnumdw
+authorLink: "https://mhagnumdw.github.io/"
+
 categories:
 - SSL
 date: "2022-11-23T08:48:00Z"
-feature-img: assets/img/posts/adicionar-certificado-ca-sectigo/banner.png
-image: assets/img/posts/adicionar-certificado-ca-sectigo/banner.png
+
+resources:
+- name: "featured-image"
+  src: "banner.png"
 tags:
 - certificado
 - ca
 - curl
 - docker
-thumbnail: assets/img/posts/adicionar-certificado-ca-sectigo/banner.png
+
 title: Adicionar certificado da CA da Sectigo
 ---
 

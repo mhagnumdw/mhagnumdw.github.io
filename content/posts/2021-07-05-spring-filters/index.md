@@ -1,14 +1,18 @@
 ---
-author-id: mhagnumdw
+author: mhagnumdw
+authorLink: "https://mhagnumdw.github.io/"
+
 categories:
 - spring
 date: "2021-07-05T15:30:00Z"
-feature-img: assets/img/posts/spring-filters/banner.png
-image: assets/img/posts/spring-filters/banner.png
+
+resources:
+- name: "featured-image"
+  src: "banner.png"
 tags:
 - spring
 - filters
-thumbnail: assets/img/posts/spring-filters/banner.png
+
 title: 'Spring Boot: filtros que podem ser úteis'
 ---
 

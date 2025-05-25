@@ -1,16 +1,13 @@
 ---
-author-id: mhagnumdw
-categories:
-- argocd
-- powerlevel10k
-date: "2024-09-23T17:30:00Z"
-feature-img: assets/img/posts/argocd-context-ps1-powerlevel10k/banner.png
-image: assets/img/posts/argocd-context-ps1-powerlevel10k/banner.png
-tags:
-- argocd
-- powerlevel10k
-thumbnail: assets/img/posts/argocd-context-ps1-powerlevel10k/banner.png
 title: Contexto do ArgoCD no prompt PS1
+date: "2024-09-23T17:30:00Z"
+author: mhagnumdw
+authorLink: "https://mhagnumdw.github.io/"
+resources:
+- name: "featured-image"
+  src: "banner.png"
+categories: ["argocd", "powerlevel10k"]
+tags: ["argocd", "powerlevel10k"]
 ---
 
 Configurar para que o contexto corrente do ArgoCD apareça no prompt (PS1), conforme a imagem de capa desse post. Usando o powerlevel10k.

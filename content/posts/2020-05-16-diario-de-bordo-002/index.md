@@ -1,9 +1,11 @@
 ---
-author-id: mhagnumdw
+author: mhagnumdw
+authorLink: "https://mhagnumdw.github.io/"
+
 categories:
 - Diário de Bordo
 date: "2020-05-16T16:14:00Z"
-feature-img: assets/img/cockpit-banner.jpg
+
 image: assets/img/cockpit-banner.jpg
 tags:
 - docker
@@ -11,7 +13,7 @@ tags:
 - gitlab
 - facelets
 - jsf
-thumbnail: assets/img/cockpit-banner-900.jpg
+
 title: 'Diário de Bordo #002 - Ambientes iguais com comportamentos diferentes'
 ---
 
