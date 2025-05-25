@@ -4,7 +4,9 @@ authorLink: "https://mhagnumdw.github.io/"
 
 date: "2019-05-28T15:28:00Z"
 
-image: assets/img/posts/typescript-dependency-graph/banner-tslint-without-node_modules.png
+resources:
+- name: "featured-image"
+  src: "banner-tslint-without-node_modules.png"
 tags:
 - typescript
 

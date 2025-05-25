@@ -6,7 +6,9 @@ categories:
 - Git
 date: "2017-10-01T13:32:22Z"
 
-image: assets/img/posts/git-dicas/git-goodness_v2.png
+resources:
+- name: "featured-image"
+  src: "git-goodness_v2.png"
 tags:
 - git
 - git-dicas

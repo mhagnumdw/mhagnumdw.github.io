@@ -4,7 +4,9 @@ authorLink: "https://mhagnumdw.github.io/"
 
 date: "2019-05-29T08:30:00Z"
 
-image: assets/img/posts/buildar-hibernate-36-a-partir-do-fonte/buildar-hibernate-36-banner.png
+resources:
+- name: "featured-image"
+  src: "buildar-hibernate-36-banner.png"
 tags:
 - hibernate
 

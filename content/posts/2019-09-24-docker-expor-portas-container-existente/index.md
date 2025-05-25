@@ -4,7 +4,9 @@ authorLink: "https://mhagnumdw.github.io/"
 
 date: "2019-09-24T09:07:00Z"
 
-image: assets/img/posts/docker-expor-portas-container-existente/docker-network-ports-banner.png
+resources:
+- name: "featured-image"
+  src: "docker-network-ports-banner.png"
 tags:
 - docker
 

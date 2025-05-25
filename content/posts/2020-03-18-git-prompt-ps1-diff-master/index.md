@@ -4,7 +4,9 @@ authorLink: "https://mhagnumdw.github.io/"
 
 date: "2020-03-18T09:34:00Z"
 
-image: assets/img/posts/git-prompt-ps1-diff-master/git-prompt-ps1-diff-master.png
+resources:
+- name: "featured-image"
+  src: "git-prompt-ps1-diff-master.png"
 tags:
 - git
 - diff

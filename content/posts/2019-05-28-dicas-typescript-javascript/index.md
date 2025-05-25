@@ -4,7 +4,9 @@ authorLink: "https://mhagnumdw.github.io/"
 
 date: "2019-05-28T17:52:00Z"
 
-image: assets/img/posts/dicas-typescript-javascript/dicas-typescript-javascript-banner.png
+resources:
+- name: "featured-image"
+  src: "dicas-typescript-javascript-banner.png"
 tags:
 - typescript
 - ECMAScript

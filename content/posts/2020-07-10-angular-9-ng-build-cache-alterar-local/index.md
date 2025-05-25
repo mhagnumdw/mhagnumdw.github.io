@@ -6,7 +6,9 @@ categories:
 - angular
 date: "2020-07-10T17:06:00Z"
 
-image: assets/img/posts/angular-9-ng-build-cache-alterar-local/angular-9-ng-build-cache-alterar-local-banner.png
+resources:
+- name: "featured-image"
+  src: "angular-9-ng-build-cache-alterar-local-banner.png"
 tags:
 - angular
 - build

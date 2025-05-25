@@ -4,7 +4,9 @@ authorLink: "https://mhagnumdw.github.io/"
 
 date: "2019-05-28T18:10:00Z"
 
-image: assets/img/posts/chrome-change-timezone/chrome-change-timezone-logo.png
+resources:
+- name: "featured-image"
+  src: "chrome-change-timezone-logo.png"
 tags:
 - chrome
 - timezone

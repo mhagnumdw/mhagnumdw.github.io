@@ -6,7 +6,9 @@ categories:
 - test
 date: "2017-11-14T22:52:43Z"
 
-image: assets/img/posts/test-coverage-maven-jenkins-cobertura-jacoco-e-openclover/code-coverage-banner_v2.png
+resources:
+- name: "featured-image"
+  src: "code-coverage-banner_v2.png"
 tags:
 - coverage
 - Java

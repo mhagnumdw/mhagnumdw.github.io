@@ -4,7 +4,9 @@ authorLink: "https://mhagnumdw.github.io/"
 
 date: "2019-08-21T08:47:00Z"
 
-image: assets/img/posts/svn-diff-beyond-compare/svn-beyond-compare-banner.png
+resources:
+- name: "featured-image"
+  src: "svn-beyond-compare-banner.png"
 tags:
 - svn
 - diff

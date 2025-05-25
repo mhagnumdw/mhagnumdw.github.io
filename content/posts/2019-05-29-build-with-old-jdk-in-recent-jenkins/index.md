@@ -4,7 +4,9 @@ authorLink: "https://mhagnumdw.github.io/"
 
 date: "2019-05-29T10:06:00Z"
 
-image: assets/img/posts/build-with-old-jdk-in-recent-jenkins/build-with-old-jdk-in-recent-jenkins-banner.jpeg
+resources:
+- name: "featured-image"
+  src: "build-with-old-jdk-in-recent-jenkins-banner.jpeg"
 tags:
 - jenkins
 

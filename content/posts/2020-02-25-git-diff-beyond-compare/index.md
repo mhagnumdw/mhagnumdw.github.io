@@ -4,7 +4,9 @@ authorLink: "https://mhagnumdw.github.io/"
 
 date: "2020-02-25T09:34:00Z"
 
-image: assets/img/posts/git-diff-beyond-compare/git-beyond-compare-banner.png
+resources:
+- name: "featured-image"
+  src: "git-beyond-compare-banner.png"
 tags:
 - git
 - diff

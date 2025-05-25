@@ -6,7 +6,9 @@ categories:
 - Sync
 date: "2019-11-12T22:38:00Z"
 
-image: assets/img/posts/google-drive-com-rclone/google-drive-com-rclone-banner.png
+resources:
+- name: "featured-image"
+  src: "google-drive-com-rclone-banner.png"
 tags:
 - google drive
 - sync

@@ -4,7 +4,9 @@ authorLink: "https://mhagnumdw.github.io/"
 
 date: "2020-04-23T19:23:00Z"
 
-image: assets/img/posts/windows-wsl-linux-chmod-nao-funciona/windows-wsl-linux-chmod-nao-funciona-banner.png
+resources:
+- name: "featured-image"
+  src: "windows-wsl-linux-chmod-nao-funciona-banner.png"
 tags:
 - windows
 - wsl

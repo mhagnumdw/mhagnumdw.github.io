@@ -6,7 +6,9 @@ categories:
 - Diário de Bordo
 date: "2020-05-16T12:22:00Z"
 
-image: assets/img/cockpit-banner.jpg
+resources:
+- name: "featured-image"
+  src: "cockpit-banner.jpg"
 tags:
 - docker
 - ssh

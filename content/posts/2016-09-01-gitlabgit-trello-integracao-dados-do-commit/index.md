@@ -7,7 +7,9 @@ categories:
 - Linux
 date: "2016-09-01T16:58:30Z"
 
-image: assets/img/posts/gitlabgit-trello-integracao-dados-do-commit/git-gitlab-trello-integracao-banner_v2.png
+resources:
+- name: "featured-image"
+  src: "git-gitlab-trello-integracao-banner_v2.png"
 tags:
 - Cygwin
 - GitLab

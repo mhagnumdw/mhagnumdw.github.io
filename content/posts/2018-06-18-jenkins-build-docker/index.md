@@ -6,7 +6,9 @@ categories:
 - Jenkins
 date: "2018-06-18T09:56:00Z"
 
-image: assets/img/posts/jenkins-build-docker/jenkins-build-docker-v2.png
+resources:
+- name: "featured-image"
+  src: "jenkins-build-docker-v2.png"
 tags:
 - Fedora
 - Docker

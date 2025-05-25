@@ -6,7 +6,9 @@ categories:
 - Cygwin
 date: "2018-06-04T20:03:00Z"
 
-image: assets/img/posts/cygwin-cron/cygwin-cron.png
+resources:
+- name: "featured-image"
+  src: "cygwin-cron.png"
 tags:
 - cron
 

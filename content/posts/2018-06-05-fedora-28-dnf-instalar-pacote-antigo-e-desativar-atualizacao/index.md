@@ -6,7 +6,9 @@ categories:
 - Linux
 date: "2018-06-05T14:39:00Z"
 
-image: assets/img/posts/fedora-28-dnf-instalar-pacote-antigo-e-desativar-atualizacao/fedora-dnf-package-old-disable.png
+resources:
+- name: "featured-image"
+  src: "fedora-dnf-package-old-disable.png"
 tags:
 - Fedora
 - dnf
