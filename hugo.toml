@@ -49,7 +49,7 @@ theme = "LoveIt"
     [params.header.title]
       # URL of the LOGO
       # LOGO 的 URL
-      logo = "img/caduceus.jpg"
+      logo = "/img/caduceus.jpg"
       # title name
       # 标题名称
       name = "MhagnumDw"
