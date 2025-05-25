@@ -1,19 +1,13 @@
 ---
+title: Cygwin SSH Server no Windows 7
+date: "2016-08-24T11:47:28Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
-
-categories:
-- Cygwin
-date: "2016-08-24T11:47:28Z"
-
 resources:
 - name: "featured-image"
   src: "cygwin_ssh_server_logo.png"
-tags:
-- SSH
-- Linux
-
-title: Cygwin SSH Server no Windows 7
+categories: ["Cygwin"]
+tags: ["SSH", "Linux"]
 ---
 
 Instalar o Cygwin SSH Server como serviço no Windows.

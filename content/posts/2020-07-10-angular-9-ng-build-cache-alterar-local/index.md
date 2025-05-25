@@ -1,20 +1,13 @@
 ---
+title: 'Angular 9+: alterar local do cache do ng build'
+date: "2020-07-10T17:06:00Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
-
-categories:
-- angular
-date: "2020-07-10T17:06:00Z"
-
 resources:
 - name: "featured-image"
   src: "angular-9-ng-build-cache-alterar-local-banner.png"
-tags:
-- angular
-- build
-- performance
-
-title: 'Angular 9+: alterar local do cache do ng build'
+categories: ["angular"]
+tags: ["angular", "build", "performance"]
 ---
 
 A partir do Angular 9+ existe um cache do build que por padrão é criado dentro da pasta `./node_modules/.cache`. Vamos ver como alterar o local desse cache e também a diferença que ele faz no tempo de build.

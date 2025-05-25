@@ -1,20 +1,13 @@
 ---
+title: 'Diário de Bordo #001 - Demora para se conectar via SSH'
+date: "2020-05-16T12:22:00Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
-
-categories:
-- Diário de Bordo
-date: "2020-05-16T12:22:00Z"
-
 resources:
 - name: "featured-image"
   src: "cockpit-banner.jpg"
-tags:
-- docker
-- ssh
-- dns
-
-title: 'Diário de Bordo #001 - Demora para se conectar via SSH'
+categories: ["Diário de Bordo"]
+tags: ["docker", "ssh", "dns"]
 ---
 
 Teste automatizado, Docker, SVN Subversion container, demora de aproximadamente 10 segundos para conectar via SSH ⏩ Troubleshooting

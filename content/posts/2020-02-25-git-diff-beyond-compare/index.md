@@ -1,17 +1,13 @@
 ---
+title: Git Diff com Beyond Compare
+date: "2020-02-25T09:34:00Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
-
-date: "2020-02-25T09:34:00Z"
-
 resources:
 - name: "featured-image"
   src: "git-beyond-compare-banner.png"
-tags:
-- git
-- diff
-
-title: Git Diff com Beyond Compare
+categories: ["git"]
+tags: ["git", "diff"]
 ---
 
 Usar o Beyond Compare como ferramenta de **diff** para o Git.

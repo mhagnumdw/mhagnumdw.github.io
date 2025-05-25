@@ -1,20 +1,13 @@
 ---
+title: 'Vários JBoss + RHEL + ulimit: problema e solução'
+date: "2016-08-18T14:26:40Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
-
-categories:
-- JBoss
-date: "2016-08-18T14:26:40Z"
-
 resources:
 - name: "featured-image"
   src: "jboss_rhel_ulimit.png"
-tags:
-- ulimit
-- JBoss
-- Linux
-
-title: 'Vários JBoss + RHEL + ulimit: problema e solução'
+categories: ["JBoss"]
+tags: ["ulimit", "JBoss", "Linux"]
 ---
 
 O JBoss EAP (Application Server) vinha apresentando problemas estranhos na subida. Quando um dos nós tentava subir alguns erros surgiam, geralmente ocorrendo: `Caused by: java.lang.OutOfMemoryError: unable to create new native thread`. Embora pareça um clássico problema de memória da JVM, o real problema é que o usuário que executava o JBoss tinha atingido os limites de recursos do sistema operacional disponibilizados para ele.

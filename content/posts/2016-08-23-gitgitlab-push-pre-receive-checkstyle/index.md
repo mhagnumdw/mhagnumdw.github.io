@@ -1,22 +1,13 @@
 ---
+title: Git/GitLab + push + pre-receive + Checkstyle
+date: "2016-08-23T19:19:24Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
-
-categories:
-- Git
-- Java
-- Linux
-date: "2016-08-23T19:19:24Z"
-
 resources:
 - name: "featured-image"
   src: "gitlab_checkstyle_push_prereceive_v2.png"
-tags:
-- Checkstyle
-- GitLab
-- hook
-
-title: Git/GitLab + push + pre-receive + Checkstyle
+categories: ["Git", "Java", "Linux"]
+tags: ["Checkstyle", "GitLab", "hook"]
 ---
 
 Objetivo: realizar checagem de estilo de código com o checkstyle no hook pre-receive do git. Quando for realizado o push, antes de sua efetivação, a análise no código será realizada. O push será rejeitado se a análise contiver WARN's.

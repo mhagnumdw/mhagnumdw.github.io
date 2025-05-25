@@ -1,16 +1,13 @@
 ---
+title: Buildar Hibernate 3.6.x
+date: "2019-05-29T08:30:00Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
-
-date: "2019-05-29T08:30:00Z"
-
 resources:
 - name: "featured-image"
   src: "buildar-hibernate-36-banner.png"
-tags:
-- hibernate
-
-title: Buildar Hibernate 3.6.x
+categories: ["hibernate"]
+tags: ["hibernate"]
 ---
 
 Buildar Hibernate 3.6.x a partir do fonte e versionar na sua infra.

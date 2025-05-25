@@ -1,20 +1,13 @@
 ---
+title: Fedora/RHEL - Instalar Microsoft core fonts
+date: "2017-01-26T12:57:29Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
-
-categories:
-- Linux
-date: "2017-01-26T12:57:29Z"
-
 resources:
 - name: "featured-image"
   src: "fedora_redhat_microsoft_core_fonts.jpg"
-tags:
-- Fedora
-- fonts
-- RHEL
-
-title: Fedora/RHEL - Instalar Microsoft core fonts
+categories: ["Linux"]
+tags: ["Fedora", "fonts", "RHEL"]
 ---
 
 Instalar as fontes da Microsoft no linux Fefora/RHEL. Para outras distros os passos são os mesmos ou bem parecidos.

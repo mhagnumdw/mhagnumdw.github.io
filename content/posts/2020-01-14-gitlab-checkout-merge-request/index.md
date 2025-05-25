@@ -1,19 +1,13 @@
 ---
+title: 'GitLab: checkout merge request'
+date: "2020-01-14T19:33:00Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
-
-categories:
-- GitLab
-date: "2020-01-14T19:33:00Z"
-
 resources:
 - name: "featured-image"
   src: "banner.jpg"
-tags:
-- checkout
-- merge request
-
-title: 'GitLab: checkout merge request'
+categories: ["GitLab"]
+tags: ["checkout", "merge request"]
 ---
 
 Realizar o checkout de um merge request do GitLab.

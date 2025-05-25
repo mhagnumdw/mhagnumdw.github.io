@@ -1,21 +1,13 @@
 ---
+title: 'Test Coverage + Maven + Jenkins: Cobertura, JaCoCo e OpenClover'
+date: "2017-11-14T22:52:43Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
-
-categories:
-- test
-date: "2017-11-14T22:52:43Z"
-
 resources:
 - name: "featured-image"
   src: "code-coverage-banner_v2.png"
-tags:
-- coverage
-- Java
-- Jenkins
-- maven
-
-title: 'Test Coverage + Maven + Jenkins: Cobertura, JaCoCo e OpenClover'
+categories: ["test"]
+tags: ["coverage", "Java", "Jenkins", "maven"]
 ---
 
 Configuração para Code Coverage usando Maven, Jenkins e um dos seguintes plugins para gerar a cobertura de código: OpenClover, Cobertura e JaCoCo.

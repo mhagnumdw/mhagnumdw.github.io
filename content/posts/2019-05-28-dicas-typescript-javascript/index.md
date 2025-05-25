@@ -1,18 +1,13 @@
 ---
+title: 'Typescript/ECMAScript/Javascript: dicas'
+date: "2019-05-28T17:52:00Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
-
-date: "2019-05-28T17:52:00Z"
-
 resources:
 - name: "featured-image"
   src: "dicas-typescript-javascript-banner.png"
-tags:
-- typescript
-- ECMAScript
-- javascript
-
-title: 'Typescript/ECMAScript/Javascript: dicas'
+categories: ["javascript"]
+tags: ["typescript", "ECMAScript", "javascript"]
 ---
 
 Dicas de Typescript/ECMAScript/Javascript (snippets)

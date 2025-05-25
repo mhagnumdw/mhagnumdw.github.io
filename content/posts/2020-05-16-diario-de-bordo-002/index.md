@@ -1,22 +1,13 @@
 ---
+title: 'Diário de Bordo #002 - Ambientes iguais com comportamentos diferentes'
+date: "2020-05-16T16:14:00Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
-
-categories:
-- Diário de Bordo
-date: "2020-05-16T16:14:00Z"
-
 resources:
 - name: "featured-image"
   src: "cockpit-banner.jpg"
-tags:
-- docker
-- openshift
-- gitlab
-- facelets
-- jsf
-
-title: 'Diário de Bordo #002 - Ambientes iguais com comportamentos diferentes'
+categories: ["Diário de Bordo"]
+tags: ["docker", "openshift", "gitlab", "facelets", "jsf"]
 ---
 
 Build, pipeline no GitLab, geração de imagem docker de aplicação com jsf 1.2 + Facelets + JBoss EAP 6.4, deploy no OpenShift, ambientes totalmente iguais e comportamentos diferentes ⏩ Troubleshooting

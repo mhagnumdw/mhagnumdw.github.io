@@ -1,21 +1,13 @@
 ---
+title: Jenkins buildando dentro de container (Docker)
+date: "2018-06-18T09:56:00Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
-
-categories:
-- Jenkins
-date: "2018-06-18T09:56:00Z"
-
 resources:
 - name: "featured-image"
   src: "jenkins-build-docker-v2.png"
-tags:
-- Fedora
-- Docker
-- Container
-- Jenkins
-
-title: Jenkins buildando dentro de container (Docker)
+categories: ["Jenkins"]
+tags: ["Fedora", "Docker", "Container", "Jenkins"]
 ---
 
 Executar o build do Jenkins dentro de um container.

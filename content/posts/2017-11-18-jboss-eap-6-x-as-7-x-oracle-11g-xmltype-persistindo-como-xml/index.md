@@ -1,23 +1,13 @@
 ---
+title: 'JBoss EAP 6.x/AS 7.x + Oracle 11g + XMLType: persistindo como XML'
+date: "2017-11-18T21:53:24Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
-
-categories:
-- Hibernate 3
-- JBoss
-- Oracle
-- XML
-date: "2017-11-18T21:53:24Z"
-
 resources:
 - name: "featured-image"
   src: "logo_jboss_oracle_xmltype_v5.png"
-tags:
-- Hibernate
-- XMLType
-- XStream
-
-title: 'JBoss EAP 6.x/AS 7.x + Oracle 11g + XMLType: persistindo como XML'
+categories: ["Hibernate"]
+tags: ["Hibernate", "XMLType", "XStream"]
 ---
 
 A ideia é persistir uma entidade que possua um relacionamento qualquer com um objeto e esse objeto será persistido no banco de dados como XML (não é String!), mas especificamente o tipo XMLType.

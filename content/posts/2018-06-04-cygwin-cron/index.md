@@ -1,18 +1,13 @@
 ---
+title: Cygwin Cron
+date: "2018-06-04T20:03:00Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
-
-categories:
-- Cygwin
-date: "2018-06-04T20:03:00Z"
-
 resources:
 - name: "featured-image"
   src: "cygwin-cron.png"
-tags:
-- cron
-
-title: Cygwin Cron
+categories: ["Cygwin"]
+tags: ["cron"]
 ---
 
 Instalar o cron no Cygwin como serviço no Windows.

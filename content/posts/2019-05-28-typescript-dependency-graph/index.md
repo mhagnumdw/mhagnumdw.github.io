@@ -1,16 +1,13 @@
 ---
+title: Typescript - Gráfico de dependências
+date: "2019-05-28T15:28:00Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
-
-date: "2019-05-28T15:28:00Z"
-
 resources:
 - name: "featured-image"
   src: "banner-tslint-without-node_modules.png"
-tags:
-- typescript
-
-title: Typescript - Gráfico de dependências
+categories: ["typescript"]
+tags: ["typescript"]
 ---
 
 Gerar um gráfico das dependências.

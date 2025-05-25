@@ -1,16 +1,13 @@
 ---
+title: JBoss EAP 6 - Consumo elevado de CPU com muitos logs
+date: "2020-05-06T12:30:00Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
-
-date: "2020-05-06T12:30:00Z"
-
 resources:
 - name: "featured-image"
   src: "banner.png"
-tags:
-- jboss
-
-title: JBoss EAP 6 - Consumo elevado de CPU com muitos logs
+categories: ["jboss"]
+tags: ["jboss"]
 ---
 
 JBoss EAP 6 - Consumo elevado de CPU quando existem muitos arquivos arquivos de log, inclusive logs compactados.

@@ -1,16 +1,13 @@
 ---
+title: Jenkins recente buildando com JDK antiga
+date: "2019-05-29T10:06:00Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
-
-date: "2019-05-29T10:06:00Z"
-
 resources:
 - name: "featured-image"
   src: "build-with-old-jdk-in-recent-jenkins-banner.jpeg"
-tags:
-- jenkins
-
-title: Jenkins recente buildando com JDK antiga
+categories: ["jenkins"]
+tags: ["jenkins"]
 ---
 
 Por exemplo, a partir de tal versão do Jenkins a JDK 8 é necessária e isso pode ser um problema para buildar projetos que requerem uma JDK mais antiga.

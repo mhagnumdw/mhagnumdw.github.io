@@ -1,17 +1,13 @@
 ---
+title: Git - Quantidade de commits atrás/frente em relação ao master no prompt
+date: "2020-03-18T09:34:00Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
-
-date: "2020-03-18T09:34:00Z"
-
 resources:
 - name: "featured-image"
   src: "git-prompt-ps1-diff-master.png"
-tags:
-- git
-- diff
-
-title: Git - Quantidade de commits atrás/frente em relação ao master no prompt
+categories: ["git"]
+tags: ["git", "diff"]
 ---
 
 Exibir no prompt, por meio do `PS1`, a quantidade de commits atrás e na frente em relação a branch `origin/master`.

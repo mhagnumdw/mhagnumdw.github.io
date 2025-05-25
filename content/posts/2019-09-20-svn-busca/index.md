@@ -1,16 +1,13 @@
 ---
+title: SVN - Busca avançada em múltiplos repositórios
+date: "2019-09-20T11:43:00Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
-
-date: "2019-09-20T11:43:00Z"
-
 resources:
 - name: "featured-image"
   src: "svn-busca-banner.png"
-tags:
-- svn
-
-title: SVN - Busca avançada em múltiplos repositórios
+categories: ["svn"]
+tags: ["svn"]
 ---
 
 Localizar commits pelo nome de usuário, descrição do commit e outras informações.

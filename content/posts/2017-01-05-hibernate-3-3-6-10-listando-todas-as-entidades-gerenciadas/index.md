@@ -1,20 +1,13 @@
 ---
+title: Hibernate 3 / 3.6.10 - Listando todas as entidades gerenciadas
+date: "2017-01-05T14:09:52Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
-
-categories:
-- Hibernate 3
-date: "2017-01-05T14:09:52Z"
-
 resources:
 - name: "featured-image"
   src: "hibernate_3_list_all_managed_entities.png"
-tags:
-- Hibernate
-- Java
-- JPA
-
-title: Hibernate 3 / 3.6.10 - Listando todas as entidades gerenciadas
+categories: ["Hibernate 3"]
+tags: ["Hibernate", "Java", "JPA"]
 ---
 
 Objetivo: listar todas as entidades gerenciadas pelo EntityManager no Hibernate 3.6.10 (JPA 1)

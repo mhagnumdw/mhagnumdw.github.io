@@ -1,16 +1,13 @@
 ---
+title: 'Richfaces 3.3.4: rich:editor com spellcheck do browser'
+date: "2019-05-28T16:05:00Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
-
-date: "2019-05-28T16:05:00Z"
-
 resources:
 - name: "featured-image"
   src: "richfaces_logo.jpeg"
-tags:
-- richfaces
-
-title: 'Richfaces 3.3.4: rich:editor com spellcheck do browser'
+categories: ["richfaces"]
+tags: ["richfaces"]
 ---
 
 Para ativar o spell check no `rich:editor`, usando os recursos do próprio browser, basta ativar a opção `gecko_spellcheck`, exemplo:

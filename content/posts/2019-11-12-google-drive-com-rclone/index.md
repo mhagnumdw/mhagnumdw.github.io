@@ -1,21 +1,13 @@
 ---
+title: Google Drive sincronizando com rclone
+date: "2019-11-12T22:38:00Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
-
-categories:
-- Sync
-date: "2019-11-12T22:38:00Z"
-
 resources:
 - name: "featured-image"
   src: "google-drive-com-rclone-banner.png"
-tags:
-- google drive
-- sync
-- cloud
-- linux
-
-title: Google Drive sincronizando com rclone
+categories: ["Sync"]
+tags: ["google drive", "sync", "cloud", "linux"]
 ---
 
 Direto ao ponto: sincronizando no Linux com Google Drive e [rclone](https://rclone.org/).

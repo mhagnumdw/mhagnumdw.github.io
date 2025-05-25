@@ -1,17 +1,13 @@
 ---
+title: SVN Diff com Beyond Compare
+date: "2019-08-21T08:47:00Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
-
-date: "2019-08-21T08:47:00Z"
-
 resources:
 - name: "featured-image"
   src: "svn-beyond-compare-banner.png"
-tags:
-- svn
-- diff
-
-title: SVN Diff com Beyond Compare
+categories: ["svn"]
+tags: ["svn", "diff"]
 ---
 
 Usar o Beyond Compare como ferramenta de **diff** para o SVN.

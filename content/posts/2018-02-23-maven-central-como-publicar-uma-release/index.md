@@ -1,23 +1,13 @@
 ---
+title: 'Maven Central: como publicar uma release'
+date: "2018-02-23T14:04:14Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
-
-categories:
-- Java
-- maven
-date: "2018-02-23T14:04:14Z"
-
 resources:
 - name: "featured-image"
   src: "mvc.png"
-tags:
-- central
-- Java
-- maven
-- release
-- sonatype
-
-title: 'Maven Central: como publicar uma release'
+categories: ["Java", "maven"]
+tags: ["central", "Java", "maven", "release", "sonatype"]
 ---
 
 Abaixo os passos para realizar uma publicação no Maven Central.

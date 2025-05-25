@@ -1,18 +1,13 @@
 ---
+title: 'Jenkins: Renomear Jobs em massa'
+date: "2016-09-27T21:56:16Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
-
-categories:
-- Jenkins
-date: "2016-09-27T21:56:16Z"
-
 resources:
 - name: "featured-image"
   src: "jenkins_script_console_v0.png"
-tags:
-- jenkins
-
-title: 'Jenkins: Renomear Jobs em massa'
+categories: ["Jenkins"]
+tags: ["jenkins"]
 ---
 
 O Jenkins não possui uma função nativa para renomear jobs em massa. Quando o número de jobs é elevado fica inviável renomear manualmente.

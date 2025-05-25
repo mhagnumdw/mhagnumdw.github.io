@@ -1,19 +1,13 @@
 ---
+title: 'git: dicas'
+date: "2017-10-01T13:32:22Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
-
-categories:
-- Git
-date: "2017-10-01T13:32:22Z"
-
 resources:
 - name: "featured-image"
   src: "git-goodness_v2.png"
-tags:
-- git
-- git-dicas
-
-title: 'git: dicas'
+categories: ["Git"]
+tags: ["git", "git-dicas"]
 ---
 
 Dicas de git (snippets)

@@ -1,21 +1,13 @@
 ---
+title: GitLab/Git + Trello = Integração (dados do commit)
+date: "2016-09-01T16:58:30Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
-
-categories:
-- Git
-- Linux
-date: "2016-09-01T16:58:30Z"
-
 resources:
 - name: "featured-image"
   src: "git-gitlab-trello-integracao-banner_v2.png"
-tags:
-- Cygwin
-- GitLab
-- Trello
-
-title: GitLab/Git + Trello = Integração (dados do commit)
+categories: ["Git", "Linux"]
+tags: ["Cygwin", "GitLab", "Trello"]
 ---
 
 Integrar GitLab e Trello no post-commit (client side) ou post-receive (server side).

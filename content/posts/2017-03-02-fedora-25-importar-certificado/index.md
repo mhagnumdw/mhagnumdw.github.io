@@ -1,19 +1,13 @@
 ---
+title: Fedora 25 - Importar certificado
+date: "2017-03-02T15:49:32Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
-
-categories:
-- Linux
-date: "2017-03-02T15:49:32Z"
-
 resources:
 - name: "featured-image"
   src: "nss_importar_certificado.png"
-tags:
-- Certificado
-- Fedora
-
-title: Fedora 25 - Importar certificado
+categories: ["Linux"]
+tags: ["Certificado", "Fedora"]
 ---
 
 Importar certificado para que seja reconhecido pelos browsers e outros softwares.

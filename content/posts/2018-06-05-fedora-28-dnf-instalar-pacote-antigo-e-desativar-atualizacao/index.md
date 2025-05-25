@@ -1,20 +1,13 @@
 ---
+title: 'Fedora 28 + DNF: instalar pacote antigo e desativar atualização'
+date: "2018-06-05T14:39:00Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
-
-categories:
-- Linux
-date: "2018-06-05T14:39:00Z"
-
 resources:
 - name: "featured-image"
   src: "fedora-dnf-package-old-disable.png"
-tags:
-- Fedora
-- dnf
-- yum
-
-title: 'Fedora 28 + DNF: instalar pacote antigo e desativar atualização'
+categories: ["linux"]
+tags: ["Fedora", "dnf", "yum"]
 ---
 
 Instalar uma versão específica de um pacote e desativar sua atualização ao executar `dnf update`.

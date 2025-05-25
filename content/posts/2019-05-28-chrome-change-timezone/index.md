@@ -1,17 +1,13 @@
 ---
+title: Mudar o timezone do Chrome
+date: "2019-05-28T18:10:00Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
-
-date: "2019-05-28T18:10:00Z"
-
 resources:
 - name: "featured-image"
   src: "chrome-change-timezone-logo.png"
-tags:
-- chrome
-- timezone
-
-title: Mudar o timezone do Chrome
+categories: ["chrome"]
+tags: ["chrome", "timezone"]
 ---
 
 Isso é bom pra realizar alguns testes onde servidor e cliente estão em timezones diferentes.

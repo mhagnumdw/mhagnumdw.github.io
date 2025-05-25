@@ -1,18 +1,13 @@
 ---
+title: 'SQL: gerando ranges (Date e Number)'
+date: "2016-10-08T12:02:12Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
-
-categories:
-- SQL
-date: "2016-10-08T12:02:12Z"
-
 resources:
 - name: "featured-image"
   src: "select_with_rangre_logo.png"
-tags:
-- sql
-
-title: 'SQL: gerando ranges (Date e Number)'
+categories: ["SQL"]
+tags: ["sql"]
 ---
 
 A necessidade é fazer uma consulta que tenha como base um conjunto sequencial de outra informação. Como exemplo, fazer uma segunda consulta com base em todos dias dentro de duas datas.

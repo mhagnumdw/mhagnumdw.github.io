@@ -1,20 +1,13 @@
 ---
+title: Exibir branch do Git no prompt (Linux/Cygwin)
+date: "2016-09-05T11:25:10Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
-
-categories:
-- Git
-date: "2016-09-05T11:25:10Z"
-
 resources:
 - name: "featured-image"
   src: "exibir_branch_do_git_no_prompt.png"
-tags:
-- Git
-- Cygwin
-- Linux
-
-title: Exibir branch do Git no prompt (Linux/Cygwin)
+categories: ["Git"]
+tags: ["Git", "Cygwin", "Linux"]
 ---
 
 Os passos abaixo descrevem como exibir a branch do git no prompt de comando.
