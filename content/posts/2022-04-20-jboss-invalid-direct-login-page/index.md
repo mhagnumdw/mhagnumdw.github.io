@@ -1,21 +1,13 @@
 ---
+title: 'JBWEB000006: Invalid direct reference to form login page'
+date: "2022-04-20T11:32:00Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
-
-categories:
-- JBoss
-date: "2022-04-20T11:32:00Z"
-
 resources:
 - name: "featured-image"
   src: "banner.png"
-tags:
-- http
-- jboss
-- tomcat
-- JASS
-
-title: 'JBWEB000006: Invalid direct reference to form login page'
+categories: ["JBoss"]
+tags: ["http", "jboss", "tomcat", "JASS"]
 ---
 
 Como corrigir o problema de 'HTTP Status 400 - JBWEB000006: Invalid direct reference to form login page'.

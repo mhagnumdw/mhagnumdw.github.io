@@ -1,18 +1,13 @@
 ---
+title: Openshift - Quem fez o quê? (Audioria)
+date: "2022-05-19T15:42:00Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
-
-categories:
-- openshift
-date: "2022-05-19T15:42:00Z"
-
 resources:
 - name: "featured-image"
   src: "banner.png"
-tags:
-- auditoria
-
-title: Openshift - Quem fez o quê? (Audioria)
+categories: ["openshift"]
+tags: ["auditoria"]
 ---
 
 Descobrir quem fez o quê nos recursos do cluster. Por exemplo: quem pausou um `deploymentconfig`?

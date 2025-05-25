@@ -1,17 +1,13 @@
 ---
+title: 'GitLab Registry: Cleanup policy for tags / Garbage collection'
+date: "2020-11-18T20:28:00Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
-
-categories:
-- gitlab
-date: "2020-11-18T20:28:00Z"
-
-image: assets/img/posts/gitlab-registry-cleanup/gitlab-registry-cleanup-banner.png
-tags:
-- docker
-- registry
-
-title: 'GitLab Registry: Cleanup policy for tags / Garbage collection'
+resources:
+- name: "featured-image"
+  src: "gitlab-registry-cleanup-banner.png"
+categories: ["gitlab"]
+tags: ["docker", "registry"]
 ---
 
 É comum um projeto acumular muitas imagens docker e também é comum o registry, que acaba abrigando imagens docker de diversos projetos, crescer mais ainda, consumindo muito espaço em disco. De forma bem simples e direta (embora não seja muito possível nesse caso), vamos ver como fazer essa limpeza.

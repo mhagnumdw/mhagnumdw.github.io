@@ -1,19 +1,13 @@
 ---
+title: 'Jenkins: Dicas'
+date: "2022-11-07T17:26:00Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
-
-categories:
-- Jenkins
-date: "2022-11-07T17:26:00Z"
-
 resources:
 - name: "featured-image"
   src: "banner.png"
-tags:
-- jenkins
-- dicas
-
-title: 'Jenkins: Dicas'
+categories: ["Jenkins"]
+tags: ["jenkins", "dicas"]
 ---
 
 Dicas sobre o Jenkins. Snippets, configurações simples, scripts groovy para autoamizar tarefas etc.

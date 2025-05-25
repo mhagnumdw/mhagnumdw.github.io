@@ -1,19 +1,13 @@
 ---
+title: Migrar do LastPass para o KeePass
+date: "2022-01-07T12:34:00Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
-
-categories:
-- lastpass
-- keepass
-date: "2022-01-07T12:34:00Z"
-
 resources:
 - name: "featured-image"
   src: "banner.png"
-tags:
-- senhas
-
-title: Migrar do LastPass para o KeePass
+categories: ["lastpass", "keepass"]
+tags: ["senhas"]
 ---
 
 Como migrar do LastPass para o KeePass e manter os dados sincronizados entre os dispositivos no KeePass.

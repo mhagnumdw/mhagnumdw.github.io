@@ -1,22 +1,13 @@
 ---
+title: Testar velocidade na rede local
+date: "2021-06-03T15:03:00Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
-
-categories:
-- lan
-- wifi
-- velocidade
-date: "2021-06-03T15:03:00Z"
-
 resources:
 - name: "featured-image"
   src: "banner.png"
-tags:
-- lan
-- wifi
-- velocidade
-
-title: Testar velocidade na rede local
+categories: ["lan", "wifi", "velocidade"]
+tags: ["lan", "wifi", "velocidade"]
 ---
 
 Testar a velocidade de conexão entre duas máquinas na mesma rede local. Uma será Windows e outra Linux. Mas poderiam ser ambas Windows ou Linux.

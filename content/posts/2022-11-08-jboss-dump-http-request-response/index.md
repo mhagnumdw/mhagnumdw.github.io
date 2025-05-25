@@ -1,19 +1,13 @@
 ---
+title: 'JBoss EAP 6: dump da requisição http recebida'
+date: "2022-11-08T13:26:00Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
-
-categories:
-- JBoss
-date: "2022-11-08T13:26:00Z"
-
 resources:
 - name: "featured-image"
   src: "banner.png"
-tags:
-- jboss
-- http
-
-title: 'JBoss EAP 6: dump da requisição http recebida'
+categories: ["JBoss"]
+tags: ["jboss", "http"]
 ---
 
 Logar o request/response das requisições HTTP feitas para o JBoss.

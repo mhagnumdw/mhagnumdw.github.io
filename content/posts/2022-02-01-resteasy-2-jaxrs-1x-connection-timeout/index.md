@@ -1,20 +1,13 @@
 ---
+title: RestEasy 2 - Configurar timeout da conexão
+date: "2022-02-01T19:49:00Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
-
-categories:
-- RestEasy
-date: "2022-02-01T19:49:00Z"
-
 resources:
 - name: "featured-image"
   src: "banner.png"
-tags:
-- http
-- timeout
-- jboss
-
-title: RestEasy 2 - Configurar timeout da conexão
+categories: ["RestEasy"]
+tags: ["http", "timeout", "jboss"]
 ---
 
 Configurar o timout de conexão, que por padrão é infinito.

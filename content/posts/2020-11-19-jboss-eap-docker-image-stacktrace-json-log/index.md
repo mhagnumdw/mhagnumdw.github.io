@@ -1,19 +1,13 @@
 ---
+title: 'Imagem docker JBoss EAP 6.4: Logs em JSON e stacktrace'
+date: "2020-11-19T19:20:00Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
-
-categories:
-- JBoss EAP
-date: "2020-11-19T19:20:00Z"
-
 resources:
 - name: "featured-image"
   src: "banner.png"
-tags:
-- docker
-- jboss
-
-title: 'Imagem docker JBoss EAP 6.4: Logs em JSON e stacktrace'
+categories: ["JBoss EAP"]
+tags: ["docker", "jboss"]
 ---
 
 Ativar o log no formato JSON na imagem docker do JBoss EAP 6.4. Também vamos mudar o formato que o stacktrace aparece no JSON.

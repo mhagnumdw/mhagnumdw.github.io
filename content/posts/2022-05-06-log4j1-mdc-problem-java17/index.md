@@ -1,20 +1,13 @@
 ---
+title: Log4j1 - MDC não funciona no Java 9+
+date: "2022-05-06T16:18:00Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
-
-categories:
-- log4j1
-date: "2022-05-06T16:18:00Z"
-
 resources:
 - name: "featured-image"
   src: "banner.png"
-tags:
-- log4j
-- mdc
-- java
-
-title: Log4j1 - MDC não funciona no Java 9+
+categories: ["log4j1"]
+tags: ["log4j", "mdc", "java"]
 ---
 
 O MDC do Log4j1 não aparece no log no Java 9+.

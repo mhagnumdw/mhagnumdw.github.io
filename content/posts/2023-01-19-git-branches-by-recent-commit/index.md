@@ -1,18 +1,13 @@
 ---
+title: 'Git: listar as branches por commit mais recente'
+date: "2023-01-19T16:18:34Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
-
-categories:
-- git
-date: "2023-01-19T16:18:34Z"
-
 resources:
 - name: "featured-image"
   src: "banner.png"
-tags:
-- git
-
-title: 'Git: listar as branches por commit mais recente'
+categories: ["git"]
+tags: ["git"]
 ---
 
 Listar as branches por commit mais recente. Útil para ter um overview sobre quais branches estão mais desatualizadas.

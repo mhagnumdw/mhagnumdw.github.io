@@ -1,19 +1,13 @@
 ---
+title: 'Docker: alterar data e hora sem interferir no host'
+date: "2020-11-25T16:45:00Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
-
-categories:
-- docker
-date: "2020-11-25T16:45:00Z"
-
 resources:
 - name: "featured-image"
   src: "banner.png"
-tags:
-- docker
-- time
-
-title: 'Docker: alterar data e hora sem interferir no host'
+categories: ["docker"]
+tags: ["docker", "time"]
 ---
 
 Alterar a data e hora de um container docker **sem interferir na data e hora do host**.

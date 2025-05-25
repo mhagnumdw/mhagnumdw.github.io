@@ -1,21 +1,13 @@
 ---
+title: JBoss EAP 6 EJB 3.1 Concurrent Access Timeout InterceptorContext
+date: "2023-07-10T09:00:00Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
-
-categories:
-- JBoss
-- EJB
-date: "2023-07-10T09:00:00Z"
-
 resources:
 - name: "featured-image"
   src: "banner.png"
-tags:
-- JBoss EAP
-- EJB 3.1
-- Transaction
-
-title: JBoss EAP 6 EJB 3.1 Concurrent Access Timeout InterceptorContext
+categories: ["JBoss", "EJB"]
+tags: ["JBoss EAP", "EJB 3.1", "Transaction"]
 ---
 
 O seguinte erro ocorre em chamadas EJB: `JBAS014360: EJB 3.1 FR 4.3.14.1 concurrent access timeout on org.jboss.invocation.InterceptorContext@ad0f81 - could not obtain lock within 5000 MILLISECONDS`

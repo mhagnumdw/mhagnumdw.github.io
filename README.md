@@ -2,6 +2,9 @@
 
 <https://mhagnumdw.github.io/>
 
+// TODOs: ainda sem funcionar
+- [ ] Tag `<video`
+
 ## Executando o blog localmente
 
 Primeiro é preciso baixar o projeto:

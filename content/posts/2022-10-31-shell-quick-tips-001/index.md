@@ -1,18 +1,13 @@
 ---
+title: 'Shell - Quick Tips #001'
+date: "2022-10-31T09:50:00Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
-
-categories:
-- shell
-date: "2022-10-31T09:50:00Z"
-
 resources:
 - name: "featured-image"
   src: "banner.png"
-tags:
-- find
-
-title: 'Shell - Quick Tips #001'
+categories: ["shell"]
+tags: ["find"]
 ---
 
 Listar o conteúdo de uma pasta com dezenas de milhares de arquivos. Ao usar o ls é comum recebermos a mensagem: _Argument list too long_.

@@ -1,19 +1,13 @@
 ---
+title: 'GitLab: BackfillAdminModeScopeForPersonalAccessTokens'
+date: "2023-02-11T17:27:18Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
-
-categories:
-- GitLab
-date: "2023-02-11T17:27:18Z"
-
 resources:
 - name: "featured-image"
   src: "banner.png"
-tags:
-- GitLab
-- Update
-
-title: 'GitLab: BackfillAdminModeScopeForPersonalAccessTokens'
+categories: ["GitLab"]
+tags: ["GitLab", "Update"]
 ---
 
 Problem with the background migration `BackfillAdminModeScopeForPersonalAccessTokens: personal_access_tokens`  that fails after updating GitLab from version 15.4.6 to 15.8.1.

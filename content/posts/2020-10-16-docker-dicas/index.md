@@ -1,19 +1,13 @@
 ---
-authors-ids:
-- mhagnumdw
-- jacksoncastro
-categories:
-- docker
+title: 'docker: dicas'
 date: "2020-10-16T16:25:00Z"
-
+author: mhagnumdw
+authorLink: "https://mhagnumdw.github.io/"
 resources:
 - name: "featured-image"
   src: "banner.png"
-tags:
-- docker
-- docker-dicas
-
-title: 'docker: dicas'
+categories: ["docker"]
+tags: ["docker", "docker-dicas"]
 ---
 
 Dicas de docker.

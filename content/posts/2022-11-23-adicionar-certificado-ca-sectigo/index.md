@@ -1,21 +1,13 @@
 ---
+title: Adicionar certificado da CA da Sectigo
+date: "2022-11-23T08:48:00Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
-
-categories:
-- SSL
-date: "2022-11-23T08:48:00Z"
-
 resources:
 - name: "featured-image"
   src: "banner.png"
-tags:
-- certificado
-- ca
-- curl
-- docker
-
-title: Adicionar certificado da CA da Sectigo
+categories: ["SSL"]
+tags: ["certificado", "ca", "curl", "docker"]
 ---
 
 Esse certificado já é reconhecido pelo Chrome e Firefox. Mas em comandos como `curl` e `docker`, que olham para os certificados instalados no SO, pode ser que eles falhem ao acessar sites com https com certificado da Sectigo.

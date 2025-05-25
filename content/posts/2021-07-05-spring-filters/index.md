@@ -1,19 +1,13 @@
 ---
+title: 'Spring Boot: filtros que podem ser úteis'
+date: "2021-07-05T15:30:00Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
-
-categories:
-- spring
-date: "2021-07-05T15:30:00Z"
-
 resources:
 - name: "featured-image"
   src: "banner.png"
-tags:
-- spring
-- filters
-
-title: 'Spring Boot: filtros que podem ser úteis'
+categories: ["spring"]
+tags: ["spring", "filters"]
 ---
 
 Alguns filtros que podem ajudar durante o desenvolvimento com o Spring Boot.
