@@ -1,0 +1,74 @@
+//
+// Nesse arquivo toda minha personalização do tema
+//
+// https://hugoloveit.com/theme-documentation-basics/#style-customization
+//
+
+@import 'source-sans-pro';
+
+.home-avatar::after {
+  content: "Programação, configuração, script, Linux e afins";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+  line-height: 1.3;
+  font-size: 3em;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px #3f3f3f;
+}
+
+header {
+
+  .logo {
+    border-radius: 2.0em;
+  }
+
+  .logo, .header-title-pre {
+    padding-right: unset;
+    margin-right: .25rem;
+  }
+
+}
+
+.header-title > a:first-child {
+  display: flex;
+  align-items: center;
+}
+
+.home {
+
+  .home-profile {
+
+    .home-avatar {
+
+      img {
+        width: 100vw;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 350px;
+        object-fit: cover;
+
+        @include border-radius(unset);
+        @include box-shadow(unset);
+        @include transition(unset);
+
+        pointer-events: none !important;
+        &:hover {
+            @include transform(unset !important);
+        }
+
+      }
+
+    }
+
+  }
+
+}
