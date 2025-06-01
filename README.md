@@ -5,6 +5,7 @@
 // TODOs: ainda sem funcionar
 - [ ] Tag `<video`
 - [ ] A busca com lunr.js não está case-insensitive
+- [ ] Disqus (sistema de comentários)
 
 ## Executando o blog localmente
 
@@ -30,6 +31,8 @@ docker run --rm -it \
 ```
 
 Acessar <http://localhost:1313/techblog>
+
+Para executar no modo de produção adicionar a env `--env HUGO_ENV="production"` ou o parâmetro `server --environment production`.
 
 ### Com o hugo instalado no sistema
 
