@@ -37,6 +37,10 @@ header {
 
 }
 
+.header-title {
+  flex: unset;
+}
+
 .header-title > a:first-child {
   display: flex;
   align-items: center;
@@ -46,7 +50,11 @@ header {
 
   .home-profile {
 
+    padding: unset;
+
     .home-avatar {
+
+      padding: unset;
 
       img {
         width: 100vw;
@@ -71,4 +79,10 @@ header {
 
   }
 
+}
+
+.home[data-home=posts] {
+  .home-profile {
+    padding-top: unset;
+  }
 }
