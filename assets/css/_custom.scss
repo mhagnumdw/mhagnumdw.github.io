@@ -82,7 +82,20 @@ header {
 }
 
 .home[data-home=posts] {
+
   .home-profile {
     padding-top: unset;
+  }
+
+  .summary {
+    border-bottom: 1px dashed #c1c1c1;
+  }
+
+  .featured-image-preview {
+
+    img {
+      border-radius: 0.5rem 0.5rem 0 0;
+    }
+
   }
 }

@@ -37,7 +37,7 @@ theme = "LoveIt"
   [params.author]
     name = "MhagnumDw"
     email = ""
-    link = ""
+    link = "https://github.com/mhagnumdw"
 
   # Header config
   # 页面头部导航栏配置
@@ -104,7 +104,7 @@ theme = "LoveIt"
     dateFormat = "01-02"
     # amount of RSS pages
     # RSS 文章数目
-    rss = 10
+    rss = 20
 
   # List (category or tag) page config
   # List (目录或标签) 页面配置
@@ -117,7 +117,7 @@ theme = "LoveIt"
     dateFormat = "01-02"
     # amount of RSS pages
     # RSS 文章数目
-    rss = 10
+    rss = 20
 
   # App icon config
   # 应用图标配置
@@ -176,7 +176,7 @@ theme = "LoveIt"
   [params.home]
     # amount of RSS pages
     # RSS 文章数目
-    rss = 10
+    rss = 20
     # Home page profile
     # 主页个人信息
     [params.home.profile]
@@ -186,7 +186,7 @@ theme = "LoveIt"
       gravatarEmail = ""
       # URL of avatar shown in home page
       # 主页显示头像的 URL
-      avatarURL = "img/cropped-codecode.jpg"
+      avatarURL = "/img/cropped-codecode.jpg"
       # title shown in home page (HTML format is supported)
       # 主页显示的网站标题 (支持 HTML 格式)
       title = ""
@@ -208,7 +208,7 @@ theme = "LoveIt"
       enable = true
       # special amount of posts in each home posts page
       # 主页每页显示文章数量
-      paginate = 6
+      paginate = 20
   # Social config in home page
   # 主页的社交信息设置
   [params.social]
@@ -393,7 +393,7 @@ theme = "LoveIt"
     # Social share links in post page
     # 文章页面的分享信息设置
     [params.page.share]
-      enable = true
+      enable = false
       X = true
       Threads = true
       Facebook = true
