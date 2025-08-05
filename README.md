@@ -9,6 +9,7 @@ Primeiro é preciso baixar o projeto:
 ```bash
 git clone git@github.com:mhagnumdw/mhagnumdw.github.io.git
 cd mhagnumdw.github.io
+git pull --recurse-submodules
 ```
 
 Em seguida use uma das opções abaixo para acessar o site do blog localmente.
@@ -25,7 +26,7 @@ docker run --rm -it \
   server
 ```
 
-Acessar <http://localhost:1313/techblog>
+Acessar <http://localhost:1313>
 
 Para executar no modo de produção adicionar a env `--env HUGO_ENV="production"` ou o parâmetro `server --environment production`.
 
