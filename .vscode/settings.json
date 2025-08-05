@@ -1,28 +1,6 @@
 {
-    "search.exclude": {
-        "_site": true,
-        ".sass-cache": true
-    },
-    "workbench.colorCustomizations": {
-        "activityBar.activeBackground": "#5de2fc",
-        "activityBar.activeBorder": "#fb24d8",
-        "activityBar.background": "#5de2fc",
-        "activityBar.foreground": "#15202b",
-        "activityBar.inactiveForeground": "#15202b99",
-        "activityBarBadge.background": "#fb24d8",
-        "activityBarBadge.foreground": "#e7e7e7",
-        "statusBar.background": "#2bd9fb",
-        "statusBar.foreground": "#15202b",
-        "statusBarItem.hoverBackground": "#05c8ee",
-        "tab.activeBorder": "#5de2fc",
-        "titleBar.activeBackground": "#2bd9fb",
-        "titleBar.activeForeground": "#15202b",
-        "titleBar.inactiveBackground": "#2bd9fb99",
-        "titleBar.inactiveForeground": "#15202b99",
-        "sash.hoverBorder": "#5de2fc",
-        "statusBarItem.remoteBackground": "#2bd9fb",
-        "statusBarItem.remoteForeground": "#15202b",
-        "commandCenter.border": "#15202b99"
-    },
-    "peacock.color": "#2bd9fb"
+    "cSpell.words": [
+        "hugo",
+        "hugomods"
+    ]
 }
