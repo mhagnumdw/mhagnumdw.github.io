@@ -22,19 +22,13 @@ No Windows, executar `SQLWorkbench64.exe`. No linux `./sqlwbconsole.sh`.
 
 Precisamos criar dois profiles das duas instâncias de banco de dados, conforme vídeo abaixo.
 
-<video muted controls style="width=:100%;padding: unset;">
-    <source src="sql-workbench-criar-profiles.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-</video>
+{{< video src="sql-workbench-criar-profiles.mp4" >}}
 
 ## Gerar o _diff_
 
 Agora, no terminal, abrir o console `SQL Workbench/J` e executar o script que vai gerar o `SQL` de _diff_ que deve ser aplicado no destino. Ver vídeo abaixo.
 
-<video muted controls style="width=:100%;padding: unset;">
-    <source src="sql-workbench-gerar-diff.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-</video>
+{{< video src="sql-workbench-gerar-diff.mp4" >}}
 
 > 📋 O `sql` resultante deve ser checado. Como visto no vídeo acima, pode não ser muito preciso, por exemplo: para o Oracle o drop de tabelas não foi gerado, mas para o Postgres foi.
 

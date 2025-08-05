@@ -63,10 +63,7 @@ $ date # verificando: foi alterada no container e no host
 Tue Dec 15 18:00:07 -03 2020
 ```
 
-<video muted autoplay controls style="width=:100%;padding: unset;">
-    <source src="docker-privileged-change-date-time.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-</video>
+{{< video src="docker-privileged-change-date-time.mp4" >}}
 
 ### Executando `date -s` em um container com `--cap-add=SYS_TIME`
 

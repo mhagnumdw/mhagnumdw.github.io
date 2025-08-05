@@ -2,11 +2,6 @@
 
 <https://mhagnumdw.github.io/>
 
-// TODOs: ainda sem funcionar
-- [ ] Tag `<video`
-- [ ] A busca com lunr.js não está case-insensitive
-- [ ] Disqus (sistema de comentários)
-
 ## Executando o blog localmente
 
 Primeiro é preciso baixar o projeto:

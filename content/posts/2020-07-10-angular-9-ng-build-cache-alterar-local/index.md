@@ -28,10 +28,7 @@ E é só isso. Basta dar uma olhada no conteúdo da pasta.
 
 ## Tempo de build
 
-<video muted autoplay controls style="width=:100%;padding: unset;">
-    <source src="angular-9-ng-build-cache-alterar-local.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-</video>
+{{< video src="angular-9-ng-build-cache-alterar-local.mp4" >}}
 
 > 📋 No vídeo o local do cache está o padrão, como visto mais acima, dentro de `./node_modules/.cache`.
 
