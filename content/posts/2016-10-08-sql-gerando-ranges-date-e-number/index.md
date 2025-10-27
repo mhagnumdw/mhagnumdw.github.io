@@ -3,6 +3,7 @@ title: 'SQL: gerando ranges (Date e Number)'
 date: "2016-10-08T12:02:12Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
+avatarURL: "/images/authors/dwouglas.jpg"
 resources:
 - name: "featured-image"
   src: "select_with_rangre_logo.png"

@@ -3,6 +3,7 @@ title: 'JBWEB000006: Invalid direct reference to form login page'
 date: "2022-04-20T11:32:00Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
+avatarURL: "/images/authors/dwouglas.jpg"
 resources:
 - name: "featured-image"
   src: "banner.png"

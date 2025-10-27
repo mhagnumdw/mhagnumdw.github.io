@@ -3,6 +3,7 @@ title: SVN Diff com Beyond Compare
 date: "2019-08-21T08:47:00Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
+avatarURL: "/images/authors/dwouglas.jpg"
 resources:
 - name: "featured-image"
   src: "svn-beyond-compare-banner.png"

@@ -3,6 +3,7 @@ title: 'Angular 9+: alterar local do cache do ng build'
 date: "2020-07-10T17:06:00Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
+avatarURL: "/images/authors/dwouglas.jpg"
 resources:
 - name: "featured-image"
   src: "angular-9-ng-build-cache-alterar-local-banner.png"

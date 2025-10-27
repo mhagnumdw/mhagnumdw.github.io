@@ -3,6 +3,7 @@ title: 'Shell - Quick Tips #001'
 date: "2022-10-31T09:50:00Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
+avatarURL: "/images/authors/dwouglas.jpg"
 resources:
 - name: "featured-image"
   src: "banner.png"

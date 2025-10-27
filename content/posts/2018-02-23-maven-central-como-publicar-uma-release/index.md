@@ -3,6 +3,7 @@ title: 'Maven Central: como publicar uma release'
 date: "2018-02-23T14:04:14Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
+avatarURL: "/images/authors/dwouglas.jpg"
 resources:
 - name: "featured-image"
   src: "mvc.png"

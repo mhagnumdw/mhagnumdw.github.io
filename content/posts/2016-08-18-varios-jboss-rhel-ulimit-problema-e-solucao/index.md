@@ -3,6 +3,7 @@ title: 'Vários JBoss + RHEL + ulimit: problema e solução'
 date: "2016-08-18T14:26:40Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
+avatarURL: "/images/authors/dwouglas.jpg"
 resources:
 - name: "featured-image"
   src: "jboss_rhel_ulimit.png"

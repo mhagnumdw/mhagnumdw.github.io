@@ -3,6 +3,7 @@ title: Jenkins buildando dentro de container (Docker)
 date: "2018-06-18T09:56:00Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
+avatarURL: "/images/authors/dwouglas.jpg"
 resources:
 - name: "featured-image"
   src: "jenkins-build-docker-v2.png"

@@ -3,6 +3,7 @@ title: Postman logando no Keycloak com OpenID Connect + OAuth2
 date: "2024-05-07T15:03:00Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
+avatarURL: "/images/authors/dwouglas.jpg"
 resources:
 - name: "featured-image"
   src: "banner.png"

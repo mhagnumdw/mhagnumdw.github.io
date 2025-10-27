@@ -3,6 +3,7 @@ title: RichFaces 3 + File Upload + Transaction Timeout
 date: "2021-01-08T14:10:00Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
+avatarURL: "/images/authors/dwouglas.jpg"
 resources:
 - name: "featured-image"
   src: "banner.png"
@@ -10,7 +11,7 @@ categories: ["richfaces3"]
 tags: ["richfaces"]
 ---
 
-O componente de upload apresenta a mensagem _Transfer error occurred_ e no log o [arjuna](https://narayana.io/arjuna-core/index.html) apresenta uma mensagem de WARN informando que o tempo da transação esgotou.
+O componente de upload apresenta a mensagem _Transfer error occurred_ e no log o `arjuna` apresenta uma mensagem de WARN informando que o tempo da transação esgotou.
 
 <!--more-->
 
@@ -19,6 +20,7 @@ O componente de upload apresenta a mensagem _Transfer error occurred_ e no log o
 - JBoss EAP 6.4.20
 - RichFaces 3.3.X
 - JBoss Seam 2.2.X
+- [arjuna](https://narayana.io/arjuna-core/index.html)
 
 ## Erro
 

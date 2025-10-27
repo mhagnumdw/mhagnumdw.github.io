@@ -3,9 +3,12 @@ title: 'Diário de Bordo #001 - Demora para se conectar via SSH'
 date: "2020-05-16T12:22:00Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
+avatarURL: "/images/authors/dwouglas.jpg"
 resources:
 - name: "featured-image"
-  src: "cockpit-banner.jpg"
+  # TODO: obter a imagem do static ou assets não funciona mesmo seguindo a documentação: https://feelit.khusika.id/theme-documentation-content/#contents-organization
+  # https://github.com/khusika/FeelIt/issues/142
+  src: "/images/cockpit-banner.jpg"
 categories: ["Diário de Bordo"]
 tags: ["docker", "ssh", "dns"]
 ---

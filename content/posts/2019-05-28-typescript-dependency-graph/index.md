@@ -3,6 +3,7 @@ title: Typescript - Gráfico de dependências
 date: "2019-05-28T15:28:00Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
+avatarURL: "/images/authors/dwouglas.jpg"
 resources:
 - name: "featured-image"
   src: "banner-tslint-without-node_modules.png"

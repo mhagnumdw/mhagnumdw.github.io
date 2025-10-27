@@ -3,6 +3,7 @@ title: Exibir branch do Git no prompt (Linux/Cygwin)
 date: "2016-09-05T11:25:10Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
+avatarURL: "/images/authors/dwouglas.jpg"
 resources:
 - name: "featured-image"
   src: "exibir_branch_do_git_no_prompt.png"

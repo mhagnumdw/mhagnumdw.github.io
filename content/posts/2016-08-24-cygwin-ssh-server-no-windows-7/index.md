@@ -3,6 +3,7 @@ title: Cygwin SSH Server no Windows 7
 date: "2016-08-24T11:47:28Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
+avatarURL: "/images/authors/dwouglas.jpg"
 resources:
 - name: "featured-image"
   src: "cygwin_ssh_server_logo.png"

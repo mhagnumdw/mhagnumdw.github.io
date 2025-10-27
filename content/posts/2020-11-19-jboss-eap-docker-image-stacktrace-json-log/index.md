@@ -3,6 +3,7 @@ title: 'Imagem docker JBoss EAP 6.4: Logs em JSON e stacktrace'
 date: "2020-11-19T19:20:00Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
+avatarURL: "/images/authors/dwouglas.jpg"
 resources:
 - name: "featured-image"
   src: "banner.png"

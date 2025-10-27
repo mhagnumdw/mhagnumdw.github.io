@@ -3,6 +3,7 @@ title: 'GitLab: BackfillAdminModeScopeForPersonalAccessTokens'
 date: "2023-02-11T17:27:18Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
+avatarURL: "/images/authors/dwouglas.jpg"
 resources:
 - name: "featured-image"
   src: "banner.png"

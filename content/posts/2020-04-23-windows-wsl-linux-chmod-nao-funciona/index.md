@@ -3,6 +3,7 @@ title: Windows WSL - Alterar permissões com chmod não surte efeito
 date: "2020-04-23T19:23:00Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
+avatarURL: "/images/authors/dwouglas.jpg"
 resources:
 - name: "featured-image"
   src: "windows-wsl-linux-chmod-nao-funciona-banner.png"

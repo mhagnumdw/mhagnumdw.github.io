@@ -3,6 +3,7 @@ title: Google Drive sincronizando com rclone
 date: "2019-11-12T22:38:00Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
+avatarURL: "/images/authors/dwouglas.jpg"
 resources:
 - name: "featured-image"
   src: "google-drive-com-rclone-banner.png"
@@ -10,11 +11,11 @@ categories: ["Sync"]
 tags: ["google drive", "sync", "cloud", "linux"]
 ---
 
-Direto ao ponto: sincronizando no Linux com Google Drive e [rclone](https://rclone.org/).
+Direto ao ponto: sincronizando no Linux com Google Drive e `rclone`.
 
 <!--more-->
 
-### Instalar e Configurar o rclone
+### Instalar e Configurar o [rclone](https://rclone.org/)
 
 #### Instalar
 

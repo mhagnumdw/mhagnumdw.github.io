@@ -3,6 +3,7 @@ title: Contexto do ArgoCD no prompt PS1
 date: "2024-09-23T17:30:00Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
+avatarURL: "/images/authors/dwouglas.jpg"
 resources:
 - name: "featured-image"
   src: "banner.png"

@@ -3,6 +3,7 @@ title: Buildar Hibernate 3.6.x
 date: "2019-05-29T08:30:00Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
+avatarURL: "/images/authors/dwouglas.jpg"
 resources:
 - name: "featured-image"
   src: "buildar-hibernate-36-banner.png"

@@ -3,6 +3,7 @@ title: Docker - Expor portas de um container existente
 date: "2019-09-24T09:07:00Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
+avatarURL: "/images/authors/dwouglas.jpg"
 resources:
 - name: "featured-image"
   src: "docker-network-ports-banner.png"

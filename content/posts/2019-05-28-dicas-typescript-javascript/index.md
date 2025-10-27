@@ -3,6 +3,7 @@ title: 'Typescript/ECMAScript/Javascript: dicas'
 date: "2019-05-28T17:52:00Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
+avatarURL: "/images/authors/dwouglas.jpg"
 resources:
 - name: "featured-image"
   src: "dicas-typescript-javascript-banner.png"

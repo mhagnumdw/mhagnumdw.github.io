@@ -3,6 +3,7 @@ title: Java ServiceLoader + @AutoService + Eclipse IDE
 date: "2016-08-14T00:23:26Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
+avatarURL: "/images/authors/dwouglas.jpg"
 resources:
 - name: "featured-image"
   src: "java_serviceloader_autoservice_eclipse.png"

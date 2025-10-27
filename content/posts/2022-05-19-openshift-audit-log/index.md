@@ -3,6 +3,7 @@ title: Openshift - Quem fez o quê? (Audioria)
 date: "2022-05-19T15:42:00Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
+avatarURL: "/images/authors/dwouglas.jpg"
 resources:
 - name: "featured-image"
   src: "banner.png"

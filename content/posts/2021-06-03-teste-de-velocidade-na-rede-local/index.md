@@ -3,6 +3,7 @@ title: Testar velocidade na rede local
 date: "2021-06-03T15:03:00Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
+avatarURL: "/images/authors/dwouglas.jpg"
 resources:
 - name: "featured-image"
   src: "banner.png"

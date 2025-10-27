@@ -3,6 +3,7 @@ title: 'Maven: prevenir compilação desnecessária'
 date: "2021-05-19T18:20:00Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
+avatarURL: "/images/authors/dwouglas.jpg"
 resources:
 - name: "featured-image"
   src: "banner.png"
@@ -10,7 +11,7 @@ categories: ["maven", "pipeline"]
 tags: ["maven", "pipeline"]
 ---
 
-O [Maven](https://maven.apache.org/) faz uso do plugin [maven-compiler-plugin](http://maven.apache.org/plugins/maven-compiler-plugin/) para compilar os `.java` em `.class`. O plugin já é otimizado para só efetuar uma nova compilação se necessário. Em alguns casos o plugin pode compilar novamente o source e não desejamos esse comportamento, vamos ver como contornar isso.
+O `maven-compiler-plugin` do Maven é otimizado para compilar fontes apenas quando necessário, mas às vezes a recompilação ocorre de forma indesejada. Veremos como contornar esse comportamento.
 
 <!--more-->
 

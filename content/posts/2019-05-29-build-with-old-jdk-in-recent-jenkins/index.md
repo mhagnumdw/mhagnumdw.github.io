@@ -3,6 +3,7 @@ title: Jenkins recente buildando com JDK antiga
 date: "2019-05-29T10:06:00Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
+avatarURL: "/images/authors/dwouglas.jpg"
 resources:
 - name: "featured-image"
   src: "build-with-old-jdk-in-recent-jenkins-banner.jpeg"

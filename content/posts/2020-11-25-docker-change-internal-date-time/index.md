@@ -3,6 +3,7 @@ title: 'Docker: alterar data e hora sem interferir no host'
 date: "2020-11-25T16:45:00Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
+avatarURL: "/images/authors/dwouglas.jpg"
 resources:
 - name: "featured-image"
   src: "banner.png"

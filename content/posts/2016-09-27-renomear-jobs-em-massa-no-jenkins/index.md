@@ -3,6 +3,7 @@ title: 'Jenkins: Renomear Jobs em massa'
 date: "2016-09-27T21:56:16Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
+avatarURL: "/images/authors/dwouglas.jpg"
 resources:
 - name: "featured-image"
   src: "jenkins_script_console_v0.png"

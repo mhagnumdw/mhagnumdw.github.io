@@ -3,9 +3,12 @@ title: 'Diário de Bordo #002 - Ambientes iguais com comportamentos diferentes'
 date: "2020-05-16T16:14:00Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
+avatarURL: "/images/authors/dwouglas.jpg"
 resources:
 - name: "featured-image"
-  src: "cockpit-banner.jpg"
+  # TODO: obter a imagem do static ou assets não funciona mesmo seguindo a documentação: https://feelit.khusika.id/theme-documentation-content/#contents-organization
+  # https://github.com/khusika/FeelIt/issues/142
+  src: "/images/cockpit-banner.jpg"
 categories: ["Diário de Bordo"]
 tags: ["docker", "openshift", "gitlab", "facelets", "jsf"]
 ---
@@ -13,8 +16,6 @@ tags: ["docker", "openshift", "gitlab", "facelets", "jsf"]
 Build, pipeline no GitLab, geração de imagem docker de aplicação com jsf 1.2 + Facelets + JBoss EAP 6.4, deploy no OpenShift, ambientes totalmente iguais e comportamentos diferentes ⏩ Troubleshooting
 
 <!--more-->
-
-{% include about_diario_de_bordo.markdown %}
 
 > **Spoiler:** é claro que existia diferença nos ambientes!
 

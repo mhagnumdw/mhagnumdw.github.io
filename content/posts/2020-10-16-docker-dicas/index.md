@@ -3,6 +3,7 @@ title: 'docker: dicas'
 date: "2020-10-16T16:25:00Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
+avatarURL: "/images/authors/dwouglas.jpg"
 resources:
 - name: "featured-image"
   src: "banner.png"

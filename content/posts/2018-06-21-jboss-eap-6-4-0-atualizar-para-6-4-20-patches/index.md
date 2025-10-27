@@ -3,6 +3,7 @@ title: 'JBoss EAP 6.4.0: atualizar para 6.4.20 (patches)'
 date: "2018-06-21T10:16:00Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
+avatarURL: "/images/authors/dwouglas.jpg"
 resources:
 - name: "featured-image"
   src: "jboss-eap-6-4-0-atualizar-para-6-4-20-patches.png"

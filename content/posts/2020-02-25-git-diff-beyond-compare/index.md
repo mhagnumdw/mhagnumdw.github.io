@@ -3,6 +3,7 @@ title: Git Diff com Beyond Compare
 date: "2020-02-25T09:34:00Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
+avatarURL: "/images/authors/dwouglas.jpg"
 resources:
 - name: "featured-image"
   src: "git-beyond-compare-banner.png"

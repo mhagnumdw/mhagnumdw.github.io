@@ -3,6 +3,7 @@ title: 'Fedora 28 + DNF: instalar pacote antigo e desativar atualização'
 date: "2018-06-05T14:39:00Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
+avatarURL: "/images/authors/dwouglas.jpg"
 resources:
 - name: "featured-image"
   src: "fedora-dnf-package-old-disable.png"

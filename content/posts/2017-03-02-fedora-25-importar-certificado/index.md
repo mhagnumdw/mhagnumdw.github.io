@@ -3,6 +3,7 @@ title: Fedora 25 - Importar certificado
 date: "2017-03-02T15:49:32Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
+avatarURL: "/images/authors/dwouglas.jpg"
 resources:
 - name: "featured-image"
   src: "nss_importar_certificado.png"

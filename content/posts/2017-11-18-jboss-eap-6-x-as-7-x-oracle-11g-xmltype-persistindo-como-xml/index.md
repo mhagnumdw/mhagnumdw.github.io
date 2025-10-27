@@ -3,6 +3,7 @@ title: 'JBoss EAP 6.x/AS 7.x + Oracle 11g + XMLType: persistindo como XML'
 date: "2017-11-18T21:53:24Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
+avatarURL: "/images/authors/dwouglas.jpg"
 resources:
 - name: "featured-image"
   src: "logo_jboss_oracle_xmltype_v5.png"

@@ -3,6 +3,7 @@ title: 'GitLab Registry: Cleanup policy for tags / Garbage collection'
 date: "2020-11-18T20:28:00Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
+avatarURL: "/images/authors/dwouglas.jpg"
 resources:
 - name: "featured-image"
   src: "gitlab-registry-cleanup-banner.png"

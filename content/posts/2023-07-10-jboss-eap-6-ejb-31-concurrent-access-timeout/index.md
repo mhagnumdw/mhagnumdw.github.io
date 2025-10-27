@@ -3,6 +3,7 @@ title: JBoss EAP 6 EJB 3.1 Concurrent Access Timeout InterceptorContext
 date: "2023-07-10T09:00:00Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
+avatarURL: "/images/authors/dwouglas.jpg"
 resources:
 - name: "featured-image"
   src: "banner.png"

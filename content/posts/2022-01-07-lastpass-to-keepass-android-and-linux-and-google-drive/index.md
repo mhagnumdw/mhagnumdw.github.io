@@ -3,6 +3,7 @@ title: Migrar do LastPass para o KeePass
 date: "2022-01-07T12:34:00Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
+avatarURL: "/images/authors/dwouglas.jpg"
 resources:
 - name: "featured-image"
   src: "banner.png"

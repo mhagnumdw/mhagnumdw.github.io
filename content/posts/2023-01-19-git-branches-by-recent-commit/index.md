@@ -3,6 +3,7 @@ title: 'Git: listar as branches por commit mais recente'
 date: "2023-01-19T16:18:34Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
+avatarURL: "/images/authors/dwouglas.jpg"
 resources:
 - name: "featured-image"
   src: "banner.png"

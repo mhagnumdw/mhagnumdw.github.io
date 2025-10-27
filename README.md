@@ -22,7 +22,7 @@ Entrar na pasta do projeto e executar:
 docker run --rm -it \
   -v $(pwd):/src \
   -p 1313:1313 \
-  hugomods/hugo:base-non-root-0.145.0 \
+  hugomods/hugo:exts-non-root-0.152.1 \
   server
 ```
 
@@ -32,9 +32,17 @@ Para executar no modo de produção adicionar a env `--env HUGO_ENV="production"
 
 ### Com o hugo instalado no sistema
 
-[Instalar](https://gohugo.io/getting-started/installing) o Hugo.
+Instalar o Hugo seguindo os [passos no site oficial](https://gohugo.io/getting-started/installing) **ou de forma mais simples com** [asdf](https://asdf-vm.com/guide/getting-started.html#_2-download-asdf):
 
-Entrar na pasta do projeto e executar:
+```bash
+# Instalar o asdf: https://asdf-vm.com/guide/getting-started.html#_2-download-asdf
+
+# Em seguida instalar o Hugo:
+asdf plugin add gohugo
+asdf install # não é preciso especificar a versão pois já está definida no arquivo `.tool-versions`
+```
+
+Após o Hugo instalado, entrar na pasta do projeto e executar:
 
 ```bash
 hugo server --disableFastRender --buildDrafts
@@ -78,3 +86,8 @@ rg --multiline --no-heading --no-filename '(?s)categories:.*?tags:' | sort | uni
 # tags
 rg --multiline --no-heading --no-filename '(?s)tags:.*?author-id:' | sort | uniq -c | sort -n
 ```
+
+## Alguns Links
+
+- Exemplo e documentação do tema: <https://feelit.khusika.dev>
+- Gerar diff online: <https://www.diffchecker.com/diff>

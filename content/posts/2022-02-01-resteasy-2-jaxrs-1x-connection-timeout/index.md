@@ -3,6 +3,7 @@ title: RestEasy 2 - Configurar timeout da conexão
 date: "2022-02-01T19:49:00Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
+avatarURL: "/images/authors/dwouglas.jpg"
 resources:
 - name: "featured-image"
   src: "banner.png"

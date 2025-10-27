@@ -3,6 +3,7 @@ title: Git/GitLab + push + pre-receive + Checkstyle
 date: "2016-08-23T19:19:24Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
+avatarURL: "/images/authors/dwouglas.jpg"
 resources:
 - name: "featured-image"
   src: "gitlab_checkstyle_push_prereceive_v2.png"

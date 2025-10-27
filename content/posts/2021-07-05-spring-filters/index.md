@@ -3,6 +3,7 @@ title: 'Spring Boot: filtros que podem ser úteis'
 date: "2021-07-05T15:30:00Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
+avatarURL: "/images/authors/dwouglas.jpg"
 resources:
 - name: "featured-image"
   src: "banner.png"

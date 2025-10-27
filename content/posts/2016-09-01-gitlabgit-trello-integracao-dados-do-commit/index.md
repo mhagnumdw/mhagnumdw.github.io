@@ -3,6 +3,7 @@ title: GitLab/Git + Trello = Integração (dados do commit)
 date: "2016-09-01T16:58:30Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
+avatarURL: "/images/authors/dwouglas.jpg"
 resources:
 - name: "featured-image"
   src: "git-gitlab-trello-integracao-banner_v2.png"

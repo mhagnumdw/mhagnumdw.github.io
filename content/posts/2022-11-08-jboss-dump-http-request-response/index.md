@@ -3,6 +3,7 @@ title: 'JBoss EAP 6: dump da requisição http recebida'
 date: "2022-11-08T13:26:00Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
+avatarURL: "/images/authors/dwouglas.jpg"
 resources:
 - name: "featured-image"
   src: "banner.png"

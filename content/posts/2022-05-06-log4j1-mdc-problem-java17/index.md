@@ -3,6 +3,7 @@ title: Log4j1 - MDC não funciona no Java 9+
 date: "2022-05-06T16:18:00Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
+avatarURL: "/images/authors/dwouglas.jpg"
 resources:
 - name: "featured-image"
   src: "banner.png"

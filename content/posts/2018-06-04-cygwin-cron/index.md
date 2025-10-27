@@ -3,6 +3,7 @@ title: Cygwin Cron
 date: "2018-06-04T20:03:00Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
+avatarURL: "/images/authors/dwouglas.jpg"
 resources:
 - name: "featured-image"
   src: "cygwin-cron.png"

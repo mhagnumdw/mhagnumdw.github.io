@@ -3,6 +3,7 @@ title: GitLab Pipeline - Acessar uma máquina remota com chave SSH
 date: "2023-07-11T09:00:00Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
+avatarURL: "/images/authors/dwouglas.jpg"
 resources:
 - name: "featured-image"
   src: "banner.png"

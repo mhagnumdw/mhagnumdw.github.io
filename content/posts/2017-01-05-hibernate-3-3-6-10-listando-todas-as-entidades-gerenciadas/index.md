@@ -3,6 +3,7 @@ title: Hibernate 3 / 3.6.10 - Listando todas as entidades gerenciadas
 date: "2017-01-05T14:09:52Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
+avatarURL: "/images/authors/dwouglas.jpg"
 resources:
 - name: "featured-image"
   src: "hibernate_3_list_all_managed_entities.png"

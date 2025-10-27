@@ -3,6 +3,7 @@ title: ArgoCD CLI - Criar um projeto e adicionar repositórios
 date: "2023-01-18T12:07:44Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
+avatarURL: "/images/authors/dwouglas.jpg"
 resources:
 - name: "featured-image"
   src: "banner.png"

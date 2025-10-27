@@ -3,6 +3,7 @@ title: Fedora/RHEL - Instalar Microsoft core fonts
 date: "2017-01-26T12:57:29Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
+avatarURL: "/images/authors/dwouglas.jpg"
 resources:
 - name: "featured-image"
   src: "fedora_redhat_microsoft_core_fonts.jpg"

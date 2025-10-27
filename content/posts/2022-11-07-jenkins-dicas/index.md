@@ -3,6 +3,7 @@ title: 'Jenkins: Dicas'
 date: "2022-11-07T17:26:00Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
+avatarURL: "/images/authors/dwouglas.jpg"
 resources:
 - name: "featured-image"
   src: "banner.png"

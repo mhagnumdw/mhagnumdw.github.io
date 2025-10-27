@@ -3,6 +3,7 @@ title: 'GitLab: checkout merge request'
 date: "2020-01-14T19:33:00Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
+avatarURL: "/images/authors/dwouglas.jpg"
 resources:
 - name: "featured-image"
   src: "banner.jpg"

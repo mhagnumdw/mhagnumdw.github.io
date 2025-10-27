@@ -3,6 +3,7 @@ title: Database diff com SQL Workbench/J
 date: "2020-07-29T15:20:00Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
+avatarURL: "/images/authors/dwouglas.jpg"
 resources:
 - name: "featured-image"
   src: "database-diff-banner.png"
@@ -10,9 +11,11 @@ categories: ["database"]
 tags: ["database", "diff"]
 ---
 
-Visualizar o _diff_ do esquema entre duas bases de dados - usando `jdbc`. Para o exemplo vamos utilziar o banco de dados [H2](https://www.h2database.com/) e a ferramenta [SQL Workbench/J](https://www.sql-workbench.eu/). Ao final teremos um script `SQL` para ser aplicado no banco destino para que ele fique igual ao banco de origem.
+Visualizar o _diff_ do esquema entre duas bases de dados - usando `jdbc`.
 
 <!--more-->
+
+Para o exemplo vamos utilizar o banco de dados [H2](https://www.h2database.com/) e a ferramenta [SQL Workbench/J](https://www.sql-workbench.eu/). Ao final teremos um script `SQL` para ser aplicado no banco destino para que ele fique igual ao banco de origem.
 
 Download do `SQL Workbench/J` [nessa página](https://www.sql-workbench.eu/downloads.html) ou direto por esse [link](https://www.sql-workbench.eu/Workbench-Build125-with-optional-libs.zip). Após o download extrair para uma pasta.
 

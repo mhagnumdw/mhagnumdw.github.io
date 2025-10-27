@@ -3,6 +3,7 @@ title: SVN - Busca avançada em múltiplos repositórios
 date: "2019-09-20T11:43:00Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
+avatarURL: "/images/authors/dwouglas.jpg"
 resources:
 - name: "featured-image"
   src: "svn-busca-banner.png"

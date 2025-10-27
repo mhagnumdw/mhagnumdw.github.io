@@ -3,6 +3,7 @@ title: Adicionar certificado da CA da Sectigo
 date: "2022-11-23T08:48:00Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
+avatarURL: "/images/authors/dwouglas.jpg"
 resources:
 - name: "featured-image"
   src: "banner.png"

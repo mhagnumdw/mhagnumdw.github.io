@@ -3,6 +3,7 @@ title: 'git: dicas'
 date: "2017-10-01T13:32:22Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
+avatarURL: "/images/authors/dwouglas.jpg"
 resources:
 - name: "featured-image"
   src: "git-goodness_v2.png"

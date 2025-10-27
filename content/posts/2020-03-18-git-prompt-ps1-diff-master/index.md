@@ -3,6 +3,7 @@ title: Git - Quantidade de commits atrás/frente em relação ao master no promp
 date: "2020-03-18T09:34:00Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
+avatarURL: "/images/authors/dwouglas.jpg"
 resources:
 - name: "featured-image"
   src: "git-prompt-ps1-diff-master.png"

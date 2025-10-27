@@ -3,6 +3,7 @@ title: Mudar o timezone do Chrome
 date: "2019-05-28T18:10:00Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
+avatarURL: "/images/authors/dwouglas.jpg"
 resources:
 - name: "featured-image"
   src: "chrome-change-timezone-logo.png"
