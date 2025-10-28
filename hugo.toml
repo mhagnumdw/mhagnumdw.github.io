@@ -22,7 +22,7 @@ enableEmoji = true
   # date format
   dateFormat = "02/01/2006"
   # website images for Open Graph and Twitter Cards
-  images = []
+  images = ["/img/caduceus.jpg"]
   # whether to enable CSS and JS source mapping
   SourceMap = true
 
