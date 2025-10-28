@@ -21,13 +21,15 @@ cat .gitmodules
 Para atualizar apenas o tema:
 
 ```bash
-git submodule update --init --recursive
+git submodule update --remote
 ```
 
 Para incluir os submodules no pull:
 
 ```bash
 git pull --recurse-submodules
+# ou
+git submodule update --init --recursive
 ```
 
 Existe personalização do CSS do tema em `assets/css`.
