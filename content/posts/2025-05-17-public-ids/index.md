@@ -1,7 +1,7 @@
 ---
 title: "Public IDs (External IDs)"
 date: 2025-05-17T15:43:00-03:00
-author: "Dwouglas Mhagnum"
+author: "mhagnumdw"
 authorLink: "https://git.sefin.fortaleza.ce.gov.br/dwouglas"
 avatarURL: "/images/authors/dwouglas.jpg"
 resources:
