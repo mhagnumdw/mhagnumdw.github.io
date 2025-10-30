@@ -1,5 +1,5 @@
 ---
-title: 'Imagem docker JBoss EAP 6.4: Logs em JSON e stacktrace'
+title: 'c'
 date: "2020-11-19T19:20:00Z"
 author: mhagnumdw
 authorLink: "https://mhagnumdw.github.io/"
@@ -66,11 +66,9 @@ A partir disso cada linha do log da aplicação será parecida com isso:
 
 **Se houver exceção, o log será parecido com isso:**
 
-<details>
-  <summary>Clique AQUI para visualizar o log em JSON</summary>
-<!-- Não mudar o bloco de código para ```json , pois a formatação
-dentro do details+summary só funcionou com o bloco de código do Jekyll -->
-{{< highlight json >}}
+{{< admonition type=note open=false title="Clique AQUI para visualizar o log em JSON" >}}
+
+```json
 {
   "@version": 1,
   "@timestamp": "2020-11-20T16:24:35-03:00",
@@ -416,8 +414,9 @@ dentro do details+summary só funcionou com o bloco de código do Jekyll -->
   },
   "log-handler": "CONSOLE"
 }
-{{< / highlight >}}
-</details>
+```
+
+{{< /admonition >}}
 
 > 📋 Observar que cada linha do stacktrace ficou em um fragmento de JSON, o que pode deixar um pouco chato a visualização.
 

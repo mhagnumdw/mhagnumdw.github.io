@@ -6,8 +6,6 @@ authorLink: "https://mhagnumdw.github.io/"
 avatarURL: "/images/authors/dwouglas.jpg"
 resources:
 - name: "featured-image"
-  # TODO: obter a imagem do static ou assets não funciona mesmo seguindo a documentação: https://feelit.khusika.id/theme-documentation-content/#contents-organization
-  # https://github.com/khusika/FeelIt/issues/142
   src: "/images/cockpit-banner.jpg"
 categories: ["Diário de Bordo"]
 tags: ["docker", "ssh", "dns"]
@@ -19,15 +17,13 @@ Teste automatizado, Docker, SVN Subversion container, demora de aproximadamente 
 
 ## História
 
-{% include about_diario_de_bordo.markdown %}
-
 Tenho alguns testes automatizados escritos em Java que sobem um container do SVN e se conectam ao container via SSH utilizando chave púlica/privada.
 
 A biblioteca Java utilizada para fazer acesso SSH é a [jsch](http://www.jcraft.com/jsch/) na versão [0.1.55](https://mvnrepository.com/artifact/com.jcraft/jsch/0.1.55). Inicialmente pensei que o problema fosse nela, inclusive precisei escrever uma classe de log para ela seguindo [esse modelo](http://www.jcraft.com/jsch/examples/Logger.java.html) (estranho!), onde é possível vincular ao sistema de log da minha aplicação.
 
 Agora com o log do jsch e debugando o código dele, percebi que o código ficava esperando um [InputStream](https://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html) de um socket no método `com.jcraft.jsch.IO.getByte(byte[], int, int)`, então comecei a pensar que o problema estava no servidor de SSH no container. Antes disso pesquisei sobre lentidão na conexão SSH com jsch, na esperança de achar algum parâmetro mágico e pouco achei e nada serviu.
 
-Para elimintar de vez que o problema poderia estar no jsch, resolvi me conectar ao container via linha de comando (porque não pensei nisso antes!). Ao me conectar, exatamente com a linha `ssh -i chave-privada -p 2220 user@127.0.0.1`, assim como fazia meu teste automatizado, também obtive o delay de aproximadamente 10 segundos para concluir a conexão.
+Para eliminar de vez que o problema poderia estar no jsch, resolvi me conectar ao container via linha de comando (porque não pensei nisso antes!). Ao me conectar, exatamente com a linha `ssh -i chave-privada -p 2220 user@127.0.0.1`, assim como fazia meu teste automatizado, também obtive o delay de aproximadamente 10 segundos para concluir a conexão.
 
 > **NOTA:** o IP 127.0.0.1 é porque o container subiu fazendo bind das portas para o meu host.
 

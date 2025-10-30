@@ -37,7 +37,6 @@ No log do servidor há mensagens parecidas com essas:
 15:28:43,242 WARN  [com.arjuna.ats.arjuna] (Transaction Reaper Worker 0) ARJUNA012121: TransactionReaper::doCancellations worker Thread[Transaction Reaper Worker 0,5,main] successfully canceled TX 0:ffffac1d2001:519735cd:5ff8a379:17d
 ```
 
-<br/>
 Requests no developer tools. Retorna http `200`, mas pelo payload dá pra ver que redireciona para a tela de erro:
 
 ![FireFox Developer Tools](firefox-developer-tools.jpg)

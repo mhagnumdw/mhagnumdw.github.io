@@ -6,8 +6,6 @@ authorLink: "https://mhagnumdw.github.io/"
 avatarURL: "/images/authors/dwouglas.jpg"
 resources:
 - name: "featured-image"
-  # TODO: obter a imagem do static ou assets não funciona mesmo seguindo a documentação: https://feelit.khusika.id/theme-documentation-content/#contents-organization
-  # https://github.com/khusika/FeelIt/issues/142
   src: "/images/cockpit-banner.jpg"
 categories: ["Diário de Bordo"]
 tags: ["docker", "openshift", "gitlab", "facelets", "jsf"]
@@ -33,8 +31,7 @@ A partir daqui vou chamar as aplicações de `app-master` e `app-branch`.
 
 Ao acessar ambas as aplicações, `app-master` e `app-branch`, e mandar pesquisar em uma tela de pesquisa simples, nada ocorria na tela, ao mandar pesquisa novamente nada ocorria e ao mandar pesquisa pela terceira vez a aplicação quebrava com a stack abaixo:
 
-<details>
-  <summary>Stacktrace - Clique para ver (não é relevante)</summary>
+{{< admonition type=note open=false title="Stacktrace - Clique para ver (não é relevante)" >}}
 
 ```stacktrace
 16:46:35,717 SEVERE [javax.enterprise.resource.webcontainer.jsf.lifecycle] (http-10.129.2.161:8080-6) JSF1054: (Phase ID: PROCESS_VALIDATIONS 3, View ID: /pages/cidade/pesquisa.xhtml) Exception thrown during phase execution: javax.faces.event.PhaseEvent[source=com.sun.faces.lifecycle.LifecycleImpl@47d599aa]
@@ -152,8 +149,7 @@ Caused by: java.lang.NumberFormatException: For input string: "org.jboss.seam.ui
         at com.sun.faces.lifecycle.LifecycleImpl.execute(Unknown Source) [jsf-impl-1.2.15.b01-SP2-redhat-1.jar:1.2.15.b01-SP2-redhat-1]
         ... 49 more
 ```
-
-</details><br/>
+{{< /admonition >}}
 
 Resumindo o stack, o erro era: `Caused by: java.lang.NumberFormatException: For input string: "org.jboss.seam.ui.NoSelectionConverter.noSelectionValue"`
 
@@ -167,9 +163,7 @@ Eu também observei no log, na primeira vez que mandava pesquisar, diversas mens
 
 `19:17:15,290 INFO  [facelets.facelet] (http-0.0.0.0:8080-6) Facelet[/layout/template.xhtml] was modified @ 19:17:15, flushing component applied @ 19:16:50`
 
-<details>
-  <summary>Mais dessas mensagens aqui - Clique para ver</summary>
-
+{{< admonition type=note open=false title="Mais dessas mensagens aqui - Clique para ver" >}}
 ```log
 19:17:15,290 INFO  [facelets.facelet] (http-0.0.0.0:8080-6) Facelet[/layout/template.xhtml] was modified @ 19:17:15, flushing component applied @ 19:16:50
 19:17:15,293 INFO  [facelets.facelet] (http-0.0.0.0:8080-6) Facelet[/layout/cabecalho.xhtml] was modified @ 19:17:15, flushing component applied @ 19:16:49
@@ -214,8 +208,7 @@ Eu também observei no log, na primeira vez que mandava pesquisar, diversas mens
 19:17:15,405 INFO  [facelets.facelet] (http-0.0.0.0:8080-6) Facelet[/WEB-INF/facelets/tags/footer.xhtml] was modified @ 19:17:15, flushing component applied @ 19:16:50
 19:17:15,405 INFO  [facelets.facelet] (http-0.0.0.0:8080-6) Facelet[/WEB-INF/facelets/tags/footer.xhtml] was modified @ 19:17:15, flushing component applied @ 19:16:50
 ```
-
-</details><br/>
+{{< /admonition >}}
 
 > **Spoiler:** se eu tivesse dado atenção a essas mensagens acima e se minha memória tivesse funcionado, eu teria matado a charada sem ter perdido muito tempo.
 

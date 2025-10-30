@@ -1,7 +1,9 @@
 {
     "cSpell.blockCheckingWhenTextChunkSizeGreaterThan": 2048,
     "cSpell.words": [
+        "debugando",
         "hugo",
-        "hugomods"
+        "hugomods",
+        "jsch"
     ]
 }

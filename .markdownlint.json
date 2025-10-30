@@ -6,9 +6,6 @@
     "MD026": false,
     "MD033": {
         "allowed_elements": [
-            "details",
-            "summary",
-            "br",
             "video",
             "source"
         ]
