@@ -118,7 +118,7 @@ enableGitInfo = true
     url = "posts/"
     # title will be shown when you hover on this menu link
     title = ""
-    weight = 2
+    weight = 1
   [[menu.main]]
     identifier = "tags"
     pre = ""
@@ -126,7 +126,7 @@ enableGitInfo = true
     name = "Tags"
     url = "tags/"
     title = ""
-    weight = 3
+    weight = 2
   [[menu.main]]
     identifier = "categories"
     pre = ""
@@ -134,6 +134,14 @@ enableGitInfo = true
     name = "Categories"
     url = "categories/"
     title = ""
+    weight = 3
+  [[menu.main]]
+    identifier = "github"
+    pre = "<i class='fa-brands fa-github fa-fw'></i>"
+    post = ""
+    name = ""
+    url = "https://github.com/mhagnumdw"
+    title = "GitHub"
     weight = 4
   # Comment config
   [params.page.comment]
