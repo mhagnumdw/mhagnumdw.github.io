@@ -5,6 +5,9 @@ theme = 'FeelIt'
 canonifyURLs = true # quebra a busca (search)
 enableEmoji = true
 
+# whether to use git commit log
+enableGitInfo = true
+
 [params]
   # FeelIt theme version
   version = "1.0.X"
@@ -15,7 +18,7 @@ enableEmoji = true
   # site default theme ("light", "dark", "auto")
   defaultTheme = "auto"
   # public git repo url only then enableGitInfo is true
-  gitRepo = ""
+  gitRepo = "https://github.com/mhagnumdw/mhagnumdw.github.io"
   # which hash function used for SRI, when empty, no SRI is used
   # ("sha256", "sha384", "sha512", "md5")
   fingerprint = ""
@@ -33,6 +36,8 @@ enableEmoji = true
     name = "MhagnumDw"
     # whether to use typeit animation for title name
     typeit = false
+    # whether to show RSS icon
+    rss = true
 
   # Search config
   [params.search]
@@ -55,6 +60,13 @@ enableEmoji = true
       index = ""
       appID = ""
       searchKey = ""
+
+  # Page config
+  [params.page]
+    # whether to show link to Raw Markdown content of the content
+    linkToMarkdown = true
+    # whether to show link to improve the article
+    improveArticle = "https://github.com/mhagnumdw/mhagnumdw.github.io/edit/master/content/"
 
   [params.page.code]
     maxShownLines = -1
