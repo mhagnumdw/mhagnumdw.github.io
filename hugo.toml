@@ -64,7 +64,8 @@ enableGitInfo = true
   # Page config
   [params.page]
     # whether to show link to Raw Markdown content of the content
-    linkToMarkdown = true
+    # precisa que no Output Format tenha "markdown"
+    linkToMarkdown = false
     # whether to show link to improve the article
     improveArticle = "https://github.com/mhagnumdw/mhagnumdw.github.io/edit/master/content/"
 
