@@ -28,7 +28,15 @@ Para incluir os submodules no pull:
 
 ```bash
 git pull --recurse-submodules
-# ou
+```
+
+Para incluir os submodules a primeira vez:
+
+```bash
+# direto no clone
+git clone --recurse-submodules git@github.com:mhagnumdw/mhagnumdw.github.io.git
+
+# se já tem o repo clonado
 git submodule update --init --recursive
 ```
 

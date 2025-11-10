@@ -7,9 +7,11 @@
 Primeiro é preciso baixar o projeto:
 
 ```bash
-git clone git@github.com:mhagnumdw/mhagnumdw.github.io.git
+git clone --recurse-submodules git@github.com:mhagnumdw/mhagnumdw.github.io.git
 cd mhagnumdw.github.io
-git pull --recurse-submodules
+
+# extra: se clonou o repo sem o parâmetro --recurse-submodules, execute:
+git submodule update --init --recursive
 ```
 
 Em seguida use uma das opções abaixo para acessar o site do blog localmente.
