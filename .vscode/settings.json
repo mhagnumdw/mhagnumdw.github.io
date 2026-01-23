@@ -4,6 +4,9 @@
         "debugando",
         "hugo",
         "hugomods",
-        "jsch"
+        "jsch",
+        "lightgallery",
+        "powerlevel",
+        "subshell"
     ]
 }
